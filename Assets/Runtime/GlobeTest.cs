@@ -10,8 +10,8 @@ using Vector3 = UnityEngine.Vector3;
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class GlobeTest : MonoBehaviour
 {
-  int xSize = 36;
-  int ySize = 18;
+  //int xSize = 36;
+  //int ySize = 18;
 
   public Vector3[,] points;
   public Vector3[,] pointsSphere;

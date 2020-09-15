@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
@@ -97,17 +98,17 @@ public class PDSData
 
 
     DatasetID = ReturnValueForToken("DATA_SET_ID", result);
-    MapResolution = int.Parse(ReturnValueForToken("MAP_RESOLUTION     ", result));
-    RowCount = int.Parse(ReturnValueForToken("LINE_LAST_PIXEL     ", result));
-    ColumnCount = int.Parse(ReturnValueForToken("SAMPLE_LAST_PIXEL     ", result));
+    MapResolution = int.Parse(ReturnValueForToken("MAP_RESOLUTION     ", result),CultureInfo.InvariantCulture);
+    RowCount = int.Parse(ReturnValueForToken("LINE_LAST_PIXEL     ", result),CultureInfo.InvariantCulture);
+    ColumnCount = int.Parse(ReturnValueForToken("SAMPLE_LAST_PIXEL     ", result),CultureInfo.InvariantCulture);
 
-    MinLat = float.Parse(ReturnValueForToken("MINIMUM_LATITUDE     ", result));
-    MaxLat = float.Parse(ReturnValueForToken("MAXIMUM_LATITUDE     ", result));
-    MinLon = float.Parse(ReturnValueForToken("WESTERNMOST_LONGITUDE     ", result));
-    MaxLon = float.Parse(ReturnValueForToken("EASTERNMOST_LONGITUDE     ", result));
-    DataScale = float.Parse(ReturnValueForToken("SCALING_FACTOR     ", result));
-    MoonRadius = float.Parse(ReturnValueForToken("  OFFSET     ", result));
-    SampleBits = int.Parse(ReturnValueForToken("SAMPLE_BITS     ", result));
+    MinLat = float.Parse(ReturnValueForToken("MINIMUM_LATITUDE     ", result),CultureInfo.InvariantCulture);
+    MaxLat = float.Parse(ReturnValueForToken("MAXIMUM_LATITUDE     ", result),CultureInfo.InvariantCulture);
+    MinLon = float.Parse(ReturnValueForToken("WESTERNMOST_LONGITUDE     ", result),CultureInfo.InvariantCulture);
+    MaxLon = float.Parse(ReturnValueForToken("EASTERNMOST_LONGITUDE     ", result),CultureInfo.InvariantCulture);
+    DataScale = float.Parse(ReturnValueForToken("SCALING_FACTOR     ", result),CultureInfo.InvariantCulture);
+    MoonRadius = float.Parse(ReturnValueForToken("  OFFSET     ", result),CultureInfo.InvariantCulture);
+    SampleBits = int.Parse(ReturnValueForToken("SAMPLE_BITS     ", result),CultureInfo.InvariantCulture);
     SampleType = ReturnValueForToken("SAMPLE_TYPE     ", result);
 
     if (SampleBits == 16)
@@ -121,8 +122,8 @@ public class PDSData
     else
     {
       DataSize = 4;
-      MinHeight = float.Parse(ReturnValueForToken("  MINIMUM     ", result));
-      MaxHeight = float.Parse(ReturnValueForToken("  MAXIMUM     ", result));
+      MinHeight = float.Parse(ReturnValueForToken("  MINIMUM     ", result),CultureInfo.InvariantCulture);
+      MaxHeight = float.Parse(ReturnValueForToken("  MAXIMUM     ", result),CultureInfo.InvariantCulture);
       TrueMin = MoonConstants.LowestPointOnTheMoon;
       TrueMax = MoonConstants.HighestPointOnTheMoon;
     }

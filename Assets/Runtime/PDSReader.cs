@@ -13,7 +13,7 @@ public class PDSReader : MonoBehaviour
   public float Radius;
   public bool DrawQuads;
   public bool DrawTexture;
-  public Renderer renderer;
+  public Renderer _renderer;
   public bool DrawMesh;
 
   public int Width;
@@ -144,7 +144,7 @@ public class PDSReader : MonoBehaviour
     print($"min: {min}, max: {max}");
     if (DrawTexture)
     {
-      renderer.sharedMaterial = new Material(Shader.Find("Standard"));
+      _renderer.sharedMaterial = new Material(Shader.Find("Standard"));
       _texture = new Texture2D(data.ColumnCount, data.RowCount, TextureFormat.RGBA32, false);
       for (var y = 0; y < data.RowCount; y++)
       {
@@ -159,7 +159,7 @@ public class PDSReader : MonoBehaviour
       }
 
       _texture.Apply();
-      renderer.sharedMaterial.mainTexture = _texture;
+      _renderer.sharedMaterial.mainTexture = _texture;
     }
 
     if (DrawMesh)

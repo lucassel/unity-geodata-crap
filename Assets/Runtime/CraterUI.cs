@@ -11,7 +11,7 @@ using Random = System.Random;
 public class CraterUI : MonoBehaviour
 {
   public Texture BoxTexture;
-  public Camera camera;
+  public Camera cam;
   public CraterReader CraterReader;
   public bool AutoPlay;
   [Range(0f, 1f)] public float Scanline;
@@ -59,7 +59,7 @@ public class CraterUI : MonoBehaviour
   private void OnDrawGizmos()
   {
     _moonPosition = CraterReader.transform.position;
-    _cameraPosition = camera.transform.position;
+    _cameraPosition = cam.transform.position;
     _cameraNormal = (_moonPosition - _cameraPosition).normalized;
 
 
@@ -82,7 +82,7 @@ public class CraterUI : MonoBehaviour
     if (CullWithPlane)
     {
       var craterpos = CraterReader.transform.position;
-      var campos = camera.transform.position;
+      var campos = cam.transform.position;
       var normal = (craterpos - campos).normalized;
       _plane = new Plane(normal, 0f);
     }
@@ -109,7 +109,7 @@ public class CraterUI : MonoBehaviour
         }
       }
 
-      var p = camera.WorldToScreenPoint(c.AsTopDown(CraterReader.Offset, CraterReader.Multiplier));
+      var p = cam.WorldToScreenPoint(c.AsTopDown(CraterReader.Offset, CraterReader.Multiplier));
       var scan = Mathf.Lerp(0, Screen.height, Scanline);
       GUI.Box(new Rect(0, Screen.height - scan, Screen.width, 8), _tex, _boxStyle);
       if (p.y > scan)
