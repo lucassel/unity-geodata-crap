@@ -5,12 +5,15 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using Random = UnityEngine.Random;
 
-
+/// <summary>
+/// Reads PDS data from disk, constructs mesh.
+/// </summary>
 public class PDSReader : MonoBehaviour
 {
   public PDSData Data;
   public TextAsset LabelFile;
-  public float Radius;
+
+  public float Radius = 90f;
   public bool DrawQuads;
   public bool DrawTexture;
   public Renderer _renderer;
@@ -20,23 +23,24 @@ public class PDSReader : MonoBehaviour
   public int Height;
   public Material MoonMaterial;
 
-  void OnValidate()
+  private void OnValidate()
   {
     Configure();
   }
 
-  void Start()
+  private void Start()
   {
     Configure();
   }
 
-  void Configure()
+  private void Configure()
   {
-    _style = new GUIStyle();
-    _style.fontSize = 38;
+    _style = new GUIStyle
+    {
+      fontSize = 38
+    };
     _style.normal.textColor = new Color(1f, 0f, 0f, 1f);
   }
-
 
   public void Read()
   {
@@ -51,7 +55,7 @@ public class PDSReader : MonoBehaviour
     ReadBinaryFile(LabelFile.name, Data);
   }
 
-  void OnDrawGizmos()
+  private void OnDrawGizmos()
   {
     if (DrawQuads)
     {
@@ -63,7 +67,7 @@ public class PDSReader : MonoBehaviour
     }
   }
 
-  void DrawQuadrant(float size, Vector3 offset, UnityEngine.Color color)
+  private void DrawQuadrant(float size, Vector3 offset, UnityEngine.Color color)
   {
     Gizmos.color = color;
     Gizmos.DrawLine(offset, offset + new Vector3(0, 0, size));
@@ -72,14 +76,14 @@ public class PDSReader : MonoBehaviour
     Gizmos.DrawLine(offset + new Vector3(0f, 0, size), offset + new Vector3(size, 0, size));
   }
 
-  void DivideQuad(float size, Vector3 offset)
+  private void DivideQuad(float size, Vector3 offset)
   {
     var res = 4;
     var step = size / res;
     Gizmos.color = Color.blue;
-    for (int x = 0; x < res / 2 + 2; x++)
+    for (var x = 0; x < res / 2 + 2; x++)
     {
-      for (int y = 0; y < res / 2 + 2; y++)
+      for (var y = 0; y < res / 2 + 2; y++)
       {
         if (DrawQuads)
         {
@@ -91,13 +95,13 @@ public class PDSReader : MonoBehaviour
     }
   }
 
-  void DivideQuadFinal(float size, Vector3 offset)
+  private void DivideQuadFinal(float size, Vector3 offset)
   {
     var res = 4;
     var step = size / res;
-    for (int x = 0; x < res / 2 + 2; x++)
+    for (var x = 0; x < res / 2 + 2; x++)
     {
-      for (int y = 0; y < res / 2 + 2; y++)
+      for (var y = 0; y < res / 2 + 2; y++)
       {
         if (DrawQuads)
         {
@@ -109,7 +113,7 @@ public class PDSReader : MonoBehaviour
     }
   }
 
-  void OnGUI()
+  private void OnGUI()
   {
     if (Data != null)
     {
@@ -120,17 +124,16 @@ public class PDSReader : MonoBehaviour
     }
   }
 
-
-  void ReadBinaryFile(string fileName, PDSData data)
+  private void ReadBinaryFile(string fileName, PDSData data)
   {
     _imgData = File.ReadAllBytes(Path.Combine(Application.streamingAssetsPath, $"{fileName}.IMG"));
 
-    float[] floatData = new float[_imgData.Length / 4];
-    float[,] floatDataDimensional = new float[data.ColumnCount, data.RowCount];
+    var floatData = new float[_imgData.Length / 4];
+    var floatDataDimensional = new float[data.ColumnCount, data.RowCount];
 
-    for (int y = 0; y < data.RowCount; y++)
+    for (var y = 0; y < data.RowCount; y++)
     {
-      for (int x = 0; x < data.ColumnCount; x++)
+      for (var x = 0; x < data.ColumnCount; x++)
       {
         var i = x + Width * y;
         floatData[i] = BitConverter.ToSingle(_imgData, i * 4);
@@ -150,7 +153,7 @@ public class PDSReader : MonoBehaviour
       {
         for (var x = 0; x < data.ColumnCount; x++)
         {
-          byte c = (byte) RemapValue(floatDataDimensional[x, y], min, max, 0,
+          var c = (byte)RemapValue(floatDataDimensional[x, y], min, max, 0,
             255);
 
           var color = new Color32(c, c, c, 255);
@@ -173,7 +176,7 @@ public class PDSReader : MonoBehaviour
       {
         for (var x = 0; x < data.ColumnCount; x++)
         {
-          float z = RemapValue(floatDataDimensional[x, data.RowCount - 1 - y], min, max,
+          var z = RemapValue(floatDataDimensional[x, data.RowCount - 1 - y], min, max,
             MoonConstants.LowestPointOnTheMoon,
             MoonConstants.HighestPointOnTheMoon);
           verts[x, y] = (new Vector3(x, z, -y) + new Vector3(-data.ColumnCount / 2f, 0, data.RowCount / 2f)) *
@@ -181,15 +184,15 @@ public class PDSReader : MonoBehaviour
         }
       }
 
-      var mf = GetComponent<MeshFilter>();
-      var mr = GetComponent<MeshRenderer>();
+      MeshFilter mf = GetComponent<MeshFilter>();
+      MeshRenderer mr = GetComponent<MeshRenderer>();
       if (!DrawTexture)
       {
         mr.material = MoonMaterial;
       }
 
-      var d = SphereMeshGenerator.GenerateTerrainMesh(verts);
-      var mesh = d.CreateMesh32Bit();
+      MeshData d = SphereMeshGenerator.GenerateTerrainMesh(verts);
+      Mesh mesh = d.CreateMesh32Bit();
       mesh = FlipMesh(mesh);
       mf.sharedMesh = mesh;
     }
@@ -198,14 +201,14 @@ public class PDSReader : MonoBehaviour
     {
       var verts = new Vector3[Height, Height];
 
-      for (int i = 0; i < 2; i ++)
+      for (var i = 0; i < 2; i++)
       {
         for (var y = 0; y < data.RowCount; y++)
         {
           for (var x = 0; x < data.ColumnCount / 2; x++)
           {
             var offset = i * Height;
-            float z = RemapValue(floatDataDimensional[x + offset, data.RowCount - 1 - y], min, max,
+            var z = RemapValue(floatDataDimensional[x + offset, data.RowCount - 1 - y], min, max,
               MoonConstants.LowestPointOnTheMoon,
               MoonConstants.HighestPointOnTheMoon);
             verts[x, y] = (new Vector3(x + offset, z, -y) + new Vector3(-data.ColumnCount / 2f, 0, data.RowCount / 2f)) *
@@ -215,15 +218,15 @@ public class PDSReader : MonoBehaviour
 
         if (i == 0)
         {
-          var a = SphereMeshGenerator.GenerateTerrainMesh(verts);
-          var mesh = a.CreateMesh32Bit();
+          MeshData a = SphereMeshGenerator.GenerateTerrainMesh(verts);
+          Mesh mesh = a.CreateMesh32Bit();
           mesh = FlipMesh(mesh);
           meshA.sharedMesh = mesh;
         }
         else
         {
-          var b = SphereMeshGenerator.GenerateTerrainMesh(verts);
-          var mesh = b.CreateMesh32Bit();
+          MeshData b = SphereMeshGenerator.GenerateTerrainMesh(verts);
+          Mesh mesh = b.CreateMesh32Bit();
           mesh = FlipMesh(mesh);
           meshB.sharedMesh = mesh;
         }
@@ -233,18 +236,17 @@ public class PDSReader : MonoBehaviour
 
   public bool DrawChunk;
 
-  static Mesh FlipMesh(Mesh mesh)
+  private static Mesh FlipMesh(Mesh mesh)
   {
     Vector3[] normals = mesh.normals;
-    for (int i = 0; i < normals.Length; i++)
+    for (var i = 0; i < normals.Length; i++)
       normals[i] = -normals[i];
     mesh.normals = normals;
 
-
-    int[] triangles = mesh.GetTriangles(0);
-    for (int i = 0; i < triangles.Length; i += 3)
+    var triangles = mesh.GetTriangles(0);
+    for (var i = 0; i < triangles.Length; i += 3)
     {
-      int temp = triangles[i + 0];
+      var temp = triangles[i + 0];
       triangles[i + 0] = triangles[i + 1];
       triangles[i + 1] = temp;
     }
@@ -253,15 +255,15 @@ public class PDSReader : MonoBehaviour
     return mesh;
   }
 
-  static float RemapValue(float val, float min1, float max1, float min2, float max2)
+  private static float RemapValue(float val, float min1, float max1, float min2, float max2)
   {
     return Mathf.Lerp(min2, max2, Mathf.InverseLerp(min1, max1, val));
   }
 
   public MeshFilter meshA, meshB;
 
-  byte[] _imgData;
-  string _path;
-  Texture2D _texture;
-  GUIStyle _style;
+  private byte[] _imgData;
+  private string _path;
+  private Texture2D _texture;
+  private GUIStyle _style;
 }

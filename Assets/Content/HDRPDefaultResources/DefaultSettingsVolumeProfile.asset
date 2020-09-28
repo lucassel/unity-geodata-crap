@@ -142,7 +142,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 11
+    m_Value: 2
   multiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -528,7 +528,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   maxShadowDistance:
     m_OverrideState: 1
-    m_Value: 150
+    m_Value: 39969.9
     min: 0
   directionalTransmissionMultiplier:
     m_OverrideState: 0
@@ -554,7 +554,7 @@ MonoBehaviour:
     m_Value: 0.13333334
   cascadeShadowBorder1:
     m_OverrideState: 1
-    m_Value: 0.06666666
+    m_Value: 0
   cascadeShadowBorder2:
     m_OverrideState: 0
     m_Value: 0
