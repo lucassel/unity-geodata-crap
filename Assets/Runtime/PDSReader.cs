@@ -18,20 +18,15 @@ public class PDSReader : MonoBehaviour
   public bool DrawTexture;
   public Renderer _renderer;
   public bool DrawMesh;
+  public bool DrawChunk;
 
   public int Width;
   public int Height;
   public Material MoonMaterial;
 
-  private void OnValidate()
-  {
-    Configure();
-  }
+  private void OnValidate() => Configure();
 
-  private void Start()
-  {
-    Configure();
-  }
+  private void Start() => Configure();
 
   private void Configure()
   {
@@ -51,7 +46,7 @@ public class PDSReader : MonoBehaviour
 
   public void Build()
   {
-    Data = new PDSData(LabelFile);
+    if (Data == null) Read();
     ReadBinaryFile(LabelFile.name, Data);
   }
 
@@ -233,8 +228,6 @@ public class PDSReader : MonoBehaviour
       }
     }
   }
-
-  public bool DrawChunk;
 
   private static Mesh FlipMesh(Mesh mesh)
   {
