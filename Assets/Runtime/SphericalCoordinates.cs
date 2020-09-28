@@ -6,10 +6,7 @@ using UnityEngine;
 public static class SphericalCoordinates
 {
 
-  static float ConvertToRadians(float angle)
-  {
-    return (float) (Math.PI / 180) * angle;
-  }
+  static float ConvertToRadians(float angle) => (float)(Math.PI / 180) * angle;
   public static Vector3 SphericalToCartesian(float radius, float polar, float elevation)
   {
     polar = ConvertToRadians(polar);

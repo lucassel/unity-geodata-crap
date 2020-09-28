@@ -1,7 +1,7 @@
-﻿using UnityEngine;
-using UnityEngine.Networking;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Networking;
 
 public class TileMapManager : MonoBehaviour
 {
@@ -9,54 +9,48 @@ public class TileMapManager : MonoBehaviour
   public GPS _sessionLocation;
   public bool UseVectorData;
   public bool UseTileMaps = true;
-  int _zoomLevel = 19;
-  float _rotationY;
+  private int _zoomLevel = 19;
+  private float _rotationY;
   public int MapSizeMultiplier;
   public GameObject MapPrefab;
 
-  Vector2 _previousMousePosition;
-  GameObject _mapPrefab;
-  GameObject _userPrefab;
-  string XMLString;
+  private Vector2 _previousMousePosition;
+  private GameObject _mapPrefab;
+  private GameObject _userPrefab;
+  private string XMLString;
   public string DataURL;
-  Vector3 Origin;
-  TilemapRenderer _tilemapdata;
-  Vector2 _originID = new Vector2();
-  List<TilemapRenderer> _tileList = new List<TilemapRenderer>();
-  List<TilemapRenderer> _textureDownloadQueue = new List<TilemapRenderer>();
+  private Vector3 Origin;
+  private TilemapRenderer _tilemapdata;
+  private Vector2 _originID = new Vector2();
+  private List<TilemapRenderer> _tileList = new List<TilemapRenderer>();
+  private List<TilemapRenderer> _textureDownloadQueue = new List<TilemapRenderer>();
   public int TextureDownloadQueueSize = 5;
-  int _textureCounter = 0;
+  //int _textureCounter = 0;
 
-  void Start()
-  {
+  private void Start() =>
     // Include a check for using GPS or Editor/Runtime input
     GPS.OnStart += SpawnSession;
-  }
 
-  void OnDestroy()
-  {
-    GPS.OnStart -= SpawnSession;
-  }
+  private void OnDestroy() => GPS.OnStart -= SpawnSession;
 
-  void SpawnSession()
+  private void SpawnSession()
   {
-    Origin = new Vector3((float) GPS.Instance.Longitude, 0, (float) GPS.Instance.Latitude);
+    Origin = new Vector3((float)GPS.Instance.Longitude, 0, (float)GPS.Instance.Latitude);
     _originID.x = WebTileHelper.Longitude2TileX(GPS.Instance.Longitude, _zoomLevel);
     _originID.y = WebTileHelper.Latitude2TileY(GPS.Instance.Latitude, _zoomLevel);
 
-
     if (MapSizeMultiplier == 0)
-      SpawnTile((int) _originID.x, (int) _originID.y, _zoomLevel, UseVectorData, UseTileMaps);
+      SpawnTile((int)_originID.x, (int)_originID.y, _zoomLevel, UseVectorData, UseTileMaps);
     else
     {
-      for (int x = -MapSizeMultiplier; x < MapSizeMultiplier + 1; x++)
+      for (var x = -MapSizeMultiplier; x < MapSizeMultiplier + 1; x++)
       {
-        for (int y = -MapSizeMultiplier; y < MapSizeMultiplier + 1; y++)
+        for (var y = -MapSizeMultiplier; y < MapSizeMultiplier + 1; y++)
         {
           var idx = _originID.x - x;
           var idy = _originID.y - y;
 
-          SpawnTile((int) idx, (int) idy, _zoomLevel, UseVectorData, UseTileMaps);
+          SpawnTile((int)idx, (int)idy, _zoomLevel, UseVectorData, UseTileMaps);
         }
       }
     }
@@ -65,8 +59,8 @@ public class TileMapManager : MonoBehaviour
     var left_bottom = new Vector2(_originID[0] - MapSizeMultiplier, _originID[1] + MapSizeMultiplier);
     var right_top = new Vector2(_originID[0] + MapSizeMultiplier, _originID[1] - MapSizeMultiplier);
 
-    var LowerLeft = _tileList.Find(tile => tile.IDx == left_bottom.x && tile.IDy == left_bottom.y);
-    var UpperRight = _tileList.Find(tile => tile.IDx == right_top.x && tile.IDy == right_top.y);
+    TilemapRenderer LowerLeft = _tileList.Find(tile => tile.IDx == left_bottom.x && tile.IDy == left_bottom.y);
+    TilemapRenderer UpperRight = _tileList.Find(tile => tile.IDx == right_top.x && tile.IDy == right_top.y);
 
     /*
     Debug.Log("lower left is " + LowerLeft.Name);
@@ -86,31 +80,22 @@ public class TileMapManager : MonoBehaviour
     }
   }
 
-
-  void SpawnTile(int x, int y, int zoom, bool useVector, bool useTileMap)
+  private void SpawnTile(int x, int y, int zoom, bool useVector, bool useTileMap)
   {
     var tile = Instantiate(MapPrefab, transform) as GameObject;
-    var data = tile.GetComponent<TilemapRenderer>();
+    TilemapRenderer data = tile.GetComponent<TilemapRenderer>();
     _tileList.Add(data);
     data.InitializeTile(x, y, _zoomLevel, Origin);
     tile.name = data.Name;
   }
 
+  private void CheckTilesComplete() => Debug.Log("Tile Complete");
 
-  void CheckTilesComplete()
-  {
-    Debug.Log("Tile Complete");
-  }
-
-
-  public void DataDownload()
-  {
-    StartCoroutine("DownloadData");
-  }
+  public void DataDownload() => StartCoroutine("DownloadData");
 
   public IEnumerator DownloadData()
   {
-    using (UnityWebRequest www = UnityWebRequest.Get(DataURL))
+    using (var www = UnityWebRequest.Get(DataURL))
     {
       Debug.Log("attempting download");
       yield return www.SendWebRequest();

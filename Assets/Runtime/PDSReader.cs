@@ -23,6 +23,12 @@ public class PDSReader : MonoBehaviour
   public int Width;
   public int Height;
   public Material MoonMaterial;
+  public MeshFilter meshA, meshB;
+
+  private byte[] _imgData;
+  private string _path;
+  private Texture2D _texture;
+  private GUIStyle _style;
 
   private void OnValidate() => Configure();
 
@@ -105,17 +111,6 @@ public class PDSReader : MonoBehaviour
             Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f, 1f, 1f));
         }
       }
-    }
-  }
-
-  private void OnGUI()
-  {
-    if (Data != null)
-    {
-      GUI.Label(new Rect(20, 40, 100, 20), $"File: {Data.DatasetID}", _style);
-      GUI.Label(new Rect(20, 90, 100, 20), $"Resolution: {Data.MapResolution} pixels/degree", _style);
-      GUI.Label(new Rect(20, 140, 100, 20), $"Sample bits: {Data.SampleBits} bit depth", _style);
-      GUI.Label(new Rect(20, 190, 100, 20), $"Sample type: {Data.SampleType}", _style);
     }
   }
 
@@ -248,15 +243,16 @@ public class PDSReader : MonoBehaviour
     return mesh;
   }
 
-  private static float RemapValue(float val, float min1, float max1, float min2, float max2)
+  private static float RemapValue(float val, float min1, float max1, float min2, float max2) => Mathf.Lerp(min2, max2, Mathf.InverseLerp(min1, max1, val));
+
+  private void OnGUI()
   {
-    return Mathf.Lerp(min2, max2, Mathf.InverseLerp(min1, max1, val));
+    if (Data != null)
+    {
+      GUI.Label(new Rect(20, 40, 100, 20), $"File: {Data.DatasetID}", _style);
+      GUI.Label(new Rect(20, 90, 100, 20), $"Resolution: {Data.MapResolution} pixels/degree", _style);
+      GUI.Label(new Rect(20, 140, 100, 20), $"Sample bits: {Data.SampleBits} bit depth", _style);
+      GUI.Label(new Rect(20, 190, 100, 20), $"Sample type: {Data.SampleType}", _style);
+    }
   }
-
-  public MeshFilter meshA, meshB;
-
-  private byte[] _imgData;
-  private string _path;
-  private Texture2D _texture;
-  private GUIStyle _style;
 }

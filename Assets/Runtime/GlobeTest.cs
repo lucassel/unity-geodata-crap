@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
-
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
@@ -23,38 +19,28 @@ public class GlobeTest : MonoBehaviour
   public bool DrawIndices;
   public bool DrawGrids;
 
-  MeshFilter mf;
+  private MeshFilter mf;
 
+  private void Start() => Configure();
 
-  void Start()
-  {
-    Configure();
-  }
+  private void OnEnable() => Configure();
 
-  void OnEnable()
-  {
-    Configure();
-  }
-
-
-  void Configure()
+  private void Configure()
   {
     mf = GetComponent<MeshFilter>();
     FillCoords();
     CalculatePoints();
   }
 
-
-  void FillCoords()
+  private void FillCoords()
   {
     points = new Vector3[37, 19];
     pointsSphere = new Vector3[37, 19];
     pointsReal = new Vector3[37, 19];
 
-
-    for (int x = 0; x < 361; x += 10)
+    for (var x = 0; x < 361; x += 10)
     {
-      for (int y = 0; y < 181; y += 10)
+      for (var y = 0; y < 181; y += 10)
       {
         var pos = new Vector2(x - 180, y - 90);
         points[x / 10, y / 10] = pos;
@@ -64,15 +50,14 @@ public class GlobeTest : MonoBehaviour
     }
   }
 
-
   public Mesh MakeMesh()
   {
     var m = new Mesh();
     var verts = new List<Vector3>();
     var triangles = new List<int>();
-    for (int y = 0; y < pointsReal.GetLength(1) - 1; y++)
+    for (var y = 0; y < pointsReal.GetLength(1) - 1; y++)
     {
-      for (int x = 0; x < pointsReal.GetLength(0) - 1; x++)
+      for (var x = 0; x < pointsReal.GetLength(0) - 1; x++)
       {
         verts.Add(pointsReal[x, y]);
         verts.Add(pointsReal[x, y + 1]);
@@ -89,33 +74,30 @@ public class GlobeTest : MonoBehaviour
       }
     }
 
-
     m.SetVertices(verts);
     m.SetTriangles(triangles.ToArray(), 0);
 
     m.RecalculateTangents();
     m.RecalculateNormals();
 
-
     return m;
   }
 
-  void CalculatePoints()
+  private void CalculatePoints()
   {
-    for (int i = 0; i < points.GetLength(0); i++)
+    for (var i = 0; i < points.GetLength(0); i++)
     {
-      for (int j = 0; j < points.GetLength(1); j++)
+      for (var j = 0; j < points.GetLength(1); j++)
       {
         pointsReal[i, j] = Vector3.Lerp(points[i, j], pointsSphere[i, j], Lerp);
       }
     }
   }
 
-
-  void Update()
+  private void Update()
   {
     CalculatePoints();
-    var m = SphereMeshGenerator.GenerateTerrainMesh(pointsReal);
+    MeshData m = SphereMeshGenerator.GenerateTerrainMesh(pointsReal);
     mf.sharedMesh = m.CreateMesh();
     //for (int i = 0; i < 18; i++)
     {
@@ -128,13 +110,13 @@ public class GlobeTest : MonoBehaviour
     //mf.sharedMesh= m;
   }
 
-  void OnDrawGizmos()
+  private void OnDrawGizmos()
   {
     Gizmos.color = Color.white;
 
-    for (int i = 0; i < pointsReal.GetLength(0); i++)
+    for (var i = 0; i < pointsReal.GetLength(0); i++)
     {
-      for (int j = 0; j < pointsReal.GetLength(1); j++)
+      for (var j = 0; j < pointsReal.GetLength(1); j++)
       {
         if (DrawGrids)
         {
@@ -151,7 +133,6 @@ public class GlobeTest : MonoBehaviour
         }
       }
     }
-
 
     Gizmos.color = Color.white;
     if (Cartesian)

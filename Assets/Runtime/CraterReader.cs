@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO.Compression;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Newtonsoft.Json.Linq;
-using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
-
 
 [Serializable]
 public class Crater
@@ -19,11 +15,7 @@ public class Crater
   public Vector3 Cartesian;
   public Vector3 Position;
 
-
-  public Vector3 AsTopDown(Vector3 Offset, float multiplier)
-  {
-    return new Vector3(Cartesian.x * multiplier, Cartesian.z, Cartesian.y * multiplier) + Offset;
-  }
+  public Vector3 AsTopDown(Vector3 Offset, float multiplier) => new Vector3(Cartesian.x * multiplier, Cartesian.z, Cartesian.y * multiplier) + Offset;
 
   public Crater(string name, float diameter, float longitude, float latitude, float sphereRadius)
   {
@@ -34,16 +26,9 @@ public class Crater
     Cartesian = new Vector3(Longitude, Latitude, 0f);
   }
 
-  public Vector3 AsSpherical(float radius, Vector3 offset)
-  {
-    return SphericalCoordinates.SphericalToCartesian(radius, Longitude, Latitude) + offset;
-  }
+  public Vector3 AsSpherical(float radius, Vector3 offset) => SphericalCoordinates.SphericalToCartesian(radius, Longitude, Latitude) + offset;
 
-
-  public void UpdatePosition(Vector3 pos)
-  {
-    Position = pos;
-  }
+  public void UpdatePosition(Vector3 pos) => Position = pos;
 }
 
 public enum PlaneOrientation
@@ -52,12 +37,11 @@ public enum PlaneOrientation
   XZ
 }
 
-
 public class CraterReader : MonoBehaviour
 {
   public TextAsset CraterData;
   public float DiameterThreshold = 50f;
-  List<Crater> CraterListFull;
+  private List<Crater> CraterListFull;
 
   public List<Crater> CraterList;
 
@@ -67,17 +51,15 @@ public class CraterReader : MonoBehaviour
   public float Radius = 90f;
   public Vector3 Offset = new Vector3(3600f / 2f, 0f, 1800f / 2f);
   public float Multiplier = 10f;
-  GUIStyle _style;
+  private GUIStyle _style;
 
-
-  List<Crater> GetCratersByDiameter(float threshold)
+  private List<Crater> GetCratersByDiameter(float threshold)
   {
     var list = CraterListFull.Where(x => x.Diameter > threshold).ToList();
     return list;
   }
 
-
-  void OnValidate()
+  private void OnValidate()
   {
     if (CraterListFull == null)
     {
@@ -92,13 +74,12 @@ public class CraterReader : MonoBehaviour
     CraterList = GetCratersByDiameter(DiameterThreshold);
   }
 
-
   // Start is called before the first frame update
   public void Configure()
   {
     CraterListFull = new List<Crater>();
     var arr = JArray.Parse(CraterData.text);
-    for (int i = 0; i < arr.Count; i++)
+    for (var i = 0; i < arr.Count; i++)
     {
       var craterName = arr[i]["1. Crater name "].ToString();
       var craterDiameter = float.Parse(arr[i]["2. Diameter [km]"].ToString());
@@ -107,16 +88,18 @@ public class CraterReader : MonoBehaviour
       CraterListFull.Add(new Crater(craterName, craterDiameter, lon, lat, Radius));
     }
 
-    _style = new GUIStyle();
-    _style.fontSize = 24;
+    _style = new GUIStyle
+    {
+      fontSize = 24
+    };
     _style.normal.textColor = Color.red;
   }
 
-  void Update()
+  private void Update()
   {
     if (CraterList != null)
     {
-      for (int i = 0; i < CraterList.Count; i++)
+      for (var i = 0; i < CraterList.Count; i++)
       {
         CraterList[i]
           .UpdatePosition(Vector3.Lerp(CraterList[i].Cartesian, CraterList[i].AsSpherical(Radius, Offset), Lerp));
@@ -124,26 +107,18 @@ public class CraterReader : MonoBehaviour
     }
   }
 
-
-  void OnDrawGizmosSelected()
+  private void OnDrawGizmosSelected()
   {
     if (CraterList != null)
     {
-      for (int i = 0; i < CraterList.Count; i++)
+      for (var i = 0; i < CraterList.Count; i++)
       {
         if (i == selection)
         {
           Gizmos.color = Color.red;
         }
 
-        if (CraterList[i].Name == "Tycho")
-        {
-          Gizmos.color = Color.green;
-        }
-        else
-        {
-          Gizmos.color = Color.white;
-        }
+        Gizmos.color = CraterList[i].Name == "Tycho" ? Color.green : Color.white;
 
         switch (PlaneOrientation)
         {
@@ -152,6 +127,7 @@ public class CraterReader : MonoBehaviour
               Vector3.Lerp(CraterList[i].Cartesian, CraterList[i].AsSpherical(Radius, Offset), Lerp),
               .009f * CraterList[i].Diameter * 2);
             break;
+
           case PlaneOrientation.XZ:
             Gizmos.DrawWireSphere(
               Vector3.Lerp(CraterList[i].AsTopDown(Offset, Multiplier), CraterList[i].AsSpherical(Radius, Offset),

@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using Newtonsoft.Json.Converters;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using Random = System.Random;
 
 [ExecuteInEditMode]
 public class CraterUI : MonoBehaviour
@@ -19,10 +13,12 @@ public class CraterUI : MonoBehaviour
 
   public bool CullWithPlane;
 
-  void Start()
+  private void Start()
   {
-    _style = new GUIStyle();
-    _style.fontSize = 28;
+    _style = new GUIStyle
+    {
+      fontSize = 28
+    };
     _style.normal.textColor = new Color(1f, 0f, 0f, alpha);
     _boxStyle = new GUIStyle();
     _tex = MakeTex(2, 2, new Color(1f, 0f, 0f, alpha));
@@ -30,24 +26,22 @@ public class CraterUI : MonoBehaviour
     //_boxStyle.normal.background = MakeTex(2, 2, new Color(1f, 0f, 0f, alpha));
   }
 
-
-  Texture2D MakeTex(int width, int height, Color col)
+  private Texture2D MakeTex(int width, int height, Color col)
   {
-    Color[] pix = new Color[width * height];
-    for (int i = 0; i < pix.Length; ++i)
+    var pix = new Color[width * height];
+    for (var i = 0; i < pix.Length; ++i)
     {
       pix[i] = col;
     }
 
-    Texture2D result = new Texture2D(width, height);
+    var result = new Texture2D(width, height);
     result.SetPixels(pix);
     result.Apply();
     return result;
   }
 
-
   // Update is called once per frame
-  void Update()
+  private void Update()
   {
     if (AutoPlay)
     {
@@ -55,17 +49,15 @@ public class CraterUI : MonoBehaviour
     }
   }
 
-
   private void OnDrawGizmos()
   {
     _moonPosition = CraterReader.transform.position;
     _cameraPosition = cam.transform.position;
     _cameraNormal = (_moonPosition - _cameraPosition).normalized;
 
-
     _plane = new Plane(_cameraNormal, 0f);
     Gizmos.color = Color.red;
-    foreach (var c in scannedCraters)
+    foreach (Crater c in scannedCraters)
     {
       Gizmos.DrawWireSphere(c.Position, 1f);
     }
@@ -76,14 +68,13 @@ public class CraterUI : MonoBehaviour
     }
   }
 
-
-  void OnGUI()
+  private void OnGUI()
   {
     if (CullWithPlane)
     {
-      var craterpos = CraterReader.transform.position;
-      var campos = cam.transform.position;
-      var normal = (craterpos - campos).normalized;
+      Vector3 craterpos = CraterReader.transform.position;
+      Vector3 campos = cam.transform.position;
+      Vector3 normal = (craterpos - campos).normalized;
       _plane = new Plane(normal, 0f);
     }
 
@@ -95,7 +86,7 @@ public class CraterUI : MonoBehaviour
     }
 
     scannedCraters.Clear();
-    foreach (var c in CraterReader.CraterList)
+    foreach (Crater c in CraterReader.CraterList)
     {
       if (CullWithPlane)
       {
@@ -109,7 +100,7 @@ public class CraterUI : MonoBehaviour
         }
       }
 
-      var p = cam.WorldToScreenPoint(c.AsTopDown(CraterReader.Offset, CraterReader.Multiplier));
+      Vector3 p = cam.WorldToScreenPoint(c.AsTopDown(CraterReader.Offset, CraterReader.Multiplier));
       var scan = Mathf.Lerp(0, Screen.height, Scanline);
       GUI.Box(new Rect(0, Screen.height - scan, Screen.width, 8), _tex, _boxStyle);
       if (p.y > scan)
@@ -122,16 +113,16 @@ public class CraterUI : MonoBehaviour
     }
   }
 
-  GUIStyle _style;
-  GUIStyle _boxStyle;
-  Texture _tex;
-  int BoxSize = 10;
-  float alpha = .666f;
+  private GUIStyle _style;
+  private GUIStyle _boxStyle;
+  private Texture _tex;
+  private int BoxSize = 10;
+  private float alpha = .666f;
 
-  List<Crater> scannedCraters = new List<Crater>();
-  Plane _plane;
-  Vector3 _cameraPosition;
-  Vector3 _cameraNormal;
-  Vector3 _moonPosition;
-  Crater _currentCrater;
+  private List<Crater> scannedCraters = new List<Crater>();
+  private Plane _plane;
+  private Vector3 _cameraPosition;
+  private Vector3 _cameraNormal;
+  private Vector3 _moonPosition;
+  private Crater _currentCrater;
 }

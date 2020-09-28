@@ -1,8 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+using UnityEngine;
 using UnityEngine.Networking;
 using static WebTileHelper;
 
@@ -14,7 +12,6 @@ public class Tilemap
   public int Z;
 }
 
-
 [RequireComponent(typeof(MeshRenderer), typeof(MeshFilter))]
 public class TilemapRenderer : MonoBehaviour
 {
@@ -24,16 +21,16 @@ public class TilemapRenderer : MonoBehaviour
   public int Zoom = 19;
   public string Name;
   public Vector3 Offset;
-  Vector3 LeftBottom { get; set; }
-  Vector3 LeftTop { get; set; }
-  Vector3 RightTop { get; set; }
-  Vector3 RightBottom { get; set; }
+  private Vector3 LeftBottom { get; set; }
+  private Vector3 LeftTop { get; set; }
+  private Vector3 RightTop { get; set; }
+  private Vector3 RightBottom { get; set; }
 
-  BoundingBox BoundingBox;
+  private BoundingBox BoundingBox;
 
   public string ImageURL;
 
-  void Awake()
+  private void Awake()
   {
     _meshRenderer = GetComponent<MeshRenderer>();
     _meshFilter = GetComponent<MeshFilter>();
@@ -41,7 +38,7 @@ public class TilemapRenderer : MonoBehaviour
     TextureTile();
   }
 
-  void Configure()
+  private void Configure()
   {
     BoundingBox = Tile2BoundingBox(IDx, IDy, Zoom);
     CalculateVertices(BoundingBox);
@@ -58,58 +55,63 @@ public class TilemapRenderer : MonoBehaviour
     Configure();
   }
 
-  void TextureTile()
+  private void TextureTile()
   {
     ConstructMesh();
     StartCoroutine(DownloadWebmapTile());
   }
 
-
   public BoundingBox Tile2BoundingBox(int x, int y, int zoom)
   {
-    var bb = new BoundingBox();
-    bb.North = Tile2Lat(y, zoom);
-    bb.South = Tile2Lat(y + 1, zoom);
-    bb.West = Tile2Lon(x, zoom);
-    bb.East = Tile2Lon(x + 1, zoom);
+    var bb = new BoundingBox
+    {
+      North = Tile2Lat(y, zoom),
+      South = Tile2Lat(y + 1, zoom),
+      West = Tile2Lon(x, zoom),
+      East = Tile2Lon(x + 1, zoom)
+    };
     return bb;
   }
 
   public void CalculateVertices(BoundingBox box)
   {
-    LeftBottom = new Vector3((float) (MercatorProjection.lonToX(box.West)), 0,
-      (float) (MercatorProjection.latToY(box.South)));
-    LeftTop = new Vector3((float) (MercatorProjection.lonToX(box.West)), 0,
-      (float) (MercatorProjection.latToY(box.North)));
-    RightBottom = new Vector3((float) (MercatorProjection.lonToX(box.East)), 0,
-      (float) (MercatorProjection.latToY(box.South)));
-    RightTop = new Vector3((float) (MercatorProjection.lonToX(box.East)), 0,
-      (float) (MercatorProjection.latToY(box.North)));
+    LeftBottom = new Vector3((float)(MercatorProjection.lonToX(box.West)), 0,
+      (float)(MercatorProjection.latToY(box.South)));
+    LeftTop = new Vector3((float)(MercatorProjection.lonToX(box.West)), 0,
+      (float)(MercatorProjection.latToY(box.North)));
+    RightBottom = new Vector3((float)(MercatorProjection.lonToX(box.East)), 0,
+      (float)(MercatorProjection.latToY(box.South)));
+    RightTop = new Vector3((float)(MercatorProjection.lonToX(box.East)), 0,
+      (float)(MercatorProjection.latToY(box.North)));
   }
 
   public void ConstructMesh()
   {
     var mesh = new Mesh();
-    var vertices = new List<Vector3>();
-    vertices.Add(Vector3.zero);
-    vertices.Add(RightBottom - LeftBottom);
-    vertices.Add(LeftTop - LeftBottom);
-    vertices.Add(RightTop - LeftBottom);
+    var vertices = new List<Vector3>
+    {
+      Vector3.zero,
+      RightBottom - LeftBottom,
+      LeftTop - LeftBottom,
+      RightTop - LeftBottom
+    };
 
     var tri = new int[6];
-    //  Lower left triangle.
+    // Lower left triangle.
     tri[0] = 0;
     tri[1] = 2;
     tri[2] = 1;
-    //  Upper right triangle.
+    // Upper right triangle.
     tri[3] = 2;
     tri[4] = 3;
     tri[5] = 1;
-    var uv = new List<Vector2>();
-    uv.Add(new Vector2(0, 0));
-    uv.Add(new Vector2(1, 0));
-    uv.Add(new Vector2(0, 1));
-    uv.Add(new Vector2(1, 1));
+    var uv = new List<Vector2>
+    {
+      new Vector2(0, 0),
+      new Vector2(1, 0),
+      new Vector2(0, 1),
+      new Vector2(1, 1)
+    };
 
     mesh.SetVertices(vertices);
     mesh.SetTriangles(tri, 0);
@@ -117,7 +119,6 @@ public class TilemapRenderer : MonoBehaviour
     mesh.RecalculateNormals();
     _meshFilter.sharedMesh = mesh;
   }
-
 
   public IEnumerator DownloadWebmapTile()
   {
@@ -139,7 +140,6 @@ public class TilemapRenderer : MonoBehaviour
     }
   }
 
-
-  MeshFilter _meshFilter;
-  MeshRenderer _meshRenderer;
+  private MeshFilter _meshFilter;
+  private MeshRenderer _meshRenderer;
 }
