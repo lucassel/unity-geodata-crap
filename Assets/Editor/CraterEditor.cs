@@ -1,22 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(CraterReader))]
 public class CraterEditor : Editor
 {
-  GUIStyle _style;
-  CraterReader reader;
+  private GUIStyle _style;
+  private CraterReader reader;
 
-  void OnEnable()
+  private void OnEnable()
   {
-    _style = new GUIStyle();
-    _style.fontSize = 18;
+    _style = new GUIStyle
+    {
+      fontSize = 18
+    };
     _style.normal.textColor = Color.red;
-    reader = (CraterReader) target;
+    reader = (CraterReader)target;
   }
-
 
   public override void OnInspectorGUI()
   {
@@ -27,7 +26,6 @@ public class CraterEditor : Editor
 
     base.OnInspectorGUI();
   }
-
 
   public void OnSceneGUI()
   {
@@ -40,7 +38,7 @@ public class CraterEditor : Editor
 
       if (reader.CraterList[reader.selection] != null)
       {
-        var pos = Vector3.zero;
+        Vector3 pos = Vector3.zero;
         switch (reader.PlaneOrientation)
         {
           case PlaneOrientation.XY:
