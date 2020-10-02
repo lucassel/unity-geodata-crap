@@ -26,10 +26,7 @@ public class GlobeTest : MonoBehaviour
 
   private void OnEnable() => Configure();
 
-  private void Configure()
-  {
-    mf = GetComponent<MeshFilter>();
-  }
+  private void Configure() => mf = GetComponent<MeshFilter>();
 
   private Vector3[,] CreateCoordinates(PlaneOrientation orientation, float radius, float lerp)
   {
@@ -38,7 +35,9 @@ public class GlobeTest : MonoBehaviour
     {
       for (var y = 0; y < 181; y += 10)
       {
+        var offset = new Vector2(Radius * 2, Radius);
         var pos = new Vector2(x - 180, y - 90);
+
         coords[x / 10, y / 10] = new GeoCoord(pos, Orientation, Radius);
       }
     }
