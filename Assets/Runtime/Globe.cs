@@ -24,7 +24,11 @@ public class Globe : MonoBehaviour
 
   private void OnEnable() => Configure();
 
-  private void Configure() => mf = GetComponent<MeshFilter>();
+  private void Configure()
+  {
+    mf = GetComponent<MeshFilter>();
+    CreateCoordinates(Orientation, Radius, Lerp);
+  }
 
   private Vector3[,] CreateCoordinates(PlaneOrientation orientation, float radius, float lerp)
   {
@@ -62,6 +66,9 @@ public class Globe : MonoBehaviour
   {
     Gizmos.color = Color.white;
     Gizmos.matrix = transform.localToWorldMatrix;
+
+    if (pointsReal == null)
+      return;
 
     for (var i = 0; i < pointsReal.GetLength(0); i++)
     {

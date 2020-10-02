@@ -1,7 +1,8 @@
 {
     "name": "Lucy.Geodata.Runtime",
     "references": [
-        "GUID:5fd5d0dfa7c9cdc498c963c8d2ff60e6"
+        "GUID:5fd5d0dfa7c9cdc498c963c8d2ff60e6",
+        "GUID:9a73168161c74194a877181a9b86bb38"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -10,5 +11,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": []
+    "versionDefines": [],
+    "noEngineReferences": false
 }
