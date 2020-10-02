@@ -1,31 +1,29 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(GlobeTest))]
 public class GlobeEditor : Editor
 {
+  private GlobeTest sphere;
+  private GUIStyle _style;
 
-  GlobeTest sphere;
-  GUIStyle _style;
-  void OnEnable()
+  private void OnEnable()
   {
-    _style = new GUIStyle();
-    _style.fontSize = 8;
+    _style = new GUIStyle
+    {
+      fontSize = 8,
+    };
     _style.normal.textColor = Color.white;
-    sphere = (GlobeTest) target;
+    sphere = (GlobeTest)target;
   }
 
   public void OnSceneGUI()
   {
-
     if (sphere.pointsReal != null)
     {
-      for (int x = 0; x < sphere.pointsReal.GetLength(0); x++)
+      for (var x = 0; x < sphere.pointsReal.GetLength(0); x++)
       {
-        for (int y = 0; y < sphere.pointsReal.GetLength(1); y++)
+        for (var y = 0; y < sphere.pointsReal.GetLength(1); y++)
         {
           if (sphere.DrawCoords)
           {

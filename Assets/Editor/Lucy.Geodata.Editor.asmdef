@@ -1,7 +1,8 @@
 {
-    "name": "Lucy.Geodata;Editor",
+    "name": "Lucy.Geodata.Editor",
     "references": [
-        "GUID:527e273b913ff4a09919c23aaecd2473"
+        "GUID:527e273b913ff4a09919c23aaecd2473",
+        "GUID:e2699e74b07e7e34eb1f095ecd892d08"
     ],
     "includePlatforms": [
         "Editor"
@@ -12,5 +13,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": []
+    "versionDefines": [],
+    "noEngineReferences": false
 }

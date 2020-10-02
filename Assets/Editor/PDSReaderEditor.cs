@@ -1,19 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(PDSReader))]
 public class PDSReaderEditor : Editor
 {
-  PDSReader reader;
+  private PDSReader reader;
 
-
-  // Start is called before the first frame update
-  void OnEnable()
-  {
-    reader = (PDSReader) target;
-  }
+  private void OnEnable() => reader = (PDSReader)target;
 
   public override void OnInspectorGUI()
   {
@@ -24,12 +17,13 @@ public class PDSReaderEditor : Editor
 
     if (GUILayout.Button("Build"))
     {
+      EditorHelper.DeleteChildren(reader.gameObject);
       reader.Build();
     }
 
     if (GUILayout.Button("Clear"))
     {
-      reader.GetComponent<MeshFilter>().sharedMesh = new Mesh();
+      EditorHelper.DeleteChildren(reader.gameObject);
     }
 
     base.OnInspectorGUI();

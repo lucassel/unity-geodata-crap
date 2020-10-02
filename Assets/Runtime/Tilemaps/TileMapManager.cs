@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -20,10 +21,10 @@ public class TileMapManager : MonoBehaviour
   private string XMLString;
   public string DataURL;
   private Vector3 Origin;
-  private TilemapRenderer _tilemapdata;
+  private WebTileRenderer _tilemapdata;
   private Vector2 _originID = new Vector2();
-  private List<TilemapRenderer> _tileList = new List<TilemapRenderer>();
-  private List<TilemapRenderer> _textureDownloadQueue = new List<TilemapRenderer>();
+  private List<WebTileRenderer> _tileList = new List<WebTileRenderer>();
+  private List<WebTileRenderer> _textureDownloadQueue = new List<WebTileRenderer>();
   public int TextureDownloadQueueSize = 5;
   //int _textureCounter = 0;
 
@@ -59,8 +60,8 @@ public class TileMapManager : MonoBehaviour
     var left_bottom = new Vector2(_originID[0] - MapSizeMultiplier, _originID[1] + MapSizeMultiplier);
     var right_top = new Vector2(_originID[0] + MapSizeMultiplier, _originID[1] - MapSizeMultiplier);
 
-    TilemapRenderer LowerLeft = _tileList.Find(tile => tile.IDx == left_bottom.x && tile.IDy == left_bottom.y);
-    TilemapRenderer UpperRight = _tileList.Find(tile => tile.IDx == right_top.x && tile.IDy == right_top.y);
+    WebTileRenderer LowerLeft = _tileList.Find(tile => tile.IDx == left_bottom.x && tile.IDy == left_bottom.y);
+    WebTileRenderer UpperRight = _tileList.Find(tile => tile.IDx == right_top.x && tile.IDy == right_top.y);
 
     /*
     Debug.Log("lower left is " + LowerLeft.Name);
@@ -83,7 +84,7 @@ public class TileMapManager : MonoBehaviour
   private void SpawnTile(int x, int y, int zoom, bool useVector, bool useTileMap)
   {
     var tile = Instantiate(MapPrefab, transform) as GameObject;
-    TilemapRenderer data = tile.GetComponent<TilemapRenderer>();
+    WebTileRenderer data = tile.GetComponent<WebTileRenderer>();
     _tileList.Add(data);
     data.InitializeTile(x, y, _zoomLevel, Origin);
     tile.name = data.Name;

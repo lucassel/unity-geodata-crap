@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Networking;
+
 using static WebTileHelper;
 
 [System.Serializable]
@@ -13,7 +15,7 @@ public class Tilemap
 }
 
 [RequireComponent(typeof(MeshRenderer), typeof(MeshFilter))]
-public class TilemapRenderer : MonoBehaviour
+public class WebTileRenderer : MonoBehaviour
 {
   public Tilemap Tilemap;
   public int IDx = 267580;
