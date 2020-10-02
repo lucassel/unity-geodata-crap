@@ -15,6 +15,7 @@ public enum MoonType { texture, mesh, quads }
 public class PDSReader : MonoBehaviour
 {
   public MoonType SpawnType;
+  public PlaneOrientation Orientation;
   public PDSData Data;
   public TextAsset LabelFile;
 
@@ -86,7 +87,7 @@ public class PDSReader : MonoBehaviour
     MeshRenderer mr = plane.GetComponent<MeshRenderer>();
     mr.sharedMaterial = MoonMaterial;
     MeshFilter mf = plane.GetComponent<MeshFilter>();
-    mf.sharedMesh = PlaneMeshGenerator.CreatePreviewMesh(new Vector3(Width * -0.5f, 0f, Height * -0.5f), new Vector3(Width * .5f, 0f, Height * .5f));
+    mf.sharedMesh = PlaneMeshGenerator.CreatePlaneMesh(new Vector2(Width * -0.5f, Height * -0.5f), new Vector2(Width * .5f, Height * .5f), Orientation);
 
     var width = floatDataDimensional.GetLength(0);
     var height = floatDataDimensional.GetLength(1);

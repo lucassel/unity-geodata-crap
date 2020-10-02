@@ -22,6 +22,7 @@ public class GlobeTest : MonoBehaviour
   public bool DrawGrids;
 
   private MeshFilter mf;
+  private Vector3 _pos;
 
   private void Start() => Configure();
 
@@ -115,7 +116,7 @@ public class GlobeTest : MonoBehaviour
   private void OnDrawGizmos()
   {
     Gizmos.color = Color.white;
-
+    Gizmos.matrix = transform.localToWorldMatrix;
     for (var i = 0; i < pointsReal.GetLength(0); i++)
     {
       for (var j = 0; j < pointsReal.GetLength(1); j++)
@@ -145,5 +146,6 @@ public class GlobeTest : MonoBehaviour
       Gizmos.DrawLine(new Vector3(-180, 90, 0), new Vector3(-180, -90, 0));
       Gizmos.DrawLine(new Vector3(180, 90, 0), new Vector3(180, -90, 0));
     }
+    Gizmos.matrix = Matrix4x4.identity;
   }
 }
