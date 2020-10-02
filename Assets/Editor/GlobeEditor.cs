@@ -1,10 +1,10 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(GlobeTest))]
+[CustomEditor(typeof(Globe))]
 public class GlobeEditor : Editor
 {
-  private GlobeTest sphere;
+  private Globe sphere;
   private GUIStyle _style;
 
   private void OnEnable()
@@ -14,7 +14,7 @@ public class GlobeEditor : Editor
       fontSize = 8,
     };
     _style.normal.textColor = Color.white;
-    sphere = (GlobeTest)target;
+    sphere = (Globe)target;
   }
 
   public void OnSceneGUI()
@@ -27,7 +27,7 @@ public class GlobeEditor : Editor
         {
           if (sphere.DrawCoords)
           {
-            Handles.Label(sphere.pointsReal[x, y], sphere.coords[x, y].coordinate.ToString(), _style);
+            Handles.Label(sphere.pointsReal[x, y], sphere.coords[x, y].polarCoordinate.ToString(), _style);
           }
 
           if (sphere.DrawIndices)
