@@ -29,10 +29,9 @@ public class GlobeTest : MonoBehaviour
   private void Configure()
   {
     mf = GetComponent<MeshFilter>();
-    CreateCoordinates();
   }
 
-  private void CreateCoordinates()
+  private Vector3[,] CreateCoordinates(PlaneOrientation orientation, float radius, float lerp)
   {
     coords = new GeoCoord[37, 19];
     for (var x = 0; x < 361; x += 10)
@@ -43,10 +42,6 @@ public class GlobeTest : MonoBehaviour
         coords[x / 10, y / 10] = new GeoCoord(pos, Orientation, Radius);
       }
     }
-  }
-
-  private Vector3[,] UpdateCoords(GeoCoord[,] coords, PlaneOrientation orientation, float radius, float lerp)
-  {
     var pts = new Vector3[coords.GetLength(0), coords.GetLength(1)];
     for (var x = 0; x < coords.GetLength(0); x++)
     {
@@ -61,7 +56,7 @@ public class GlobeTest : MonoBehaviour
 
   private void Update()
   {
-    pointsReal = UpdateCoords(coords, Orientation, Radius, Lerp);
+    pointsReal = CreateCoordinates(Orientation, Radius, Lerp);
     MeshData m = SphereMeshGenerator.GenerateTerrainMesh(pointsReal);
     mf.sharedMesh = m.CreateMesh();
   }
@@ -94,11 +89,11 @@ public class GlobeTest : MonoBehaviour
     Gizmos.color = Color.white;
     if (Cartesian)
     {
-      Gizmos.DrawLine(new Vector3(-180, 90, 0), new Vector3(180, 90, 0));
-      Gizmos.DrawLine(new Vector3(-180, -90, 0), new Vector3(180, -90, 0));
+      Gizmos.DrawLine(new Vector3(-Radius * 2f, Radius, 0), new Vector3(Radius * 2f, Radius, 0));
+      Gizmos.DrawLine(new Vector3(-Radius * 2f, -Radius, 0), new Vector3(Radius * 2f, -Radius, 0));
 
-      Gizmos.DrawLine(new Vector3(-180, 90, 0), new Vector3(-180, -90, 0));
-      Gizmos.DrawLine(new Vector3(180, 90, 0), new Vector3(180, -90, 0));
+      Gizmos.DrawLine(new Vector3(-Radius * 2f, Radius, 0), new Vector3(-Radius * 2f, -Radius, 0));
+      Gizmos.DrawLine(new Vector3(Radius * 2f, Radius, 0), new Vector3(Radius * 2f, -Radius, 0));
     }
     Gizmos.matrix = Matrix4x4.identity;
   }
