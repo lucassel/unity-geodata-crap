@@ -27,7 +27,7 @@ public class GlobeEditor : Editor
         {
           if (sphere.DrawCoords)
           {
-            Handles.Label(sphere.pointsReal[x, y], sphere.points[x, y].ToString(), _style);
+            Handles.Label(sphere.pointsReal[x, y], sphere.coords[x, y].coordinate.ToString(), _style);
           }
 
           if (sphere.DrawIndices)

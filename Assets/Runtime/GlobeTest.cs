@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-using UnityEngine;
+﻿using UnityEngine;
 
 using Vector3 = UnityEngine.Vector3;
 
@@ -10,9 +8,9 @@ public class GlobeTest : MonoBehaviour
 {
   //int xSize = 36;
   //int ySize = 18;
+  public GeoCoord[,] coords;
 
-  public Vector3[,] points;
-  public Vector3[,] pointsSphere;
+  public PlaneOrientation Orientation;
   public Vector3[,] pointsReal;
   [Range(0f, 1f)] public float Lerp;
   [Range(0, 1000)] public float Radius = 100;
@@ -31,92 +29,48 @@ public class GlobeTest : MonoBehaviour
   private void Configure()
   {
     mf = GetComponent<MeshFilter>();
-    FillCoords();
-    CalculatePoints();
+    CreateCoordinates();
   }
 
-  private void FillCoords()
+  private void CreateCoordinates()
   {
-    points = new Vector3[37, 19];
-    pointsSphere = new Vector3[37, 19];
-    pointsReal = new Vector3[37, 19];
-
+    coords = new GeoCoord[37, 19];
     for (var x = 0; x < 361; x += 10)
     {
       for (var y = 0; y < 181; y += 10)
       {
         var pos = new Vector2(x - 180, y - 90);
-        points[x / 10, y / 10] = pos;
-        pointsSphere[x / 10, y / 10] = SphericalCoordinates.SphericalToCartesian(Radius, pos.x,
-          pos.y);
+        coords[x / 10, y / 10] = new GeoCoord(pos, Orientation, Radius);
       }
     }
   }
 
-  public Mesh MakeMesh()
+  private Vector3[,] UpdateCoords(GeoCoord[,] coords, PlaneOrientation orientation, float radius, float lerp)
   {
-    var m = new Mesh();
-    var verts = new List<Vector3>();
-    var triangles = new List<int>();
-    for (var y = 0; y < pointsReal.GetLength(1) - 1; y++)
+    var pts = new Vector3[coords.GetLength(0), coords.GetLength(1)];
+    for (var x = 0; x < coords.GetLength(0); x++)
     {
-      for (var x = 0; x < pointsReal.GetLength(0) - 1; x++)
+      for (var y = 0; y < coords.GetLength(1); y++)
       {
-        verts.Add(pointsReal[x, y]);
-        verts.Add(pointsReal[x, y + 1]);
-        verts.Add(pointsReal[x + 1, y + 1]);
-        verts.Add(pointsReal[x + 1, y]);
-
-        triangles.Add(x * 4);
-        triangles.Add(x * 4 + 1);
-        triangles.Add(x * 4 + 2);
-
-        triangles.Add(x * 4 + 0);
-        triangles.Add(x * 4 + 2);
-        triangles.Add(x * 4 + 3);
+        coords[x, y].UpdateCoordinate(orientation, radius);
+        pts[x, y] = Vector3.Lerp(coords[x, y]._cartesian, coords[x, y]._spherical, lerp);
       }
     }
-
-    m.SetVertices(verts);
-    m.SetTriangles(triangles.ToArray(), 0);
-
-    m.RecalculateTangents();
-    m.RecalculateNormals();
-
-    return m;
-  }
-
-  private void CalculatePoints()
-  {
-    for (var i = 0; i < points.GetLength(0); i++)
-    {
-      for (var j = 0; j < points.GetLength(1); j++)
-      {
-        pointsReal[i, j] = Vector3.Lerp(points[i, j], pointsSphere[i, j], Lerp);
-      }
-    }
+    return pts;
   }
 
   private void Update()
   {
-    CalculatePoints();
+    pointsReal = UpdateCoords(coords, Orientation, Radius, Lerp);
     MeshData m = SphereMeshGenerator.GenerateTerrainMesh(pointsReal);
     mf.sharedMesh = m.CreateMesh();
-    //for (int i = 0; i < 18; i++)
-    {
-      //filters[i].mesh = MakeMesh(i);
-      //combine[i].mesh = MakeMesh(i);
-    }
-
-    //var m = new Mesh();
-    //m.CombineMeshes(combine, true);
-    //mf.sharedMesh= m;
   }
 
   private void OnDrawGizmos()
   {
     Gizmos.color = Color.white;
     Gizmos.matrix = transform.localToWorldMatrix;
+
     for (var i = 0; i < pointsReal.GetLength(0); i++)
     {
       for (var j = 0; j < pointsReal.GetLength(1); j++)
