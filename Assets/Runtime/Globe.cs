@@ -8,6 +8,8 @@ public class Globe : MonoBehaviour
 {
   [Range(0f, 1f)] public float Lerp;
   [Range(0f, 1700f)] public float Radius = 100;
+  [Range(1, 2)] public int DivisionLevel = 1;
+
   public PlaneOrientation Orientation;
   public GeoCoord[,] coords;
   public Vector3[,] pointsReal;
@@ -18,7 +20,6 @@ public class Globe : MonoBehaviour
   public bool DrawGrids;
 
   private MeshFilter mf;
-  private Vector3 _pos;
 
   private void Start() => Configure();
 
@@ -32,15 +33,16 @@ public class Globe : MonoBehaviour
 
   private Vector3[,] CreateCoordinates(PlaneOrientation orientation, float radius, float lerp)
   {
-    coords = new GeoCoord[37, 19];
-    for (var x = 0; x < 361; x += 10)
+    coords = new GeoCoord[36 * DivisionLevel + 1, 18 * DivisionLevel + 1];
+
+    for (var x = 0; x < 361; x += 10 / DivisionLevel)
     {
-      for (var y = 0; y < 181; y += 10)
+      for (var y = 0; y < 181; y += 10 / DivisionLevel)
       {
         var offset = new Vector2(Radius * 2, Radius);
         var pos = new Vector2(x - 180, y - 90);
 
-        coords[x / 10, y / 10] = new GeoCoord(pos, Orientation, Radius);
+        coords[x / (10 / DivisionLevel), y / (10 / DivisionLevel)] = new GeoCoord(pos, Orientation, Radius);
       }
     }
     var pts = new Vector3[coords.GetLength(0), coords.GetLength(1)];
