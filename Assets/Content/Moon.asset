@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d5fa5cfd06a964eb3e3fd2c9e25850, type: 3}
   m_Name: Moon
   m_EditorClassIdentifier: 
-  Radius: 397
+  Radius: 693
   Lerp: 1
   Orientation: 0
-  LongitudeLow: -7.428253
+  LongitudeLow: -18
   LongitudeMinimum: -18
-  LongitudeHigh: 8.048945
+  LongitudeHigh: 4.83379
   LongitudeMaximum: 18
-  LatitudeLow: 0
+  LatitudeLow: -2.214007
   LatitudeMinimum: -9
-  LatitudeHigh: 1
+  LatitudeHigh: 4.997192
   LatitudeMaximum: 9

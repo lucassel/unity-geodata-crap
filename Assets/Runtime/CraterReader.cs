@@ -89,6 +89,7 @@ public class CraterReader : MonoBehaviour
 
   private void OnDrawGizmosSelected()
   {
+    Gizmos.matrix = transform.localToWorldMatrix;
     if (CraterList != null)
     {
       for (var i = 0; i < CraterList.Count; i++)
@@ -98,5 +99,6 @@ public class CraterReader : MonoBehaviour
         Gizmos.DrawWireSphere(CraterList[i].Position, CraterList[i].Diameter * Multiplier);
       }
     }
+    Gizmos.matrix = Matrix4x4.identity;
   }
 }

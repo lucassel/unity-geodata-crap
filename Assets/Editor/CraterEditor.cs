@@ -51,8 +51,9 @@ public class CraterEditor : Editor
       {
         return;
       }
-
+      Handles.matrix = reader.transform.localToWorldMatrix;
       Handles.Label(reader.CraterList[reader.selection].Position, reader.CraterList[reader.selection].Name, _style);
+      Handles.matrix = Matrix4x4.identity;
     }
   }
 }
