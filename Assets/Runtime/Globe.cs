@@ -38,12 +38,12 @@ public class Globe : MonoBehaviour
   private void Configure()
   {
     mf = GetComponent<MeshFilter>();
-    CreateCoordinates(Settings.Orientation, Settings.Radius, Settings.Lerp);
+    coords = CreateCoordinates(Settings.Orientation, Settings.Radius, Settings.Lerp);
   }
 
   private void OnValidate() => UpdateGlobe();
 
-  private Vector3[,] CreateCoordinates(PlaneOrientation orientation, float radius, float lerp)
+  private GeoCoord[,] CreateCoordinates(PlaneOrientation orientation, float radius, float lerp)
   {
     var multi = 10;
 
@@ -57,10 +57,10 @@ public class Globe : MonoBehaviour
     {
       for (var y = 0; y < newCoords.GetLength(1); y++)
       {
-        newCoords[x, y] = new GeoCoord(new Vector2((x + Settings.LowLongitude) + x * multi, (y + Settings.LowLatitude) + y * multi), orientation, radius);
+        newCoords[x, y] = new GeoCoord(new Vector2(Settings.LowLongitude + x * multi, Settings.LowLatitude + y * multi), orientation, radius);
       }
     }
-    return CoordinatesToPositions(newCoords, orientation, radius, lerp);
+    return newCoords;
   }
 
   private Vector3[,] CoordinatesToPositions(GeoCoord[,] coords, PlaneOrientation orientation, float radius, float lerp)
@@ -79,7 +79,8 @@ public class Globe : MonoBehaviour
 
   private void UpdateGlobe()
   {
-    pointsReal = CreateCoordinates(Settings.Orientation, Settings.Radius, Settings.Lerp);
+    coords = CreateCoordinates(Settings.Orientation, Settings.Radius, Settings.Lerp);
+    pointsReal = CoordinatesToPositions(coords, Settings.Orientation, Settings.Radius, Settings.Lerp);
 
     if (UpdateMesh)
     {
