@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [CreateAssetMenu()]
 public class GlobeSettings : ScriptableObject
@@ -10,4 +11,6 @@ public class GlobeSettings : ScriptableObject
   public float Lerp;
 
   public PlaneOrientation Orientation;
+
+  public Action OnGlobeSettingsUpdate;
 }

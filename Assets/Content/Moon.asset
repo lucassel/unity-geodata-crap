@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d5fa5cfd06a964eb3e3fd2c9e25850, type: 3}
   m_Name: Moon
   m_EditorClassIdentifier: 
-  Radius: 427
-  Lerp: 1
+  Radius: 422
+  Lerp: 0
   Orientation: 0

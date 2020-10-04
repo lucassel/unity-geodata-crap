@@ -6,8 +6,6 @@ using Vector3 = UnityEngine.Vector3;
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class Globe : MonoBehaviour
 {
-  //[Range(0f, 1f)] public float Lerp;
-  //[Range(0f, 1700f)] public float Radius = 100;
   [Range(1, 10)] public int DivisionLevel = 10;
 
   public GlobeSettings Settings;
@@ -24,17 +22,23 @@ public class Globe : MonoBehaviour
 
   private MeshFilter mf;
 
-  private void Start() => Configure();
+  private void OnEnable()
+  {
+    Settings.OnGlobeSettingsUpdate += UpdateGlobe;
+  }
 
-  private void OnEnable() => Configure();
+  private void OnDisable()
+  {
+    Settings.OnGlobeSettingsUpdate -= UpdateGlobe;
+  }
+
+  private void Start() => Configure();
 
   private void Configure()
   {
     mf = GetComponent<MeshFilter>();
     CreateCoordinates(Settings.Orientation, Settings.Radius, Settings.Lerp);
   }
-
-  public void OnSettingsUpdated() => UpdateGlobe();
 
   private void OnValidate() => UpdateGlobe();
 
@@ -68,6 +72,8 @@ public class Globe : MonoBehaviour
   {
     pointsReal = CreateCoordinates(Settings.Orientation, Settings.Radius, Settings.Lerp);
     MeshData m = SphereMeshGenerator.GenerateTerrainMesh(pointsReal);
+    if (mf is null)
+      return;
     mf.sharedMesh = m.CreateMesh();
   }
 

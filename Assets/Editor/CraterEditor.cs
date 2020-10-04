@@ -19,12 +19,27 @@ public class CraterEditor : Editor
 
   public override void OnInspectorGUI()
   {
+    DrawSettingsEditor(reader.Settings, reader.Settings.OnGlobeSettingsUpdate);
+
     if (GUILayout.Button("Configure"))
     {
       reader.Configure();
     }
 
     base.OnInspectorGUI();
+  }
+
+  private void DrawSettingsEditor(Object settings, System.Action onSettingsUpdated)
+  {
+    using (var check = new EditorGUI.ChangeCheckScope())
+    {
+      Editor editor = CreateEditor(settings);
+      editor.OnInspectorGUI();
+      if (check.changed)
+      {
+        onSettingsUpdated?.Invoke();
+      }
+    }
   }
 
   public void OnSceneGUI()
@@ -36,26 +51,7 @@ public class CraterEditor : Editor
         return;
       }
 
-      if (reader.CraterList[reader.selection] != null)
-      {
-        Vector3 pos = Vector3.zero;
-        switch (reader.PlaneOrientation)
-        {
-          case PlaneOrientation.XY:
-            pos = Vector3.Lerp(reader.CraterList[reader.selection].Cartesian,
-              reader.CraterList[reader.selection].AsSpherical(reader.Radius, reader.Offset), reader.Lerp);
-            break;
-
-          case PlaneOrientation.XZ:
-
-            pos = Vector3.Lerp(reader.CraterList[reader.selection].Position,
-              reader.CraterList[reader.selection].AsSpherical(reader.Radius, reader.Offset), reader.Lerp);
-
-            break;
-        }
-
-        Handles.Label(pos, reader.CraterList[reader.selection].Name, _style);
-      }
+      Handles.Label(reader.CraterList[reader.selection].Position, reader.CraterList[reader.selection].Name, _style);
     }
   }
 }

@@ -65,7 +65,7 @@ public class CraterUI : MonoBehaviour
 
     if (_currentCrater != null)
     {
-      Gizmos.DrawLine(_cameraPosition, _currentCrater.AsTopDown(CraterReader.Offset, CraterReader.Multiplier));
+      Gizmos.DrawLine(_cameraPosition, _currentCrater.Position);
     }
   }
 
@@ -101,7 +101,7 @@ public class CraterUI : MonoBehaviour
         }
       }
 
-      Vector3 p = cam.WorldToScreenPoint(c.AsTopDown(CraterReader.Offset, CraterReader.Multiplier));
+      Vector3 p = cam.WorldToScreenPoint(c.Position);
       var scan = Mathf.Lerp(0, Screen.height, Scanline);
       GUI.Box(new Rect(0, Screen.height - scan, Screen.width, 8), _tex, _boxStyle);
       if (p.y > scan)
