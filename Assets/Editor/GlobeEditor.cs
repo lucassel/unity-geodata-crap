@@ -17,34 +17,33 @@ public class GlobeEditor : Editor
     sphere = (Globe)target;
   }
 
-  private void DrawSettingsEditor(Object settings, System.Action onSettingsUpdated)
+  private void DrawSettingsEditor(GlobeSettings settings)
   {
     using (var check = new EditorGUI.ChangeCheckScope())
     {
-      Editor editor = CreateEditor(settings);
-      editor.OnInspectorGUI();
-
       var so = settings as GlobeSettings;
+
+      so.Lerp = EditorGUILayout.Slider("Lerp:", so.Lerp, 0f, 1f);
+      so.Radius = EditorGUILayout.Slider("Radius:", so.Radius, 1f, 1700f);
+
       EditorGUILayout.LabelField("Longitude");
-      EditorGUILayout.LabelField("Min Val:", so.Longi.x.ToString());
-      EditorGUILayout.LabelField("Max Val:", so.Longi.y.ToString());
+      EditorGUILayout.LabelField($"Low: {so.LowLongitude.ToString()}", $"High: {so.HighLongitude.ToString()}");
       EditorGUILayout.MinMaxSlider(ref so.LongitudeLow, ref so.LongitudeHigh, so.LongitudeMinimum, so.LongitudeMaximum);
 
       EditorGUILayout.LabelField("Latitude");
-      EditorGUILayout.LabelField("Min Val:", so.Lati.x.ToString());
-      EditorGUILayout.LabelField("Max Val:", so.Lati.y.ToString());
+      EditorGUILayout.LabelField($"Low: {so.LowLatitude.ToString()}", $"High: {so.HighLatitude.ToString()}");
       EditorGUILayout.MinMaxSlider(ref so.LatitudeLow, ref so.LatitudeHigh, so.LatitudeMinimum, so.LatitudeMaximum);
 
       if (check.changed)
       {
-        onSettingsUpdated?.Invoke();
+        so.OnGlobeSettingsUpdate.Invoke();
       }
     }
   }
 
   public override void OnInspectorGUI()
   {
-    DrawSettingsEditor(sphere.Settings, sphere.Settings.OnGlobeSettingsUpdate);
+    DrawSettingsEditor(sphere.Settings);
     base.OnInspectorGUI();
   }
 

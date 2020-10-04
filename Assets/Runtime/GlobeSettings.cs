@@ -14,17 +14,23 @@ public class GlobeSettings : ScriptableObject
 
   public Action OnGlobeSettingsUpdate;
 
-  [HideInInspector] public float LongitudeLow = -90;
-  [HideInInspector] public float LongitudeMinimum = -180;
-  [HideInInspector] public float LongitudeHigh = 90;
-  [HideInInspector] public float LongitudeMaximum = 180;
+  public float LongitudeLow = -9;
+  public float LongitudeMinimum = -18;
+  public float LongitudeHigh = 9;
+  public float LongitudeMaximum = 18;
 
-  [HideInInspector] public float LatitudeLow = 0;
-  [HideInInspector] public float LatitudeMinimum = -90;
-  [HideInInspector] public float LatitudeHigh = 10;
-  [HideInInspector] public float LatitudeMaximum = 90;
+  public float LatitudeLow = 0;
+  public float LatitudeMinimum = -9;
+  public float LatitudeHigh = 1;
+  public float LatitudeMaximum = 9;
 
-  public Vector2Int Longi => new Vector2Int((int)LongitudeLow, (int)LongitudeHigh);
+  public int LowLongitude => (int)LongitudeLow * 10;
+  public int HighLongitude => (int)LongitudeHigh * 10;
 
-  public Vector2Int Lati => new Vector2Int((int)LatitudeLow, (int)LatitudeHigh);
+  public int LowLatitude => (int)LatitudeLow * 10;
+  public int HighLatitude => (int)LatitudeHigh * 10;
+
+  //public Vector2Int Longi => new Vector2Int((int)LongitudeLow, (int)LongitudeHigh);
+
+  //public Vector2Int Lati => new Vector2Int((int)LatitudeLow, (int)LatitudeHigh);
 }
