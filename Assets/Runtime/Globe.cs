@@ -84,7 +84,7 @@ public class Globe : MonoBehaviour
 
     if (UpdateMesh)
     {
-      MeshData m = SphereMeshGenerator.GenerateTerrainMesh(pointsReal);
+      MeshData m = SphereMeshGenerator.GenerateFromGeoCoords(pointsReal, coords, Settings);
       if (mf is null)
         return;
       mf.sharedMesh = m.CreateMesh();
