@@ -23,6 +23,18 @@ public class GlobeEditor : Editor
     {
       Editor editor = CreateEditor(settings);
       editor.OnInspectorGUI();
+
+      var so = settings as GlobeSettings;
+      EditorGUILayout.LabelField("Longitude");
+      EditorGUILayout.LabelField("Min Val:", so.Longi.x.ToString());
+      EditorGUILayout.LabelField("Max Val:", so.Longi.y.ToString());
+      EditorGUILayout.MinMaxSlider(ref so.LongitudeLow, ref so.LongitudeHigh, so.LongitudeMinimum, so.LongitudeMaximum);
+
+      EditorGUILayout.LabelField("Latitude");
+      EditorGUILayout.LabelField("Min Val:", so.Lati.x.ToString());
+      EditorGUILayout.LabelField("Max Val:", so.Lati.y.ToString());
+      EditorGUILayout.MinMaxSlider(ref so.LatitudeLow, ref so.LatitudeHigh, so.LatitudeMinimum, so.LatitudeMaximum);
+
       if (check.changed)
       {
         onSettingsUpdated?.Invoke();

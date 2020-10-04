@@ -80,7 +80,6 @@ public class CraterReader : MonoBehaviour
 
   public void UpdateCraters()
   {
-    //print("update craterz");
     for (var i = 0; i < CraterList.Count; i++)
     {
       CraterList[i].UpdateCrater(Settings.Orientation, Settings.Radius);
@@ -94,14 +93,7 @@ public class CraterReader : MonoBehaviour
     {
       for (var i = 0; i < CraterList.Count; i++)
       {
-        if (i == selection)
-        {
-          Gizmos.color = Color.red;
-        }
-        else
-        {
-          Gizmos.color = CraterList[i].Name == "Tycho" ? Color.green : Color.white;
-        }
+        Gizmos.color = i == selection ? Color.red : CraterList[i].Name == "Tycho" ? Color.green : Color.white;
 
         Gizmos.DrawWireSphere(CraterList[i].Position, CraterList[i].Diameter * Multiplier);
       }
