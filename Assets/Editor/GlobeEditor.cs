@@ -17,6 +17,25 @@ public class GlobeEditor : Editor
     sphere = (Globe)target;
   }
 
+  private void DrawSettingsEditor(Object settings, System.Action onSettingsUpdated)
+  {
+    using (var check = new EditorGUI.ChangeCheckScope())
+    {
+      Editor editor = CreateEditor(settings);
+      editor.OnInspectorGUI();
+      if (check.changed)
+      {
+        onSettingsUpdated?.Invoke();
+      }
+    }
+  }
+
+  public override void OnInspectorGUI()
+  {
+    DrawSettingsEditor(sphere.Settings, sphere.OnSettingsUpdated);
+    base.OnInspectorGUI();
+  }
+
   public void OnSceneGUI()
   {
     if (sphere.pointsReal != null)
