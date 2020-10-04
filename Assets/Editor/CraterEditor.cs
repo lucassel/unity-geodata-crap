@@ -25,7 +25,7 @@ public class CraterEditor : Editor
     {
       reader.Configure();
     }
-
+    GlobeSettingsEditor.DrawSettingsEditor(reader.Settings);
     base.OnInspectorGUI();
   }
 
@@ -35,6 +35,7 @@ public class CraterEditor : Editor
     {
       Editor editor = CreateEditor(settings);
       editor.OnInspectorGUI();
+
       if (check.changed)
       {
         onSettingsUpdated?.Invoke();

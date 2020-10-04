@@ -10,7 +10,6 @@ public class Globe : MonoBehaviour
 
   public GlobeSettings Settings;
 
-  //public PlaneOrientation Orientation;
   public GeoCoord[,] coords;
 
   public Vector3[,] pointsReal;
@@ -19,6 +18,8 @@ public class Globe : MonoBehaviour
   public bool DrawCoords;
   public bool DrawIndices;
   public bool DrawGrids;
+
+  public bool UpdateMesh;
 
   private MeshFilter mf;
 
@@ -44,18 +45,26 @@ public class Globe : MonoBehaviour
 
   private Vector3[,] CreateCoordinates(PlaneOrientation orientation, float radius, float lerp)
   {
-    coords = new GeoCoord[360 / DivisionLevel + 1, 180 / DivisionLevel + 1];
+    var multi = 10;
+
+    var width = Settings.HighLongitude - Settings.LowLongitude;
+    var height = Settings.HighLatitude - Settings.LowLatitude;
     var offset = new Vector2(radius * 2, radius);
 
-    for (var x = 0; x < 361; x += DivisionLevel)
-    {
-      for (var y = 0; y < 181; y += DivisionLevel)
-      {
-        var pos = new Vector2(x - 180, y - 90);
+    var newCoords = new GeoCoord[(width / multi) + 1, (height / multi) + 1];
 
-        coords[x / DivisionLevel, y / DivisionLevel] = new GeoCoord(pos, orientation, radius);
+    for (var x = 0; x < newCoords.GetLength(0); x++)
+    {
+      for (var y = 0; y < newCoords.GetLength(1); y++)
+      {
+        newCoords[x, y] = new GeoCoord(new Vector2((x + Settings.LowLongitude) + x * multi, (y + Settings.LowLatitude) + y * multi), orientation, radius);
       }
     }
+    return CoordinatesToPositions(newCoords, orientation, radius, lerp);
+  }
+
+  private Vector3[,] CoordinatesToPositions(GeoCoord[,] coords, PlaneOrientation orientation, float radius, float lerp)
+  {
     var pts = new Vector3[coords.GetLength(0), coords.GetLength(1)];
     for (var x = 0; x < coords.GetLength(0); x++)
     {
@@ -71,10 +80,14 @@ public class Globe : MonoBehaviour
   private void UpdateGlobe()
   {
     pointsReal = CreateCoordinates(Settings.Orientation, Settings.Radius, Settings.Lerp);
-    MeshData m = SphereMeshGenerator.GenerateTerrainMesh(pointsReal);
-    if (mf is null)
-      return;
-    mf.sharedMesh = m.CreateMesh();
+
+    if (UpdateMesh)
+    {
+      MeshData m = SphereMeshGenerator.GenerateTerrainMesh(pointsReal);
+      if (mf is null)
+        return;
+      mf.sharedMesh = m.CreateMesh();
+    }
   }
 
   private void OnDrawGizmos()

@@ -43,7 +43,7 @@ public class GlobeEditor : Editor
 
   public override void OnInspectorGUI()
   {
-    DrawSettingsEditor(sphere.Settings);
+    GlobeSettingsEditor.DrawSettingsEditor(sphere.Settings);
     base.OnInspectorGUI();
   }
 
