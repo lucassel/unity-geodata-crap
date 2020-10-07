@@ -5,6 +5,18 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CraterUI : MonoBehaviour
 {
+  private GUIStyle _style;
+  private GUIStyle _boxStyle;
+  private Texture _tex;
+  private int BoxSize = 10;
+  public float alpha = .666f;
+
+  private List<Crater> scannedCraters = new List<Crater>();
+  private Plane _plane;
+  private Vector3 _cameraPosition;
+  private Vector3 _cameraNormal;
+  private Vector3 _moonPosition;
+  private Crater _currentCrater;
   public Texture BoxTexture;
   public Camera cam;
   public CraterReader CraterReader;
@@ -18,7 +30,7 @@ public class CraterUI : MonoBehaviour
   {
     _style = new GUIStyle
     {
-      fontSize = 28
+      fontSize = 36
     };
     _style.normal.textColor = new Color(1f, 0f, 0f, alpha);
     _boxStyle = new GUIStyle();
@@ -44,19 +56,23 @@ public class CraterUI : MonoBehaviour
   // Update is called once per frame
   private void Update()
   {
+    _moonPosition = CraterReader.transform.position;
+    _cameraPosition = cam.transform.position;
+    _cameraNormal = (_moonPosition - _cameraPosition).normalized;
+
+    _plane = new Plane(_cameraNormal, 0f);
+
     if (AutoPlay)
     {
       Scanline = Mathf.PingPong(Time.time * ScanlineSpeed, 1f);
     }
   }
 
-  private void OnDrawGizmos()
+  private void OnDrawGizmosSelected()
   {
-    _moonPosition = CraterReader.transform.position;
-    _cameraPosition = cam.transform.position;
-    _cameraNormal = (_moonPosition - _cameraPosition).normalized;
+    Gizmos.color = Color.magenta;
+    Gizmos.DrawLine(CraterReader.transform.position, CraterReader.transform.position + _plane.normal * 100f);
 
-    _plane = new Plane(_cameraNormal, 0f);
     Gizmos.color = Color.red;
     foreach (Crater c in scannedCraters)
     {
@@ -71,34 +87,20 @@ public class CraterUI : MonoBehaviour
 
   private void OnGUI()
   {
-    if (CullWithPlane)
-    {
-      Vector3 craterpos = CraterReader.transform.position;
-      Vector3 campos = cam.transform.position;
-      Vector3 normal = (craterpos - campos).normalized;
-      _plane = new Plane(normal, 0f);
-    }
-
     if (scannedCraters.Count > 0)
     {
-      var rnd = UnityEngine.Random.Range(0, scannedCraters.Count);
+      var rnd = Random.Range(0, scannedCraters.Count);
       _currentCrater = scannedCraters[rnd];
       CraterReader.selection = rnd;
     }
 
     scannedCraters.Clear();
+
     foreach (Crater c in CraterReader.CraterList)
     {
-      if (CullWithPlane)
+      if (CullWithPlane && _plane.GetSide(c.Position))
       {
-        if (_plane.GetSide(c.Position))
-        {
-          return;
-        }
-        else
-        {
-          continue;
-        }
+        continue;
       }
 
       Vector3 p = cam.WorldToScreenPoint(c.Position);
@@ -113,17 +115,4 @@ public class CraterUI : MonoBehaviour
       }
     }
   }
-
-  private GUIStyle _style;
-  private GUIStyle _boxStyle;
-  private Texture _tex;
-  private int BoxSize = 10;
-  private float alpha = .666f;
-
-  private List<Crater> scannedCraters = new List<Crater>();
-  private Plane _plane;
-  private Vector3 _cameraPosition;
-  private Vector3 _cameraNormal;
-  private Vector3 _moonPosition;
-  private Crater _currentCrater;
 }

@@ -24,11 +24,11 @@ public class GlobeSettings : ScriptableObject
   public float LatitudeHigh = 1;
   public float LatitudeMaximum = 9;
 
-  public int LowLongitude => (int)LongitudeLow * 10;
-  public int HighLongitude => (int)LongitudeHigh * 10;
+  public int LowLongitude => (int)Mathf.Floor(LongitudeLow) * 10;
+  public int HighLongitude => (int)Mathf.Floor(LongitudeHigh) * 10;
 
-  public int LowLatitude => (int)LatitudeLow * 10;
-  public int HighLatitude => (int)LatitudeHigh * 10;
+  public int LowLatitude => (int)Mathf.Floor(LatitudeLow) * 10;
+  public int HighLatitude => (int)Mathf.Floor(LatitudeHigh) * 10;
 
   //public Vector2Int Longi => new Vector2Int((int)LongitudeLow, (int)LongitudeHigh);
 

@@ -44,7 +44,7 @@ public class PDSReader : MonoBehaviour
   {
     _style = new GUIStyle
     {
-      fontSize = 38
+      fontSize = 24
     };
     _style.normal.textColor = new Color(1f, 0f, 0f, 1f);
   }
@@ -282,9 +282,9 @@ public class PDSReader : MonoBehaviour
     if (Data != null)
     {
       GUI.Label(new Rect(20, 40, 100, 20), $"File: {Data.DatasetID}", _style);
-      GUI.Label(new Rect(20, 90, 100, 20), $"Resolution: {Data.MapResolution} pixels/degree", _style);
-      GUI.Label(new Rect(20, 140, 100, 20), $"Sample bits: {Data.SampleBits} bit depth", _style);
-      GUI.Label(new Rect(20, 190, 100, 20), $"Sample type: {Data.SampleType}", _style);
+      GUI.Label(new Rect(20, 70, 100, 20), $"Resolution: {Data.MapResolution} pixels/degree", _style);
+      GUI.Label(new Rect(20, 100, 100, 20), $"Sample bits: {Data.SampleBits} bit depth", _style);
+      GUI.Label(new Rect(20, 130, 100, 20), $"Sample type: {Data.SampleType}", _style);
     }
   }
 }
