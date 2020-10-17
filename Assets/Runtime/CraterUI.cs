@@ -9,7 +9,7 @@ public class CraterUI : MonoBehaviour
 {
   private GUIStyle _style;
   private GUIStyle _boxStyle;
-  private Texture _tex;
+  private Texture2D _tex;
   private int BoxSize = 10;
   public float alpha = .666f;
 
@@ -29,18 +29,28 @@ public class CraterUI : MonoBehaviour
   public bool CullWithPlane;
   public ScanlineMethod ScanlineMethod;
   public int FontSize = 20;
+  public Color DetailColor = Color.red;
 
-  private void Start()
+  private void OnEnable()
+  {
+    Configure();
+  }
+
+  private void OnValidate()
+  {
+    Configure();
+  }
+
+  public void Configure()
   {
     _style = new GUIStyle
     {
       fontSize = FontSize
     };
-    _style.normal.textColor = new Color(1f, 0f, 0f, alpha);
+    _style.normal.textColor = DetailColor;
     _boxStyle = new GUIStyle();
-    //_tex = MakeTex(2, 2, new Color(1f, 0f, 0f, alpha));
-    _boxStyle.normal.background = MakeTex(1, 1, new Color(1f, 0f, 0f, alpha));
-    //_boxStyle.normal.background = MakeTex(2, 2, new Color(1f, 0f, 0f, alpha));
+    _tex = MakeTex(1, 1, DetailColor);
+    _boxStyle.normal.background = _tex;
   }
 
   private Texture2D MakeTex(int width, int height, Color col)

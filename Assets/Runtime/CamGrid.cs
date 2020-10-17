@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
 public class CamGrid : MonoBehaviour
 {
   public GameObject prefab;
 
   public int columns, rows;
-
-  public int ScreenWidth, ScreenHeight;
 
   private Vector3[,] grid;
 
@@ -18,6 +17,10 @@ public class CamGrid : MonoBehaviour
   [Range(0.0001f, .01f)]
   public float DotScale = .001f;
 
+  private GUIStyle _boxStyle;
+
+  private Texture2D _tex;
+
   private Vector3[] vertices;
   private Vector3[] bounds;
   private List<GameObject> dots = new List<GameObject>();
@@ -25,6 +28,9 @@ public class CamGrid : MonoBehaviour
   private List<LineRenderer> vertical = new List<LineRenderer>();
 
   private Camera _cam;
+
+  [Range(1, 20)]
+  public int IntersectionSize = 8;
 
   // Use this for initialization
   private void Start()
@@ -37,10 +43,25 @@ public class CamGrid : MonoBehaviour
     Configure();
   }
 
+  private Texture2D MakeTex(int width, int height, Color col)
+  {
+    var pix = new Color[width * height];
+    for (var i = 0; i < pix.Length; ++i)
+    {
+      pix[i] = col;
+    }
+
+    var result = new Texture2D(width, height);
+    result.SetPixels(pix);
+    result.Apply();
+    return result;
+  }
+
   private void Configure()
   {
-    ScreenWidth = Screen.width;
-    ScreenHeight = Screen.height;
+    _boxStyle = new GUIStyle();
+    _tex = MakeTex(1, 1, Color.white);
+    _boxStyle.normal.background = _tex;
     _cam = GetComponent<Camera>();
     GenerateGrid(_cam);
   }
@@ -58,12 +79,48 @@ public class CamGrid : MonoBehaviour
     }
   }
 
+  private void OnGUI()
+  {
+    if (grid != null)
+    {
+      GUILines(grid);
+      GUIIntersections(grid);
+    }
+  }
+
+  private void GUILines(Vector3[,] grid)
+  {
+    Gizmos.color = Color.white;
+    var res_x = Screen.width / columns;
+    for (var x = 1; x < grid.GetLength(0); x++)
+    {
+      GUI.Box(new Rect(x * res_x, 0, 1, Screen.height), _tex, _boxStyle);
+    }
+    var res_y = Screen.height / rows;
+    for (var y = 1; y < grid.GetLength(1); y++)
+    {
+      GUI.Box(new Rect(0, y * res_y, Screen.width, 1), _tex, _boxStyle);
+    }
+  }
+
+  private void GUIIntersections(Vector3[,] grid)
+  {
+    var res_x = Screen.width / columns;
+    var res_y = Screen.height / rows;
+
+    for (var x = 1; x < grid.GetLength(0); x++)
+    {
+      for (var y = 1; y < grid.GetLength(1); y++)
+      {
+        GUI.Box(new Rect(x * res_x - IntersectionSize * 4, y * res_y - IntersectionSize / 2, IntersectionSize * 8, IntersectionSize), _tex, _boxStyle);
+        GUI.Box(new Rect(x * res_x - IntersectionSize / 2, y * res_y - IntersectionSize * 4, IntersectionSize, IntersectionSize * 8), _tex, _boxStyle);
+      }
+    }
+  }
+
   // Update is called once per frame
   private void Update()
   {
-    ScreenWidth = Screen.width;
-    ScreenHeight = Screen.height;
-
     GenerateGrid(_cam);
     //Place();
     //PlaceLines();
@@ -71,7 +128,6 @@ public class CamGrid : MonoBehaviour
 
   private void GenerateGrid(Camera cam)
   {
-    //camDepth = cam.ViewportToWorldPoint(new Vector3(0, 0, cam.nearClipPlane));
     bounds = new Vector3[4];
     bounds[0] = cam.ViewportToWorldPoint(new Vector3(0, 0, cam.nearClipPlane)); // left bottom
     bounds[1] = cam.ViewportToWorldPoint(new Vector3(1, 0, cam.nearClipPlane)); // right bottom
@@ -81,7 +137,6 @@ public class CamGrid : MonoBehaviour
     var res_x = Vector3.Distance(bounds[0], bounds[1]) / columns;
     var res_y = Vector3.Distance(bounds[0], bounds[3]) / rows;
 
-    //vertices = new Vector3[(columns + 1) * (rows + 1)];
     grid = new Vector3[columns, rows];
 
     for (var y = 0; y < rows; y++)
