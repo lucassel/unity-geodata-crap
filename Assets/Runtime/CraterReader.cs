@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
@@ -14,8 +13,7 @@ public class CraterReader : MonoBehaviour
 {
   public GlobeSettings Settings;
   public TextAsset CraterData;
-  public float DiameterThreshold = 50f;
-  private List<Crater> CraterListFull;
+  private List<Crater> CraterListFull = new List<Crater>();
 
   public List<Crater> CraterList;
 
@@ -23,39 +21,64 @@ public class CraterReader : MonoBehaviour
 
   public Vector3 Offset = new Vector3(3600f / 2f, 0f, 1800f / 2f);
 
-  public float Multiplier = 10f;
-  private GUIStyle _style;
+  public bool LimitCratersByDiameter = true;
 
-  private List<Crater> GetCratersByDiameter(float threshold)
-  {
-    var list = CraterListFull.Where(x => x.Diameter > threshold).ToList();
-    return list;
-  }
+  [Range(10f, 500f)]
+  public float DiameterThreshold = 50f;
+
+  public bool LimitCratersByCoordinates;
+
+  private GUIStyle _style;
 
   private void OnEnable() => Settings.OnGlobeSettingsUpdate += UpdateCraters;
 
   private void OnDisable() => Settings.OnGlobeSettingsUpdate -= UpdateCraters;
 
+  private List<Crater> StripCraters(List<Crater> input, float threshold, GlobeSettings settings)
+  {
+    var result = new List<Crater>();
+
+    for (var i = 0; i < input.Count; i++)
+    {
+      Crater c = input[i];
+      if (c.Diameter < DiameterThreshold)
+      { continue; }
+
+      if (c.Longitude < settings.LongitudeLow * 10f)
+      {
+        continue;
+      }
+
+      if (c.Longitude > settings.LongitudeHigh * 10f)
+      {
+        continue;
+      }
+
+      if (c.Latitude < settings.LatitudeLow * 10f)
+      {
+        continue;
+      }
+
+      if (c.Latitude > settings.LatitudeHigh * 10f)
+      { continue; }
+      Debug.Log($"crater {c.Name} is valid");
+      result.Add(c);
+    }
+    return result;
+  }
+
+  private void Awake()
+  {
+    Configure();
+  }
+
   private void OnValidate()
   {
-    if (CraterListFull == null)
-    {
-      Configure();
-      CraterList = GetCratersByDiameter(DiameterThreshold);
-    }
-
-    if (CraterListFull.Count == 0)
-    {
-      Configure();
-      CraterList = GetCratersByDiameter(DiameterThreshold);
-    }
-
-    UpdateCraters();
+    Configure();
   }
 
   public void Configure()
   {
-    CraterListFull = new List<Crater>();
     var arr = JArray.Parse(CraterData.text);
     for (var i = 0; i < arr.Count; i++)
     {
@@ -66,6 +89,8 @@ public class CraterReader : MonoBehaviour
       CraterListFull.Add(new Crater(craterName, craterDiameter, lon, lat, Settings.Radius, Settings.Orientation));
     }
 
+    UpdateCraters();
+
     _style = new GUIStyle
     {
       fontSize = 24
@@ -73,13 +98,11 @@ public class CraterReader : MonoBehaviour
     _style.normal.textColor = Color.red;
   }
 
-  private void Update()
-  {
-    UpdateCraters();
-  }
-
   public void UpdateCraters()
   {
+    CraterList = StripCraters(CraterListFull, DiameterThreshold, Settings);
+    Debug.Log($"serving {CraterList.Count} craters");
+
     for (var i = 0; i < CraterList.Count; i++)
     {
       CraterList[i].UpdateCrater(Settings.Orientation, Settings.Radius);
@@ -96,7 +119,7 @@ public class CraterReader : MonoBehaviour
       {
         Gizmos.color = i == selection ? Color.red : CraterList[i].Name == "Tycho" ? Color.green : Color.white;
 
-        Gizmos.DrawWireSphere(CraterList[i].Position, CraterList[i].Diameter * Multiplier);
+        Gizmos.DrawWireSphere(CraterList[i].Position, CraterList[i].Diameter * Settings.Radius * .0001f);
       }
     }
     Gizmos.matrix = Matrix4x4.identity;

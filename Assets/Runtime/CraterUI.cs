@@ -2,6 +2,8 @@
 
 using UnityEngine;
 
+public enum ScanlineMethod { TopDown, LeftRight, UV }
+
 [ExecuteInEditMode]
 public class CraterUI : MonoBehaviour
 {
@@ -20,11 +22,12 @@ public class CraterUI : MonoBehaviour
   public Texture BoxTexture;
   public Camera cam;
   public CraterReader CraterReader;
-  public bool AutoPlay;
+  public bool Reverse;
   [Range(0f, 1f)] public float Scanline;
   [Range(0.1f, 6f)] public float ScanlineSpeed;
 
   public bool CullWithPlane;
+  public ScanlineMethod ScanlineMethod;
 
   private void Start()
   {
@@ -60,12 +63,7 @@ public class CraterUI : MonoBehaviour
     _cameraPosition = cam.transform.position;
     _cameraNormal = (_moonPosition - _cameraPosition).normalized;
 
-    _plane = new Plane(_cameraNormal, 0f);
-
-    if (AutoPlay)
-    {
-      Scanline = Mathf.PingPong(Time.time * ScanlineSpeed, 1f);
-    }
+    _plane = new Plane(_cameraNormal, _moonPosition);
   }
 
   private void OnDrawGizmosSelected()
@@ -96,23 +94,56 @@ public class CraterUI : MonoBehaviour
 
     scannedCraters.Clear();
 
-    foreach (Crater c in CraterReader.CraterList)
+    switch (ScanlineMethod)
     {
-      if (CullWithPlane && _plane.GetSide(c.Position))
-      {
-        continue;
-      }
+      case ScanlineMethod.TopDown:
+        var scan = Mathf.Lerp(0, Screen.height, Scanline);
+        if (Reverse)
+        {
+          GUI.Box(new Rect(0, scan, Screen.width, 8), _tex, _boxStyle);
+        }
+        else
+        {
+          GUI.Box(new Rect(0, Screen.height - scan, Screen.width, 8), _tex, _boxStyle);
+        }
+        foreach (Crater c in CraterReader.CraterList)
+        {
+          if (CullWithPlane && _plane.GetSide(c.Position))
+          {
+            continue;
+          }
+          Vector3 p = cam.WorldToScreenPoint(c.Position);
 
-      Vector3 p = cam.WorldToScreenPoint(c.Position);
-      var scan = Mathf.Lerp(0, Screen.height, Scanline);
-      GUI.Box(new Rect(0, Screen.height - scan, Screen.width, 8), _tex, _boxStyle);
-      if (p.y > scan)
-      {
-        Vector2 vec = p;
-        GUI.Box(new Rect(vec.x, Screen.height - vec.y, BoxSize, BoxSize), _tex, _boxStyle);
-        GUI.Label(new Rect(vec.x + 20, Screen.height - vec.y, 100, 20), $"{c.Name}", _style);
-        scannedCraters.Add(c);
-      }
+          if (p.y > scan)
+          {
+            Vector2 vec = p;
+            GUI.Box(new Rect(vec.x, Screen.height - vec.y, BoxSize, BoxSize), _tex, _boxStyle);
+            GUI.Label(new Rect(vec.x + 20, Screen.height - vec.y, 100, 20), $"{c.Name}", _style);
+            scannedCraters.Add(c);
+          }
+        }
+        break;
+
+      case ScanlineMethod.LeftRight:
+        var scan_width = Mathf.Lerp(0, Screen.width, Scanline);
+        GUI.Box(new Rect(scan_width, 0, 8, Screen.height), _tex, _boxStyle);
+        foreach (Crater c in CraterReader.CraterList)
+        {
+          if (CullWithPlane && _plane.GetSide(c.Position))
+          {
+            continue;
+          }
+
+          Vector3 p = cam.WorldToScreenPoint(c.Position);
+          if (p.x < scan_width)
+          {
+            Vector2 vec = p;
+            GUI.Box(new Rect(vec.x, Screen.height - vec.y, BoxSize, BoxSize), _tex, _boxStyle);
+            GUI.Label(new Rect(vec.x + 20, Screen.height - vec.y, 100, 20), $"{c.Name}", _style);
+            scannedCraters.Add(c);
+          }
+        }
+        break;
     }
   }
 }
