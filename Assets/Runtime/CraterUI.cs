@@ -28,17 +28,18 @@ public class CraterUI : MonoBehaviour
 
   public bool CullWithPlane;
   public ScanlineMethod ScanlineMethod;
+  public int FontSize = 20;
 
   private void Start()
   {
     _style = new GUIStyle
     {
-      fontSize = 36
+      fontSize = FontSize
     };
     _style.normal.textColor = new Color(1f, 0f, 0f, alpha);
     _boxStyle = new GUIStyle();
-    _tex = MakeTex(2, 2, new Color(1f, 0f, 0f, alpha));
-    _boxStyle.normal.background = MakeTex(5, 5, new Color(1f, 0f, 0f, alpha));
+    //_tex = MakeTex(2, 2, new Color(1f, 0f, 0f, alpha));
+    _boxStyle.normal.background = MakeTex(1, 1, new Color(1f, 0f, 0f, alpha));
     //_boxStyle.normal.background = MakeTex(2, 2, new Color(1f, 0f, 0f, alpha));
   }
 
@@ -74,7 +75,7 @@ public class CraterUI : MonoBehaviour
     Gizmos.color = Color.red;
     foreach (Crater c in scannedCraters)
     {
-      Gizmos.DrawWireSphere(c.Position, 1f);
+      //Gizmos.DrawWireSphere(c.Position, 1f);
     }
 
     if (_currentCrater != null)
@@ -117,29 +118,10 @@ public class CraterUI : MonoBehaviour
           if (p.y > scan)
           {
             Vector2 vec = p;
-            GUI.Box(new Rect(vec.x, Screen.height - vec.y, BoxSize, BoxSize), _tex, _boxStyle);
-            GUI.Label(new Rect(vec.x + 20, Screen.height - vec.y, 100, 20), $"{c.Name}", _style);
-            scannedCraters.Add(c);
-          }
-        }
-        break;
+            GUI.Box(new Rect(vec.x - BoxSize / 4, Screen.height - vec.y + BoxSize / 4, BoxSize, BoxSize / 4), _tex, _boxStyle);
+            GUI.Box(new Rect(vec.x + BoxSize / 4, Screen.height - vec.y - BoxSize / 4, BoxSize / 4, BoxSize), _tex, _boxStyle);
 
-      case ScanlineMethod.LeftRight:
-        var scan_width = Mathf.Lerp(0, Screen.width, Scanline);
-        GUI.Box(new Rect(scan_width, 0, 8, Screen.height), _tex, _boxStyle);
-        foreach (Crater c in CraterReader.CraterList)
-        {
-          if (CullWithPlane && _plane.GetSide(c.Position))
-          {
-            continue;
-          }
-
-          Vector3 p = cam.WorldToScreenPoint(c.Position);
-          if (p.x < scan_width)
-          {
-            Vector2 vec = p;
-            GUI.Box(new Rect(vec.x, Screen.height - vec.y, BoxSize, BoxSize), _tex, _boxStyle);
-            GUI.Label(new Rect(vec.x + 20, Screen.height - vec.y, 100, 20), $"{c.Name}", _style);
+            GUI.Label(new Rect(vec.x + 10, Screen.height - vec.y, 100, 20), $"{c.Name}", _style);
             scannedCraters.Add(c);
           }
         }

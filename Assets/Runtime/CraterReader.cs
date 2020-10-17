@@ -28,8 +28,6 @@ public class CraterReader : MonoBehaviour
 
   public bool LimitCratersByCoordinates;
 
-  private GUIStyle _style;
-
   private void OnEnable() => Settings.OnGlobeSettingsUpdate += UpdateCraters;
 
   private void OnDisable() => Settings.OnGlobeSettingsUpdate -= UpdateCraters;
@@ -90,12 +88,6 @@ public class CraterReader : MonoBehaviour
     }
 
     UpdateCraters();
-
-    _style = new GUIStyle
-    {
-      fontSize = 24
-    };
-    _style.normal.textColor = Color.red;
   }
 
   public void UpdateCraters()

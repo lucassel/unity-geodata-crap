@@ -206,7 +206,7 @@ MonoBehaviour:
   Cartesian: 0
   DrawCoords: 0
   DrawIndices: 0
-  DrawGrids: 1
+  DrawGrids: 0
   UpdateMesh: 1
 --- !u!4 &96579887
 Transform:
@@ -270,7 +270,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96579885}
-  m_Mesh: {fileID: 1015487642}
+  m_Mesh: {fileID: 711096833}
 --- !u!114 &96579891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,51 +286,101 @@ MonoBehaviour:
   Settings: {fileID: 11400000, guid: 32abf1d3345308e4da24011684f2b3b1, type: 2}
   CraterData: {fileID: 4900000, guid: 262248150bdcb46e48c90b5b5e8d9dd0, type: 3}
   CraterList:
+  - Name: Abulfeda
+    Diameter: 62.23
+    Longitude: 13.91
+    Latitude: -13.87
+    Position: {x: 653.0636, y: -166.12578, z: 161.73787}
+  - Name: Agrippa
+    Diameter: 43.75
+    Longitude: 10.47
+    Latitude: 4.1
+    Position: {x: 679.71765, y: 49.547726, z: 125.61014}
   - Name: Albategnius
     Diameter: 130.84
     Longitude: 4.01
     Latitude: -11.24
     Position: {x: 678.0438, y: -135.07896, z: 47.532364}
-  - Name: Al-Khwarizmi G
-    Diameter: 102.83
-    Longitude: 107.35
-    Latitude: 6.76
-    Position: {x: -205.22134, y: 81.573524, z: 656.8706}
-  - Name: Al-Khwarizmi-King
-    Diameter: 590
-    Longitude: 112
-    Latitude: 1
-    Position: {x: -259.56284, y: 12.094517, z: 642.44055}
+  - Name: Almanon
+    Diameter: 47.76
+    Longitude: 15.14
+    Latitude: -16.85
+    Position: {x: 640.22644, y: -200.8779, z: 173.22595}
   - Name: Alphonsus
     Diameter: 110.54
     Longitude: -2.85
     Latitude: -13.39
     Position: {x: 673.3278, y: -160.48364, z: -33.520245}
+  - Name: Alter
+    Diameter: 64.73
+    Longitude: -107.8
+    Latitude: 18.74
+    Position: {x: -200.61604, y: 222.64302, z: -624.84576}
+  - Name: Alter W
+    Diameter: 51.47
+    Longitude: -109.41
+    Latitude: 20.38
+    Position: {x: -215.8857, y: 241.33368, z: -612.6993}
+  - Name: Amici
+    Diameter: 52.03
+    Longitude: -172.23
+    Latitude: -10.06
+    Position: {x: -676.08057, y: -121.05281, z: -92.25096}
   - Name: Amici M
     Diameter: 107.91
     Longitude: -172.02
     Latitude: -11.81
     Position: {x: -671.76184, y: -141.83417, z: -94.17076}
+  - Name: Amici Q
+    Diameter: 43.59
+    Longitude: -175.89
+    Latitude: -12.34
+    Position: {x: -675.2483, y: -148.10272, z: -48.520935}
   - Name: Amici U
     Diameter: 88.73
     Longitude: -175.47
     Latitude: -8.75
     Position: {x: -682.7949, y: -105.42151, z: -54.096806}
-  - Name: Anderson
-    Diameter: 105.33
-    Longitude: 170.79
-    Latitude: 15.5
-    Position: {x: -659.1869, y: 185.1962, z: 106.8832}
   - Name: Ansgarius
     Diameter: 91.42
     Longitude: 79.72
     Latitude: -12.92
     Position: {x: 120.54095, y: -154.94812, z: 664.6127}
-  - Name: Babcock
-    Diameter: 95.28
-    Longitude: 94.14
-    Latitude: 4.13
-    Position: {x: -49.900352, y: 49.90965, z: 689.39685}
+  - Name: Apollonius
+    Diameter: 50.66
+    Longitude: 60.96
+    Latitude: 4.51
+    Position: {x: 335.35452, y: 54.492733, z: 604.00073}
+  - Name: Artem'ev
+    Diameter: 66.39
+    Longitude: -145.22
+    Latitude: 10.4
+    Position: {x: -559.8434, y: 125.09976, z: -388.81158}
+  - Name: Artem'ev G
+    Diameter: 60.94
+    Longitude: -143.69
+    Latitude: 10.01
+    Position: {x: -549.9358, y: 120.45729, z: -404.11588}
+  - Name: Arzachel
+    Diameter: 96.99
+    Longitude: -1.93
+    Latitude: -18.26
+    Position: {x: 657.7303, y: -217.13737, z: -22.16393}
+  - Name: Balboa
+    Diameter: 69.19
+    Longitude: -83.31
+    Latitude: 19.24
+    Position: {x: 76.22354, y: 228.36142, z: -649.8385}
+  - Name: Balboa A
+    Diameter: 46.66
+    Longitude: -82.02
+    Latitude: 17.42
+    Position: {x: 91.79495, y: 207.4661, z: -654.81335}
+  - Name: Balboa B
+    Diameter: 54.25
+    Longitude: -82.57
+    Latitude: 20.49
+    Position: {x: 83.94552, y: 242.5804, z: -643.7056}
   - Name: Balmer-Kapteyn
     Diameter: 500
     Longitude: 70
@@ -341,16 +391,151 @@ MonoBehaviour:
     Longitude: 80.01
     Latitude: 5.28
     Position: {x: 119.708916, y: 63.771946, z: 679.59686}
-  - Name: Buisson Z
-    Diameter: 115.35
-    Longitude: 113.29
-    Latitude: 0.13
-    Position: {x: -274.00122, y: 1.5723658, z: 636.5296}
-  - Name: Chaplygin
-    Diameter: 123.39
-    Longitude: 150.24
-    Latitude: -5.76
-    Position: {x: -598.56433, y: -69.550674, z: 342.24615}
+  - Name: Beaumont
+    Diameter: 50.69
+    Longitude: 28.82
+    Latitude: -18.08
+    Position: {x: 577.1847, y: -215.06882, z: 317.57242}
+  - Name: Behaim
+    Diameter: 56.21
+    Longitude: 79.41
+    Latitude: -16.61
+    Position: {x: 122.04497, y: -198.09795, z: 652.772}
+  - Name: Bell
+    Diameter: 86.33
+    Longitude: -96.53
+    Latitude: 21.98
+    Position: {x: -73.081955, y: 259.37808, z: -638.45996}
+  - Name: Bell T
+    Diameter: 52.2
+    Longitude: -99.04
+    Latitude: 21.91
+    Position: {x: -101.0221, y: 258.59274, z: -634.95935}
+  - Name: Belopol'skiy
+    Diameter: 61.9
+    Longitude: -128.23
+    Latitude: -17.25
+    Position: {x: -409.55273, y: -205.50331, z: -519.88837}
+  - Name: Bilharz
+    Diameter: 44.55
+    Longitude: 56.34
+    Latitude: -5.83
+    Position: {x: 382.1179, y: -70.393, z: 573.82904}
+  - Name: Billy
+    Diameter: 45.57
+    Longitude: -50.24
+    Latitude: -13.83
+    Position: {x: 430.37482, y: -165.65604, z: -517.2858}
+  - Name: Bohr
+    Diameter: 70.07
+    Longitude: -86.52
+    Latitude: 12.71
+    Position: {x: 41.0345, y: 152.4714, z: -674.77234}
+  - Name: Bonpland
+    Diameter: 59.25
+    Longitude: -17.33
+    Latitude: -8.38
+    Position: {x: 654.47815, y: -100.99622, z: -204.22324}
+  - Name: Boscovich
+    Diameter: 41.53
+    Longitude: 11.01
+    Latitude: 9.71
+    Position: {x: 670.4993, y: 116.88236, z: 130.45334}
+  - Name: Boscovich P
+    Diameter: 64.82
+    Longitude: 10.31
+    Latitude: 11.47
+    Position: {x: 668.1943, y: 137.8064, z: 121.55196}
+  - Name: Bredikhin
+    Diameter: 61.68
+    Longitude: -158.37
+    Latitude: 17.25
+    Position: {x: -615.2252, y: 205.50331, z: -243.95761}
+  - Name: Cannon
+    Diameter: 57.58
+    Longitude: 81.36
+    Latitude: 19.88
+    Position: {x: 97.902336, y: 235.65555, z: 644.3063}
+  - Name: Capella
+    Diameter: 48.13
+    Longitude: 34.92
+    Latitude: -7.65
+    Position: {x: 563.1695, y: -92.25308, z: 393.16476}
+  - Name: Cardanus
+    Diameter: 49.57
+    Longitude: -72.5
+    Latitude: 13.27
+    Position: {x: 202.82498, y: 159.07132, z: -643.27856}
+  - Name: Catharina
+    Diameter: 98.77
+    Longitude: 23.55
+    Latitude: -17.98
+    Position: {x: 604.25684, y: -213.9187, z: 263.3656}
+  - Name: Catharina P
+    Diameter: 46.8
+    Longitude: 23.32
+    Latitude: -17.28
+    Position: {x: 607.664, y: -205.84982, z: 261.95294}
+  - Name: Cavalerius
+    Diameter: 59.35
+    Longitude: -66.93
+    Latitude: 5.1
+    Position: {x: 270.48074, y: 61.603745, z: -635.05444}
+  - Name: Cavalerius D
+    Diameter: 51.77
+    Longitude: -68.47
+    Latitude: 8.66
+    Position: {x: 251.42343, y: 104.34548, z: -637.2969}
+  - Name: Chaucer
+    Diameter: 45.48
+    Longitude: -140.71
+    Latitude: 3.39
+    Position: {x: -535.4094, y: 40.978577, z: -438.07132}
+  - Name: Colombo
+    Diameter: 79.02
+    Longitude: 46.02
+    Latitude: -15.26
+    Position: {x: 464.25693, y: -182.39732, z: 481.08807}
+  - Name: Comrie K
+    Diameter: 70.6
+    Longitude: -112.57
+    Latitude: 21.92
+    Position: {x: -246.75276, y: 258.70496, z: -593.6614}
+  - Name: Comstock
+    Diameter: 73.23
+    Longitude: -122.05
+    Latitude: 21.59
+    Position: {x: -341.94595, y: 254.99785, z: -546.16675}
+  - Name: Condorcet
+    Diameter: 74.85
+    Longitude: 69.58
+    Latitude: 12.1
+    Position: {x: 236.41537, y: 145.26567, z: 635.02344}
+  - Name: Condorcet P
+    Diameter: 48.4
+    Longitude: 70.29
+    Latitude: 8.76
+    Position: {x: 230.99449, y: 105.54105, z: 644.7881}
+  - Name: Congreve
+    Diameter: 57.61
+    Longitude: -167.84
+    Latitude: -0.28
+    Position: {x: -677.44324, y: -3.3866234, z: -145.97342}
+  - Name: Congreve Q
+    Diameter: 55.35
+    Longitude: -169.56
+    Latitude: -1.74
+    Position: {x: -681.21326, y: -21.042294, z: -125.51779}
+  - Name: Congreve U
+    Diameter: 54.72
+    Longitude: -170.75
+    Latitude: 0.4
+    Position: {x: -683.9718, y: 4.838013, z: -111.39185}
+  - Name: Cook
+    Diameter: 45.16
+    Longitude: 48.81
+    Latitude: -17.5
+    Position: {x: 435.2581, y: -208.38911, z: 497.36642}
   - Name: Copernicus
     Diameter: 96.07
     Longitude: -20.08
@@ -361,41 +546,141 @@ MonoBehaviour:
     Longitude: 59
     Latitude: 18
     Position: {x: 339.4524, y: 214.14879, z: 564.94366}
+  - Name: Crookes
+    Diameter: 48.25
+    Longitude: -165.1
+    Latitude: -10.4
+    Position: {x: -658.6965, y: -125.09976, z: -175.26556}
+  - Name: Cruger
+    Diameter: 45.94
+    Longitude: -66.96
+    Latitude: -16.68
+    Position: {x: 259.8097, y: -198.90913, z: -610.8871}
   - Name: Cyrillus
     Diameter: 98.09
     Longitude: 24.07
     Latitude: -13.29
     Position: {x: 615.7967, y: -159.30676, z: 275.07233}
-  - Name: Daedalus
-    Diameter: 93.61
-    Longitude: 179.4
-    Latitude: -5.83
-    Position: {x: -689.3778, y: -70.393, z: 7.2195735}
-  - Name: Dellinger
-    Diameter: 82.04
-    Longitude: 140.7
-    Latitude: -6.87
-    Position: {x: -532.42084, y: -82.89459, z: 435.78143}
+  - Name: Cyrillus F
+    Diameter: 43.9
+    Longitude: 25.49
+    Latitude: -15.32
+    Position: {x: 603.3152, y: -183.09734, z: 287.63733}
+  - Name: Daedalus C
+    Diameter: 58.36
+    Longitude: -178.91
+    Latitude: -4.15
+    Position: {x: -691.05786, y: -50.150917, z: -13.148303}
+  - Name: Daguerre
+    Diameter: 45.79
+    Longitude: 33.61
+    Latitude: -11.91
+    Position: {x: 564.7232, y: -143.01785, z: 375.34332}
+  - Name: Dalton
+    Diameter: 60.69
+    Longitude: -84.45
+    Latitude: 17.07
+    Position: {x: 64.070526, y: 203.4231, z: -659.3656}
+  - Name: Damoiseau A
+    Diameter: 47.29
+    Longitude: -62.59
+    Latitude: -6.36
+    Position: {x: 317.06235, y: -76.767166, z: -611.4141}
+  - Name: Damoiseau H
+    Diameter: 44.89
+    Longitude: -59.96
+    Latitude: -3.87
+    Position: {x: 346.12787, y: -46.77257, z: -598.5456}
+  - Name: Damoiseau M
+    Diameter: 58.3
+    Longitude: -61.38
+    Latitude: -5.08
+    Position: {x: 330.64197, y: -61.362797, z: -605.93695}
+  - Name: Davy Y
+    Diameter: 69.56
+    Longitude: -7.25
+    Latitude: -11.05
+    Position: {x: 674.7141, y: -132.82423, z: -85.83447}
+  - Name: Delambre
+    Diameter: 51.49
+    Longitude: 17.39
+    Latitude: -1.94
+    Position: {x: 660.9457, y: -23.460072, z: 207.00113}
+  - Name: Descartes
+    Diameter: 47.73
+    Longitude: 15.67
+    Latitude: -11.74
+    Position: {x: 653.2854, y: -141.00531, z: 183.2612}
+  - Name: Dirichlet
+    Diameter: 47.24
+    Longitude: -152.05
+    Latitude: 10.58
+    Position: {x: -601.7592, y: 127.24049, z: -319.28778}
   - Name: Doppler
     Diameter: 101.79
     Longitude: -159.84
     Latitude: -12.58
     Position: {x: -634.92487, y: -150.93716, z: -233.10382}
+  - Name: Dubyago
+    Diameter: 48.12
+    Longitude: 69.95
+    Latitude: 4.38
+    Position: {x: 236.89432, y: 52.9251, z: 649.09863}
+  - Name: Eddington
+    Diameter: 120.13
+    Longitude: -72.02
+    Latitude: 21.5
+    Position: {x: 199.0338, y: 253.98534, z: -613.29114}
   - Name: Einstein
     Diameter: 181.47
     Longitude: -88.65
     Latitude: 16.6
     Position: {x: 15.646431, y: 197.98204, z: -663.9332}
+  - Name: Einstein A
+    Diameter: 50.48
+    Longitude: -88.25
+    Latitude: 16.69
+    Position: {x: 20.271654, y: 199.025, z: -663.4961}
+  - Name: Elvey
+    Diameter: 80.21
+    Longitude: -100.64
+    Latitude: 9.01
+    Position: {x: -126.37494, y: 108.52855, z: -672.68115}
   - Name: Encke T
     Diameter: 94.68
     Longitude: -37.88
     Latitude: 3.23
     Position: {x: 546.1149, y: 39.04659, z: -424.8328}
+  - Name: Engel'gardt
+    Diameter: 43.51
+    Longitude: -159.47
+    Latitude: 5.39
+    Position: {x: -646.11707, y: 65.09664, z: -241.95895}
   - Name: Engel'gardt B
     Diameter: 121.21
     Longitude: -158.18
     Latitude: 7.8
     Position: {x: -637.3984, y: 94.050896, z: -255.19934}
+  - Name: Engel'gardt C
+    Diameter: 45.93
+    Longitude: -157.37
+    Latitude: 9.37
+    Position: {x: -631.11066, y: 112.8269, z: -263.09393}
+  - Name: Eratosthenes
+    Diameter: 58.77
+    Longitude: -11.32
+    Latitude: 14.47
+    Position: {x: 657.96326, y: 173.16202, z: -131.71289}
+  - Name: Euclides P
+    Diameter: 63.82
+    Longitude: -27.69
+    Latitude: -4.52
+    Position: {x: 611.7255, y: -54.613304, z: -321.0269}
+  - Name: Evans
+    Diameter: 69.4
+    Longitude: -133.78
+    Latitude: -9.63
+    Position: {x: -472.72394, y: -115.92849, z: -493.2967}
   - Name: Evans Q
     Diameter: 138.41
     Longitude: -136.3
@@ -411,11 +696,26 @@ MonoBehaviour:
     Longitude: -126.06
     Latitude: 17.9
     Position: {x: -388.17633, y: 212.99814, z: -533.1041}
-  - Name: Firsov S
-    Diameter: 104.17
-    Longitude: 110.27
-    Latitude: 3.34
-    Position: {x: -239.6782, y: 40.374863, z: 648.97864}
+  - Name: Firmicus
+    Diameter: 56.81
+    Longitude: 63.43
+    Latitude: 7.25
+    Position: {x: 307.49432, y: 87.45588, z: 614.85583}
+  - Name: Firmicus M
+    Diameter: 44.25
+    Longitude: 66.65
+    Latitude: 4.08
+    Position: {x: 273.97223, y: 49.306442, z: 634.6315}
+  - Name: Flammarion
+    Diameter: 76.18
+    Longitude: -3.73
+    Latitude: -3.33
+    Position: {x: 690.3644, y: -40.254116, z: -45.00686}
+  - Name: Flamsteed G
+    Diameter: 42.9
+    Longitude: -51.05
+    Latitude: -4.74
+    Position: {x: 434.15894, y: -57.26555, z: -537.0993}
   - Name: Flamsteed P
     Diameter: 112.24
     Longitude: -44.25
@@ -426,21 +726,11 @@ MonoBehaviour:
     Longitude: -45
     Latitude: -7
     Position: {x: 486.3724, y: -84.45546, z: -486.3724}
-  - Name: Fleming
-    Diameter: 126.37
-    Longitude: 109.28
-    Latitude: 14.91
-    Position: {x: -221.11412, y: 178.3099, z: 632.11005}
   - Name: Fra Mauro
     Diameter: 96.76
     Longitude: -16.97
     Latitude: -6.06
     Position: {x: 659.1213, y: -73.15992, z: -201.13626}
-  - Name: Freundlich-Sharonov
-    Diameter: 600
-    Longitude: 175
-    Latitude: 18.5
-    Position: {x: -654.68744, y: 219.89212, z: 57.277824}
   - Name: Fridman
     Diameter: 101.45
     Longitude: -126.88
@@ -451,56 +741,146 @@ MonoBehaviour:
     Longitude: -152.99
     Latitude: -13.94
     Position: {x: -599.2289, y: -166.94762, z: -305.454}
+  - Name: Galois A
+    Diameter: 52.91
+    Longitude: -152.46
+    Latitude: -13.52
+    Position: {x: -597.44684, y: -162.01285, z: -311.54147}
+  - Name: Galois L
+    Diameter: 49.15
+    Longitude: -151.9
+    Latitude: -15.07
+    Position: {x: -590.29016, y: -180.17928, z: -315.18567}
   - Name: Galois Q
     Diameter: 133.6
     Longitude: -154.46
     Latitude: -14.85
     Position: {x: -604.3988, y: -177.60855, z: -288.8015}
+  - Name: Gassendi
+    Diameter: 111.39
+    Longitude: -39.96
+    Latitude: -17.55
+    Position: {x: 506.4555, y: -208.96579, z: -424.3644}
+  - Name: Gibbs
+    Diameter: 78.76
+    Longitude: 84.27
+    Latitude: -18.37
+    Position: {x: 65.663895, y: -218.40045, z: 654.3993}
   - Name: Gilbert
     Diameter: 100.25
     Longitude: 76.16
     Latitude: -3.2
     Position: {x: 165.51497, y: -38.684303, z: 671.8313}
-  - Name: Goddard
-    Diameter: 93.18
-    Longitude: 89.13
-    Latitude: 15.15
-    Position: {x: 10.156731, y: 181.11343, z: 668.83765}
+  - Name: Glaisher W
+    Diameter: 48.01
+    Longitude: 47.64
+    Latitude: 12.55
+    Position: {x: 455.77765, y: 150.58302, z: 499.8405}
+  - Name: Goclenius
+    Diameter: 73.04
+    Longitude: 45.03
+    Latitude: -10.05
+    Position: {x: 482.2533, y: -120.93371, z: 482.75854}
+  - Name: Goddard C
+    Diameter: 48.19
+    Longitude: 85.21
+    Latitude: 16.81
+    Position: {x: 55.39548, y: 200.4148, z: 661.07056}
+  - Name: Gould M
+    Diameter: 41.54
+    Longitude: -17.24
+    Latitude: -17.67
+    Position: {x: 630.63824, y: -210.34921, z: -195.69771}
   - Name: Grimaldi
     Diameter: 173.49
     Longitude: -68.36
     Latitude: -5.38
     Position: {x: 254.43423, y: -64.97623, z: -641.31915}
-  - Name: Guyot
-    Diameter: 98.28
-    Longitude: 117.12
-    Latitude: 11.63
-    Position: {x: -309.4223, y: 139.70242, z: 604.1441}
-  - Name: Heaviside
-    Diameter: 164.46
-    Longitude: 166.77
-    Latitude: -10.44
-    Position: {x: -663.4392, y: -125.57559, z: 155.97484}
-  - Name: Heaviside K
-    Diameter: 124.9
-    Longitude: 168.5
-    Latitude: -12.91
-    Position: {x: -661.922, y: -154.83023, z: 134.66953}
+  - Name: Guericke
+    Diameter: 60.75
+    Longitude: -14.19
+    Latitude: -11.57
+    Position: {x: 658.2034, y: -138.99153, z: -166.42885}
+  - Name: Gutenberg
+    Diameter: 70.65
+    Longitude: 41.25
+    Latitude: -8.61
+    Position: {x: 515.1532, y: -103.74758, z: 451.7772}
+  - Name: Gutenberg C
+    Diameter: 45.21
+    Longitude: 41.13
+    Latitude: -10.04
+    Position: {x: 513.9873, y: -120.81461, z: 448.85388}
+  - Name: Gylden
+    Diameter: 48.15
+    Longitude: 0.23
+    Latitude: -5.37
+    Position: {x: 689.95294, y: -64.855804, z: 2.7696636}
+  - Name: Hansen
+    Diameter: 41.18
+    Longitude: 72.54
+    Latitude: 14.04
+    Position: {x: 201.71611, y: 168.12126, z: 641.32275}
+  - Name: Hansen B
+    Diameter: 79.89
+    Longitude: 79.52
+    Latitude: 14.43
+    Position: {x: 122.07481, y: 172.69353, z: 659.9422}
+  - Name: Hansteen
+    Diameter: 44.99
+    Longitude: -52.06
+    Latitude: -11.53
+    Position: {x: 417.48303, y: -138.51752, z: -535.5089}
+  - Name: Hartwig
+    Diameter: 78.46
+    Longitude: -80.47
+    Latitude: -6.14
+    Position: {x: 114.07763, y: -74.12205, z: -679.51544}
+  - Name: Harvey
+    Diameter: 59.98
+    Longitude: -146.51
+    Latitude: 19.35
+    Position: {x: -545.3024, y: 229.61716, z: -360.7911}
   - Name: Hedin
     Diameter: 157.38
     Longitude: -76.57
     Latitude: 2.87
     Position: {x: 160.75238, y: 34.698513, z: -673.20404}
-  - Name: Hertz
-    Diameter: 82.94
-    Longitude: 104.56
-    Latitude: 13.32
-    Position: {x: -169.52916, y: 159.65987, z: 652.70026}
+  - Name: Hedin A
+    Diameter: 64.65
+    Longitude: -78.06
+    Latitude: 5.4
+    Position: {x: 142.7366, y: 65.217064, z: -674.99774}
+  - Name: Helberg
+    Diameter: 61.93
+    Longitude: -102.46
+    Latitude: 22.63
+    Position: {x: -138.0085, y: 266.6516, z: -624.57947}
+  - Name: Henyey
+    Diameter: 68.74
+    Longitude: -152.33
+    Latitude: 12.7
+    Position: {x: -598.73083, y: 152.35342, z: -313.94083}
+  - Name: Henyey U
+    Diameter: 45.72
+    Longitude: -153.6
+    Latitude: 13.6
+    Position: {x: -603.32367, y: 162.95348, z: -299.4925}
   - Name: Hertzsprung
     Diameter: 536.37
     Longitude: -128.66
     Latitude: 1.37
     Position: {x: -432.79172, y: 16.568752, z: -540.98596}
+  - Name: Hertzsprung D
+    Diameter: 48.29
+    Longitude: -126.2
+    Latitude: 3.43
+    Position: {x: -408.55652, y: 41.461525, z: -558.22174}
+  - Name: Hertzsprung S
+    Diameter: 48.9
+    Longitude: -133.4
+    Latitude: 0.45
+    Position: {x: -476.13687, y: 5.442753, z: -503.50085}
   - Name: Hevelius
     Diameter: 113.87
     Longitude: -67.46
@@ -511,21 +891,41 @@ MonoBehaviour:
     Longitude: 4.91
     Latitude: -5.36
     Position: {x: 687.43787, y: -64.73539, z: 59.055073}
-  - Name: Hirayama
-    Diameter: 145.21
-    Longitude: 93.63
-    Latitude: -6.01
-    Position: {x: -43.634743, y: -72.55852, z: 687.8083}
-  - Name: Ibn Firnas
-    Diameter: 88.29
-    Longitude: 122.3
-    Latitude: 6.83
-    Position: {x: -367.67825, y: 82.41424, z: 581.60944}
+  - Name: Houtermans
+    Diameter: 42.68
+    Longitude: 87.38
+    Latitude: -9.42
+    Position: {x: 31.251066, y: -113.42354, z: 682.9403}
+  - Name: Houzeau
+    Diameter: 76.84
+    Longitude: -123.89
+    Latitude: -17.25
+    Position: {x: -369.03592, y: -205.50331, z: -549.39044}
+  - Name: Hubble
+    Diameter: 81.84
+    Longitude: 86.91
+    Latitude: 22.29
+    Position: {x: 34.56441, y: 262.85123, z: 640.28394}
+  - Name: Hubble C
+    Diameter: 53.64
+    Longitude: 85.62
+    Latitude: 19.45
+    Position: {x: 49.904785, y: 230.758, z: 651.54376}
   - Name: Icarus
     Diameter: 93.73
     Longitude: -173.26
     Latitude: -5.49
     Position: {x: -685.0537, y: -66.30071, z: -80.96036}
+  - Name: Icarus D
+    Diameter: 69.36
+    Longitude: -171.42
+    Latitude: -4.55
+    Position: {x: -683.0847, y: -54.97503, z: -103.062935}
+  - Name: Icarus X
+    Diameter: 44.66
+    Longitude: -175.68
+    Latitude: -2.25
+    Position: {x: -690.49835, y: -27.207054, z: -52.161324}
   - Name: Insularum
     Diameter: 600
     Longitude: -18
@@ -536,11 +936,41 @@ MonoBehaviour:
     Longitude: -129.16
     Latitude: -14.38
     Position: {x: -423.9105, y: -172.10779, z: -520.5072}
+  - Name: Isidorus
+    Diameter: 41.39
+    Longitude: 33.5
+    Latitude: -7.96
+    Position: {x: 572.315, y: -95.967834, z: 378.807}
+  - Name: Jackson
+    Diameter: 71.38
+    Longitude: -163.32
+    Latitude: 22.05
+    Position: {x: -615.2849, y: 260.163, z: -184.36023}
   - Name: Julius Caesar
     Diameter: 84.72
     Longitude: 15.21
     Latitude: 9.17
     Position: {x: 660.1783, y: 110.43947, z: 179.4902}
+  - Name: Kamerlingh Onnes
+    Diameter: 70.03
+    Longitude: -116.29
+    Latitude: 14.72
+    Position: {x: -296.8658, y: 176.08824, z: -600.92645}
+  - Name: Kant D
+    Diameter: 52.4
+    Longitude: 18.7
+    Latitude: -11.36
+    Position: {x: 643.5568, y: -136.50223, z: 217.83197}
+  - Name: Kapteyn
+    Diameter: 48.65
+    Longitude: 70.59
+    Latitude: -10.79
+    Position: {x: 226.23003, y: -129.73645, z: 642.0572}
+  - Name: Kapteyn C
+    Diameter: 43.94
+    Longitude: 70.25
+    Latitude: -13.33
+    Position: {x: 227.86719, y: -159.77757, z: 634.66266}
   - Name: Kastner
     Diameter: 116.07
     Longitude: 78.94
@@ -551,41 +981,96 @@ MonoBehaviour:
     Longitude: 79.35
     Latitude: -3.68
     Position: {x: 127.80865, y: -44.47949, z: 679.6584}
-  - Name: Keeler
-    Diameter: 158.07
-    Longitude: 161.78
-    Latitude: -9.78
-    Position: {x: -648.6888, y: -117.7168, z: 213.52899}
-  - Name: Keeler-Heaviside
-    Diameter: 500
-    Longitude: 162
-    Latitude: -10
-    Position: {x: -649.06915, y: -120.33819, z: 210.89539}
   - Name: Kekule
     Diameter: 94.22
     Longitude: -138.47
     Latitude: 16.31
     Position: {x: -497.90796, y: 194.61812, z: -440.97678}
+  - Name: Kekule V
+    Diameter: 64.95
+    Longitude: -141.73
+    Latitude: 18.33
+    Position: {x: -516.46893, y: 217.94124, z: -407.44382}
   - Name: Kibal'chich
     Diameter: 91.67
     Longitude: -147.18
     Latitude: 2.72
     Position: {x: -581.7254, y: 32.886402, z: -375.18402}
-  - Name: Kondratyuk
-    Diameter: 97.97
-    Longitude: 115.8
-    Latitude: -15.33
-    Position: {x: -290.8834, y: -183.21399, z: 601.7213}
+  - Name: Kiess
+    Diameter: 67.79
+    Longitude: 84.11
+    Latitude: -6.41
+    Position: {x: 70.6703, y: -77.368164, z: 685.03204}
+  - Name: Klein
+    Diameter: 43.47
+    Longitude: 2.53
+    Latitude: -11.99
+    Position: {x: 677.22064, y: -143.9645, z: 29.923367}
+  - Name: Kolhorster
+    Diameter: 78.78
+    Longitude: -115.01
+    Latitude: 10.79
+    Position: {x: -287.80414, y: 129.73645, z: -616.91675}
   - Name: Korolev
     Diameter: 423.41
     Longitude: -157.41
     Latitude: -4.19
     Position: {x: -638.1211, y: -50.633446, z: -265.4935}
+  - Name: Korolev C
+    Diameter: 66.47
+    Longitude: -153.22
+    Latitude: -0.73
+    Position: {x: -618.6207, y: -8.829207, z: -312.2169}
+  - Name: Korolev M
+    Diameter: 56.75
+    Longitude: -157.37
+    Latitude: -8.5
+    Position: {x: -632.61914, y: -102.431915, z: -263.72278}
+  - Name: Krafft
+    Diameter: 51.15
+    Longitude: -72.72
+    Latitude: 16.56
+    Position: {x: 197.31155, y: 197.51834, z: -634.2742}
+  - Name: Krasovskiy
+    Diameter: 61.67
+    Longitude: -175.63
+    Latitude: 3.79
+    Position: {x: -689.4741, y: 45.807125, z: -52.688904}
+  - Name: Krasovskiy H
+    Diameter: 45.99
+    Longitude: -171.59
+    Latitude: 2.62
+    Position: {x: -684.83136, y: 31.678204, z: -101.24932}
+  - Name: Krasovskiy L
+    Diameter: 56.87
+    Longitude: -175.03
+    Latitude: -0.52
+    Position: {x: -690.366, y: -6.2893815, z: -60.034924}
+  - Name: Krasovskiy P
+    Diameter: 41
+    Longitude: -177.34
+    Latitude: 0.88
+    Position: {x: -692.1717, y: 10.643297, z: -32.157684}
   - Name: Krasovskiy T
     Diameter: 96.46
     Longitude: -177.09
     Latitude: 3.64
     Position: {x: -690.71014, y: 43.996666, z: -35.11086}
+  - Name: La Perouse
+    Diameter: 80.4
+    Longitude: 76.28
+    Latitude: -10.67
+    Position: {x: 161.52202, y: -128.31041, z: 661.586}
+  - Name: Lade
+    Diameter: 58.11
+    Longitude: 9.99
+    Latitude: -1.33
+    Position: {x: 682.3089, y: -16.085081, z: 120.18667}
+  - Name: Lade A
+    Diameter: 57.82
+    Longitude: 12.73
+    Latitude: -0.16
+    Position: {x: 675.96295, y: -1.9352185, z: 152.70677}
   - Name: Lame
     Diameter: 84.28
     Longitude: 64.56
@@ -596,76 +1081,166 @@ MonoBehaviour:
     Longitude: 23.32
     Latitude: 5.14
     Position: {x: 633.8286, y: 62.08562, z: 273.23203}
-  - Name: Langemak
-    Diameter: 104.76
-    Longitude: 119.45
-    Latitude: -9.93
-    Position: {x: -335.61868, y: -119.50431, z: 594.4138}
-  - Name: Langemak N
-    Diameter: 137.93
-    Longitude: 119.12
-    Latitude: -13.19
-    Position: {x: -328.3449, y: -158.12938, z: 589.43506}
   - Name: Langrenus
     Diameter: 131.98
     Longitude: 61.04
     Latitude: -8.86
     Position: {x: 331.54593, y: -106.73628, z: 599.1107}
+  - Name: Langrenus P
+    Diameter: 42.27
+    Longitude: 63.01
+    Latitude: -12.04
+    Position: {x: 307.58917, y: -144.556, z: 603.93823}
+  - Name: Lebedinskiy
+    Diameter: 63.39
+    Longitude: -164.89
+    Latitude: 7.84
+    Position: {x: -662.7874, y: 94.5302, z: -178.95786}
+  - Name: Lebedinskiy P
+    Diameter: 49.7
+    Longitude: -165.64
+    Latitude: 5.75
+    Position: {x: -667.9704, y: 69.43033, z: -171.00871}
   - Name: Letronne
     Diameter: 117.59
     Longitude: -42.49
     Latitude: -10.5
     Position: {x: 502.4579, y: -126.289215, z: -460.25653}
+  - Name: Leuschner
+    Diameter: 50.14
+    Longitude: -109.05
+    Latitude: 1.67
+    Position: {x: -226.09438, y: 20.196009, z: -654.769}
   - Name: Lipskiy
     Diameter: 91.15
     Longitude: -179.38
     Latitude: -2.15
     Position: {x: -692.4716, y: -25.998432, z: -7.493539}
-  - Name: Lobachevskiy
-    Diameter: 87.26
-    Longitude: 113.07
-    Latitude: 9.76
-    Position: {x: -267.62543, y: 117.47842, z: 628.3506}
-  - Name: Lomonosov-Fleming
-    Diameter: 620
-    Longitude: 105
-    Latitude: 19
-    Position: {x: -169.58972, y: 225.61871, z: 632.9175}
-  - Name: Love
-    Diameter: 90.08
-    Longitude: 129.17
-    Latitude: -6.33
-    Position: {x: -435.04642, y: -76.40653, z: 533.9903}
+  - Name: Lodygin
+    Diameter: 56.11
+    Longitude: -146.78
+    Latitude: -17.42
+    Position: {x: -553.1557, y: -207.4661, z: -362.25076}
+  - Name: Lodygin F
+    Diameter: 46.98
+    Longitude: -143.47
+    Latitude: -17.75
+    Position: {x: -530.34814, y: -211.27097, z: -392.86697}
+  - Name: Lohse
+    Diameter: 43.34
+    Longitude: 60.31
+    Latitude: -13.76
+    Position: {x: 333.39673, y: -164.8338, z: 584.7439}
+  - Name: Lowell
+    Diameter: 62.65
+    Longitude: -103.42
+    Latitude: -12.97
+    Position: {x: -156.73329, y: -155.5375, z: -656.8804}
+  - Name: Lubiniezky
+    Diameter: 42.97
+    Longitude: -23.89
+    Latitude: -17.88
+    Position: {x: 603.0238, y: -212.76793, z: -267.09747}
+  - Name: Lucretius
+    Diameter: 64.61
+    Longitude: -121.24
+    Latitude: -8.22
+    Position: {x: -355.71402, y: -99.081276, z: -586.4294}
   - Name: Mach
     Diameter: 174.97
     Longitude: -149.24
     Latitude: 18.13
     Position: {x: -565.9416, y: 215.64363, z: -336.8336}
-  - Name: Mandel'shtam
-    Diameter: 181.89
-    Longitude: 162.39
-    Latitude: 5.7
-    Position: {x: -657.2586, y: 68.82858, z: 208.62096}
+  - Name: Maclaurin
+    Diameter: 54.33
+    Longitude: 67.99
+    Latitude: -1.92
+    Position: {x: 259.56873, y: -23.218307, z: 642.1324}
+  - Name: Maclaurin H
+    Diameter: 41.96
+    Longitude: 64.1
+    Latitude: -1.58
+    Position: {x: 302.58856, y: -19.107887, z: 623.1565}
+  - Name: Maclaurin M
+    Diameter: 42.13
+    Longitude: 69.18
+    Latitude: -4.88
+    Position: {x: 245.42235, y: -58.95291, z: 645.4002}
+  - Name: Maclaurin O
+    Diameter: 41.47
+    Longitude: 67.56
+    Latitude: -0.14
+    Position: {x: 264.52826, y: -1.6933168, z: 640.5239}
+  - Name: Macrobius
+    Diameter: 62.79
+    Longitude: 45.97
+    Latitude: 21.26
+    Position: {x: 448.87967, y: 251.28229, z: 464.3417}
+  - Name: Maestlin R
+    Diameter: 60.42
+    Longitude: -41.47
+    Latitude: 3.53
+    Position: {x: 518.2815, y: 42.668808, z: -458.05316}
+  - Name: Manilius E
+    Diameter: 48.37
+    Longitude: 6.35
+    Latitude: 18.38
+    Position: {x: 653.6126, y: 218.51523, z: 72.73689}
+  - Name: Maraldi D
+    Diameter: 66.49
+    Longitude: 36.08
+    Latitude: 16.74
+    Position: {x: 536.3442, y: 199.60419, z: 390.82227}
   - Name: Marginis
     Diameter: 580
     Longitude: 84
     Latitude: 20
     Position: {x: 68.06963, y: 237.01994, z: 647.6396}
+  - Name: Maunder
+    Diameter: 53.8
+    Longitude: -93.88
+    Latitude: -14.52
+    Position: {x: -45.39542, y: -173.74753, z: -669.32806}
+  - Name: McKellar
+    Diameter: 50.16
+    Longitude: -170.86
+    Latitude: -15.72
+    Position: {x: -658.61005, y: -187.75897, z: -105.96393}
   - Name: McMath
     Diameter: 88.58
     Longitude: -166.09
     Latitude: 16.63
     Position: {x: -644.54126, y: 198.32973, z: -159.62726}
-  - Name: Meitner
-    Diameter: 87.27
-    Longitude: 113.1
-    Latitude: -10.87
-    Position: {x: -267.01123, y: -130.68683, z: 625.99915}
-  - Name: Mendeleev
-    Diameter: 325.13
-    Longitude: 141.17
-    Latitude: 5.38
-    Position: {x: -537.4756, y: 64.97623, z: 432.605}
+  - Name: McMath J
+    Diameter: 46.09
+    Longitude: -163.83
+    Latitude: 14.59
+    Position: {x: -644.12164, y: 174.567, z: -186.76901}
+  - Name: McNally
+    Diameter: 47.03
+    Longitude: -127.65
+    Latitude: 22.5
+    Position: {x: -391.0871, y: 265.19965, z: -506.92108}
+  - Name: Mechnikov
+    Diameter: 58.83
+    Longitude: -148.99
+    Latitude: -10.47
+    Position: {x: -584.0655, y: -125.93243, z: -351.08066}
+  - Name: Mechnikov D
+    Diameter: 54.64
+    Longitude: -147.19
+    Latitude: -9.74
+    Position: {x: -574.0515, y: -117.24, z: -370.09274}
+  - Name: Mees
+    Diameter: 51.55
+    Longitude: -96.18
+    Latitude: 13.57
+    Position: {x: -72.520424, y: 162.60078, z: -669.7393}
+  - Name: Mees Y
+    Diameter: 77.28
+    Longitude: -96.74
+    Latitude: 15.73
+    Position: {x: -78.28735, y: 187.87538, z: -662.43713}
   - Name: Michelson
     Diameter: 123.14
     Longitude: -121.55
@@ -676,46 +1251,111 @@ MonoBehaviour:
     Longitude: -154.65
     Latitude: 17.76
     Position: {x: -596.424, y: 211.38615, z: -282.5655}
+  - Name: Mitra A
+    Diameter: 45.62
+    Longitude: -154.15
+    Latitude: 20.6
+    Position: {x: -583.7805, y: 243.82626, z: -282.83936}
+  - Name: Mitra J
+    Diameter: 48.44
+    Longitude: -153.06
+    Latitude: 15.99
+    Position: {x: -593.8939, y: 190.90044, z: -301.82123}
+  - Name: Morse
+    Diameter: 72.77
+    Longitude: -175.29
+    Latitude: 21.9
+    Position: {x: -640.8192, y: 258.48053, z: -52.79766}
   - Name: Moseley
     Diameter: 88.89
     Longitude: -90.2
     Latitude: 20.95
     Position: {x: -2.2590759, y: 247.78432, z: -647.1838}
+  - Name: Murchison
+    Diameter: 57.83
+    Longitude: -0.21
+    Latitude: 5.07
+    Position: {x: 690.284, y: 61.24233, z: -2.5300343}
+  - Name: Nectaris
+    Diameter: 860
+    Longitude: 34
+    Latitude: -16
+    Position: {x: 552.267, y: -191.0167, z: 372.5088}
   - Name: Neper
     Diameter: 144.32
     Longitude: 84.58
     Latitude: 8.76
     Position: {x: 64.694305, y: 105.54105, z: 681.85394}
+  - Name: Nobel
+    Diameter: 50.87
+    Longitude: -101.39
+    Latitude: 14.73
+    Position: {x: -132.36009, y: 176.2052, z: -657.0248}
+  - Name: Nobili
+    Diameter: 41.79
+    Longitude: 75.95
+    Latitude: 0.17
+    Position: {x: 168.23792, y: 2.0561695, z: 672.26544}
+  - Name: Ohm
+    Diameter: 61.75
+    Longitude: -113.78
+    Latitude: 18.32
+    Position: {x: -265.27255, y: 217.82642, z: -602.0225}
+  - Name: Olbers
+    Diameter: 73.02
+    Longitude: -76.14
+    Latitude: 7.3
+    Position: {x: 164.66278, y: 88.05578, z: -667.36896}
   - Name: Olbers D
     Diameter: 100.03
     Longitude: -78.03
     Latitude: 10.23
     Position: {x: 141.44298, y: 123.07682, z: -667.1544}
-  - Name: Ostwald
-    Diameter: 108.13
-    Longitude: 121.95
-    Latitude: 10.24
-    Position: {x: -360.87976, y: 123.195854, z: 578.65155}
-  - Name: Papaleksi
-    Diameter: 92.03
-    Longitude: 163.95
-    Latitude: 10.15
-    Position: {x: -655.5646, y: 122.124466, z: 188.59953}
+  - Name: Opelt
+    Diameter: 48.73
+    Longitude: -17.64
+    Latitude: -16.32
+    Position: {x: 633.80475, y: -194.73419, z: -201.54182}
+  - Name: Pallas
+    Diameter: 49.51
+    Longitude: -1.65
+    Latitude: 5.48
+    Position: {x: 689.5467, y: 66.18031, z: -19.863008}
+  - Name: Parrot
+    Diameter: 70.66
+    Longitude: 3.29
+    Latitude: -14.57
+    Position: {x: 669.6084, y: -174.3329, z: 38.49212}
+  - Name: Parry
+    Diameter: 47.28
+    Longitude: -15.78
+    Latitude: -7.88
+    Position: {x: 660.58575, y: -95.00946, z: -186.67789}
   - Name: Paschen
     Diameter: 127.36
     Longitude: -140.53
     Latitude: -14.06
     Position: {x: -518.93994, y: -168.35593, z: -427.32498}
-  - Name: Pasteur
-    Diameter: 232.77
-    Longitude: 104.91
-    Latitude: -11.58
-    Position: {x: -174.68053, y: -139.11003, z: 656.0367}
-  - Name: Perepelkin
-    Diameter: 88.74
-    Longitude: 128.8
-    Latitude: -9.99
-    Position: {x: -427.65265, y: -120.21906, z: 531.8925}
+  - Name: Paschen K
+    Diameter: 55.04
+    Longitude: -139.57
+    Latitude: -17.93
+    Position: {x: -501.89148, y: -213.3434, z: -427.59625}
+  - Name: Paschen M
+    Diameter: 87.84
+    Longitude: -140.62
+    Latitude: -16.3
+    Position: {x: -514.1272, y: -194.50201, z: -422.0085}
+  - Name: Paschen S
+    Diameter: 44.23
+    Longitude: -142.67
+    Latitude: -14.61
+    Position: {x: -533.2253, y: -174.8011, z: -406.65015}
+  - Name: Plinius
+    Diameter: 41.31
+    Longitude: 23.61
+    Latitude: 15.36
+    Position: {x: 612.3094, y: 183.5639, z: 267.63867}
   - Name: Poynting
     Diameter: 127.55
     Longitude: -133.38
@@ -726,36 +1366,146 @@ MonoBehaviour:
     Longitude: -1.84
     Latitude: -9.16
     Position: {x: 683.8098, y: -110.32005, z: -21.96746}
+  - Name: Racah
+    Diameter: 71.91
+    Longitude: -179.87
+    Latitude: -13.5
+    Position: {x: -673.85065, y: -161.77763, z: -1.5289307}
+  - Name: Racah K
+    Diameter: 54.39
+    Longitude: -178.77
+    Latitude: -16.56
+    Position: {x: -664.10254, y: -197.51834, z: -14.258878}
+  - Name: Raimond
+    Diameter: 68.37
+    Longitude: -159.63
+    Latitude: 14.78
+    Position: {x: -628.1671, y: 176.79002, z: -233.23888}
+  - Name: Reaumur
+    Diameter: 51.25
+    Longitude: 0.73
+    Latitude: -2.45
+    Position: {x: 692.3103, y: -29.624043, z: 8.821136}
+  - Name: Reiner R
+    Diameter: 46.08
+    Longitude: -55.69
+    Latitude: 3.68
+    Position: {x: 389.81802, y: 44.47949, z: -571.2377}
+  - Name: Reinhold
+    Diameter: 43.28
+    Longitude: -22.86
+    Latitude: 3.28
+    Position: {x: 637.5235, y: 39.650364, z: -268.77612}
+  - Name: Rhaeticus
+    Diameter: 44.43
+    Longitude: 4.92
+    Latitude: 0.03
+    Position: {x: 690.44653, y: 0.36285394, z: 59.434937}
   - Name: Riccioli
     Diameter: 155.66
     Longitude: -74.42
     Latitude: -2.9
     Position: {x: 185.89006, y: -35.06091, z: -666.68176}
+  - Name: Robertson
+    Diameter: 89.85
+    Longitude: -105.37
+    Latitude: 21.84
+    Position: {x: -170.49718, y: 257.80707, z: -620.2542}
   - Name: Rocca
     Diameter: 84.06
     Longitude: -72.89
     Latitude: -12.89
     Position: {x: 198.74771, y: -154.59444, z: -645.63837}
+  - Name: Rocca A
+    Diameter: 64.25
+    Longitude: -70.32
+    Latitude: -13.76
+    Position: {x: 226.6814, y: -164.8338, z: -633.7936}
+  - Name: Rocca E
+    Diameter: 43.2
+    Longitude: -69.59
+    Latitude: -11.75
+    Position: {x: 236.60968, y: -141.12373, z: -635.8844}
+  - Name: Rocca M
+    Diameter: 44.13
+    Longitude: -70.89
+    Latitude: -14.57
+    Position: {x: 219.58017, y: -174.3329, z: -633.75195}
+  - Name: Rocca Q
+    Diameter: 58.51
+    Longitude: -69.14
+    Latitude: -15.29
+    Position: {x: 238.03273, y: -182.74734, z: -624.6542}
   - Name: Rocca W
     Diameter: 104.65
     Longitude: -66.52
     Latitude: -10.26
     Position: {x: 271.69614, y: -123.4339, z: -625.4552}
-  - Name: Saha
-    Diameter: 103.34
-    Longitude: 103.04
-    Latitude: -1.69
-    Position: {x: -156.29445, y: -20.437809, z: 674.83575}
+  - Name: Rocca Z
+    Diameter: 54.36
+    Longitude: -75.54
+    Latitude: -16.23
+    Position: {x: 166.14864, y: -193.68925, z: -644.3044}
+  - Name: Saunder
+    Diameter: 44.38
+    Longitude: 8.72
+    Latitude: -4.26
+    Position: {x: 683.0972, y: -51.477802, z: 104.772606}
   - Name: Schluter
     Diameter: 87.55
     Longitude: -83.39
     Latitude: -5.93
     Position: {x: 79.34475, y: -71.596146, z: -684.7098}
-  - Name: Schuster
-    Diameter: 100.08
-    Longitude: 146.42
-    Latitude: 4.44
-    Position: {x: -575.6156, y: 53.64865, z: 382.1486}
+  - Name: Schubert
+    Diameter: 51.94
+    Longitude: 81.01
+    Latitude: 2.78
+    Position: {x: 108.16219, y: 33.611275, z: 683.68134}
+  - Name: Schubert G
+    Diameter: 56.38
+    Longitude: 75.34
+    Latitude: 4.19
+    Position: {x: 174.91751, y: 50.633446, z: 668.6473}
+  - Name: Schubert N
+    Diameter: 65.13
+    Longitude: 72.65
+    Latitude: 1.79
+    Position: {x: 206.5572, y: 21.646765, z: 661.14636}
+  - Name: Schubert X
+    Diameter: 49.18
+    Longitude: 76.75
+    Latitude: 0.31
+    Position: {x: 158.83353, y: 3.7494726, z: 674.54193}
+  - Name: Sechenov
+    Diameter: 63.8
+    Longitude: -143.09
+    Latitude: -6.97
+    Position: {x: -550.0138, y: -84.09529, z: -413.1123}
+  - Name: Seleucus
+    Diameter: 45.01
+    Longitude: -66.66
+    Latitude: 21.09
+    Position: {x: 256.16644, y: 249.36494, z: -593.67065}
+  - Name: Shternberg
+    Diameter: 74.36
+    Longitude: -116.82
+    Latitude: 19.38
+    Position: {x: -294.95752, y: 229.95947, z: -583.4104}
+  - Name: Sirsalis
+    Diameter: 44.17
+    Longitude: -60.51
+    Latitude: -12.49
+    Position: {x: 333.07068, y: -149.87456, z: -588.9402}
+  - Name: Sirsalis A
+    Diameter: 48.46
+    Longitude: -61.4
+    Latitude: -12.67
+    Position: {x: 323.6556, y: -151.99942, z: -593.62634}
+  - Name: Sirsalis E
+    Diameter: 70.29
+    Longitude: -56.7
+    Latitude: -8.16
+    Position: {x: 376.62076, y: -98.36296, z: -573.3503}
   - Name: Sirsalis Z
     Diameter: 90.32
     Longitude: -62.04
@@ -766,16 +1516,56 @@ MonoBehaviour:
     Longitude: 87
     Latitude: -2
     Position: {x: 36.24674, y: -24.18535, z: 691.6287}
-  - Name: Spencer Jones
-    Diameter: 88.19
-    Longitude: 165.84
-    Latitude: 13.06
-    Position: {x: -654.5636, y: 156.59811, z: 165.14394}
+  - Name: Stadius
+    Diameter: 68.48
+    Longitude: -13.77
+    Latitude: 10.48
+    Position: {x: 661.8545, y: 126.05136, z: -162.19965}
+  - Name: Stromgren A
+    Diameter: 50.82
+    Longitude: -131.82
+    Latitude: -17.93
+    Position: {x: -439.6453, y: -213.3434, z: -491.37115}
+  - Name: Stromgren X
+    Diameter: 42.45
+    Longitude: -134.73
+    Latitude: -17.36
+    Position: {x: -465.4945, y: -206.77354, z: -469.90268}
+  - Name: Sundman
+    Diameter: 41.04
+    Longitude: -91.69
+    Latitude: 10.76
+    Position: {x: -20.078503, y: 129.37999, z: -680.5194}
+  - Name: Tacchini
+    Diameter: 42.58
+    Longitude: 85.82
+    Latitude: 5.08
+    Position: {x: 50.31438, y: 61.362797, z: 688.4418}
+  - Name: Taruntius
+    Diameter: 57.32
+    Longitude: 46.54
+    Latitude: 5.5
+    Position: {x: 474.4841, y: 66.421104, z: 500.70157}
+  - Name: Tempel
+    Diameter: 43.19
+    Longitude: 11.86
+    Latitude: 3.76
+    Position: {x: 676.74646, y: 45.445057, z: 142.11948}
   - Name: Theophilus
     Diameter: 98.59
     Longitude: 26.28
     Latitude: -11.45
     Position: {x: 609.00586, y: -137.5693, z: 300.725}
+  - Name: Timiryazev
+    Diameter: 52.15
+    Longitude: -147.15
+    Latitude: -5.09
+    Position: {x: -579.889, y: -61.483276, z: -374.4297}
+  - Name: Timiryazev S
+    Diameter: 51.44
+    Longitude: -149.51
+    Latitude: -5.63
+    Position: {x: -594.28973, y: -67.98607, z: -349.92374}
   - Name: Torricelli R
     Diameter: 87.64
     Longitude: 28.14
@@ -791,21 +1581,41 @@ MonoBehaviour:
     Longitude: -149.69
     Latitude: 5.39
     Position: {x: -595.6267, y: 65.09664, z: -348.1956}
-  - Name: Tsiolkovskiy-Stark
-    Diameter: 700
-    Longitude: 128
-    Latitude: -15
-    Position: {x: -412.1155, y: -179.3616, z: 527.4838}
+  - Name: Tsander B
+    Diameter: 55.09
+    Longitude: -147.68
+    Latitude: 9.01
+    Position: {x: -578.4109, y: 108.52855, z: -365.93906}
+  - Name: Wan-Hoo
+    Diameter: 53.28
+    Longitude: -138.91
+    Latitude: -9.96
+    Position: {x: -514.4272, y: -119.8617, z: -448.60538}
   - Name: Vasco da Gama
     Diameter: 93.52
     Longitude: -83.94
     Latitude: 13.78
     Position: {x: 71.0542, y: 165.06876, z: -669.2926}
+  - Name: Vasco da Gama C
+    Diameter: 46.83
+    Longitude: -85.07
+    Latitude: 11.48
+    Position: {x: 58.364002, y: 137.92491, z: -676.6235}
+  - Name: Vasco da Gama F
+    Diameter: 55.78
+    Longitude: -80.78
+    Latitude: 13.86
+    Position: {x: 107.80352, y: 166.00835, z: -664.12994}
   - Name: Vasco da Gama P
     Diameter: 102.54
     Longitude: -80.34
     Latitude: 12
     Position: {x: 113.745125, y: 144.08281, z: -668.2449}
+  - Name: Vasco da Gama R
+    Diameter: 60.9
+    Longitude: -83.51
+    Latitude: 9.91
+    Position: {x: 77.160866, y: 119.266014, z: -678.2852}
   - Name: Vavilov
     Diameter: 98.22
     Longitude: -138.77
@@ -816,81 +1626,131 @@ MonoBehaviour:
     Longitude: -137.48
     Latitude: 0.03
     Position: {x: -510.76968, y: 0.36285394, z: -468.3623}
-  - Name: Vening Meinesz
-    Diameter: 88.69
-    Longitude: 162.51
-    Latitude: -0.1
-    Position: {x: -660.9611, y: -1.2095125, z: 208.2735}
-  - Name: Ventris
-    Diameter: 100.74
-    Longitude: 157.97
-    Latitude: -4.77
-    Position: {x: -640.1774, y: -57.62716, z: 259.03854}
-  - Name: Vetchinkin
-    Diameter: 94.29
-    Longitude: 131.08
-    Latitude: 9.77
-    Position: {x: -448.77438, y: 117.59762, z: 514.80225}
+  - Name: Vendelinus
+    Diameter: 141.21
+    Longitude: 61.55
+    Latitude: -16.46
+    Position: {x: 316.60962, y: -196.35869, z: 584.3378}
   - Name: Weyl
     Diameter: 122.82
     Longitude: -120.53
     Latitude: 15.97
     Position: {x: -338.4501, y: 190.66786, z: -573.88696}
-  - Name: Wyld
-    Diameter: 103.4
-    Longitude: 98.1
-    Latitude: -1.42
-    Position: {x: -97.61455, y: -17.173328, z: 685.8757}
+  - Name: Wichmann R
+    Diameter: 64.13
+    Longitude: -38.95
+    Latitude: -6.64
+    Position: {x: 535.32745, y: -80.13203, z: -432.72668}
+  - Name: Widmannstatten
+    Diameter: 52.88
+    Longitude: 85.43
+    Latitude: -6.09
+    Position: {x: 54.904575, y: -73.52074, z: 686.89825}
   - Name: Zhukovskiy
     Diameter: 82.07
     Longitude: -167.28
     Latitude: 7.55
     Position: {x: -670.1317, y: 91.05419, z: -151.2666}
+  - Name: Zollner
+    Diameter: 47.69
+    Longitude: 18.9
+    Latitude: -7.97
+    Position: {x: 649.30426, y: -96.08762, z: 222.30653}
+  - Name: Abulfeda
+    Diameter: 62.23
+    Longitude: 13.91
+    Latitude: -13.87
+    Position: {x: 653.0636, y: -166.12578, z: 161.73787}
+  - Name: Agrippa
+    Diameter: 43.75
+    Longitude: 10.47
+    Latitude: 4.1
+    Position: {x: 679.71765, y: 49.547726, z: 125.61014}
   - Name: Albategnius
     Diameter: 130.84
     Longitude: 4.01
     Latitude: -11.24
     Position: {x: 678.0438, y: -135.07896, z: 47.532364}
-  - Name: Al-Khwarizmi G
-    Diameter: 102.83
-    Longitude: 107.35
-    Latitude: 6.76
-    Position: {x: -205.22134, y: 81.573524, z: 656.8706}
-  - Name: Al-Khwarizmi-King
-    Diameter: 590
-    Longitude: 112
-    Latitude: 1
-    Position: {x: -259.56284, y: 12.094517, z: 642.44055}
+  - Name: Almanon
+    Diameter: 47.76
+    Longitude: 15.14
+    Latitude: -16.85
+    Position: {x: 640.22644, y: -200.8779, z: 173.22595}
   - Name: Alphonsus
     Diameter: 110.54
     Longitude: -2.85
     Latitude: -13.39
     Position: {x: 673.3278, y: -160.48364, z: -33.520245}
+  - Name: Alter
+    Diameter: 64.73
+    Longitude: -107.8
+    Latitude: 18.74
+    Position: {x: -200.61604, y: 222.64302, z: -624.84576}
+  - Name: Alter W
+    Diameter: 51.47
+    Longitude: -109.41
+    Latitude: 20.38
+    Position: {x: -215.8857, y: 241.33368, z: -612.6993}
+  - Name: Amici
+    Diameter: 52.03
+    Longitude: -172.23
+    Latitude: -10.06
+    Position: {x: -676.08057, y: -121.05281, z: -92.25096}
   - Name: Amici M
     Diameter: 107.91
     Longitude: -172.02
     Latitude: -11.81
     Position: {x: -671.76184, y: -141.83417, z: -94.17076}
+  - Name: Amici Q
+    Diameter: 43.59
+    Longitude: -175.89
+    Latitude: -12.34
+    Position: {x: -675.2483, y: -148.10272, z: -48.520935}
   - Name: Amici U
     Diameter: 88.73
     Longitude: -175.47
     Latitude: -8.75
     Position: {x: -682.7949, y: -105.42151, z: -54.096806}
-  - Name: Anderson
-    Diameter: 105.33
-    Longitude: 170.79
-    Latitude: 15.5
-    Position: {x: -659.1869, y: 185.1962, z: 106.8832}
   - Name: Ansgarius
     Diameter: 91.42
     Longitude: 79.72
     Latitude: -12.92
     Position: {x: 120.54095, y: -154.94812, z: 664.6127}
-  - Name: Babcock
-    Diameter: 95.28
-    Longitude: 94.14
-    Latitude: 4.13
-    Position: {x: -49.900352, y: 49.90965, z: 689.39685}
+  - Name: Apollonius
+    Diameter: 50.66
+    Longitude: 60.96
+    Latitude: 4.51
+    Position: {x: 335.35452, y: 54.492733, z: 604.00073}
+  - Name: Artem'ev
+    Diameter: 66.39
+    Longitude: -145.22
+    Latitude: 10.4
+    Position: {x: -559.8434, y: 125.09976, z: -388.81158}
+  - Name: Artem'ev G
+    Diameter: 60.94
+    Longitude: -143.69
+    Latitude: 10.01
+    Position: {x: -549.9358, y: 120.45729, z: -404.11588}
+  - Name: Arzachel
+    Diameter: 96.99
+    Longitude: -1.93
+    Latitude: -18.26
+    Position: {x: 657.7303, y: -217.13737, z: -22.16393}
+  - Name: Balboa
+    Diameter: 69.19
+    Longitude: -83.31
+    Latitude: 19.24
+    Position: {x: 76.22354, y: 228.36142, z: -649.8385}
+  - Name: Balboa A
+    Diameter: 46.66
+    Longitude: -82.02
+    Latitude: 17.42
+    Position: {x: 91.79495, y: 207.4661, z: -654.81335}
+  - Name: Balboa B
+    Diameter: 54.25
+    Longitude: -82.57
+    Latitude: 20.49
+    Position: {x: 83.94552, y: 242.5804, z: -643.7056}
   - Name: Balmer-Kapteyn
     Diameter: 500
     Longitude: 70
@@ -901,16 +1761,151 @@ MonoBehaviour:
     Longitude: 80.01
     Latitude: 5.28
     Position: {x: 119.708916, y: 63.771946, z: 679.59686}
-  - Name: Buisson Z
-    Diameter: 115.35
-    Longitude: 113.29
-    Latitude: 0.13
-    Position: {x: -274.00122, y: 1.5723658, z: 636.5296}
-  - Name: Chaplygin
-    Diameter: 123.39
-    Longitude: 150.24
-    Latitude: -5.76
-    Position: {x: -598.56433, y: -69.550674, z: 342.24615}
+  - Name: Beaumont
+    Diameter: 50.69
+    Longitude: 28.82
+    Latitude: -18.08
+    Position: {x: 577.1847, y: -215.06882, z: 317.57242}
+  - Name: Behaim
+    Diameter: 56.21
+    Longitude: 79.41
+    Latitude: -16.61
+    Position: {x: 122.04497, y: -198.09795, z: 652.772}
+  - Name: Bell
+    Diameter: 86.33
+    Longitude: -96.53
+    Latitude: 21.98
+    Position: {x: -73.081955, y: 259.37808, z: -638.45996}
+  - Name: Bell T
+    Diameter: 52.2
+    Longitude: -99.04
+    Latitude: 21.91
+    Position: {x: -101.0221, y: 258.59274, z: -634.95935}
+  - Name: Belopol'skiy
+    Diameter: 61.9
+    Longitude: -128.23
+    Latitude: -17.25
+    Position: {x: -409.55273, y: -205.50331, z: -519.88837}
+  - Name: Bilharz
+    Diameter: 44.55
+    Longitude: 56.34
+    Latitude: -5.83
+    Position: {x: 382.1179, y: -70.393, z: 573.82904}
+  - Name: Billy
+    Diameter: 45.57
+    Longitude: -50.24
+    Latitude: -13.83
+    Position: {x: 430.37482, y: -165.65604, z: -517.2858}
+  - Name: Bohr
+    Diameter: 70.07
+    Longitude: -86.52
+    Latitude: 12.71
+    Position: {x: 41.0345, y: 152.4714, z: -674.77234}
+  - Name: Bonpland
+    Diameter: 59.25
+    Longitude: -17.33
+    Latitude: -8.38
+    Position: {x: 654.47815, y: -100.99622, z: -204.22324}
+  - Name: Boscovich
+    Diameter: 41.53
+    Longitude: 11.01
+    Latitude: 9.71
+    Position: {x: 670.4993, y: 116.88236, z: 130.45334}
+  - Name: Boscovich P
+    Diameter: 64.82
+    Longitude: 10.31
+    Latitude: 11.47
+    Position: {x: 668.1943, y: 137.8064, z: 121.55196}
+  - Name: Bredikhin
+    Diameter: 61.68
+    Longitude: -158.37
+    Latitude: 17.25
+    Position: {x: -615.2252, y: 205.50331, z: -243.95761}
+  - Name: Cannon
+    Diameter: 57.58
+    Longitude: 81.36
+    Latitude: 19.88
+    Position: {x: 97.902336, y: 235.65555, z: 644.3063}
+  - Name: Capella
+    Diameter: 48.13
+    Longitude: 34.92
+    Latitude: -7.65
+    Position: {x: 563.1695, y: -92.25308, z: 393.16476}
+  - Name: Cardanus
+    Diameter: 49.57
+    Longitude: -72.5
+    Latitude: 13.27
+    Position: {x: 202.82498, y: 159.07132, z: -643.27856}
+  - Name: Catharina
+    Diameter: 98.77
+    Longitude: 23.55
+    Latitude: -17.98
+    Position: {x: 604.25684, y: -213.9187, z: 263.3656}
+  - Name: Catharina P
+    Diameter: 46.8
+    Longitude: 23.32
+    Latitude: -17.28
+    Position: {x: 607.664, y: -205.84982, z: 261.95294}
+  - Name: Cavalerius
+    Diameter: 59.35
+    Longitude: -66.93
+    Latitude: 5.1
+    Position: {x: 270.48074, y: 61.603745, z: -635.05444}
+  - Name: Cavalerius D
+    Diameter: 51.77
+    Longitude: -68.47
+    Latitude: 8.66
+    Position: {x: 251.42343, y: 104.34548, z: -637.2969}
+  - Name: Chaucer
+    Diameter: 45.48
+    Longitude: -140.71
+    Latitude: 3.39
+    Position: {x: -535.4094, y: 40.978577, z: -438.07132}
+  - Name: Colombo
+    Diameter: 79.02
+    Longitude: 46.02
+    Latitude: -15.26
+    Position: {x: 464.25693, y: -182.39732, z: 481.08807}
+  - Name: Comrie K
+    Diameter: 70.6
+    Longitude: -112.57
+    Latitude: 21.92
+    Position: {x: -246.75276, y: 258.70496, z: -593.6614}
+  - Name: Comstock
+    Diameter: 73.23
+    Longitude: -122.05
+    Latitude: 21.59
+    Position: {x: -341.94595, y: 254.99785, z: -546.16675}
+  - Name: Condorcet
+    Diameter: 74.85
+    Longitude: 69.58
+    Latitude: 12.1
+    Position: {x: 236.41537, y: 145.26567, z: 635.02344}
+  - Name: Condorcet P
+    Diameter: 48.4
+    Longitude: 70.29
+    Latitude: 8.76
+    Position: {x: 230.99449, y: 105.54105, z: 644.7881}
+  - Name: Congreve
+    Diameter: 57.61
+    Longitude: -167.84
+    Latitude: -0.28
+    Position: {x: -677.44324, y: -3.3866234, z: -145.97342}
+  - Name: Congreve Q
+    Diameter: 55.35
+    Longitude: -169.56
+    Latitude: -1.74
+    Position: {x: -681.21326, y: -21.042294, z: -125.51779}
+  - Name: Congreve U
+    Diameter: 54.72
+    Longitude: -170.75
+    Latitude: 0.4
+    Position: {x: -683.9718, y: 4.838013, z: -111.39185}
+  - Name: Cook
+    Diameter: 45.16
+    Longitude: 48.81
+    Latitude: -17.5
+    Position: {x: 435.2581, y: -208.38911, z: 497.36642}
   - Name: Copernicus
     Diameter: 96.07
     Longitude: -20.08
@@ -921,41 +1916,141 @@ MonoBehaviour:
     Longitude: 59
     Latitude: 18
     Position: {x: 339.4524, y: 214.14879, z: 564.94366}
+  - Name: Crookes
+    Diameter: 48.25
+    Longitude: -165.1
+    Latitude: -10.4
+    Position: {x: -658.6965, y: -125.09976, z: -175.26556}
+  - Name: Cruger
+    Diameter: 45.94
+    Longitude: -66.96
+    Latitude: -16.68
+    Position: {x: 259.8097, y: -198.90913, z: -610.8871}
   - Name: Cyrillus
     Diameter: 98.09
     Longitude: 24.07
     Latitude: -13.29
     Position: {x: 615.7967, y: -159.30676, z: 275.07233}
-  - Name: Daedalus
-    Diameter: 93.61
-    Longitude: 179.4
-    Latitude: -5.83
-    Position: {x: -689.3778, y: -70.393, z: 7.2195735}
-  - Name: Dellinger
-    Diameter: 82.04
-    Longitude: 140.7
-    Latitude: -6.87
-    Position: {x: -532.42084, y: -82.89459, z: 435.78143}
+  - Name: Cyrillus F
+    Diameter: 43.9
+    Longitude: 25.49
+    Latitude: -15.32
+    Position: {x: 603.3152, y: -183.09734, z: 287.63733}
+  - Name: Daedalus C
+    Diameter: 58.36
+    Longitude: -178.91
+    Latitude: -4.15
+    Position: {x: -691.05786, y: -50.150917, z: -13.148303}
+  - Name: Daguerre
+    Diameter: 45.79
+    Longitude: 33.61
+    Latitude: -11.91
+    Position: {x: 564.7232, y: -143.01785, z: 375.34332}
+  - Name: Dalton
+    Diameter: 60.69
+    Longitude: -84.45
+    Latitude: 17.07
+    Position: {x: 64.070526, y: 203.4231, z: -659.3656}
+  - Name: Damoiseau A
+    Diameter: 47.29
+    Longitude: -62.59
+    Latitude: -6.36
+    Position: {x: 317.06235, y: -76.767166, z: -611.4141}
+  - Name: Damoiseau H
+    Diameter: 44.89
+    Longitude: -59.96
+    Latitude: -3.87
+    Position: {x: 346.12787, y: -46.77257, z: -598.5456}
+  - Name: Damoiseau M
+    Diameter: 58.3
+    Longitude: -61.38
+    Latitude: -5.08
+    Position: {x: 330.64197, y: -61.362797, z: -605.93695}
+  - Name: Davy Y
+    Diameter: 69.56
+    Longitude: -7.25
+    Latitude: -11.05
+    Position: {x: 674.7141, y: -132.82423, z: -85.83447}
+  - Name: Delambre
+    Diameter: 51.49
+    Longitude: 17.39
+    Latitude: -1.94
+    Position: {x: 660.9457, y: -23.460072, z: 207.00113}
+  - Name: Descartes
+    Diameter: 47.73
+    Longitude: 15.67
+    Latitude: -11.74
+    Position: {x: 653.2854, y: -141.00531, z: 183.2612}
+  - Name: Dirichlet
+    Diameter: 47.24
+    Longitude: -152.05
+    Latitude: 10.58
+    Position: {x: -601.7592, y: 127.24049, z: -319.28778}
   - Name: Doppler
     Diameter: 101.79
     Longitude: -159.84
     Latitude: -12.58
     Position: {x: -634.92487, y: -150.93716, z: -233.10382}
+  - Name: Dubyago
+    Diameter: 48.12
+    Longitude: 69.95
+    Latitude: 4.38
+    Position: {x: 236.89432, y: 52.9251, z: 649.09863}
+  - Name: Eddington
+    Diameter: 120.13
+    Longitude: -72.02
+    Latitude: 21.5
+    Position: {x: 199.0338, y: 253.98534, z: -613.29114}
   - Name: Einstein
     Diameter: 181.47
     Longitude: -88.65
     Latitude: 16.6
     Position: {x: 15.646431, y: 197.98204, z: -663.9332}
+  - Name: Einstein A
+    Diameter: 50.48
+    Longitude: -88.25
+    Latitude: 16.69
+    Position: {x: 20.271654, y: 199.025, z: -663.4961}
+  - Name: Elvey
+    Diameter: 80.21
+    Longitude: -100.64
+    Latitude: 9.01
+    Position: {x: -126.37494, y: 108.52855, z: -672.68115}
   - Name: Encke T
     Diameter: 94.68
     Longitude: -37.88
     Latitude: 3.23
     Position: {x: 546.1149, y: 39.04659, z: -424.8328}
+  - Name: Engel'gardt
+    Diameter: 43.51
+    Longitude: -159.47
+    Latitude: 5.39
+    Position: {x: -646.11707, y: 65.09664, z: -241.95895}
   - Name: Engel'gardt B
     Diameter: 121.21
     Longitude: -158.18
     Latitude: 7.8
     Position: {x: -637.3984, y: 94.050896, z: -255.19934}
+  - Name: Engel'gardt C
+    Diameter: 45.93
+    Longitude: -157.37
+    Latitude: 9.37
+    Position: {x: -631.11066, y: 112.8269, z: -263.09393}
+  - Name: Eratosthenes
+    Diameter: 58.77
+    Longitude: -11.32
+    Latitude: 14.47
+    Position: {x: 657.96326, y: 173.16202, z: -131.71289}
+  - Name: Euclides P
+    Diameter: 63.82
+    Longitude: -27.69
+    Latitude: -4.52
+    Position: {x: 611.7255, y: -54.613304, z: -321.0269}
+  - Name: Evans
+    Diameter: 69.4
+    Longitude: -133.78
+    Latitude: -9.63
+    Position: {x: -472.72394, y: -115.92849, z: -493.2967}
   - Name: Evans Q
     Diameter: 138.41
     Longitude: -136.3
@@ -971,11 +2066,26 @@ MonoBehaviour:
     Longitude: -126.06
     Latitude: 17.9
     Position: {x: -388.17633, y: 212.99814, z: -533.1041}
-  - Name: Firsov S
-    Diameter: 104.17
-    Longitude: 110.27
-    Latitude: 3.34
-    Position: {x: -239.6782, y: 40.374863, z: 648.97864}
+  - Name: Firmicus
+    Diameter: 56.81
+    Longitude: 63.43
+    Latitude: 7.25
+    Position: {x: 307.49432, y: 87.45588, z: 614.85583}
+  - Name: Firmicus M
+    Diameter: 44.25
+    Longitude: 66.65
+    Latitude: 4.08
+    Position: {x: 273.97223, y: 49.306442, z: 634.6315}
+  - Name: Flammarion
+    Diameter: 76.18
+    Longitude: -3.73
+    Latitude: -3.33
+    Position: {x: 690.3644, y: -40.254116, z: -45.00686}
+  - Name: Flamsteed G
+    Diameter: 42.9
+    Longitude: -51.05
+    Latitude: -4.74
+    Position: {x: 434.15894, y: -57.26555, z: -537.0993}
   - Name: Flamsteed P
     Diameter: 112.24
     Longitude: -44.25
@@ -986,21 +2096,11 @@ MonoBehaviour:
     Longitude: -45
     Latitude: -7
     Position: {x: 486.3724, y: -84.45546, z: -486.3724}
-  - Name: Fleming
-    Diameter: 126.37
-    Longitude: 109.28
-    Latitude: 14.91
-    Position: {x: -221.11412, y: 178.3099, z: 632.11005}
   - Name: Fra Mauro
     Diameter: 96.76
     Longitude: -16.97
     Latitude: -6.06
     Position: {x: 659.1213, y: -73.15992, z: -201.13626}
-  - Name: Freundlich-Sharonov
-    Diameter: 600
-    Longitude: 175
-    Latitude: 18.5
-    Position: {x: -654.68744, y: 219.89212, z: 57.277824}
   - Name: Fridman
     Diameter: 101.45
     Longitude: -126.88
@@ -1011,56 +2111,146 @@ MonoBehaviour:
     Longitude: -152.99
     Latitude: -13.94
     Position: {x: -599.2289, y: -166.94762, z: -305.454}
+  - Name: Galois A
+    Diameter: 52.91
+    Longitude: -152.46
+    Latitude: -13.52
+    Position: {x: -597.44684, y: -162.01285, z: -311.54147}
+  - Name: Galois L
+    Diameter: 49.15
+    Longitude: -151.9
+    Latitude: -15.07
+    Position: {x: -590.29016, y: -180.17928, z: -315.18567}
   - Name: Galois Q
     Diameter: 133.6
     Longitude: -154.46
     Latitude: -14.85
     Position: {x: -604.3988, y: -177.60855, z: -288.8015}
+  - Name: Gassendi
+    Diameter: 111.39
+    Longitude: -39.96
+    Latitude: -17.55
+    Position: {x: 506.4555, y: -208.96579, z: -424.3644}
+  - Name: Gibbs
+    Diameter: 78.76
+    Longitude: 84.27
+    Latitude: -18.37
+    Position: {x: 65.663895, y: -218.40045, z: 654.3993}
   - Name: Gilbert
     Diameter: 100.25
     Longitude: 76.16
     Latitude: -3.2
     Position: {x: 165.51497, y: -38.684303, z: 671.8313}
-  - Name: Goddard
-    Diameter: 93.18
-    Longitude: 89.13
-    Latitude: 15.15
-    Position: {x: 10.156731, y: 181.11343, z: 668.83765}
+  - Name: Glaisher W
+    Diameter: 48.01
+    Longitude: 47.64
+    Latitude: 12.55
+    Position: {x: 455.77765, y: 150.58302, z: 499.8405}
+  - Name: Goclenius
+    Diameter: 73.04
+    Longitude: 45.03
+    Latitude: -10.05
+    Position: {x: 482.2533, y: -120.93371, z: 482.75854}
+  - Name: Goddard C
+    Diameter: 48.19
+    Longitude: 85.21
+    Latitude: 16.81
+    Position: {x: 55.39548, y: 200.4148, z: 661.07056}
+  - Name: Gould M
+    Diameter: 41.54
+    Longitude: -17.24
+    Latitude: -17.67
+    Position: {x: 630.63824, y: -210.34921, z: -195.69771}
   - Name: Grimaldi
     Diameter: 173.49
     Longitude: -68.36
     Latitude: -5.38
     Position: {x: 254.43423, y: -64.97623, z: -641.31915}
-  - Name: Guyot
-    Diameter: 98.28
-    Longitude: 117.12
-    Latitude: 11.63
-    Position: {x: -309.4223, y: 139.70242, z: 604.1441}
-  - Name: Heaviside
-    Diameter: 164.46
-    Longitude: 166.77
-    Latitude: -10.44
-    Position: {x: -663.4392, y: -125.57559, z: 155.97484}
-  - Name: Heaviside K
-    Diameter: 124.9
-    Longitude: 168.5
-    Latitude: -12.91
-    Position: {x: -661.922, y: -154.83023, z: 134.66953}
+  - Name: Guericke
+    Diameter: 60.75
+    Longitude: -14.19
+    Latitude: -11.57
+    Position: {x: 658.2034, y: -138.99153, z: -166.42885}
+  - Name: Gutenberg
+    Diameter: 70.65
+    Longitude: 41.25
+    Latitude: -8.61
+    Position: {x: 515.1532, y: -103.74758, z: 451.7772}
+  - Name: Gutenberg C
+    Diameter: 45.21
+    Longitude: 41.13
+    Latitude: -10.04
+    Position: {x: 513.9873, y: -120.81461, z: 448.85388}
+  - Name: Gylden
+    Diameter: 48.15
+    Longitude: 0.23
+    Latitude: -5.37
+    Position: {x: 689.95294, y: -64.855804, z: 2.7696636}
+  - Name: Hansen
+    Diameter: 41.18
+    Longitude: 72.54
+    Latitude: 14.04
+    Position: {x: 201.71611, y: 168.12126, z: 641.32275}
+  - Name: Hansen B
+    Diameter: 79.89
+    Longitude: 79.52
+    Latitude: 14.43
+    Position: {x: 122.07481, y: 172.69353, z: 659.9422}
+  - Name: Hansteen
+    Diameter: 44.99
+    Longitude: -52.06
+    Latitude: -11.53
+    Position: {x: 417.48303, y: -138.51752, z: -535.5089}
+  - Name: Hartwig
+    Diameter: 78.46
+    Longitude: -80.47
+    Latitude: -6.14
+    Position: {x: 114.07763, y: -74.12205, z: -679.51544}
+  - Name: Harvey
+    Diameter: 59.98
+    Longitude: -146.51
+    Latitude: 19.35
+    Position: {x: -545.3024, y: 229.61716, z: -360.7911}
   - Name: Hedin
     Diameter: 157.38
     Longitude: -76.57
     Latitude: 2.87
     Position: {x: 160.75238, y: 34.698513, z: -673.20404}
-  - Name: Hertz
-    Diameter: 82.94
-    Longitude: 104.56
-    Latitude: 13.32
-    Position: {x: -169.52916, y: 159.65987, z: 652.70026}
+  - Name: Hedin A
+    Diameter: 64.65
+    Longitude: -78.06
+    Latitude: 5.4
+    Position: {x: 142.7366, y: 65.217064, z: -674.99774}
+  - Name: Helberg
+    Diameter: 61.93
+    Longitude: -102.46
+    Latitude: 22.63
+    Position: {x: -138.0085, y: 266.6516, z: -624.57947}
+  - Name: Henyey
+    Diameter: 68.74
+    Longitude: -152.33
+    Latitude: 12.7
+    Position: {x: -598.73083, y: 152.35342, z: -313.94083}
+  - Name: Henyey U
+    Diameter: 45.72
+    Longitude: -153.6
+    Latitude: 13.6
+    Position: {x: -603.32367, y: 162.95348, z: -299.4925}
   - Name: Hertzsprung
     Diameter: 536.37
     Longitude: -128.66
     Latitude: 1.37
     Position: {x: -432.79172, y: 16.568752, z: -540.98596}
+  - Name: Hertzsprung D
+    Diameter: 48.29
+    Longitude: -126.2
+    Latitude: 3.43
+    Position: {x: -408.55652, y: 41.461525, z: -558.22174}
+  - Name: Hertzsprung S
+    Diameter: 48.9
+    Longitude: -133.4
+    Latitude: 0.45
+    Position: {x: -476.13687, y: 5.442753, z: -503.50085}
   - Name: Hevelius
     Diameter: 113.87
     Longitude: -67.46
@@ -1071,21 +2261,41 @@ MonoBehaviour:
     Longitude: 4.91
     Latitude: -5.36
     Position: {x: 687.43787, y: -64.73539, z: 59.055073}
-  - Name: Hirayama
-    Diameter: 145.21
-    Longitude: 93.63
-    Latitude: -6.01
-    Position: {x: -43.634743, y: -72.55852, z: 687.8083}
-  - Name: Ibn Firnas
-    Diameter: 88.29
-    Longitude: 122.3
-    Latitude: 6.83
-    Position: {x: -367.67825, y: 82.41424, z: 581.60944}
+  - Name: Houtermans
+    Diameter: 42.68
+    Longitude: 87.38
+    Latitude: -9.42
+    Position: {x: 31.251066, y: -113.42354, z: 682.9403}
+  - Name: Houzeau
+    Diameter: 76.84
+    Longitude: -123.89
+    Latitude: -17.25
+    Position: {x: -369.03592, y: -205.50331, z: -549.39044}
+  - Name: Hubble
+    Diameter: 81.84
+    Longitude: 86.91
+    Latitude: 22.29
+    Position: {x: 34.56441, y: 262.85123, z: 640.28394}
+  - Name: Hubble C
+    Diameter: 53.64
+    Longitude: 85.62
+    Latitude: 19.45
+    Position: {x: 49.904785, y: 230.758, z: 651.54376}
   - Name: Icarus
     Diameter: 93.73
     Longitude: -173.26
     Latitude: -5.49
     Position: {x: -685.0537, y: -66.30071, z: -80.96036}
+  - Name: Icarus D
+    Diameter: 69.36
+    Longitude: -171.42
+    Latitude: -4.55
+    Position: {x: -683.0847, y: -54.97503, z: -103.062935}
+  - Name: Icarus X
+    Diameter: 44.66
+    Longitude: -175.68
+    Latitude: -2.25
+    Position: {x: -690.49835, y: -27.207054, z: -52.161324}
   - Name: Insularum
     Diameter: 600
     Longitude: -18
@@ -1096,11 +2306,41 @@ MonoBehaviour:
     Longitude: -129.16
     Latitude: -14.38
     Position: {x: -423.9105, y: -172.10779, z: -520.5072}
+  - Name: Isidorus
+    Diameter: 41.39
+    Longitude: 33.5
+    Latitude: -7.96
+    Position: {x: 572.315, y: -95.967834, z: 378.807}
+  - Name: Jackson
+    Diameter: 71.38
+    Longitude: -163.32
+    Latitude: 22.05
+    Position: {x: -615.2849, y: 260.163, z: -184.36023}
   - Name: Julius Caesar
     Diameter: 84.72
     Longitude: 15.21
     Latitude: 9.17
     Position: {x: 660.1783, y: 110.43947, z: 179.4902}
+  - Name: Kamerlingh Onnes
+    Diameter: 70.03
+    Longitude: -116.29
+    Latitude: 14.72
+    Position: {x: -296.8658, y: 176.08824, z: -600.92645}
+  - Name: Kant D
+    Diameter: 52.4
+    Longitude: 18.7
+    Latitude: -11.36
+    Position: {x: 643.5568, y: -136.50223, z: 217.83197}
+  - Name: Kapteyn
+    Diameter: 48.65
+    Longitude: 70.59
+    Latitude: -10.79
+    Position: {x: 226.23003, y: -129.73645, z: 642.0572}
+  - Name: Kapteyn C
+    Diameter: 43.94
+    Longitude: 70.25
+    Latitude: -13.33
+    Position: {x: 227.86719, y: -159.77757, z: 634.66266}
   - Name: Kastner
     Diameter: 116.07
     Longitude: 78.94
@@ -1111,41 +2351,96 @@ MonoBehaviour:
     Longitude: 79.35
     Latitude: -3.68
     Position: {x: 127.80865, y: -44.47949, z: 679.6584}
-  - Name: Keeler
-    Diameter: 158.07
-    Longitude: 161.78
-    Latitude: -9.78
-    Position: {x: -648.6888, y: -117.7168, z: 213.52899}
-  - Name: Keeler-Heaviside
-    Diameter: 500
-    Longitude: 162
-    Latitude: -10
-    Position: {x: -649.06915, y: -120.33819, z: 210.89539}
   - Name: Kekule
     Diameter: 94.22
     Longitude: -138.47
     Latitude: 16.31
     Position: {x: -497.90796, y: 194.61812, z: -440.97678}
+  - Name: Kekule V
+    Diameter: 64.95
+    Longitude: -141.73
+    Latitude: 18.33
+    Position: {x: -516.46893, y: 217.94124, z: -407.44382}
   - Name: Kibal'chich
     Diameter: 91.67
     Longitude: -147.18
     Latitude: 2.72
     Position: {x: -581.7254, y: 32.886402, z: -375.18402}
-  - Name: Kondratyuk
-    Diameter: 97.97
-    Longitude: 115.8
-    Latitude: -15.33
-    Position: {x: -290.8834, y: -183.21399, z: 601.7213}
+  - Name: Kiess
+    Diameter: 67.79
+    Longitude: 84.11
+    Latitude: -6.41
+    Position: {x: 70.6703, y: -77.368164, z: 685.03204}
+  - Name: Klein
+    Diameter: 43.47
+    Longitude: 2.53
+    Latitude: -11.99
+    Position: {x: 677.22064, y: -143.9645, z: 29.923367}
+  - Name: Kolhorster
+    Diameter: 78.78
+    Longitude: -115.01
+    Latitude: 10.79
+    Position: {x: -287.80414, y: 129.73645, z: -616.91675}
   - Name: Korolev
     Diameter: 423.41
     Longitude: -157.41
     Latitude: -4.19
     Position: {x: -638.1211, y: -50.633446, z: -265.4935}
+  - Name: Korolev C
+    Diameter: 66.47
+    Longitude: -153.22
+    Latitude: -0.73
+    Position: {x: -618.6207, y: -8.829207, z: -312.2169}
+  - Name: Korolev M
+    Diameter: 56.75
+    Longitude: -157.37
+    Latitude: -8.5
+    Position: {x: -632.61914, y: -102.431915, z: -263.72278}
+  - Name: Krafft
+    Diameter: 51.15
+    Longitude: -72.72
+    Latitude: 16.56
+    Position: {x: 197.31155, y: 197.51834, z: -634.2742}
+  - Name: Krasovskiy
+    Diameter: 61.67
+    Longitude: -175.63
+    Latitude: 3.79
+    Position: {x: -689.4741, y: 45.807125, z: -52.688904}
+  - Name: Krasovskiy H
+    Diameter: 45.99
+    Longitude: -171.59
+    Latitude: 2.62
+    Position: {x: -684.83136, y: 31.678204, z: -101.24932}
+  - Name: Krasovskiy L
+    Diameter: 56.87
+    Longitude: -175.03
+    Latitude: -0.52
+    Position: {x: -690.366, y: -6.2893815, z: -60.034924}
+  - Name: Krasovskiy P
+    Diameter: 41
+    Longitude: -177.34
+    Latitude: 0.88
+    Position: {x: -692.1717, y: 10.643297, z: -32.157684}
   - Name: Krasovskiy T
     Diameter: 96.46
     Longitude: -177.09
     Latitude: 3.64
     Position: {x: -690.71014, y: 43.996666, z: -35.11086}
+  - Name: La Perouse
+    Diameter: 80.4
+    Longitude: 76.28
+    Latitude: -10.67
+    Position: {x: 161.52202, y: -128.31041, z: 661.586}
+  - Name: Lade
+    Diameter: 58.11
+    Longitude: 9.99
+    Latitude: -1.33
+    Position: {x: 682.3089, y: -16.085081, z: 120.18667}
+  - Name: Lade A
+    Diameter: 57.82
+    Longitude: 12.73
+    Latitude: -0.16
+    Position: {x: 675.96295, y: -1.9352185, z: 152.70677}
   - Name: Lame
     Diameter: 84.28
     Longitude: 64.56
@@ -1156,76 +2451,166 @@ MonoBehaviour:
     Longitude: 23.32
     Latitude: 5.14
     Position: {x: 633.8286, y: 62.08562, z: 273.23203}
-  - Name: Langemak
-    Diameter: 104.76
-    Longitude: 119.45
-    Latitude: -9.93
-    Position: {x: -335.61868, y: -119.50431, z: 594.4138}
-  - Name: Langemak N
-    Diameter: 137.93
-    Longitude: 119.12
-    Latitude: -13.19
-    Position: {x: -328.3449, y: -158.12938, z: 589.43506}
   - Name: Langrenus
     Diameter: 131.98
     Longitude: 61.04
     Latitude: -8.86
     Position: {x: 331.54593, y: -106.73628, z: 599.1107}
+  - Name: Langrenus P
+    Diameter: 42.27
+    Longitude: 63.01
+    Latitude: -12.04
+    Position: {x: 307.58917, y: -144.556, z: 603.93823}
+  - Name: Lebedinskiy
+    Diameter: 63.39
+    Longitude: -164.89
+    Latitude: 7.84
+    Position: {x: -662.7874, y: 94.5302, z: -178.95786}
+  - Name: Lebedinskiy P
+    Diameter: 49.7
+    Longitude: -165.64
+    Latitude: 5.75
+    Position: {x: -667.9704, y: 69.43033, z: -171.00871}
   - Name: Letronne
     Diameter: 117.59
     Longitude: -42.49
     Latitude: -10.5
     Position: {x: 502.4579, y: -126.289215, z: -460.25653}
+  - Name: Leuschner
+    Diameter: 50.14
+    Longitude: -109.05
+    Latitude: 1.67
+    Position: {x: -226.09438, y: 20.196009, z: -654.769}
   - Name: Lipskiy
     Diameter: 91.15
     Longitude: -179.38
     Latitude: -2.15
     Position: {x: -692.4716, y: -25.998432, z: -7.493539}
-  - Name: Lobachevskiy
-    Diameter: 87.26
-    Longitude: 113.07
-    Latitude: 9.76
-    Position: {x: -267.62543, y: 117.47842, z: 628.3506}
-  - Name: Lomonosov-Fleming
-    Diameter: 620
-    Longitude: 105
-    Latitude: 19
-    Position: {x: -169.58972, y: 225.61871, z: 632.9175}
-  - Name: Love
-    Diameter: 90.08
-    Longitude: 129.17
-    Latitude: -6.33
-    Position: {x: -435.04642, y: -76.40653, z: 533.9903}
+  - Name: Lodygin
+    Diameter: 56.11
+    Longitude: -146.78
+    Latitude: -17.42
+    Position: {x: -553.1557, y: -207.4661, z: -362.25076}
+  - Name: Lodygin F
+    Diameter: 46.98
+    Longitude: -143.47
+    Latitude: -17.75
+    Position: {x: -530.34814, y: -211.27097, z: -392.86697}
+  - Name: Lohse
+    Diameter: 43.34
+    Longitude: 60.31
+    Latitude: -13.76
+    Position: {x: 333.39673, y: -164.8338, z: 584.7439}
+  - Name: Lowell
+    Diameter: 62.65
+    Longitude: -103.42
+    Latitude: -12.97
+    Position: {x: -156.73329, y: -155.5375, z: -656.8804}
+  - Name: Lubiniezky
+    Diameter: 42.97
+    Longitude: -23.89
+    Latitude: -17.88
+    Position: {x: 603.0238, y: -212.76793, z: -267.09747}
+  - Name: Lucretius
+    Diameter: 64.61
+    Longitude: -121.24
+    Latitude: -8.22
+    Position: {x: -355.71402, y: -99.081276, z: -586.4294}
   - Name: Mach
     Diameter: 174.97
     Longitude: -149.24
     Latitude: 18.13
     Position: {x: -565.9416, y: 215.64363, z: -336.8336}
-  - Name: Mandel'shtam
-    Diameter: 181.89
-    Longitude: 162.39
-    Latitude: 5.7
-    Position: {x: -657.2586, y: 68.82858, z: 208.62096}
+  - Name: Maclaurin
+    Diameter: 54.33
+    Longitude: 67.99
+    Latitude: -1.92
+    Position: {x: 259.56873, y: -23.218307, z: 642.1324}
+  - Name: Maclaurin H
+    Diameter: 41.96
+    Longitude: 64.1
+    Latitude: -1.58
+    Position: {x: 302.58856, y: -19.107887, z: 623.1565}
+  - Name: Maclaurin M
+    Diameter: 42.13
+    Longitude: 69.18
+    Latitude: -4.88
+    Position: {x: 245.42235, y: -58.95291, z: 645.4002}
+  - Name: Maclaurin O
+    Diameter: 41.47
+    Longitude: 67.56
+    Latitude: -0.14
+    Position: {x: 264.52826, y: -1.6933168, z: 640.5239}
+  - Name: Macrobius
+    Diameter: 62.79
+    Longitude: 45.97
+    Latitude: 21.26
+    Position: {x: 448.87967, y: 251.28229, z: 464.3417}
+  - Name: Maestlin R
+    Diameter: 60.42
+    Longitude: -41.47
+    Latitude: 3.53
+    Position: {x: 518.2815, y: 42.668808, z: -458.05316}
+  - Name: Manilius E
+    Diameter: 48.37
+    Longitude: 6.35
+    Latitude: 18.38
+    Position: {x: 653.6126, y: 218.51523, z: 72.73689}
+  - Name: Maraldi D
+    Diameter: 66.49
+    Longitude: 36.08
+    Latitude: 16.74
+    Position: {x: 536.3442, y: 199.60419, z: 390.82227}
   - Name: Marginis
     Diameter: 580
     Longitude: 84
     Latitude: 20
     Position: {x: 68.06963, y: 237.01994, z: 647.6396}
+  - Name: Maunder
+    Diameter: 53.8
+    Longitude: -93.88
+    Latitude: -14.52
+    Position: {x: -45.39542, y: -173.74753, z: -669.32806}
+  - Name: McKellar
+    Diameter: 50.16
+    Longitude: -170.86
+    Latitude: -15.72
+    Position: {x: -658.61005, y: -187.75897, z: -105.96393}
   - Name: McMath
     Diameter: 88.58
     Longitude: -166.09
     Latitude: 16.63
     Position: {x: -644.54126, y: 198.32973, z: -159.62726}
-  - Name: Meitner
-    Diameter: 87.27
-    Longitude: 113.1
-    Latitude: -10.87
-    Position: {x: -267.01123, y: -130.68683, z: 625.99915}
-  - Name: Mendeleev
-    Diameter: 325.13
-    Longitude: 141.17
-    Latitude: 5.38
-    Position: {x: -537.4756, y: 64.97623, z: 432.605}
+  - Name: McMath J
+    Diameter: 46.09
+    Longitude: -163.83
+    Latitude: 14.59
+    Position: {x: -644.12164, y: 174.567, z: -186.76901}
+  - Name: McNally
+    Diameter: 47.03
+    Longitude: -127.65
+    Latitude: 22.5
+    Position: {x: -391.0871, y: 265.19965, z: -506.92108}
+  - Name: Mechnikov
+    Diameter: 58.83
+    Longitude: -148.99
+    Latitude: -10.47
+    Position: {x: -584.0655, y: -125.93243, z: -351.08066}
+  - Name: Mechnikov D
+    Diameter: 54.64
+    Longitude: -147.19
+    Latitude: -9.74
+    Position: {x: -574.0515, y: -117.24, z: -370.09274}
+  - Name: Mees
+    Diameter: 51.55
+    Longitude: -96.18
+    Latitude: 13.57
+    Position: {x: -72.520424, y: 162.60078, z: -669.7393}
+  - Name: Mees Y
+    Diameter: 77.28
+    Longitude: -96.74
+    Latitude: 15.73
+    Position: {x: -78.28735, y: 187.87538, z: -662.43713}
   - Name: Michelson
     Diameter: 123.14
     Longitude: -121.55
@@ -1236,46 +2621,111 @@ MonoBehaviour:
     Longitude: -154.65
     Latitude: 17.76
     Position: {x: -596.424, y: 211.38615, z: -282.5655}
+  - Name: Mitra A
+    Diameter: 45.62
+    Longitude: -154.15
+    Latitude: 20.6
+    Position: {x: -583.7805, y: 243.82626, z: -282.83936}
+  - Name: Mitra J
+    Diameter: 48.44
+    Longitude: -153.06
+    Latitude: 15.99
+    Position: {x: -593.8939, y: 190.90044, z: -301.82123}
+  - Name: Morse
+    Diameter: 72.77
+    Longitude: -175.29
+    Latitude: 21.9
+    Position: {x: -640.8192, y: 258.48053, z: -52.79766}
   - Name: Moseley
     Diameter: 88.89
     Longitude: -90.2
     Latitude: 20.95
     Position: {x: -2.2590759, y: 247.78432, z: -647.1838}
+  - Name: Murchison
+    Diameter: 57.83
+    Longitude: -0.21
+    Latitude: 5.07
+    Position: {x: 690.284, y: 61.24233, z: -2.5300343}
+  - Name: Nectaris
+    Diameter: 860
+    Longitude: 34
+    Latitude: -16
+    Position: {x: 552.267, y: -191.0167, z: 372.5088}
   - Name: Neper
     Diameter: 144.32
     Longitude: 84.58
     Latitude: 8.76
     Position: {x: 64.694305, y: 105.54105, z: 681.85394}
+  - Name: Nobel
+    Diameter: 50.87
+    Longitude: -101.39
+    Latitude: 14.73
+    Position: {x: -132.36009, y: 176.2052, z: -657.0248}
+  - Name: Nobili
+    Diameter: 41.79
+    Longitude: 75.95
+    Latitude: 0.17
+    Position: {x: 168.23792, y: 2.0561695, z: 672.26544}
+  - Name: Ohm
+    Diameter: 61.75
+    Longitude: -113.78
+    Latitude: 18.32
+    Position: {x: -265.27255, y: 217.82642, z: -602.0225}
+  - Name: Olbers
+    Diameter: 73.02
+    Longitude: -76.14
+    Latitude: 7.3
+    Position: {x: 164.66278, y: 88.05578, z: -667.36896}
   - Name: Olbers D
     Diameter: 100.03
     Longitude: -78.03
     Latitude: 10.23
     Position: {x: 141.44298, y: 123.07682, z: -667.1544}
-  - Name: Ostwald
-    Diameter: 108.13
-    Longitude: 121.95
-    Latitude: 10.24
-    Position: {x: -360.87976, y: 123.195854, z: 578.65155}
-  - Name: Papaleksi
-    Diameter: 92.03
-    Longitude: 163.95
-    Latitude: 10.15
-    Position: {x: -655.5646, y: 122.124466, z: 188.59953}
+  - Name: Opelt
+    Diameter: 48.73
+    Longitude: -17.64
+    Latitude: -16.32
+    Position: {x: 633.80475, y: -194.73419, z: -201.54182}
+  - Name: Pallas
+    Diameter: 49.51
+    Longitude: -1.65
+    Latitude: 5.48
+    Position: {x: 689.5467, y: 66.18031, z: -19.863008}
+  - Name: Parrot
+    Diameter: 70.66
+    Longitude: 3.29
+    Latitude: -14.57
+    Position: {x: 669.6084, y: -174.3329, z: 38.49212}
+  - Name: Parry
+    Diameter: 47.28
+    Longitude: -15.78
+    Latitude: -7.88
+    Position: {x: 660.58575, y: -95.00946, z: -186.67789}
   - Name: Paschen
     Diameter: 127.36
     Longitude: -140.53
     Latitude: -14.06
     Position: {x: -518.93994, y: -168.35593, z: -427.32498}
-  - Name: Pasteur
-    Diameter: 232.77
-    Longitude: 104.91
-    Latitude: -11.58
-    Position: {x: -174.68053, y: -139.11003, z: 656.0367}
-  - Name: Perepelkin
-    Diameter: 88.74
-    Longitude: 128.8
-    Latitude: -9.99
-    Position: {x: -427.65265, y: -120.21906, z: 531.8925}
+  - Name: Paschen K
+    Diameter: 55.04
+    Longitude: -139.57
+    Latitude: -17.93
+    Position: {x: -501.89148, y: -213.3434, z: -427.59625}
+  - Name: Paschen M
+    Diameter: 87.84
+    Longitude: -140.62
+    Latitude: -16.3
+    Position: {x: -514.1272, y: -194.50201, z: -422.0085}
+  - Name: Paschen S
+    Diameter: 44.23
+    Longitude: -142.67
+    Latitude: -14.61
+    Position: {x: -533.2253, y: -174.8011, z: -406.65015}
+  - Name: Plinius
+    Diameter: 41.31
+    Longitude: 23.61
+    Latitude: 15.36
+    Position: {x: 612.3094, y: 183.5639, z: 267.63867}
   - Name: Poynting
     Diameter: 127.55
     Longitude: -133.38
@@ -1286,36 +2736,146 @@ MonoBehaviour:
     Longitude: -1.84
     Latitude: -9.16
     Position: {x: 683.8098, y: -110.32005, z: -21.96746}
+  - Name: Racah
+    Diameter: 71.91
+    Longitude: -179.87
+    Latitude: -13.5
+    Position: {x: -673.85065, y: -161.77763, z: -1.5289307}
+  - Name: Racah K
+    Diameter: 54.39
+    Longitude: -178.77
+    Latitude: -16.56
+    Position: {x: -664.10254, y: -197.51834, z: -14.258878}
+  - Name: Raimond
+    Diameter: 68.37
+    Longitude: -159.63
+    Latitude: 14.78
+    Position: {x: -628.1671, y: 176.79002, z: -233.23888}
+  - Name: Reaumur
+    Diameter: 51.25
+    Longitude: 0.73
+    Latitude: -2.45
+    Position: {x: 692.3103, y: -29.624043, z: 8.821136}
+  - Name: Reiner R
+    Diameter: 46.08
+    Longitude: -55.69
+    Latitude: 3.68
+    Position: {x: 389.81802, y: 44.47949, z: -571.2377}
+  - Name: Reinhold
+    Diameter: 43.28
+    Longitude: -22.86
+    Latitude: 3.28
+    Position: {x: 637.5235, y: 39.650364, z: -268.77612}
+  - Name: Rhaeticus
+    Diameter: 44.43
+    Longitude: 4.92
+    Latitude: 0.03
+    Position: {x: 690.44653, y: 0.36285394, z: 59.434937}
   - Name: Riccioli
     Diameter: 155.66
     Longitude: -74.42
     Latitude: -2.9
     Position: {x: 185.89006, y: -35.06091, z: -666.68176}
+  - Name: Robertson
+    Diameter: 89.85
+    Longitude: -105.37
+    Latitude: 21.84
+    Position: {x: -170.49718, y: 257.80707, z: -620.2542}
   - Name: Rocca
     Diameter: 84.06
     Longitude: -72.89
     Latitude: -12.89
     Position: {x: 198.74771, y: -154.59444, z: -645.63837}
+  - Name: Rocca A
+    Diameter: 64.25
+    Longitude: -70.32
+    Latitude: -13.76
+    Position: {x: 226.6814, y: -164.8338, z: -633.7936}
+  - Name: Rocca E
+    Diameter: 43.2
+    Longitude: -69.59
+    Latitude: -11.75
+    Position: {x: 236.60968, y: -141.12373, z: -635.8844}
+  - Name: Rocca M
+    Diameter: 44.13
+    Longitude: -70.89
+    Latitude: -14.57
+    Position: {x: 219.58017, y: -174.3329, z: -633.75195}
+  - Name: Rocca Q
+    Diameter: 58.51
+    Longitude: -69.14
+    Latitude: -15.29
+    Position: {x: 238.03273, y: -182.74734, z: -624.6542}
   - Name: Rocca W
     Diameter: 104.65
     Longitude: -66.52
     Latitude: -10.26
     Position: {x: 271.69614, y: -123.4339, z: -625.4552}
-  - Name: Saha
-    Diameter: 103.34
-    Longitude: 103.04
-    Latitude: -1.69
-    Position: {x: -156.29445, y: -20.437809, z: 674.83575}
+  - Name: Rocca Z
+    Diameter: 54.36
+    Longitude: -75.54
+    Latitude: -16.23
+    Position: {x: 166.14864, y: -193.68925, z: -644.3044}
+  - Name: Saunder
+    Diameter: 44.38
+    Longitude: 8.72
+    Latitude: -4.26
+    Position: {x: 683.0972, y: -51.477802, z: 104.772606}
   - Name: Schluter
     Diameter: 87.55
     Longitude: -83.39
     Latitude: -5.93
     Position: {x: 79.34475, y: -71.596146, z: -684.7098}
-  - Name: Schuster
-    Diameter: 100.08
-    Longitude: 146.42
-    Latitude: 4.44
-    Position: {x: -575.6156, y: 53.64865, z: 382.1486}
+  - Name: Schubert
+    Diameter: 51.94
+    Longitude: 81.01
+    Latitude: 2.78
+    Position: {x: 108.16219, y: 33.611275, z: 683.68134}
+  - Name: Schubert G
+    Diameter: 56.38
+    Longitude: 75.34
+    Latitude: 4.19
+    Position: {x: 174.91751, y: 50.633446, z: 668.6473}
+  - Name: Schubert N
+    Diameter: 65.13
+    Longitude: 72.65
+    Latitude: 1.79
+    Position: {x: 206.5572, y: 21.646765, z: 661.14636}
+  - Name: Schubert X
+    Diameter: 49.18
+    Longitude: 76.75
+    Latitude: 0.31
+    Position: {x: 158.83353, y: 3.7494726, z: 674.54193}
+  - Name: Sechenov
+    Diameter: 63.8
+    Longitude: -143.09
+    Latitude: -6.97
+    Position: {x: -550.0138, y: -84.09529, z: -413.1123}
+  - Name: Seleucus
+    Diameter: 45.01
+    Longitude: -66.66
+    Latitude: 21.09
+    Position: {x: 256.16644, y: 249.36494, z: -593.67065}
+  - Name: Shternberg
+    Diameter: 74.36
+    Longitude: -116.82
+    Latitude: 19.38
+    Position: {x: -294.95752, y: 229.95947, z: -583.4104}
+  - Name: Sirsalis
+    Diameter: 44.17
+    Longitude: -60.51
+    Latitude: -12.49
+    Position: {x: 333.07068, y: -149.87456, z: -588.9402}
+  - Name: Sirsalis A
+    Diameter: 48.46
+    Longitude: -61.4
+    Latitude: -12.67
+    Position: {x: 323.6556, y: -151.99942, z: -593.62634}
+  - Name: Sirsalis E
+    Diameter: 70.29
+    Longitude: -56.7
+    Latitude: -8.16
+    Position: {x: 376.62076, y: -98.36296, z: -573.3503}
   - Name: Sirsalis Z
     Diameter: 90.32
     Longitude: -62.04
@@ -1326,16 +2886,56 @@ MonoBehaviour:
     Longitude: 87
     Latitude: -2
     Position: {x: 36.24674, y: -24.18535, z: 691.6287}
-  - Name: Spencer Jones
-    Diameter: 88.19
-    Longitude: 165.84
-    Latitude: 13.06
-    Position: {x: -654.5636, y: 156.59811, z: 165.14394}
+  - Name: Stadius
+    Diameter: 68.48
+    Longitude: -13.77
+    Latitude: 10.48
+    Position: {x: 661.8545, y: 126.05136, z: -162.19965}
+  - Name: Stromgren A
+    Diameter: 50.82
+    Longitude: -131.82
+    Latitude: -17.93
+    Position: {x: -439.6453, y: -213.3434, z: -491.37115}
+  - Name: Stromgren X
+    Diameter: 42.45
+    Longitude: -134.73
+    Latitude: -17.36
+    Position: {x: -465.4945, y: -206.77354, z: -469.90268}
+  - Name: Sundman
+    Diameter: 41.04
+    Longitude: -91.69
+    Latitude: 10.76
+    Position: {x: -20.078503, y: 129.37999, z: -680.5194}
+  - Name: Tacchini
+    Diameter: 42.58
+    Longitude: 85.82
+    Latitude: 5.08
+    Position: {x: 50.31438, y: 61.362797, z: 688.4418}
+  - Name: Taruntius
+    Diameter: 57.32
+    Longitude: 46.54
+    Latitude: 5.5
+    Position: {x: 474.4841, y: 66.421104, z: 500.70157}
+  - Name: Tempel
+    Diameter: 43.19
+    Longitude: 11.86
+    Latitude: 3.76
+    Position: {x: 676.74646, y: 45.445057, z: 142.11948}
   - Name: Theophilus
     Diameter: 98.59
     Longitude: 26.28
     Latitude: -11.45
     Position: {x: 609.00586, y: -137.5693, z: 300.725}
+  - Name: Timiryazev
+    Diameter: 52.15
+    Longitude: -147.15
+    Latitude: -5.09
+    Position: {x: -579.889, y: -61.483276, z: -374.4297}
+  - Name: Timiryazev S
+    Diameter: 51.44
+    Longitude: -149.51
+    Latitude: -5.63
+    Position: {x: -594.28973, y: -67.98607, z: -349.92374}
   - Name: Torricelli R
     Diameter: 87.64
     Longitude: 28.14
@@ -1351,21 +2951,41 @@ MonoBehaviour:
     Longitude: -149.69
     Latitude: 5.39
     Position: {x: -595.6267, y: 65.09664, z: -348.1956}
-  - Name: Tsiolkovskiy-Stark
-    Diameter: 700
-    Longitude: 128
-    Latitude: -15
-    Position: {x: -412.1155, y: -179.3616, z: 527.4838}
+  - Name: Tsander B
+    Diameter: 55.09
+    Longitude: -147.68
+    Latitude: 9.01
+    Position: {x: -578.4109, y: 108.52855, z: -365.93906}
+  - Name: Wan-Hoo
+    Diameter: 53.28
+    Longitude: -138.91
+    Latitude: -9.96
+    Position: {x: -514.4272, y: -119.8617, z: -448.60538}
   - Name: Vasco da Gama
     Diameter: 93.52
     Longitude: -83.94
     Latitude: 13.78
     Position: {x: 71.0542, y: 165.06876, z: -669.2926}
+  - Name: Vasco da Gama C
+    Diameter: 46.83
+    Longitude: -85.07
+    Latitude: 11.48
+    Position: {x: 58.364002, y: 137.92491, z: -676.6235}
+  - Name: Vasco da Gama F
+    Diameter: 55.78
+    Longitude: -80.78
+    Latitude: 13.86
+    Position: {x: 107.80352, y: 166.00835, z: -664.12994}
   - Name: Vasco da Gama P
     Diameter: 102.54
     Longitude: -80.34
     Latitude: 12
     Position: {x: 113.745125, y: 144.08281, z: -668.2449}
+  - Name: Vasco da Gama R
+    Diameter: 60.9
+    Longitude: -83.51
+    Latitude: 9.91
+    Position: {x: 77.160866, y: 119.266014, z: -678.2852}
   - Name: Vavilov
     Diameter: 98.22
     Longitude: -138.77
@@ -1376,41 +2996,41 @@ MonoBehaviour:
     Longitude: -137.48
     Latitude: 0.03
     Position: {x: -510.76968, y: 0.36285394, z: -468.3623}
-  - Name: Vening Meinesz
-    Diameter: 88.69
-    Longitude: 162.51
-    Latitude: -0.1
-    Position: {x: -660.9611, y: -1.2095125, z: 208.2735}
-  - Name: Ventris
-    Diameter: 100.74
-    Longitude: 157.97
-    Latitude: -4.77
-    Position: {x: -640.1774, y: -57.62716, z: 259.03854}
-  - Name: Vetchinkin
-    Diameter: 94.29
-    Longitude: 131.08
-    Latitude: 9.77
-    Position: {x: -448.77438, y: 117.59762, z: 514.80225}
+  - Name: Vendelinus
+    Diameter: 141.21
+    Longitude: 61.55
+    Latitude: -16.46
+    Position: {x: 316.60962, y: -196.35869, z: 584.3378}
   - Name: Weyl
     Diameter: 122.82
     Longitude: -120.53
     Latitude: 15.97
     Position: {x: -338.4501, y: 190.66786, z: -573.88696}
-  - Name: Wyld
-    Diameter: 103.4
-    Longitude: 98.1
-    Latitude: -1.42
-    Position: {x: -97.61455, y: -17.173328, z: 685.8757}
+  - Name: Wichmann R
+    Diameter: 64.13
+    Longitude: -38.95
+    Latitude: -6.64
+    Position: {x: 535.32745, y: -80.13203, z: -432.72668}
+  - Name: Widmannstatten
+    Diameter: 52.88
+    Longitude: 85.43
+    Latitude: -6.09
+    Position: {x: 54.904575, y: -73.52074, z: 686.89825}
   - Name: Zhukovskiy
     Diameter: 82.07
     Longitude: -167.28
     Latitude: 7.55
     Position: {x: -670.1317, y: 91.05419, z: -151.2666}
-  selection: 3
+  - Name: Zollner
+    Diameter: 47.69
+    Longitude: 18.9
+    Latitude: -7.97
+    Position: {x: 649.30426, y: -96.08762, z: 222.30653}
+  selection: 100
   Offset: {x: 0, y: 0, z: 0}
   LimitCratersByDiameter: 0
-  DiameterThreshold: 81
-  LimitCratersByCoordinates: 0
+  DiameterThreshold: 41
+  LimitCratersByCoordinates: 1
 --- !u!1 &289497856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +3061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClockWise: 0
-  Speed: 10
+  Speed: 3
   Axis: 0
 --- !u!4 &289497858
 Transform:
@@ -1450,15 +3070,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289497856}
-  m_LocalRotation: {x: -0.41323084, y: -0.4730527, z: 0.7562465, w: 0.18317391}
+  m_LocalRotation: {x: 0.4371333, y: -0.67932, z: 0.09701644, w: 0.58140063}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1280870320}
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 34.34, y: -75.2, z: 126}
---- !u!43 &1015487642
+  m_LocalEulerAnglesHint: {x: 39.8, y: -113.4, z: -38.77}
+--- !u!43 &711096833
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1469,14 +3089,14 @@ Mesh:
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
-    indexCount: 864
+    indexCount: 624
     topology: 0
     baseVertex: 0
     firstVertex: 0
-    vertexCount: 185
+    vertexCount: 135
     localAABB:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 693, y: 237.01994, z: 693}
+      m_Center: {x: 0, y: 0, z: -5.2641296}
+      m_Extent: {x: 693, y: 237.01994, z: 687.73584}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1493,10 +3113,10 @@ Mesh:
   m_KeepVertices: 1
   m_KeepIndices: 1
   m_IndexFormat: 0
-  m_IndexBuffer: 000025002600260001000000010026002700270002000100020027002800280003000200030028002900290004000300040029002a002a000500040005002a002b002b000600050006002b002c002c000700060007002c002d002d000800070008002d002e002e000900080009002e002f002f000a0009000a002f00300030000b000a000b003000310031000c000b000c003100320032000d000c000d003200330033000e000d000e003300340034000f000e000f0034003500350010000f00100035003600360011001000110036003700370012001100120037003800380013001200130038003900390014001300140039003a003a001500140015003a003b003b001600150016003b003c003c001700160017003c003d003d001800170018003d003e003e001900180019003e003f003f001a0019001a003f00400040001b001a001b004000410041001c001b001c004100420042001d001c001d004200430043001e001d001e004300440044001f001e001f0044004500450020001f0020004500460046002100200021004600470047002200210022004700480048002300220023004800490049002400230025004a004b004b002600250026004b004c004c002700260027004c004d004d002800270028004d004e004e002900280029004e004f004f002a0029002a004f00500050002b002a002b005000510051002c002b002c005100520052002d002c002d005200530053002e002d002e005300540054002f002e002f0054005500550030002f00300055005600560031003000310056005700570032003100320057005800580033003200330058005900590034003300340059005a005a003500340035005a005b005b003600350036005b005c005c003700360037005c005d005d003800370038005d005e005e003900380039005e005f005f003a0039003a005f00600060003b003a003b006000610061003c003b003c006100620062003d003c003d006200630063003e003d003e006300640064003f003e003f0064006500650040003f00400065006600660041004000410066006700670042004100420067006800680043004200430068006900690044004300440069006a006a004500440045006a006b006b004600450046006b006c006c004700460047006c006d006d004800470048006d006e006e00490048004a006f00700070004b004a004b007000710071004c004b004c007100720072004d004c004d007200730073004e004d004e007300740074004f004e004f0074007500750050004f00500075007600760051005000510076007700770052005100520077007800780053005200530078007900790054005300540079007a007a005500540055007a007b007b005600550056007b007c007c005700560057007c007d007d005800570058007d007e007e005900580059007e007f007f005a0059005a007f00800080005b005a005b008000810081005c005b005c008100820082005d005c005d008200830083005e005d005e008300840084005f005e005f0084008500850060005f00600085008600860061006000610086008700870062006100620087008800880063006200630088008900890064006300640089008a008a006500640065008a008b008b006600650066008b008c008c006700660067008c008d008d006800670068008d008e008e006900680069008e008f008f006a0069006a008f00900090006b006a006b009000910091006c006b006c009100920092006d006c006d009200930093006e006d006f0094009500950070006f00700095009600960071007000710096009700970072007100720097009800980073007200730098009900990074007300740099009a009a007500740075009a009b009b007600750076009b009c009c007700760077009c009d009d007800770078009d009e009e007900780079009e009f009f007a0079007a009f00a000a0007b007a007b00a000a100a1007c007b007c00a100a200a2007d007c007d00a200a300a3007e007d007e00a300a400a4007f007e007f00a400a500a50080007f008000a500a600a600810080008100a600a700a700820081008200a700a800a800830082008300a800a900a900840083008400a900aa00aa00850084008500aa00ab00ab00860085008600ab00ac00ac00870086008700ac00ad00ad00880087008800ad00ae00ae00890088008900ae00af00af008a0089008a00af00b000b0008b008a008b00b000b100b1008c008b008c00b100b200b2008d008c008d00b200b300b3008e008d008e00b300b400b4008f008e008f00b400b500b50090008f009000b500b600b600910090009100b600b700b700920091009200b700b800b80093009200
+  m_IndexBuffer: 00001b001c001c000100000001001c001d001d000200010002001d001e001e000300020003001e001f001f000400030004001f00200020000500040005002000210021000600050006002100220022000700060007002200230023000800070008002300240024000900080009002400250025000a0009000a002500260026000b000a000b002600270027000c000b000c002700280028000d000c000d002800290029000e000d000e0029002a002a000f000e000f002a002b002b0010000f0010002b002c002c001100100011002c002d002d001200110012002d002e002e001300120013002e002f002f001400130014002f00300030001500140015003000310031001600150016003100320032001700160017003200330033001800170018003300340034001900180019003400350035001a0019001b003600370037001c001b001c003700380038001d001c001d003800390039001e001d001e0039003a003a001f001e001f003a003b003b0020001f0020003b003c003c002100200021003c003d003d002200210022003d003e003e002300220023003e003f003f002400230024003f00400040002500240025004000410041002600250026004100420042002700260027004200430043002800270028004300440044002900280029004400450045002a0029002a004500460046002b002a002b004600470047002c002b002c004700480048002d002c002d004800490049002e002d002e0049004a004a002f002e002f004a004b004b0030002f0030004b004c004c003100300031004c004d004d003200310032004d004e004e003300320033004e004f004f003400330034004f00500050003500340036005100520052003700360037005200530053003800370038005300540054003900380039005400550055003a0039003a005500560056003b003a003b005600570057003c003b003c005700580058003d003c003d005800590059003e003d003e0059005a005a003f003e003f005a005b005b0040003f0040005b005c005c004100400041005c005d005d004200410042005d005e005e004300420043005e005f005f004400430044005f00600060004500440045006000610061004600450046006100620062004700460047006200630063004800470048006300640064004900480049006400650065004a0049004a006500660066004b004a004b006600670067004c004b004c006700680068004d004c004d006800690069004e004d004e0069006a006a004f004e004f006a006b006b0050004f0051006c006d006d005200510052006d006e006e005300520053006e006f006f005400530054006f00700070005500540055007000710071005600550056007100720072005700560057007200730073005800570058007300740074005900580059007400750075005a0059005a007500760076005b005a005b007600770077005c005b005c007700780078005d005c005d007800790079005e005d005e0079007a007a005f005e005f007a007b007b0060005f0060007b007c007c006100600061007c007d007d006200610062007d007e007e006300620063007e007f007f006400630064007f00800080006500640065008000810081006600650066008100820082006700660067008200830083006800670068008300840084006900680069008400850085006a0069006a008500860086006b006a00
   m_VertexData:
     serializedVersion: 3
-    m_VertexCount: 185
+    m_VertexCount: 135
     m_Channels:
     - stream: 0
       offset: 0
@@ -1554,8 +3174,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 8880
-    _typelessdata: 3fcd22c41b056dc378c86e38156676bf6f0b84beee74acbdb47eb23db6541eb09e067fbf000080bf00000000721cc73e135420c41b056dc37629e2c25f2072bf9d7584be50f948be40084e3e0353f63bdec17abf000080bf398ee33c721cc73ecdfb18c41b056dc3d8b95ec32cb965bf977584becc0cb7bec789bc3e0753f63be1006ebf000080bf398e633d721cc73e8efd0cc41b056dc340cda2c3165752bf967584be8a0602bf702a063ffd52f63b9b045abf000080bfabaaaa3d721cc73e3f6df9c31b056dc33d4bd1c3e09038bf9d7584be4a9324bf66fc293fe452f63b7c683fbf000080bf398ee33d721cc73e3d4bd1c31b056dc33f6df9c3082f19bf9a7584bee81f42bf23a4483f3a53f63b82fb1ebf000080bfe4380e3e721cc73e40cda2c31b056dc38efd0cc4554beabe967584be89c659bf3233613f2453f63bcf73f3be000080bfabaa2a3e721cc73ed4b95ec31b056dc3cdfb18c4261a9bbe9a7584be35cf6abf8dea723ffa52f63beb8aa1be000080bf721c473e721cc73e6e29e2c21b056dc3135420c412650ebe9c7584be6fb574bf67407d3f0d53f63bfe7215be000080bf398e633e721cc73e78c8eeb71b056dc33fcd22c46ceeed3c9b7584be352c77bf5ae47f3f2053f63bf2d2e53c000080bf0000803e721cc73e7029e2421b056dc3135420c452f9483e9d7584be5f2072bfddc17a3f1f53f63b42084e3e000080bfe4388e3e721cc73ed5b95e431b056dc3cdfb18c4c80cb73e9c7584be2bb965bfe2006e3ff452f63bc489bc3e000080bfc7719c3e721cc73e3ecda2431b056dc38efd0cc48906023fa07584be155752bf9b045a3f1d53f63b702a063f000080bfabaaaa3e721cc73e3d4bd1431b056dc33f6df9c34c93243f9f7584bede9038bf7b683f3f3953f63b68fc293f000080bf8ee3b83e721cc73e3f6df9431b056dc33b4bd1c3e81f423f9c7584be072f19bf82fb1e3f1353f63b23a4483f000080bf721cc73e721cc73e8efd0c441b056dc33fcda2c389c6593f967584be594beabed273f33e1a53f63b3133613f000080bf5555d53e721cc73ecdfb18441b056dc3d4b95ec335cf6a3f9b7584be261a9bbeeb8aa13e2b53f63b8dea723f000080bf398ee33e721cc73e135420441b056dc36c29e2c26fb5743f9c7584be11650ebefd72153ef052f63b67407d3f000080bf1cc7f13e721cc73e3fcd22441b056dc300000000362c773f9d7584be73eeed3cfad2e5bc2953f63b5ae47f3f000080bf0000003f721cc73e135420441b056dc36c29e2425f20723f9b7584be52f9483e42084ebefe52f63bddc17a3f000080bf721c073f721cc73ecdfb18441b056dc3d4b95e432cb9653f987584becb0cb73ec589bcbe5553f63be1006e3f000080bfe4380e3f721cc73e8efd0c441b056dc33fcda2431557523f987584be8906023f702a06bfc852f63b9b045a3f000080bf5555153f721cc73e3f6df9431b056dc33b4bd143e190383f9f7584be4993243f65fc29bfe852f63b7d683f3f000080bfc7711c3f721cc73e3d4bd1431b056dc33f6df943092f193f9f7584bee71f423f22a448bf5c53f63b84fb1e3f000080bf398e233f721cc73e3ecda2431b056dc38efd0c44544bea3e9e7584be87c6593f323361bf1453f63bd073f33e000080bfabaa2a3f721cc73ed5b95e431b056dc3cdfb1844281a9b3e9b7584be35cf6a3f8dea72bff752f63bed8aa13e000080bf1cc7313f721cc73e7029e2421b056dc3135420440e650e3e9c7584be6eb5743f67407dbf1953f63bfb72153e000080bf8ee3383f721cc73e78c8eeb71b056dc33fcd224472eeedbc9d7584be372c773f5ae47fbf1853f63bfbd2e5bc000080bf0000403f721cc73e6e29e2c21b056dc31354204455f948be9c7584be5f20723fddc17abf0c53f63b45084ebe000080bf721c473f721cc73ed4b95ec31b056dc3cdfb1844c90cb7be987584be2cb9653fe2006ebf4b53f63bc489bcbe000080bfe4384e3f721cc73e40cda2c31b056dc38efd0c44890602bf967584be1757523f9b045abfd852f63b6f2a06bf000080bf5555553f721cc73e3d4bd1c31b056dc33f6df9434a9324bf9d7584bee090383f7c683fbfeb52f63b66fc29bf000080bfc7715c3f721cc73e3f6df9c31b056dc33d4bd143e81f42bf9a7584be082f193f82fb1ebf3453f63b23a448bf000080bf398e633f721cc73e8efd0cc41b056dc340cda24388c659bf967584be5b4bea3ed573f3be2c53f63b303361bf000080bfabaa6a3f721cc73ecdfb18c41b056dc3d8b95e4335cf6abf9c7584be281a9b3eed8aa1beec52f63b8dea72bf000080bf1cc7713f721cc73e135420c41b056dc37629e2426fb574bf9c7584be0a650e3ef67215be2d53f63b67407dbf000080bf8ee3783f721cc73e3fcd22c41b056dc378c86eb8146676bf6d0b84beef74ac3db67eb2bd00b38c319e067fbf000080bf0000803f721cc73e319e2ac427adf0c2463f7a38dd5d7cbf6a7d13be42a2b0bdb97eb23d01aa2b319e067fbf000080bf00000000398ee33e9f0628c427adf0c22605edc2c84278bf16e930beab7930be0521333e408b6f397c0d7cbf000080bf398ee33c398ee33e135420c427adf0c24c6b69c3fbd36cbf14e930be071eadbeaabdaf3e8a8f6f39727270bf000080bf398e633d398ee33e6cc213c427adf0c2329eaac309335abf0ee930be98bcfcbee549003f368d6f391d895dbf000080bfabaaaa3d398ee33e70b302c427adf0c29a57dbc3d7f040bf11e930bea55622bf15cf243f7a926f3994e443bf000080bf398ee33d398ee33e9a57dbc327adf0c270b302c4ddd121bf14e930be426041bf5152443fed8f6f394c4c24bf000080bfe4380e3e398ee33e329eaac327adf0c26cc213c45f90fbbe11e930beb3895abf7ade5d3f6c906f39156cffbe000080bfabaa2a3e398ee33e486b69c327adf0c2135420c443d8abbe10e930be430f6dbfd6ac703fb08d6f39cc7caebe000080bf721c473e398ee33e1d05edc227adf0c29f0628c4ecce2dbe14e930bee06078bf202b7c3fc28f6f398b8030be000080bf398e633e398ee33e463ffab727adf0c2319e2ac40055ad3a15e930be7d267cbff1ff7f3fea8f6f39c9b9aa3a000080bf0000803e398ee33e1f05ed4227adf0c29f0628c4ad79303e14e930bec74278bf7b0d7c3f8b8e6f390721333e000080bfe4388e3e398ee33e496b694327adf0c2135420c4fe1dad3e16e930befcd36cbf7372703f568a6f39a1bdaf3e000080bfc7719c3e398ee33e309eaa4327adf0c26dc213c497bcfc3e18e930be09335abf1d895d3f35926f39e449003f000080bfabaaaa3e398ee33e9a57db4327adf0c270b302c4a656223f13e930bed6f040bf93e4433f228f6f3916cf243f000080bf8ee3b83e398ee33e70b3024427adf0c29957dbc34360413f17e930beddd121bf4b4c243f748f6f395252443f000080bf721cc73e398ee33e6cc2134427adf0c2319eaac3b3895a3f13e930be6390fbbe186cff3ecb8c6f3979de5d3f000080bf5555d53e398ee33e1354204427adf0c2486b69c3440f6d3f11e930be44d8abbecd7cae3e52916f39d6ac703f000080bf398ee33e398ee33e9f06284427adf0c21b05edc2e060783f16e930beebce2dbe8a80303e2e8d6f39212b7c3f000080bf1cc7f13e398ee33e319e2a4427adf0c2000000007d267c3f18e930be0255ad3accb9aababa8f6f39f1ff7f3f000080bf0000003f398ee33e9f06284427adf0c21b05ed42c842783f14e930beb179303e0b2133be2c8e6f397b0d7c3f000080bf721c073f398ee33e1354204427adf0c2486b6943fad36c3f15e930be041ead3ea8bdafbe85946f397272703f000080bfe4380e3f398ee33e6cc2134427adf0c2319eaa430a335a3f0ee930be97bcfc3ee44900bfbc876f391d895d3f000080bf5555153f398ee33e70b3024427adf0c29957db43d9f0403f10e930bea456223f13cf24bf25916f3995e4433f000080bfc7711c3f398ee33e9a57db4327adf0c270b30244dfd1213f17e930be4060413f505244bfad8f6f394e4c243f000080bf398e233f398ee33e309eaa4327adf0c26dc213445e90fb3e1ce930beb3895a3f7ade5dbf10926f39146cff3e000080bfabaa2a3f398ee33e496b694327adf0c21354204441d8ab3e15e930be440f6d3fd7ac70bfea8a6f39ca7cae3e000080bf1cc7313f398ee33e1f05ed4227adf0c29f062844e9ce2d3e14e930bedf60783f212b7cbff28f6f398880303e000080bf8ee3383f398ee33e463ffab727adf0c2319e2a440055adba17e930be7d267c3ff1ff7fbf638e6f39d1b9aaba000080bf0000403f398ee33e1d05edc227adf0c29f062844b17930be12e930bec642783f7b0d7cbf1f8e6f390c2133be000080bf721c473f398ee33e486b69c327adf0c213542044031eadbe14e930befad36c3f727270bfe8946f39a7bdafbe000080bfe4384e3f398ee33e329eaac327adf0c26cc2134494bcfcbe10e930be09335a3f1e895dbfdd886f39e34900bf000080bf5555553f398ee33e9a57dbc327adf0c270b30244a55622bf11e930bed7f0403f94e443bf04936f3915cf24bf000080bfc7715c3f398ee33e70b302c427adf0c29a57db43426041bf14e930beddd1213f4c4c24bf648f6f39515244bf000080bf398e633f398ee33e6cc213c427adf0c2329eaa43b3895abf12e930be6490fb3e196cffbea3936f3979de5dbf000080bfabaa6a3f398ee33e135420c427adf0c24c6b6943440f6dbf11e930be46d8ab3ece7caebee98b6f39d6ac70bf000080bf1cc7713f398ee33e9f0628c427adf0c22605ed42df6078bf12e930bee3ce2d3e838030beff926f39212b7cbf000080bf8ee3783f398ee33e319e2ac427adf0c2463f7ab8bbd679bf337a4dbe49ddae3daf7eb2bd6a5575319e067fbf000080bf0000803f398ee33e00402dc4000000008f1b7e38a4eb7ebf3079eb3ce06bb2bdc17eb23dfd6f32309e067fbf000080bf000000000000003f319e2ac40000000032adf0c25d1c7cbf12e12fb3d1d031bed1d0313edb3188a75d1c7cbf000080bf398ee33c0000003f3fcd22c4000000001f056dc3b18f70bf268e1133461dafbe461daf3e7c7b45a6b28f70bf000080bf398e633d0000003ff50916c4000000000140adc3d6b35dbf9397f2b2ffffffbe0000003f753569a6d7b35dbf000080bfabaaaa3d0000003f9ab704c400000000d6b9dec37f1b44bf278e91b2b98d24bfb98d243f55b434a77f1b44bf000080bf398ee33d0000003fd6b9dec3000000009ab704c4ba8d24bf56af9d327f1b44bf7e1b443fc65d07a7b98d24bf000080bfe4380e3e0000003f0140adc300000000f50916c4feffffbe8d7d0b33d8b35dbfd8b35d3f3b84f8a5feffffbe000080bfabaa2a3e0000003f1b056dc3000000003fcd22c4421dafbeacf135b3b38f70bfb28f703fb6b4d425421dafbe000080bf721c473e0000003f28adf0c200000000319e2ac4dad031be0d34ce325c1c7cbf5c1c7c3f688d5b25dad031be000080bf398e633e0000003f8f1bfeb70000000000402dc4d912c2b034555a32000080bf0000803fe59991a4d912c2b0000080bf0000803e0000003f2badf04200000000319e2ac4d4d0313e6276e6b25c1c7cbf5c1c7c3f7f03e0a3d4d0313e000080bfe4388e3e0000003f1d056d43000000003fcd22c43f1daf3e6976e632b38f70bfb38f703fd538fa263f1daf3e000080bfc7719c3e0000003fff3fad4300000000f60916c4feffff3e248e91b2d7b35dbfd8b35d3fdde0bb26ffffff3e000080bfabaaaa3e0000003fd6b9de43000000009ab704c4bc8d243f627666b37c1b44bf7c1b443f814510a8bc8d243f000080bf8ee3b83e0000003f9ab7044400000000d4b9dec37f1b443f97977232b98d24bfb98d243ffb9b8fa67f1b443f000080bf721cc73e0000003ff5091644000000000040adc3d7b35d3ffc866c33000000bf0000003f3ce9f025d7b35d3f000080bf5555d53e0000003f3fcd2244000000001b056dc3b28f703fbb9e17b3431dafbe431daf3efc1a0027b28f703f000080bf398ee33e0000003f319e2a440000000027adf0c25b1c7c3faef1b532d7d031bed8d0313edbfa58265c1c7c3f000080bf1cc7f13e0000003f00402d4400000000000000000000803f00000000db12c2b0db12c230000000000000803f000080bf0000003f0000003f319e2a440000000027adf0425c1c7c3f0934ceb2d6d0313ed6d031be4ef77ba65c1c7c3f000080bf721c073f0000003f3fcd2244000000001b056d43b28f703f53af1d33441daf3e441dafbe9aab9ca7b28f703f000080bfe4380e3f0000003ff5091644000000000040ad43d7b35d3f939772b3ffffff3effffffbe61cd21a8d7b35d3f000080bf5555153f0000003f9ab7044400000000d4b9de437f1b443f979772b2b98d243fb98d24bfb467c0a57f1b443f000080bfc7711c3f0000003fd6b9de43000000009ab70444bc8d243fcb6560337c1b443f7c1b44bfc19ac0a7bc8d243f000080bf398e233f0000003fff3fad4300000000f60916440000003f258e9132d7b35d3fd7b35dbf152e6fa50000003f000080bfabaa2a3f0000003f1d056d43000000003fcd22443e1daf3e9797f2b2b38f703fb38f70bf45adc3a63e1daf3e000080bf1cc7313f0000003f2badf04200000000319e2a44d5d0313ebdb8fe325c1c7c3f5c1c7cbfffb88da6d5d0313e000080bf8ee3383f0000003f8f1bfeb70000000000402d44da12c230da1242b20000803f000080bf5f8fcba5da12c230000080bf0000403f0000003f28adf0c200000000319e2a44d8d031be3a55dab25d1c7c3f5c1c7cbfbdb968a6d7d031be000080bf721c473f0000003f1b056dc3000000003fcd2244431dafbe16e12f33b28f703fb28f70bf0208c5a7431dafbe000080bfe4384e3f0000003f0140adc300000000f5091644feffffbe248e11b3d7b35d3fd8b35dbf82db3ca7ffffffbe000080bf5555553f0000003fd6b9dec3000000009ab70444b98d24bf278e91b27f1b443f7f1b44bfd06026a7b98d24bf000080bfc7715c3f0000003f9ab704c400000000d6b9de437f1b44bf56af9d32ba8d243fb98d24bf42b1efa67e1b44bf000080bf398e633f0000003ff50916c4000000000140ad43d6b35dbf3855da320000003f010000bf69dc3ba7d7b35dbf000080bfabaa6a3f0000003f3fcd22c4000000001f056d43b18f70bf268e11b3461daf3e461dafbe81e08ea7b28f70bf000080bf1cc7713f0000003f319e2ac40000000032adf0425d1c7cbf12e12f33d2d0313ed2d031be701665a75c1c7cbf000080bf8ee3783f0000003f00402dc4000000008f1b7eb8a4eb7ebf2e79ebbce06bb23dc17eb2bd097032309e067fbf000080bf0000803f0000003f319e2ac427adf042463f7a38bbd679bf327a4d3e49ddaebdaf7eb23d625575319e067fbf000080bf00000000e4380e3f9f0628c427adf0422605edc2df6078bf13e9303ee4ce2dbe8480303e52926f39212b7cbf000080bf398ee33ce4380e3f135420c427adf0424c6b69c3440f6dbf11e9303e46d8abbecf7cae3e55906f39d6ac70bf000080bf398e633de4380e3f6cc213c427adf042329eaac3b3895abf12e9303e6690fbbe1a6cff3eb08c6f3978de5dbf000080bfabaaaa3de4380e3f70b302c427adf0429a57dbc3426041bf14e9303edcd121bf4b4c243f0c926f39525244bf000080bf398ee33de4380e3f9a57dbc327adf04270b302c4a55622bf11e9303ed7f040bf94e4433f7a926f3915cf24bf000080bfe4380e3ee4380e3f329eaac327adf0426cc213c494bcfcbe0fe9303e09335abf1e895d3f258d6f39e34900bf000080bfabaa2a3ee4380e3f486b69c327adf042135420c4031eadbe14e9303efad36cbf7272703f9f906f39a7bdafbe000080bf721c473ee4380e3f1d05edc227adf0429f0628c4b37930be15e9303ec64278bf7b0d7c3f7f8f6f390e2133be000080bf398e633ee4380e3f463ffab727adf042319e2ac4f454adba18e9303e7d267cbff1ff7f3f668f6f39bfb9aaba000080bf0000803ee4380e3f1f05ed4227adf0429f0628c4e8ce2d3e14e9303edf6078bf212b7c3f7b8e6f398780303e000080bfe4388e3ee4380e3f496b694327adf042135420c441d8ab3e15e9303e440f6dbfd7ac703f58916f39ca7cae3e000080bfc7719c3ee4380e3f309eaa4327adf0426dc213c45e90fb3e1ce9303eb3895abf7ade5d3fa18b6f39146cff3e000080bfabaaaa3ee4380e3f9a57db4327adf04270b302c4ded1213f17e9303e406041bf5052443ff0936f394d4c243f000080bf8ee3b83ee4380e3f70b3024427adf0429957dbc3d9f0403f10e9303ea45622bf13cf243f008f6f3995e4433f000080bf721cc73ee4380e3f6cc2134427adf042319eaac309335a3f0fe9303e98bcfcbee549003fc0906f391d895d3f000080bf5555d53ee4380e3f1354204427adf042486b69c3fad36c3f15e9303e041eadbea8bdaf3e178e6f397272703f000080bf398ee33ee4380e3f9f06284427adf0421b05edc2c842783f13e9303eb27930be0b21333efd906f397b0d7c3f000080bf1cc7f13ee4380e3f319e2a4427adf042000000007d267c3f16e9303ef654adbac0b9aa3aa78f6f39f1ff7f3f000080bf0000003fe4380e3f9f06284427adf0421b05ed42df60783f14e9303eeace2d3e898030be838f6f39212b7c3f000080bf721c073fe4380e3f1354204427adf042486b6943440f6d3f12e9303e44d8ab3ecd7caebee58a6f39d6ac703f000080bfe4380e3fe4380e3f6cc2134427adf042319eaa43b3895a3f11e9303e6290fb3e176cffbe69946f3979de5d3f000080bf5555153fe4380e3f70b3024427adf0429957db434260413f15e9303edbd1213f4b4c24bfc28f6f395252443f000080bfc7711c3fe4380e3f9a57db4327adf04270b30244a556223f13e9303ed6f0403f93e443bf298f6f3915cf243f000080bf398e233fe4380e3f309eaa4327adf0426dc2134497bcfc3e18e9303e09335a3f1d895dbfc78b6f39e449003f000080bfabaa2a3fe4380e3f496b694327adf04213542044ff1dad3e16e9303efbd36c3f737270bf03936f39a3bdaf3e000080bf1cc7313fe4380e3f1f05ed4227adf0429f062844ae79303e15e9303ec742783f7b0d7cbf168d6f390821333e000080bf8ee3383fe4380e3f463ffab727adf042319e2a44f454ad3a16e9303e7f267c3ff1ff7fbfed906f39b8b9aa3a000080bf0000403fe4380e3f1d05edc227adf0429f062844ecce2dbe14e9303ee060783f202b7cbfc28f6f398b8030be000080bf721c473fe4380e3f486b69c327adf0421354204443d8abbe10e9303e430f6d3fd6ac70bf67896f39cc7caebe000080bfe4384e3fe4380e3f329eaac327adf0426cc213446190fbbe11e9303eb3895a3f79de5dbf50926f39166cffbe000080bf5555553fe4380e3f9a57dbc327adf04270b30244dcd121bf14e9303e4260413f525244bf82916f394b4c24bf000080bfc7715c3fe4380e3f70b302c427adf0429a57db43d7f040bf11e9303ea556223f15cf24bf04936f3994e443bf000080bf398e633fe4380e3f6cc213c427adf042329eaa4309335abf0fe9303e98bcfc3ee54900bfa9886f391d895dbf000080bfabaa6a3fe4380e3f135420c427adf0424c6b6943fbd36cbf16e9303e071ead3eaabdafbef9936f39727270bf000080bf1cc7713fe4380e3f9f0628c427adf0422605ed42c54278bf14e9303eaa79303e062133beff8b6f397c0d7cbf000080bf8ee3783fe4380e3f319e2ac427adf042463f7ab8dd5d7cbf6a7d133e42a2b03db97eb2bdf0a92b319e067fbf000080bf0000803fe4380e3f3fcd22c41b056d4378c86e38146676bf6d0b843eef74acbdb67eb23d00b38c319e067fbf000080bf00000000c7711c3f135420c41b056d437629e2c26fb574bf9c75843e0a650ebef672153e2d53f63b67407dbf000080bf398ee33cc7711c3fcdfb18c41b056d43d8b95ec334cf6abf9c75843e281a9bbeed8aa13e1553f63b8dea72bf000080bf398e633dc7711c3f8efd0cc41b056d4340cda2c388c659bf9675843e5b4beabed573f33ef752f63b303361bf000080bfabaaaa3dc7711c3f3f6df9c31b056d433d4bd1c3e81f42bf9a75843e082f19bf82fb1e3f3a53f63b23a448bf000080bf398ee33dc7711c3f3d4bd1c31b056d433f6df9c34a9324bf9c75843ee09038bf7c683f3fe252f63b66fc29bf000080bfe4380e3ec7711c3f40cda2c31b056d438efd0cc4890602bf9775843e175752bf9b045a3f0c53f63b6f2a06bf000080bfabaa2a3ec7711c3fd4b95ec31b056d43cdfb18c4c90cb7be9775843e2cb965bfe2006e3f1653f63bc489bcbe000080bf721c473ec7711c3f6e29e2c21b056d43135420c455f948be9c75843e5f2072bfddc17a3f0c53f63b45084ebe000080bf398e633ec7711c3f78c8eeb71b056d433fcd22c472eeedbc9d75843e372c77bf5ae47f3f2553f63bfad2e5bc000080bf0000803ec7711c3f7029e2421b056d43135420c40d650e3e9c75843e6fb574bf67407d3f0e53f63bf972153e000080bfe4388e3ec7711c3fd5b95e431b056d43cdfb18c4281a9b3e9b75843e34cf6abf8dea723f3853f63bee8aa13e000080bfc7719c3ec7711c3f3ecda2431b056d438efd0cc4544bea3e9e75843e87c659bf3233613fc852f63bd073f33e000080bfabaaaa3ec7711c3f3d4bd1431b056d433f6df9c3092f193f9f75843ee71f42bf22a4483f7553f63b84fb1e3f000080bf8ee3b83ec7711c3f3f6df9431b056d433b4bd1c3e190383fa075843e499324bf65fc293fd152f63b7d683f3f000080bf721cc73ec7711c3f8efd0c441b056d433fcda2c31557523f9875843e890602bf702a063f1453f63b9b045a3f000080bf5555d53ec7711c3fcdfb18441b056d43d4b95ec32cb9653f9875843ecb0cb7bec689bc3e0953f63be1006e3f000080bf398ee33ec7711c3f135420441b056d436c29e2c25f20723f9b75843e52f948be42084e3e1853f63bddc17a3f000080bf1cc7f13ec7711c3f3fcd22441b056d4300000000362c773f9d75843e73eeedbcfad2e53c2953f63b5ae47f3f000080bf0000003fc7711c3f135420441b056d436c29e2426fb5743f9d75843e11650e3efd7215be0b53f63b67407d3f000080bf721c073fc7711c3fcdfb18441b056d43d4b95e4335cf6a3f9b75843e261a9b3eeb8aa1bedf52f63b8dea723f000080bfe4380e3fc7711c3f8efd0c441b056d433fcda24389c6593f9675843e594bea3ed373f3be6553f63b3133613f000080bf5555153fc7711c3f3f6df9431b056d433b4bd143e81f423f9c75843e072f193f82fb1ebff952f63b24a4483f000080bfc7711c3fc7711c3f3d4bd1431b056d433f6df9434c93243f9f75843ede90383f7b683fbf5353f63b68fc293f000080bf398e233fc7711c3f3ecda2431b056d438efd0c448906023f9f75843e1457523f9a045abfe052f63b712a063f000080bfabaa2a3fc7711c3fd5b95e431b056d43cdfb1844c80cb73e9c75843e2bb9653fe2006ebf4053f63bc389bc3e000080bf1cc7313fc7711c3f7029e2421b056d431354204452f9483e9d75843e6020723fddc17abf0053f63b42084e3e000080bf8ee3383fc7711c3f78c8eeb71b056d433fcd22446ceeed3c9b75843e352c773f5ae47fbf2d53f63bf1d2e53c000080bf0000403fc7711c3f6e29e2c21b056d431354204412650ebe9c75843e6eb5743f67407dbf0853f63bff7215be000080bf721c473fc7711c3fd4b95ec31b056d43cdfb1844261a9bbe9b75843e35cf6a3f8dea72bfc952f63beb8aa1be000080bfe4384e3fc7711c3f40cda2c31b056d438efd0c44554beabe9675843e89c6593f323361bf5653f63bcf73f3be000080bf5555553fc7711c3f3d4bd1c31b056d433f6df943082f19bf9a75843ee81f423f23a448bf3453f63b82fb1ebf000080bfc7715c3fc7711c3f3f6df9c31b056d433d4bd143e09038bf9c75843e4a93243f66fc29bfe952f63b7c683fbf000080bf398e633fc7711c3f8efd0cc41b056d4340cda243165752bf9675843e8906023f702a06bfab52f63b9b045abf000080bfabaa6a3fc7711c3fcdfb18c41b056d43d8b95e432cb965bf9775843ecc0cb73ec689bcbe3b53f63be1006ebf000080bf1cc7713fc7711c3f135420c41b056d437629e2425f2072bf9d75843e50f9483e40084ebe0353f63bdec17abf000080bf8ee3783fc7711c3f3fcd22c41b056d4378c86eb8156676bf6f0b843eee74ac3db47eb2bdb6541eb09e067fbf000080bf0000803fc7711c3f
+    m_DataSize: 6480
+    _typelessdata: 3fcd22c41b056dc378c86e38156676bf6f0b84beee74acbdb47eb23db6541eb09e067fbf000080bf00000000721cc73e135420c41b056dc37629e2c25f2072bf9d7584be50f948be40084e3e0353f63bdec17abf000080bf398ee33c721cc73ecdfb18c41b056dc3d8b95ec32cb965bf977584becc0cb7bec789bc3e0753f63be1006ebf000080bf398e633d721cc73e8efd0cc41b056dc340cda2c3165752bf967584be8a0602bf702a063ffd52f63b9b045abf000080bfabaaaa3d721cc73e3f6df9c31b056dc33d4bd1c3e09038bf9d7584be4a9324bf66fc293fe452f63b7c683fbf000080bf398ee33d721cc73e3d4bd1c31b056dc33f6df9c3082f19bf9a7584bee81f42bf23a4483f3a53f63b82fb1ebf000080bfe4380e3e721cc73e40cda2c31b056dc38efd0cc4554beabe967584be89c659bf3233613f2453f63bcf73f3be000080bfabaa2a3e721cc73ed4b95ec31b056dc3cdfb18c4261a9bbe9a7584be35cf6abf8dea723ffa52f63beb8aa1be000080bf721c473e721cc73e6e29e2c21b056dc3135420c412650ebe9c7584be6fb574bf67407d3f0d53f63bfe7215be000080bf398e633e721cc73e78c8eeb71b056dc33fcd22c46ceeed3c9b7584be352c77bf5ae47f3f2053f63bf2d2e53c000080bf0000803e721cc73e7029e2421b056dc3135420c452f9483e9d7584be5f2072bfddc17a3f1f53f63b42084e3e000080bfe4388e3e721cc73ed5b95e431b056dc3cdfb18c4c80cb73e9c7584be2bb965bfe2006e3ff452f63bc489bc3e000080bfc7719c3e721cc73e3ecda2431b056dc38efd0cc48906023fa07584be155752bf9b045a3f1d53f63b702a063f000080bfabaaaa3e721cc73e3d4bd1431b056dc33f6df9c34c93243f9f7584bede9038bf7b683f3f3953f63b68fc293f000080bf8ee3b83e721cc73e3f6df9431b056dc33b4bd1c3e81f423f9c7584be072f19bf82fb1e3f1353f63b23a4483f000080bf721cc73e721cc73e8efd0c441b056dc33fcda2c389c6593f967584be594beabed273f33e1a53f63b3133613f000080bf5555d53e721cc73ecdfb18441b056dc3d4b95ec335cf6a3f9b7584be261a9bbeeb8aa13e2b53f63b8dea723f000080bf398ee33e721cc73e135420441b056dc36c29e2c26fb5743f9c7584be11650ebefd72153ef052f63b67407d3f000080bf1cc7f13e721cc73e3fcd22441b056dc300000000362c773f9d7584be73eeed3cfad2e5bc2953f63b5ae47f3f000080bf0000003f721cc73e135420441b056dc36c29e2425f20723f9b7584be52f9483e42084ebefe52f63bddc17a3f000080bf721c073f721cc73ecdfb18441b056dc3d4b95e432cb9653f987584becb0cb73ec589bcbe5553f63be1006e3f000080bfe4380e3f721cc73e8efd0c441b056dc33fcda2431557523f987584be8906023f702a06bfc852f63b9b045a3f000080bf5555153f721cc73e3f6df9431b056dc33b4bd143e190383f9f7584be4993243f65fc29bfe852f63b7d683f3f000080bfc7711c3f721cc73e3d4bd1431b056dc33f6df943092f193f9f7584bee71f423f22a448bf5c53f63b84fb1e3f000080bf398e233f721cc73e3ecda2431b056dc38efd0c44544bea3e9e7584be87c6593f323361bf1453f63bd073f33e000080bfabaa2a3f721cc73ed5b95e431b056dc3cdfb1844281a9b3e9b7584be35cf6a3f8dea72bff752f63bed8aa13e000080bf1cc7313f721cc73e7029e2421b056dc3135420445408803e700b84be7de96e3feb4677bfffeaf931ea83843e000080bf8ee3383f721cc73e319e2ac427adf0c2463f7a38dd5d7cbf6a7d13be42a2b0bdb97eb23d01aa2b319e067fbf000080bf00000000398ee33e9f0628c427adf0c22605edc2c84278bf16e930beab7930be0521333e408b6f397c0d7cbf000080bf398ee33c398ee33e135420c427adf0c24c6b69c3fbd36cbf14e930be071eadbeaabdaf3e8a8f6f39727270bf000080bf398e633d398ee33e6cc213c427adf0c2329eaac309335abf0ee930be98bcfcbee549003f368d6f391d895dbf000080bfabaaaa3d398ee33e70b302c427adf0c29a57dbc3d7f040bf11e930bea55622bf15cf243f7a926f3994e443bf000080bf398ee33d398ee33e9a57dbc327adf0c270b302c4ddd121bf14e930be426041bf5152443fed8f6f394c4c24bf000080bfe4380e3e398ee33e329eaac327adf0c26cc213c45f90fbbe11e930beb3895abf7ade5d3f6c906f39156cffbe000080bfabaa2a3e398ee33e486b69c327adf0c2135420c443d8abbe10e930be430f6dbfd6ac703fb08d6f39cc7caebe000080bf721c473e398ee33e1d05edc227adf0c29f0628c4ecce2dbe14e930bee06078bf202b7c3fc28f6f398b8030be000080bf398e633e398ee33e463ffab727adf0c2319e2ac40055ad3a15e930be7d267cbff1ff7f3fea8f6f39c9b9aa3a000080bf0000803e398ee33e1f05ed4227adf0c29f0628c4ad79303e14e930bec74278bf7b0d7c3f8b8e6f390721333e000080bfe4388e3e398ee33e496b694327adf0c2135420c4fe1dad3e16e930befcd36cbf7372703f568a6f39a1bdaf3e000080bfc7719c3e398ee33e309eaa4327adf0c26dc213c497bcfc3e18e930be09335abf1d895d3f35926f39e449003f000080bfabaaaa3e398ee33e9a57db4327adf0c270b302c4a656223f13e930bed6f040bf93e4433f228f6f3916cf243f000080bf8ee3b83e398ee33e70b3024427adf0c29957dbc34360413f17e930beddd121bf4b4c243f748f6f395252443f000080bf721cc73e398ee33e6cc2134427adf0c2319eaac3b3895a3f13e930be6390fbbe186cff3ecb8c6f3979de5d3f000080bf5555d53e398ee33e1354204427adf0c2486b69c3440f6d3f11e930be44d8abbecd7cae3e52916f39d6ac703f000080bf398ee33e398ee33e9f06284427adf0c21b05edc2e060783f16e930beebce2dbe8a80303e2e8d6f39212b7c3f000080bf1cc7f13e398ee33e319e2a4427adf0c2000000007d267c3f18e930be0255ad3accb9aababa8f6f39f1ff7f3f000080bf0000003f398ee33e9f06284427adf0c21b05ed42c842783f14e930beb179303e0b2133be2c8e6f397b0d7c3f000080bf721c073f398ee33e1354204427adf0c2486b6943fad36c3f15e930be041ead3ea8bdafbe85946f397272703f000080bfe4380e3f398ee33e6cc2134427adf0c2319eaa430a335a3f0ee930be97bcfc3ee44900bfbc876f391d895d3f000080bf5555153f398ee33e70b3024427adf0c29957db43d9f0403f10e930bea456223f13cf24bf25916f3995e4433f000080bfc7711c3f398ee33e9a57db4327adf0c270b30244dfd1213f17e930be4060413f505244bfad8f6f394e4c243f000080bf398e233f398ee33e309eaa4327adf0c26dc213445e90fb3e1ce930beb3895a3f7ade5dbf10926f39146cff3e000080bfabaa2a3f398ee33e496b694327adf0c21354204441d8ab3e15e930be440f6d3fd7ac70bfea8a6f39ca7cae3e000080bf1cc7313f398ee33e1f05ed4227adf0c29f062844efd1813e2e7a4dbe603f723fea4677bf8a4c8c31ed83843e000080bf8ee3383f398ee33e00402dc4000000008f1b7e38a4eb7ebf3079eb3ce06bb2bdc17eb23dfd6f32309e067fbf000080bf000000000000003f319e2ac40000000032adf0c25d1c7cbf12e12fb3d1d031bed1d0313edb3188a75d1c7cbf000080bf398ee33c0000003f3fcd22c4000000001f056dc3b18f70bf268e1133461dafbe461daf3e7c7b45a6b28f70bf000080bf398e633d0000003ff50916c4000000000140adc3d6b35dbf9397f2b2ffffffbe0000003f753569a6d7b35dbf000080bfabaaaa3d0000003f9ab704c400000000d6b9dec37f1b44bf278e91b2b98d24bfb98d243f55b434a77f1b44bf000080bf398ee33d0000003fd6b9dec3000000009ab704c4ba8d24bf56af9d327f1b44bf7e1b443fc65d07a7b98d24bf000080bfe4380e3e0000003f0140adc300000000f50916c4feffffbe8d7d0b33d8b35dbfd8b35d3f3b84f8a5feffffbe000080bfabaa2a3e0000003f1b056dc3000000003fcd22c4421dafbeacf135b3b38f70bfb28f703fb6b4d425421dafbe000080bf721c473e0000003f28adf0c200000000319e2ac4dad031be0d34ce325c1c7cbf5c1c7c3f688d5b25dad031be000080bf398e633e0000003f8f1bfeb70000000000402dc4d912c2b034555a32000080bf0000803fe59991a4d912c2b0000080bf0000803e0000003f2badf04200000000319e2ac4d4d0313e6276e6b25c1c7cbf5c1c7c3f7f03e0a3d4d0313e000080bfe4388e3e0000003f1d056d43000000003fcd22c43f1daf3e6976e632b38f70bfb38f703fd538fa263f1daf3e000080bfc7719c3e0000003fff3fad4300000000f60916c4feffff3e248e91b2d7b35dbfd8b35d3fdde0bb26ffffff3e000080bfabaaaa3e0000003fd6b9de43000000009ab704c4bc8d243f627666b37c1b44bf7c1b443f814510a8bc8d243f000080bf8ee3b83e0000003f9ab7044400000000d4b9dec37f1b443f97977232b98d24bfb98d243ffb9b8fa67f1b443f000080bf721cc73e0000003ff5091644000000000040adc3d7b35d3ffc866c33000000bf0000003f3ce9f025d7b35d3f000080bf5555d53e0000003f3fcd2244000000001b056dc3b28f703fbb9e17b3431dafbe431daf3efc1a0027b28f703f000080bf398ee33e0000003f319e2a440000000027adf0c25b1c7c3faef1b532d7d031bed8d0313edbfa58265c1c7c3f000080bf1cc7f13e0000003f00402d4400000000000000000000803f00000000db12c2b0db12c230000000000000803f000080bf0000003f0000003f319e2a440000000027adf0425c1c7c3f0934ceb2d6d0313ed6d031be4ef77ba65c1c7c3f000080bf721c073f0000003f3fcd2244000000001b056d43b28f703f53af1d33441daf3e441dafbe9aab9ca7b28f703f000080bfe4380e3f0000003ff5091644000000000040ad43d7b35d3f939772b3ffffff3effffffbe61cd21a8d7b35d3f000080bf5555153f0000003f9ab7044400000000d4b9de437f1b443f979772b2b98d243fb98d24bfb467c0a57f1b443f000080bfc7711c3f0000003fd6b9de43000000009ab70444bc8d243fcb6560337c1b443f7c1b44bfc19ac0a7bc8d243f000080bf398e233f0000003fff3fad4300000000f60916440000003f258e9132d7b35d3fd7b35dbf152e6fa50000003f000080bfabaa2a3f0000003f1d056d43000000003fcd22443e1daf3e9797f2b2b38f703fb38f70bf45adc3a63e1daf3e000080bf1cc7313f0000003f2badf04200000000319e2a44e875843e4279ebbcc42c773feb4677bf37ff282fec83843e000080bf8ee3383f0000003f319e2ac427adf042463f7a38bbd679bf327a4d3e49ddaebdaf7eb23d625575319e067fbf000080bf00000000e4380e3f9f0628c427adf0422605edc2df6078bf13e9303ee4ce2dbe8480303e52926f39212b7cbf000080bf398ee33ce4380e3f135420c427adf0424c6b69c3440f6dbf11e9303e46d8abbecf7cae3e55906f39d6ac70bf000080bf398e633de4380e3f6cc213c427adf042329eaac3b3895abf12e9303e6690fbbe1a6cff3eb08c6f3978de5dbf000080bfabaaaa3de4380e3f70b302c427adf0429a57dbc3426041bf14e9303edcd121bf4b4c243f0c926f39525244bf000080bf398ee33de4380e3f9a57dbc327adf04270b302c4a55622bf11e9303ed7f040bf94e4433f7a926f3915cf24bf000080bfe4380e3ee4380e3f329eaac327adf0426cc213c494bcfcbe0fe9303e09335abf1e895d3f258d6f39e34900bf000080bfabaa2a3ee4380e3f486b69c327adf042135420c4031eadbe14e9303efad36cbf7272703f9f906f39a7bdafbe000080bf721c473ee4380e3f1d05edc227adf0429f0628c4b37930be15e9303ec64278bf7b0d7c3f7f8f6f390e2133be000080bf398e633ee4380e3f463ffab727adf042319e2ac4f454adba18e9303e7d267cbff1ff7f3f668f6f39bfb9aaba000080bf0000803ee4380e3f1f05ed4227adf0429f0628c4e8ce2d3e14e9303edf6078bf212b7c3f7b8e6f398780303e000080bfe4388e3ee4380e3f496b694327adf042135420c441d8ab3e15e9303e440f6dbfd7ac703f58916f39ca7cae3e000080bfc7719c3ee4380e3f309eaa4327adf0426dc213c45e90fb3e1ce9303eb3895abf7ade5d3fa18b6f39146cff3e000080bfabaaaa3ee4380e3f9a57db4327adf04270b302c4ded1213f17e9303e406041bf5052443ff0936f394d4c243f000080bf8ee3b83ee4380e3f70b3024427adf0429957dbc3d9f0403f10e9303ea45622bf13cf243f008f6f3995e4433f000080bf721cc73ee4380e3f6cc2134427adf042319eaac309335a3f0fe9303e98bcfcbee549003fc0906f391d895d3f000080bf5555d53ee4380e3f1354204427adf042486b69c3fad36c3f15e9303e041eadbea8bdaf3e178e6f397272703f000080bf398ee33ee4380e3f9f06284427adf0421b05edc2c842783f13e9303eb27930be0b21333efd906f397b0d7c3f000080bf1cc7f13ee4380e3f319e2a4427adf042000000007d267c3f16e9303ef654adbac0b9aa3aa78f6f39f1ff7f3f000080bf0000003fe4380e3f9f06284427adf0421b05ed42df60783f14e9303eeace2d3e898030be838f6f39212b7c3f000080bf721c073fe4380e3f1354204427adf042486b6943440f6d3f12e9303e44d8ab3ecd7caebee58a6f39d6ac703f000080bfe4380e3fe4380e3f6cc2134427adf042319eaa43b3895a3f11e9303e6290fb3e176cffbe69946f3979de5d3f000080bf5555153fe4380e3f70b3024427adf0429957db434260413f15e9303edbd1213f4b4c24bfc28f6f395252443f000080bfc7711c3fe4380e3f9a57db4327adf04270b30244a556223f13e9303ed6f0403f93e443bf298f6f3915cf243f000080bf398e233fe4380e3f309eaa4327adf0426dc2134497bcfc3e18e9303e09335a3f1d895dbfc78b6f39e449003f000080bfabaa2a3fe4380e3f496b694327adf04213542044ff1dad3e16e9303efbd36c3f737270bf03936f39a3bdaf3e000080bf1cc7313fe4380e3f1f05ed4227adf0429f0628443222833e6a7d133ed9b2743fea4677bf44521ab1ed83843e000080bf8ee3383fe4380e3f3fcd22c41b056d4378c86e38146676bf6d0b843eef74acbdb67eb23d00b38c319e067fbf000080bf00000000c7711c3f135420c41b056d437629e2c26fb574bf9c75843e0a650ebef672153e2d53f63b67407dbf000080bf398ee33cc7711c3fcdfb18c41b056d43d8b95ec334cf6abf9c75843e281a9bbeed8aa13e1553f63b8dea72bf000080bf398e633dc7711c3f8efd0cc41b056d4340cda2c388c659bf9675843e5b4beabed573f33ef752f63b303361bf000080bfabaaaa3dc7711c3f3f6df9c31b056d433d4bd1c3e81f42bf9a75843e082f19bf82fb1e3f3a53f63b23a448bf000080bf398ee33dc7711c3f3d4bd1c31b056d433f6df9c34a9324bf9c75843ee09038bf7c683f3fe252f63b66fc29bf000080bfe4380e3ec7711c3f40cda2c31b056d438efd0cc4890602bf9775843e175752bf9b045a3f0c53f63b6f2a06bf000080bfabaa2a3ec7711c3fd4b95ec31b056d43cdfb18c4c90cb7be9775843e2cb965bfe2006e3f1653f63bc489bcbe000080bf721c473ec7711c3f6e29e2c21b056d43135420c455f948be9c75843e5f2072bfddc17a3f0c53f63b45084ebe000080bf398e633ec7711c3f78c8eeb71b056d433fcd22c472eeedbc9d75843e372c77bf5ae47f3f2553f63bfad2e5bc000080bf0000803ec7711c3f7029e2421b056d43135420c40d650e3e9c75843e6fb574bf67407d3f0e53f63bf972153e000080bfe4388e3ec7711c3fd5b95e431b056d43cdfb18c4281a9b3e9b75843e34cf6abf8dea723f3853f63bee8aa13e000080bfc7719c3ec7711c3f3ecda2431b056d438efd0cc4544bea3e9e75843e87c659bf3233613fc852f63bd073f33e000080bfabaaaa3ec7711c3f3d4bd1431b056d433f6df9c3092f193f9f75843ee71f42bf22a4483f7553f63b84fb1e3f000080bf8ee3b83ec7711c3f3f6df9431b056d433b4bd1c3e190383fa075843e499324bf65fc293fd152f63b7d683f3f000080bf721cc73ec7711c3f8efd0c441b056d433fcda2c31557523f9875843e890602bf702a063f1453f63b9b045a3f000080bf5555d53ec7711c3fcdfb18441b056d43d4b95ec32cb9653f9875843ecb0cb7bec689bc3e0953f63be1006e3f000080bf398ee33ec7711c3f135420441b056d436c29e2c25f20723f9b75843e52f948be42084e3e1853f63bddc17a3f000080bf1cc7f13ec7711c3f3fcd22441b056d4300000000362c773f9d75843e73eeedbcfad2e53c2953f63b5ae47f3f000080bf0000003fc7711c3f135420441b056d436c29e2426fb5743f9d75843e11650e3efd7215be0b53f63b67407d3f000080bf721c073fc7711c3fcdfb18441b056d43d4b95e4335cf6a3f9b75843e261a9b3eeb8aa1bedf52f63b8dea723f000080bfe4380e3fc7711c3f8efd0c441b056d433fcda24389c6593f9675843e594bea3ed373f3be6553f63b3133613f000080bf5555153fc7711c3f3f6df9431b056d433b4bd143e81f423f9c75843e072f193f82fb1ebff952f63b24a4483f000080bfc7711c3fc7711c3f3d4bd1431b056d433f6df9434c93243f9f75843ede90383f7b683fbf5353f63b68fc293f000080bf398e233fc7711c3f3ecda2431b056d438efd0c448906023f9f75843e1457523f9a045abfe052f63b712a063f000080bfabaa2a3fc7711c3fd5b95e431b056d43cdfb1844c80cb73e9c75843e2bb9653fe2006ebf4053f63bc389bc3e000080bf1cc7313fc7711c3f7029e2421b056d43135420445608803e6e0b843e7ce96e3fea4677bf9c3df230ed83843e000080bf8ee3383fc7711c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1609,8 +3229,8 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 693, y: 237.01994, z: 693}
+    m_Center: {x: 0, y: 0, z: -5.2641296}
+    m_Extent: {x: 693, y: 237.01994, z: 687.73584}
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
@@ -1727,7 +3347,7 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-  m_projectionMatrixMode: 2
+  m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
   m_SensorSize: {x: 24.89, y: 18.66}
@@ -1739,9 +3359,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 102.43
   far clip plane: 5000
-  field of view: 26.908106
+  field of view: 35.6
   orthographic: 0
   orthographic size: 100.8
   m_Depth: 1
@@ -1878,13 +3498,121 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
---- !u!82 &1280870322
-AudioSource:
+--- !u!114 &1280870322
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280870317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a9e6fbdd7579174a9d8639b338d94bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4765263096111982787, guid: 67bcabb61ccfa994cbff27521ea80935, type: 3}
+  columns: 8
+  rows: 8
+  ScreenWidth: 1080
+  ScreenHeight: 1080
+  LineWidth: 0.001
+  DotScale: 0.001
+--- !u!1 &1710285538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1710285540}
+  - component: {fileID: 1710285539}
+  m_Layer: 0
+  m_Name: PDSReader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1710285539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710285538}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5b16411651712944abffa763273096f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnType: 0
+  Orientation: 1
+  Data:
+    DatasetID: ' "LRO-L-LOLA-4-GDR-V1.0"'
+    MapResolution: 4
+    ColumnCount: 1440
+    RowCount: 720
+    MinLat: -90
+    MaxLat: 90
+    MinLon: 0
+    MaxLon: 360
+    DataScale: 1
+    MoonRadius: 1737.4
+    SampleBits: 32
+    SampleType: ' PC_REAL'
+    DataSize: 4
+    MinHeight: -8.746
+    MaxHeight: 10.38
+    TrueMin: -9.178
+    TrueMax: 10.786
+  LabelFile: {fileID: 4900000, guid: 6a06f746d09dc4c7eaf000c5dc1abc5f, type: 3}
+  Radius: 1737
+  DrawQuads: 0
+  DrawTexture: 0
+  DrawMesh: 0
+  DrawChunk: 0
+  Width: 1440
+  Height: 720
+  MoonMaterial: {fileID: 2100000, guid: 1565268cc62fc4527b4dfb74829b2968, type: 2}
+--- !u!4 &1710285540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710285538}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1721992150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1721992152}
+  - component: {fileID: 1721992151}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1721992151
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721992150}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: be76be58896fd434588b55acf808f0b0,
@@ -1975,77 +3703,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1710285538
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1710285540}
-  - component: {fileID: 1710285539}
-  m_Layer: 0
-  m_Name: PDSReader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1710285539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710285538}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5b16411651712944abffa763273096f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnType: 0
-  Orientation: 1
-  Data:
-    DatasetID: ' "LRO-L-LOLA-4-GDR-V1.0"'
-    MapResolution: 4
-    ColumnCount: 1440
-    RowCount: 720
-    MinLat: -90
-    MaxLat: 90
-    MinLon: 0
-    MaxLon: 360
-    DataScale: 1
-    MoonRadius: 1737.4
-    SampleBits: 32
-    SampleType: ' PC_REAL'
-    DataSize: 4
-    MinHeight: -8.746
-    MaxHeight: 10.38
-    TrueMin: -9.178
-    TrueMax: 10.786
-  LabelFile: {fileID: 4900000, guid: 6a06f746d09dc4c7eaf000c5dc1abc5f, type: 3}
-  Radius: 1737
-  DrawQuads: 0
-  DrawTexture: 0
-  DrawMesh: 0
-  DrawChunk: 0
-  Width: 1440
-  Height: 720
-  MoonMaterial: {fileID: 2100000, guid: 1565268cc62fc4527b4dfb74829b2968, type: 2}
---- !u!4 &1710285540
+--- !u!4 &1721992152
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710285538}
+  m_GameObject: {fileID: 1721992150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2041289085
 GameObject:
@@ -2078,7 +3748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Globe: {fileID: 96579886}
   CraterUI: {fileID: 2081715871}
-  Multiplier: 0.093
+  Multiplier: 0.06
   Reverse: 1
 --- !u!4 &2041289087
 Transform:
@@ -2126,7 +3796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0720e9d079144aebf2a81967b19656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alpha: 0.6
+  alpha: 0.8
   BoxTexture: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
   cam: {fileID: 1280870319}
   CraterReader: {fileID: 96579891}
@@ -2135,6 +3805,7 @@ MonoBehaviour:
   ScanlineSpeed: 0.1
   CullWithPlane: 1
   ScanlineMethod: 0
+  FontSize: 16
 --- !u!114 &2081715872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2185,7 +3856,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1280870319}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 0
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
