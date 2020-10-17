@@ -12,7 +12,7 @@ public class CraterUI : MonoBehaviour
   private Texture2D _tex;
   private int BoxSize = 10;
   public float alpha = .666f;
-
+  public Material UIMaterial;
   private List<Crater> scannedCraters = new List<Crater>();
   private Plane _plane;
   private Vector3 _cameraPosition;
@@ -29,17 +29,13 @@ public class CraterUI : MonoBehaviour
   public bool CullWithPlane;
   public ScanlineMethod ScanlineMethod;
   public int FontSize = 20;
-  public Color DetailColor = Color.red;
 
-  private void OnEnable()
-  {
-    Configure();
-  }
+  [ColorUsage(true, true)]
+  public Color DetailColor;
 
-  private void OnValidate()
-  {
-    Configure();
-  }
+  private void OnEnable() => Configure();
+
+  private void OnValidate() => Configure();
 
   public void Configure()
   {
@@ -47,9 +43,11 @@ public class CraterUI : MonoBehaviour
     {
       fontSize = FontSize
     };
+
     _style.normal.textColor = DetailColor;
-    _boxStyle = new GUIStyle();
     _tex = MakeTex(1, 1, DetailColor);
+
+    _boxStyle = new GUIStyle();
     _boxStyle.normal.background = _tex;
   }
 
@@ -67,7 +65,6 @@ public class CraterUI : MonoBehaviour
     return result;
   }
 
-  // Update is called once per frame
   private void Update()
   {
     _moonPosition = CraterReader.transform.position;
