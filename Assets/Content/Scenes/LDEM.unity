@@ -1,0 +1,4127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.004150128, g: 0.004150128, b: 0.004150128, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: b52e69bb5371a414ea38a6dca2c8ce77,
+    type: 2}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &122501572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 122501574}
+  - component: {fileID: 122501573}
+  m_Layer: 0
+  m_Name: PDS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &122501573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122501572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5b16411651712944abffa763273096f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LabelFile: {fileID: 4900000, guid: 6a06f746d09dc4c7eaf000c5dc1abc5f, type: 3}
+  Settings: {fileID: 11400000, guid: 32abf1d3345308e4da24011684f2b3b1, type: 2}
+  SpawnType: 1
+  Data:
+    DatasetID: ' "LRO-L-LOLA-4-GDR-V1.0"'
+    ProductID: ' "LDEM_4_FLOAT"'
+    MapResolution: 4
+    ColumnCount: 1440
+    RowCount: 720
+    MinLat: -90
+    MaxLat: 90
+    MinLon: 0
+    MaxLon: 360
+    DataScale: 1
+    MoonRadius: 1737.4
+    SampleBits: 32
+    SampleType: ' PC_REAL'
+    DataSize: 4
+    MinHeight: -8.746
+    MaxHeight: 10.38
+    TrueMin: -9.178
+    TrueMax: 10.786
+  DrawQuads: 0
+  DrawChunk: 0
+  MoonMaterial: {fileID: 2100000, guid: 8d23dde856112462487101d6c6fe87c5, type: 2}
+  _texture: {fileID: 0}
+--- !u!4 &122501574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122501572}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &236247358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 236247360}
+  - component: {fileID: 236247359}
+  - component: {fileID: 236247361}
+  m_Layer: 0
+  m_Name: Craters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &236247359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236247358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bda15c5aa7ffc41e5a3684106b3cac69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Settings: {fileID: 11400000, guid: 32abf1d3345308e4da24011684f2b3b1, type: 2}
+  CraterData: {fileID: 4900000, guid: 262248150bdcb46e48c90b5b5e8d9dd0, type: 3}
+  CraterList:
+  - Name: Abel
+    Diameter: 137.35
+    Longitude: 85.78
+    Latitude: -34.63
+    Position: {x: 102.93454, y: -966.06696, z: 1395.0337}
+  - Name: Aitken
+    Diameter: 129.69
+    Longitude: 172.96
+    Latitude: -16.44
+    Position: {x: -1618.2057, y: -481.11893, z: 199.83734}
+  - Name: Albategnius
+    Diameter: 130.84
+    Longitude: 4.01
+    Latitude: -11.24
+    Position: {x: 1663.3109, y: -331.36255, z: 116.60176}
+  - Name: Alden
+    Diameter: 111.44
+    Longitude: 111.11
+    Latitude: -23.51
+    Position: {x: -561.447, y: -678.1455, z: 1454.2682}
+  - Name: Alexander
+    Diameter: 94.8
+    Longitude: 13.69
+    Latitude: 40.25
+    Position: {x: 1260.634, y: 1098.4108, z: 307.07632}
+  - Name: Al-Khwarizmi G
+    Diameter: 102.83
+    Longitude: 107.35
+    Latitude: 6.76
+    Position: {x: -503.429, y: 200.10822, z: 1611.3708}
+  - Name: Al-Khwarizmi-King
+    Diameter: 590
+    Longitude: 112
+    Latitude: 1
+    Position: {x: -636.73425, y: 29.66909, z: 1575.9725}
+  - Name: Alphonsus
+    Diameter: 110.54
+    Longitude: -2.85
+    Latitude: -13.39
+    Position: {x: 1651.7422, y: -393.6828, z: -82.22859}
+  - Name: Amici M
+    Diameter: 107.91
+    Longitude: -172.02
+    Latitude: -11.81
+    Position: {x: -1647.9006, y: -347.93375, z: -231.01053}
+  - Name: Amundsen
+    Diameter: 103.39
+    Longitude: 83.07
+    Latitude: -84.44
+    Position: {x: 19.87332, y: -1692.002, z: 163.50632}
+  - Name: Amundsen-Ganswindt
+    Diameter: 335
+    Longitude: 120
+    Latitude: -81
+    Position: {x: -132.96933, y: -1679.0702, z: 230.3096}
+  - Name: Anaximander D
+    Diameter: 96.63
+    Longitude: -50.68
+    Latitude: 65.78
+    Position: {x: 441.91473, y: 1550.3608, z: -539.5299}
+  - Name: Anderson
+    Diameter: 105.33
+    Longitude: 170.79
+    Latitude: 15.5
+    Position: {x: -1617.053, y: 454.30524, z: 262.19547}
+  - Name: Antoniadi
+    Diameter: 137.92
+    Longitude: -173.06
+    Latitude: -69.3
+    Position: {x: -596.5045, y: -1590.2549, z: -72.60755}
+  - Name: Apollo
+    Diameter: 524.23
+    Longitude: -151.48
+    Latitude: -35.69
+    Position: {x: -1213.1659, y: -991.7791, z: -659.244}
+  - Name: Arzachel
+    Diameter: 96.99
+    Longitude: -1.93
+    Latitude: -18.26
+    Position: {x: 1613.4797, y: -532.6602, z: -54.37039}
+  - Name: Ashbrook
+    Diameter: 157.68
+    Longitude: -110.58
+    Latitude: -81.1
+    Position: {x: -92.451096, y: -1679.5317, z: -246.22311}
+  - Name: Australe
+    Diameter: 880
+    Longitude: 95
+    Latitude: -52
+    Position: {x: -91.21936, y: -1339.6182, z: 1042.6418}
+  - Name: Avogadro
+    Diameter: 129.84
+    Longitude: 165.36
+    Latitude: 63.21
+    Position: {x: -741.34985, y: 1517.5297, z: 193.65996}
+  - Name: Babbage
+    Diameter: 146.56
+    Longitude: -57.38
+    Latitude: 59.56
+    Position: {x: 464.28613, y: 1465.6724, z: -725.4261}
+  - Name: Babcock
+    Diameter: 95.28
+    Longitude: 94.14
+    Latitude: 4.13
+    Position: {x: -122.41067, y: 122.43349, z: 1691.161}
+  - Name: Bailly
+    Diameter: 300.56
+    Longitude: -68.9
+    Latitude: -66.82
+    Position: {x: 240.894, y: -1562.7637, z: -624.2913}
+  - Name: Balmer
+    Diameter: 136.3
+    Longitude: 70.22
+    Latitude: -20.27
+    Position: {x: 539.66833, y: -588.9557, z: 1500.6298}
+  - Name: Balmer-Kapteyn
+    Diameter: 500
+    Longitude: 70
+    Latitude: -15
+    Position: {x: 561.6224, y: -439.99237, z: 1543.0447}
+  - Name: Banachiewicz
+    Diameter: 99.09
+    Longitude: 80.01
+    Latitude: 5.28
+    Position: {x: 293.65823, y: 156.43912, z: 1667.1207}
+  - Name: Barnard
+    Diameter: 115.73
+    Longitude: 85.95
+    Latitude: -29.79
+    Position: {x: 104.199585, y: -844.59827, z: 1471.6644}
+  - Name: Bel'kovich
+    Diameter: 215.08
+    Longitude: 90.15
+    Latitude: 61.53
+    Position: {x: -2.1215913, y: 1494.4136, z: 810.3848}
+  - Name: Birkhoff
+    Diameter: 329.81
+    Longitude: -145.65
+    Latitude: 58.45
+    Position: {x: -734.38654, y: 1448.7126, z: -501.90448}
+  - Name: Blackett
+    Diameter: 145.31
+    Longitude: -115.84
+    Latitude: -37.55
+    Position: {x: -587.4501, y: -1036.0709, z: -1213.0374}
+  - Name: Blancanus
+    Diameter: 105.82
+    Longitude: -21.63
+    Latitude: -63.77
+    Position: {x: 698.45056, y: -1524.946, z: -276.95926}
+  - Name: Boguslawsky
+    Diameter: 94.59
+    Longitude: 43.26
+    Latitude: -72.9
+    Position: {x: 364.02994, y: -1624.8481, z: 342.5649}
+  - Name: Bolyai
+    Diameter: 102.22
+    Longitude: 126.12
+    Latitude: -33.85
+    Position: {x: -832.25385, y: -946.93494, z: 1140.4683}
+  - Name: Boussingault
+    Diameter: 127.61
+    Longitude: 53.73
+    Latitude: -70.21
+    Position: {x: 340.50522, y: -1599.5978, z: 464.05075}
+  - Name: Boussingault E
+    Diameter: 104.09
+    Longitude: 46.64
+    Latitude: -67.08
+    Position: {x: 454.55542, y: -1565.7842, z: 481.35153}
+  - Name: Brianchon
+    Diameter: 137.26
+    Longitude: -88.36
+    Latitude: 74.75
+    Position: {x: 12.797301, y: 1640.1384, z: -446.9699}
+  - Name: Brouwer
+    Diameter: 119.6
+    Longitude: -124.75
+    Latitude: -35.82
+    Position: {x: -785.71857, y: -994.90924, z: -1132.6085}
+  - Name: Buffon
+    Diameter: 105.76
+    Longitude: -133.53
+    Latitude: -40.64
+    Position: {x: -888.4593, y: -1107.217, z: -935.2597}
+  - Name: Buisson Z
+    Diameter: 115.35
+    Longitude: 113.29
+    Latitude: 0.13
+    Position: {x: -672.1531, y: 3.8571742, z: 1561.4722}
+  - Name: Byrd
+    Diameter: 97.49
+    Longitude: 10.07
+    Latitude: 85.43
+    Position: {x: 133.36432, y: 1694.5952, z: 23.683764}
+  - Name: Cabeus
+    Diameter: 100.58
+    Longitude: -42.13
+    Latitude: -85.33
+    Position: {x: 102.646935, y: -1694.3562, z: -92.8463}
+  - Name: Campbell
+    Diameter: 222.48
+    Longitude: 152.91
+    Latitude: 45.57
+    Position: {x: -1059.5043, y: 1213.9806, z: 541.9424}
+  - Name: Carnot
+    Diameter: 126.06
+    Longitude: -144.2
+    Latitude: 52.09
+    Position: {x: -847.17145, y: 1341.2606, z: -610.99945}
+  - Name: Casatus
+    Diameter: 102.85
+    Longitude: -30.75
+    Latitude: -72.7
+    Position: {x: 434.46213, y: -1623.0934, z: -258.4778}
+  - Name: Catharina
+    Diameter: 98.77
+    Longitude: 23.55
+    Latitude: -17.98
+    Position: {x: 1482.304, y: -524.7645, z: 646.0628}
+  - Name: Chaplygin
+    Diameter: 123.39
+    Longitude: 150.24
+    Latitude: -5.76
+    Position: {x: -1468.3396, y: -170.61493, z: 839.56494}
+  - Name: Charlier
+    Diameter: 109.88
+    Longitude: -131.69
+    Latitude: 36.22
+    Position: {x: -912.1726, y: 1004.5084, z: -1024.1602}
+  - Name: Chebyshev
+    Diameter: 179.05
+    Longitude: -132.88
+    Latitude: -34.01
+    Position: {x: -958.91016, y: -950.87384, z: -1032.6327}
+  - Name: Chretien
+    Diameter: 98.63
+    Longitude: 162.99
+    Latitude: -46.11
+    Position: {x: -1127.0114, y: -1225.1426, z: 344.7769}
+  - Name: Clavius
+    Diameter: 230.77
+    Longitude: -14.73
+    Latitude: -58.62
+    Position: {x: 856.11725, y: -1451.3453, z: -225.07733}
+  - Name: Cleomedes
+    Diameter: 130.77
+    Longitude: 55.5
+    Latitude: 27.6
+    Position: {x: 853.31714, y: 787.6033, z: 1241.5841}
+  - Name: Compton
+    Diameter: 164.63
+    Longitude: 104.05
+    Latitude: 55.86
+    Position: {x: -231.61794, y: 1407.0369, z: 925.5271}
+  - Name: Copernicus
+    Diameter: 96.07
+    Longitude: -20.08
+    Latitude: 9.62
+    Position: {x: 1574.2114, y: 284.09192, z: -575.4566}
+  - Name: Coulomb-Sarton
+    Diameter: 440
+    Longitude: -123
+    Latitude: 52
+    Position: {x: -570.0326, y: 1339.6182, z: -877.77313}
+  - Name: Crisium
+    Diameter: 740
+    Longitude: 59
+    Latitude: 18
+    Position: {x: 832.71155, y: 525.3289, z: 1385.8647}
+  - Name: Curie
+    Diameter: 138.87
+    Longitude: 92.28
+    Latitude: -23.05
+    Position: {x: -62.231537, y: -665.6083, z: 1563.0396}
+  - Name: Curtius
+    Diameter: 99.29
+    Longitude: 4.4
+    Latitude: -67.08
+    Position: {x: 660.10614, y: -1565.7842, z: 50.7924}
+  - Name: Cyrillus
+    Diameter: 98.09
+    Longitude: 24.07
+    Latitude: -13.29
+    Position: {x: 1510.6124, y: -390.7958, z: 674.78064}
+  - Name: d'Alembert
+    Diameter: 233.55
+    Longitude: 164.89
+    Latitude: 51.07
+    Position: {x: -1031.298, y: 1322.4542, z: 278.45865}
+  - Name: Darwin
+    Diameter: 122.18
+    Longitude: -69.21
+    Latitude: -19.93
+    Position: {x: 567.2665, y: -579.4821, z: -1494.125}
+  - Name: De La Rue
+    Diameter: 135.22
+    Longitude: 52.84
+    Latitude: 59.02
+    Position: {x: 528.57135, y: 1457.4899, z: 697.3775}
+  - Name: Debye
+    Diameter: 127.03
+    Longitude: -176.03
+    Latitude: 49.43
+    Position: {x: -1102.987, y: 1291.3403, z: -76.54808}
+  - Name: Demonax
+    Diameter: 121.93
+    Longitude: 59.36
+    Latitude: -78.09
+    Position: {x: 178.80162, y: -1663.404, z: 301.85583}
+  - Name: Deslandres
+    Diameter: 227.02
+    Longitude: -5.57
+    Latitude: -32.55
+    Position: {x: 1426.2019, y: -914.6601, z: -139.08643}
+  - Name: Doppler
+    Diameter: 101.79
+    Longitude: -159.84
+    Latitude: -12.58
+    Position: {x: -1557.5358, y: -370.26434, z: -571.8276}
+  - Name: Drygalski
+    Diameter: 162.49
+    Longitude: -87.18
+    Latitude: -79.57
+    Position: {x: 15.141201, y: -1671.9106, z: -307.3854}
+  - Name: Eddington
+    Diameter: 120.13
+    Longitude: -72.02
+    Latitude: 21.5
+    Position: {x: 488.25027, y: 623.05206, z: -1504.4661}
+  - Name: Einstein
+    Diameter: 181.47
+    Longitude: -88.65
+    Latitude: 16.6
+    Position: {x: 38.382298, y: 485.67023, z: -1628.6962}
+  - Name: Emden
+    Diameter: 114.64
+    Longitude: -176.51
+    Latitude: 62.76
+    Position: {x: -776.67883, y: 1511.465, z: -47.36769}
+  - Name: Encke T
+    Diameter: 94.68
+    Longitude: -37.88
+    Latitude: 3.23
+    Position: {x: 1339.6759, y: 95.78528, z: -1042.1583}
+  - Name: Endymion
+    Diameter: 122.1
+    Longitude: 56.48
+    Latitude: 53.61
+    Position: {x: 556.96246, y: 1368.4956, z: 840.8406}
+  - Name: Engel'gardt B
+    Diameter: 121.21
+    Longitude: -158.18
+    Latitude: 7.8
+    Position: {x: -1563.6036, y: 230.71648, z: -626.03015}
+  - Name: Eotvos
+    Diameter: 101.8
+    Longitude: 134.43
+    Latitude: -35.61
+    Position: {x: -967.52045, y: -989.85034, z: 986.9653}
+  - Name: Evans Q
+    Diameter: 138.41
+    Longitude: -136.3
+    Latitude: -11.21
+    Position: {x: -1205.5957, y: -330.48944, z: -1152.092}
+  - Name: Fabry
+    Diameter: 179.44
+    Longitude: 100.68
+    Latitude: 43.07
+    Position: {x: -230.1504, y: 1160.9153, z: 1220.3715}
+  - Name: Fecunditatis
+    Diameter: 690
+    Longitude: 52
+    Latitude: -4
+    Position: {x: 1044.0751, y: -118.586, z: 1336.355}
+  - Name: Fermi
+    Diameter: 241.41
+    Longitude: 123.24
+    Latitude: -19.61
+    Position: {x: -877.80194, y: -570.5472, z: 1339.3802}
+  - Name: Fersman
+    Diameter: 148.14
+    Longitude: -126.06
+    Latitude: 17.9
+    Position: {x: -952.2362, y: 522.5063, z: -1307.7589}
+  - Name: Firsov S
+    Diameter: 104.17
+    Longitude: 110.27
+    Latitude: 3.34
+    Position: {x: -587.95514, y: 99.04367, z: 1592.011}
+  - Name: Fitzgerald
+    Diameter: 104.21
+    Longitude: -172.14
+    Latitude: 26.67
+    Position: {x: -1504.8591, y: 763.047, z: -207.74573}
+  - Name: Fizeau
+    Diameter: 107.08
+    Longitude: -134.11
+    Latitude: -58.19
+    Position: {x: -623.70374, y: -1444.6613, z: -643.3876}
+  - Name: Flamsteed P
+    Diameter: 112.24
+    Longitude: -44.25
+    Latitude: -3.25
+    Position: {x: 1215.7549, y: -96.37774, z: -1184.3359}
+  - Name: Flamsteed-Billy
+    Diameter: 570
+    Longitude: -45
+    Latitude: -7
+    Position: {x: 1193.1213, y: -207.17789, z: -1193.1213}
+  - Name: Fleming
+    Diameter: 126.37
+    Longitude: 109.28
+    Latitude: 14.91
+    Position: {x: -542.4156, y: 437.41248, z: 1550.6307}
+  - Name: Fowler
+    Diameter: 139.52
+    Longitude: -145.27
+    Latitude: 42.59
+    Position: {x: -1028.5944, y: 1150.4707, z: -713.02936}
+  - Name: Fra Mauro
+    Diameter: 96.76
+    Longitude: -16.97
+    Latitude: -6.06
+    Position: {x: 1616.8921, y: -179.46878, z: -493.40787}
+  - Name: Fracastorius
+    Diameter: 120.58
+    Longitude: 33.07
+    Latitude: -21.36
+    Position: {x: 1326.7518, y: -619.18536, z: 863.90906}
+  - Name: Freundlich-Sharonov
+    Diameter: 600
+    Longitude: 175
+    Latitude: 18.5
+    Position: {x: -1606.0155, y: 539.4179, z: 140.50838}
+  - Name: Fridman
+    Diameter: 101.45
+    Longitude: -126.88
+    Latitude: -12.48
+    Position: {x: -996.13306, y: -367.36795, z: -1327.6897}
+  - Name: Furnerius
+    Diameter: 135.03
+    Longitude: 60.54
+    Latitude: -36
+    Position: {x: 676.40845, y: -999.2349, z: 1197.4978}
+  - Name: Gagarin
+    Diameter: 261.83
+    Longitude: 149.35
+    Latitude: -19.66
+    Position: {x: -1377.25, y: -571.94446, z: 816.1261}
+  - Name: Galois
+    Diameter: 231.97
+    Longitude: -152.99
+    Latitude: -13.94
+    Position: {x: -1469.97, y: -409.5396, z: -749.31006}
+  - Name: Galois Q
+    Diameter: 133.6
+    Longitude: -154.46
+    Latitude: -14.85
+    Position: {x: -1482.6521, y: -435.69196, z: -708.4597}
+  - Name: Gamow
+    Diameter: 113.92
+    Longitude: 144.65
+    Latitude: 65.29
+    Position: {x: -579.62427, y: 1544.34, z: 411.1568}
+  - Name: Gartner
+    Diameter: 101.79
+    Longitude: 34.76
+    Latitude: 59.24
+    Position: {x: 714.2971, y: 1460.8392, z: 495.71017}
+  - Name: Gassendi
+    Diameter: 111.39
+    Longitude: -39.96
+    Latitude: -17.55
+    Position: {x: 1242.3872, y: -512.6145, z: -1041.0094}
+  - Name: Gauss
+    Diameter: 170.72
+    Longitude: 79.08
+    Latitude: 36.01
+    Position: {x: 260.50684, y: 999.47485, z: 1350.2542}
+  - Name: Gerard
+    Diameter: 98.78
+    Longitude: -80.51
+    Latitude: 44.54
+    Position: {x: 199.77852, y: 1192.392, z: -1195.1108}
+  - Name: Gerard Q Outer
+    Diameter: 192.48
+    Longitude: -84.55
+    Latitude: 46.51
+    Position: {x: 111.121925, y: 1233.3407, z: -1164.6986}
+  - Name: Gilbert
+    Diameter: 100.25
+    Longitude: 76.16
+    Latitude: -3.2
+    Position: {x: 406.02515, y: -94.89656, z: 1648.071}
+  - Name: Goldschmidt
+    Diameter: 115.26
+    Longitude: -3.37
+    Latitude: 73.04
+    Position: {x: 495.03925, y: 1626.0647, z: -29.15064}
+  - Name: Grimaldi
+    Diameter: 173.49
+    Longitude: -68.36
+    Latitude: -5.38
+    Position: {x: 624.15326, y: -159.39334, z: -1573.2217}
+  - Name: Grissom-White
+    Diameter: 600
+    Longitude: -161
+    Latitude: -44
+    Position: {x: -1156.2537, y: -1180.9193, z: -398.12997}
+  - Name: Guyot
+    Diameter: 98.28
+    Longitude: 117.12
+    Latitude: 11.63
+    Position: {x: -759.0446, y: 342.70438, z: 1482.0273}
+  - Name: H. G. Wells
+    Diameter: 108.9
+    Longitude: 122.63
+    Latitude: 40.84
+    Position: {x: -693.4887, y: 1111.7131, z: 1083.1284}
+  - Name: Harkhebi
+    Diameter: 337.14
+    Longitude: 98.74
+    Latitude: 40.87
+    Position: {x: -195.33784, y: 1112.3864, z: 1270.6061}
+  - Name: Hausen
+    Diameter: 163.24
+    Longitude: -88.49
+    Latitude: -65.11
+    Position: {x: 18.85425, y: -1542.0997, z: -715.2432}
+  - Name: Heaviside
+    Diameter: 164.46
+    Longitude: 166.77
+    Latitude: -10.44
+    Position: {x: -1627.4845, y: -308.0498, z: 382.62228}
+  - Name: Heaviside K
+    Diameter: 124.9
+    Longitude: 168.5
+    Latitude: -12.91
+    Position: {x: -1623.7625, y: -379.81442, z: 330.35812}
+  - Name: Hecataeus
+    Diameter: 133.67
+    Longitude: 79.68
+    Latitude: -22.06
+    Position: {x: 282.25208, y: -638.48145, z: 1550.0565}
+  - Name: Hecataeus K
+    Diameter: 94.14
+    Longitude: 79.69
+    Latitude: -19.6
+    Position: {x: 286.62625, y: -570.2677, z: 1575.6396}
+  - Name: Hedin
+    Diameter: 157.38
+    Longitude: -76.57
+    Latitude: 2.87
+    Position: {x: 394.34204, y: 85.119, z: -1651.4386}
+  - Name: Helmholtz
+    Diameter: 110.16
+    Longitude: 65.34
+    Latitude: -68.64
+    Position: {x: 258.34445, y: -1583.2275, z: 562.71545}
+  - Name: Hermite
+    Diameter: 108.64
+    Longitude: -93.32
+    Latitude: 86.17
+    Position: {x: -6.5761943, y: 1696.2032, z: -113.36336}
+  - Name: Hertzsprung
+    Diameter: 536.37
+    Longitude: -128.66
+    Latitude: 1.37
+    Position: {x: -1061.6825, y: 40.644844, z: -1327.094}
+  - Name: Hevelius
+    Diameter: 113.87
+    Longitude: -67.46
+    Latitude: 2.2
+    Position: {x: 651.178, y: 65.25928, z: -1568.9833}
+  - Name: Hilbert
+    Diameter: 173.24
+    Longitude: 108.32
+    Latitude: -17.87
+    Position: {x: -508.57086, y: -521.65924, z: 1535.9778}
+  - Name: Hipparchus
+    Diameter: 143.95
+    Longitude: 4.91
+    Latitude: -5.36
+    Position: {x: 1686.3555, y: -158.80254, z: 144.86813}
+  - Name: Hirayama
+    Diameter: 145.21
+    Longitude: 93.63
+    Latitude: -6.01
+    Position: {x: -107.0405, y: -177.99347, z: 1687.2642}
+  - Name: Hommel
+    Diameter: 113.6
+    Longitude: 32.93
+    Latitude: -54.74
+    Position: {x: 823.7145, y: -1388.1194, z: 533.4968}
+  - Name: Humboldt
+    Diameter: 199.46
+    Longitude: 80.96
+    Latitude: -27.02
+    Position: {x: 237.95502, y: -772.3125, z: 1495.6305}
+  - Name: Humboldtianum
+    Diameter: 650
+    Longitude: 82
+    Latitude: 59
+    Position: {x: 121.85506, y: 1457.1844, z: 867.04376}
+  - Name: Humorum
+    Diameter: 425
+    Longitude: -39
+    Latitude: -24
+    Position: {x: 1206.9288, y: -691.4523, z: -977.3517}
+  - Name: Imbrium
+    Diameter: 1160
+    Longitude: -17
+    Latitude: 35
+    Position: {x: 1331.7103, y: 975.07996, z: -407.14468}
+  - Name: Ingenii
+    Diameter: 560
+    Longitude: 165
+    Latitude: -43
+    Position: {x: -1200.9368, y: -1159.3972, z: 321.79016}
+  - Name: Inghirami
+    Diameter: 94.6
+    Longitude: -68.95
+    Latitude: -47.49
+    Position: {x: 412.60095, y: -1253.171, z: -1072.0647}
+  - Name: Insularum
+    Diameter: 600
+    Longitude: -18
+    Latitude: 9
+    Position: {x: 1596.8906, y: 265.9386, z: -518.86127}
+  - Name: Isaev
+    Diameter: 94.1
+    Longitude: 147.49
+    Latitude: -17.57
+    Position: {x: -1366.7267, y: -513.18024, z: 871.0363}
+  - Name: J. Herschel
+    Diameter: 154.44
+    Longitude: -41.86
+    Latitude: 62.31
+    Position: {x: 588.3511, y: 1505.307, z: -527.15625}
+  - Name: Janssen
+    Diameter: 200.65
+    Longitude: 40.82
+    Latitude: -44.96
+    Position: {x: 910.3304, y: -1201.2421, z: 786.3308}
+  - Name: Joliot
+    Diameter: 172.79
+    Longitude: 93.39
+    Latitude: 25.79
+    Position: {x: -90.511765, y: 739.62573, z: 1527.9927}
+  - Name: Joule
+    Diameter: 97.52
+    Longitude: -144.14
+    Latitude: 27.15
+    Position: {x: -1225.957, y: 775.7467, z: -886.1413}
+  - Name: Jules Verne
+    Diameter: 145.54
+    Longitude: 147.28
+    Latitude: -34.85
+    Position: {x: -1173.7339, y: -971.43085, z: 754.1026}
+  - Name: Kastner
+    Diameter: 116.07
+    Longitude: 78.94
+    Latitude: -6.9
+    Position: {x: 323.76065, y: -204.23264, z: 1656.3418}
+  - Name: Kastner G
+    Diameter: 95.66
+    Longitude: 79.35
+    Latitude: -3.68
+    Position: {x: 313.5277, y: -109.11274, z: 1667.2717}
+  - Name: Keeler
+    Diameter: 158.07
+    Longitude: 161.78
+    Latitude: -9.78
+    Position: {x: -1591.3, y: -288.77136, z: 523.8085}
+  - Name: Keeler-Heaviside
+    Diameter: 500
+    Longitude: 162
+    Latitude: -10
+    Position: {x: -1592.2332, y: -295.2019, z: 517.348}
+  - Name: Kekule
+    Diameter: 94.22
+    Longitude: -138.47
+    Latitude: 16.31
+    Position: {x: -1221.4192, y: 477.41818, z: -1081.7611}
+  - Name: Klaproth
+    Diameter: 121.37
+    Longitude: -26.26
+    Latitude: -69.85
+    Position: {x: 525.1766, y: -1595.9497, z: -259.1024}
+  - Name: Koch
+    Diameter: 94.7
+    Longitude: 150.33
+    Latitude: -42.13
+    Position: {x: -1095.4646, y: -1140.3856, z: 624.08185}
+  - Name: Kondratyuk
+    Diameter: 97.97
+    Longitude: 115.8
+    Latitude: -15.33
+    Position: {x: -713.5668, y: -449.44266, z: 1476.084}
+  - Name: Korolev
+    Diameter: 423.41
+    Longitude: -157.41
+    Latitude: -4.19
+    Position: {x: -1565.3762, y: -124.20903, z: -651.2827}
+  - Name: Kovalevskaya
+    Diameter: 113.71
+    Longitude: -129.44
+    Latitude: 30.86
+    Position: {x: -927.06177, y: 872.0015, z: -1127.0181}
+  - Name: Kovalevskaya Q
+    Diameter: 100.63
+    Longitude: -131.44
+    Latitude: 29.18
+    Position: {x: -982.3337, y: 828.8433, z: -1112.6721}
+  - Name: Krasovskiy T
+    Diameter: 96.46
+    Longitude: -177.09
+    Latitude: 3.64
+    Position: {x: -1694.3827, y: 107.92833, z: -86.13053}
+  - Name: Kurchatov
+    Diameter: 110.96
+    Longitude: 141.74
+    Latitude: 38.3
+    Position: {x: -1047.5627, y: 1053.6243, z: 826.1283}
+  - Name: Lagrange
+    Diameter: 162.21
+    Longitude: -71.45
+    Latitude: -32.6
+    Position: {x: 455.61908, y: -915.9103, z: -1357.7627}
+  - Name: Lagrange R
+    Diameter: 126.59
+    Longitude: -76.67
+    Latitude: -31.33
+    Position: {x: 334.79913, y: -883.94293, z: -1412.9949}
+  - Name: Lamarck
+    Diameter: 114.65
+    Longitude: -70.06
+    Latitude: -23.12
+    Position: {x: 533.1973, y: -667.5189, z: -1469.7344}
+  - Name: Lamarck D
+    Diameter: 131.28
+    Longitude: -74.35
+    Latitude: -24.9
+    Position: {x: 415.96353, y: -715.76086, z: -1484.8099}
+  - Name: Lamb
+    Diameter: 103.55
+    Longitude: 100.94
+    Latitude: -42.67
+    Position: {x: -237.21823, y: -1152.217, z: 1227.2422}
+  - Name: Landau
+    Diameter: 218.15
+    Longitude: -119.34
+    Latitude: 42.16
+    Position: {x: -617.46967, y: 1141.0454, z: -1098.5201}
+  - Name: Langemak
+    Diameter: 104.76
+    Longitude: 119.45
+    Latitude: -9.93
+    Position: {x: -823.307, y: -293.1563, z: 1458.1581}
+  - Name: Langemak N
+    Diameter: 137.93
+    Longitude: 119.12
+    Latitude: -13.19
+    Position: {x: -805.46375, y: -387.9076, z: 1445.9446}
+  - Name: Langrenus
+    Diameter: 131.98
+    Longitude: 61.04
+    Latitude: -8.86
+    Position: {x: 813.31616, y: -261.83502, z: 1469.68}
+  - Name: Larmor
+    Diameter: 99.49
+    Longitude: -179.67
+    Latitude: 31.85
+    Position: {x: -1444.0114, y: 897.0853, z: -8.317061}
+  - Name: Le Gentil
+    Diameter: 125.38
+    Longitude: -76.02
+    Latitude: -74.27
+    Position: {x: 111.34032, y: -1636.3348, z: -447.22656}
+  - Name: Lebedev
+    Diameter: 121.8
+    Longitude: 107.89
+    Latitude: -46.8
+    Position: {x: -357.4868, y: -1239.2467, z: 1107.4615}
+  - Name: Leeuwenhoek
+    Diameter: 125
+    Longitude: -178.87
+    Latitude: -29.28
+    Position: {x: -1482.5197, y: -831.4326, z: -29.242601}
+  - Name: Leeuwenhoek E
+    Diameter: 102.11
+    Longitude: -176.27
+    Latitude: -28.51
+    Position: {x: -1490.6831, y: -811.43066, z: -97.18202}
+  - Name: Leibnitz
+    Diameter: 236.67
+    Longitude: 179.35
+    Latitude: -38.24
+    Position: {x: -1335.1365, y: -1052.2268, z: 15.147218}
+  - Name: Letronne
+    Diameter: 117.59
+    Longitude: -42.49
+    Latitude: -10.5
+    Position: {x: 1232.5807, y: -309.80038, z: -1129.0565}
+  - Name: Levi-Civita
+    Diameter: 108.23
+    Longitude: 143.14
+    Latitude: -23.34
+    Position: {x: -1248.873, y: -673.5172, z: 936.3177}
+  - Name: Lippmann
+    Diameter: 160.07
+    Longitude: -114.32
+    Latitude: -55.43
+    Position: {x: -397.2542, y: -1399.837, z: -879.00244}
+  - Name: Lomonosov-Fleming
+    Diameter: 620
+    Longitude: 105
+    Latitude: 19
+    Position: {x: -416.02097, y: 553.4658, z: 1552.6113}
+  - Name: Longomontanus
+    Diameter: 145.5
+    Longitude: -21.88
+    Latitude: -49.55
+    Position: {x: 1023.485, y: -1293.6532, z: -411.02335}
+  - Name: Longomontanus Z
+    Diameter: 96.13
+    Longitude: -18
+    Latitude: -49.91
+    Position: {x: 1041.2008, y: -1300.5574, z: -338.30667}
+  - Name: Lorentz
+    Diameter: 378.42
+    Longitude: -97.19
+    Latitude: 34.59
+    Position: {x: -175.16154, y: 965.09015, z: -1388.4954}
+  - Name: Lundmark
+    Diameter: 103.44
+    Longitude: 152.56
+    Latitude: -38.87
+    Position: {x: -1174.6621, y: -1066.8444, z: 609.928}
+  - Name: Lyot
+    Diameter: 150.6
+    Longitude: 84.8
+    Latitude: -50.47
+    Position: {x: 98.0662, y: -1311.1954, z: 1077.5665}
+  - Name: Mach
+    Diameter: 174.97
+    Longitude: -149.24
+    Latitude: 18.13
+    Position: {x: -1388.3129, y: 528.9959, z: -826.28735}
+  - Name: Maginus
+    Diameter: 155.58
+    Longitude: -5.98
+    Latitude: -50.03
+    Position: {x: 1086.1143, y: -1302.8475, z: -113.77191}
+  - Name: Mandel'shtam
+    Diameter: 181.89
+    Longitude: 162.39
+    Latitude: 5.7
+    Position: {x: -1612.3228, y: 168.84357, z: 511.7686}
+  - Name: Manzinus
+    Diameter: 95.97
+    Longitude: 26.37
+    Latitude: -67.51
+    Position: {x: 582.62164, y: -1570.7087, z: 288.8358}
+  - Name: Marginis
+    Diameter: 580
+    Longitude: 84
+    Latitude: 20
+    Position: {x: 166.9818, y: 581.4342, z: 1588.7263}
+  - Name: Maurolycus
+    Diameter: 115.35
+    Longitude: 13.92
+    Latitude: -41.77
+    Position: {x: 1230.6672, y: -1132.4415, z: 305.0153}
+  - Name: Maxwell
+    Diameter: 109.24
+    Longitude: 98.53
+    Latitude: 29.9
+    Position: {x: -218.59349, y: 847.42914, z: 1457.4226}
+  - Name: Mee
+    Diameter: 134.11
+    Longitude: -35.19
+    Latitude: -43.63
+    Position: {x: 1005.6027, y: -1172.9977, z: -709.1118}
+  - Name: Mendel
+    Diameter: 139.65
+    Longitude: -109.86
+    Latitude: -48.83
+    Position: {x: -380.18478, y: -1279.6915, z: -1052.5442}
+  - Name: Mendeleev
+    Diameter: 325.13
+    Longitude: 141.17
+    Latitude: 5.38
+    Position: {x: -1318.4827, y: 159.39334, z: 1061.2245}
+  - Name: Mendel-Rydberg
+    Diameter: 630
+    Longitude: -94
+    Latitude: -50
+    Position: {x: -76.225624, y: -1302.2755, z: -1090.0771}
+  - Name: Messala
+    Diameter: 122.4
+    Longitude: 60.06
+    Latitude: 39.31
+    Position: {x: 656.477, y: 1076.977, z: 1139.8064}
+  - Name: Meton
+    Diameter: 124.7
+    Longitude: 19.63
+    Latitude: 73.57
+    Position: {x: 452.8891, y: 1630.5822, z: 161.53381}
+  - Name: Michelson
+    Diameter: 123.14
+    Longitude: -121.55
+    Latitude: 6.72
+    Position: {x: -883.40125, y: 198.9296, z: -1438.7596}
+  - Name: Milankovic
+    Diameter: 94.21
+    Longitude: 171.35
+    Latitude: 76.53
+    Position: {x: -391.48746, y: 1653.2363, z: 59.556362}
+  - Name: Milne
+    Diameter: 259.97
+    Longitude: 112.78
+    Latitude: -31
+    Position: {x: -564.2126, y: -875.5647, z: 1343.5217}
+  - Name: Milne P
+    Diameter: 97.13
+    Longitude: 108.08
+    Latitude: -37.47
+    Position: {x: -418.73004, y: -1034.1882, z: 1282.6223}
+  - Name: Minkowski
+    Diameter: 107.51
+    Longitude: -145.8
+    Latitude: -56.13
+    Position: {x: -783.5992, y: -1411.5171, z: -532.5333}
+  - Name: Minnaert
+    Diameter: 137.31
+    Longitude: 178.57
+    Latitude: -67.54
+    Position: {x: -649.263, y: -1571.049, z: 16.2077}
+  - Name: Mitra
+    Diameter: 97.1
+    Longitude: -154.65
+    Latitude: 17.76
+    Position: {x: -1463.0892, y: 518.5519, z: -693.1622}
+  - Name: Moretus
+    Diameter: 114.45
+    Longitude: -5.95
+    Latitude: -70.63
+    Position: {x: 560.7968, y: -1603.7739, z: -58.447372}
+  - Name: Moscoviense
+    Diameter: 445
+    Longitude: 148
+    Latitude: 26
+    Position: {x: -1295.7749, y: 745.23096, z: 809.6902}
+  - Name: Mutus-Vlacq
+    Diameter: 700
+    Longitude: 21
+    Latitude: -52
+    Position: {x: 977.10815, y: -1339.6182, z: 375.0767}
+  - Name: Nansen
+    Diameter: 116.9
+    Longitude: 95.38
+    Latitude: 81.17
+    Position: {x: -24.467403, y: 1679.8518, z: 259.8061}
+  - Name: Nassau F
+    Diameter: 115.37
+    Longitude: -179.09
+    Latitude: -25.33
+    Position: {x: -1536.3658, y: -727.313, z: -24.403605}
+  - Name: Nectaris
+    Diameter: 860
+    Longitude: 34
+    Latitude: -16
+    Position: {x: 1354.7676, y: -468.5835, z: 913.80225}
+  - Name: Neper
+    Diameter: 144.32
+    Longitude: 84.58
+    Latitude: 8.76
+    Position: {x: 158.70175, y: 258.903, z: 1672.6575}
+  - Name: Nernst
+    Diameter: 121.52
+    Longitude: -94.64
+    Latitude: 35.57
+    Position: {x: -111.86035, y: 988.8852, z: -1378.2574}
+  - Name: Neujmin
+    Diameter: 97.03
+    Longitude: 125.17
+    Latitude: -26.68
+    Position: {x: -874.9493, y: -763.31213, z: 1241.6998}
+  - Name: Nubium
+    Diameter: 690
+    Longitude: -15
+    Latitude: -21
+    Position: {x: 1533.0079, y: -609.2255, z: -410.76825}
+  - Name: Numerov
+    Diameter: 105.39
+    Longitude: -162.2
+    Latitude: -70.52
+    Position: {x: -539.7739, y: -1602.6885, z: -173.30246}
+  - Name: Olbers D
+    Diameter: 100.03
+    Longitude: -78.03
+    Latitude: 10.23
+    Position: {x: 346.9741, y: 301.92004, z: -1636.598}
+  - Name: Oppenheimer
+    Diameter: 201.16
+    Longitude: -166.03
+    Latitude: -35.32
+    Position: {x: -1346.0638, y: -982.84216, z: -334.86285}
+  - Name: Orientale
+    Diameter: 930
+    Longitude: -95
+    Latitude: -19
+    Position: {x: -140.09258, y: -553.4658, z: -1601.265}
+  - Name: Orlov Y
+    Diameter: 120.01
+    Longitude: -175.37
+    Latitude: -22.84
+    Position: {x: -1561.5946, y: -659.8705, z: -126.465965}
+  - Name: Orontius
+    Diameter: 121.02
+    Longitude: -3.96
+    Latitude: -40.37
+    Position: {x: 1292.0997, y: -1101.1257, z: -89.44598}
+  - Name: Ostwald
+    Diameter: 108.13
+    Longitude: 121.95
+    Latitude: 10.24
+    Position: {x: -885.275, y: 302.21204, z: 1419.4915}
+  - Name: Paraskevopoulos
+    Diameter: 98.87
+    Longitude: -150.34
+    Latitude: 50.09
+    Position: {x: -947.78644, y: 1303.9905, z: -539.73145}
+  - Name: Parenago
+    Diameter: 94.57
+    Longitude: -108.91
+    Latitude: 25.88
+    Position: {x: -495.68674, y: 742.0292, z: -1446.958}
+  - Name: Pascal
+    Diameter: 108.2
+    Longitude: -70.63
+    Latitude: 74.36
+    Position: {x: 152.0053, y: 1637.0569, z: -432.3648}
+  - Name: Paschen
+    Diameter: 127.36
+    Longitude: -140.53
+    Latitude: -14.06
+    Position: {x: -1273.0128, y: -412.99435, z: -1048.272}
+  - Name: Pasteur
+    Diameter: 232.77
+    Longitude: 104.91
+    Latitude: -11.58
+    Position: {x: -428.50925, y: -341.25116, z: 1609.3252}
+  - Name: Pauli
+    Diameter: 95.28
+    Longitude: 137.35
+    Latitude: -44.76
+    Position: {x: -887.83417, y: -1197.0356, z: 817.8361}
+  - Name: Pavlov
+    Diameter: 143.05
+    Longitude: 142.4
+    Latitude: -28.28
+    Position: {x: -1186.1309, y: -805.4274, z: 913.44403}
+  - Name: Petavius
+    Diameter: 184.06
+    Longitude: 60.78
+    Latitude: -25.39
+    Position: {x: 749.72156, y: -728.9217, z: 1340.3696}
+  - Name: Petermann R
+    Diameter: 118.38
+    Longitude: 55.61
+    Latitude: 74.78
+    Position: {x: 252.07724, y: 1640.3724, z: 368.2874}
+  - Name: Phillips
+    Diameter: 104.21
+    Longitude: 75.67
+    Latitude: -26.57
+    Position: {x: 376.32367, y: -760.3944, z: 1473.1533}
+  - Name: Philolaus C
+    Diameter: 98.14
+    Longitude: -32.82
+    Latitude: 71.23
+    Position: {x: 459.694, y: 1609.5903, z: -296.4797}
+  - Name: Philolaus G
+    Diameter: 102.68
+    Longitude: -23.82
+    Latitude: 69.18
+    Position: {x: 552.7669, y: 1588.9928, z: -244.02977}
+  - Name: Phocylides
+    Diameter: 115.18
+    Longitude: -57.31
+    Latitude: -52.79
+    Position: {x: 555.24567, y: -1353.9215, z: -865.2161}
+  - Name: Piazzi
+    Diameter: 102.57
+    Longitude: -68.01
+    Latitude: -36.16
+    Position: {x: 513.93774, y: -1003.0716, z: -1272.6804}
+  - Name: Pingre-Hausen
+    Diameter: 300
+    Longitude: -82
+    Latitude: -56
+    Position: {x: 132.30183, y: -1409.3638, z: -941.37646}
+  - Name: Pitatus
+    Diameter: 100.63
+    Longitude: -13.53
+    Latitude: -29.88
+    Position: {x: 1433.1125, y: -846.9146, z: -344.8536}
+  - Name: Planck
+    Diameter: 319.46
+    Longitude: 135.34
+    Latitude: -57.27
+    Position: {x: -653.78784, y: -1430.0872, z: 646.07434}
+  - Name: Plaskett
+    Diameter: 114.34
+    Longitude: 176.71
+    Latitude: 81.63
+    Position: {x: -247.05283, y: 1681.8927, z: 14.201662}
+  - Name: Plato
+    Diameter: 100.68
+    Longitude: -9.38
+    Latitude: 51.62
+    Position: {x: 1041.3734, y: 1332.6473, z: -172.02481}
+  - Name: Poczobutt
+    Diameter: 212.36
+    Longitude: -99.23
+    Latitude: 57.27
+    Position: {x: -147.43115, y: 1430.0872, z: -907.25665}
+  - Name: Poincare
+    Diameter: 345.99
+    Longitude: 163.99
+    Latitude: -56.86
+    Position: {x: -893.3205, y: -1423.4734, z: 256.32425}
+  - Name: Posidonius
+    Diameter: 95.06
+    Longitude: 29.99
+    Latitude: 31.88
+    Position: {x: 1250.2902, y: 897.8414, z: 721.5644}
+  - Name: Poynting
+    Diameter: 127.55
+    Longitude: -133.38
+    Latitude: 17.5
+    Position: {x: -1113.5767, y: 511.19983, z: -1178.398}
+  - Name: Ptolemaeus
+    Diameter: 153.67
+    Longitude: -1.84
+    Latitude: -9.16
+    Position: {x: 1677.4557, y: -270.6264, z: -53.888435}
+  - Name: Purbach
+    Diameter: 114.97
+    Longitude: -2.03
+    Latitude: -25.51
+    Position: {x: 1533.3043, y: -732.13666, z: -54.347992}
+  - Name: Pythagoras
+    Diameter: 144.55
+    Longitude: -62.98
+    Latitude: 63.68
+    Position: {x: 342.43112, y: 1523.7639, z: -671.4793}
+  - Name: Rayleigh
+    Diameter: 113.77
+    Longitude: 89.45
+    Latitude: 29.12
+    Position: {x: 14.256086, y: 827.2886, z: 1485.0555}
+  - Name: Regiomontanus
+    Diameter: 126.64
+    Longitude: -1.09
+    Latitude: -28.28
+    Position: {x: 1496.8218, y: -805.4274, z: -28.479107}
+  - Name: Repsold
+    Diameter: 108.65
+    Longitude: -78.41
+    Latitude: 51.31
+    Position: {x: 213.49992, y: 1326.9171, z: -1041.0133}
+  - Name: Repsold C
+    Diameter: 135.09
+    Longitude: -73.78
+    Latitude: 48.73
+    Position: {x: 313.21814, y: 1277.7362, z: -1076.7007}
+  - Name: Riccioli
+    Diameter: 155.66
+    Longitude: -74.42
+    Latitude: -2.9
+    Position: {x: 456.0074, y: -86.008, z: -1635.4387}
+  - Name: Richardson
+    Diameter: 162.56
+    Longitude: 99.89
+    Latitude: 30.93
+    Position: {x: -250.46541, y: 873.7838, z: 1436.5824}
+  - Name: Riemann
+    Diameter: 117.85
+    Longitude: 87.18
+    Latitude: 39.38
+    Position: {x: 64.647835, y: 1078.5833, z: 1312.4323}
+  - Name: Rocca W
+    Diameter: 104.65
+    Longitude: -66.52
+    Latitude: -10.26
+    Position: {x: 666.49854, y: -302.796, z: -1534.3059}
+  - Name: Roche
+    Diameter: 152.67
+    Longitude: 136.54
+    Latitude: -42.37
+    Position: {x: -911.65466, y: -1145.6566, z: 863.9195}
+  - Name: Rontgen
+    Diameter: 128.42
+    Longitude: -91.42
+    Latitude: 32.88
+    Position: {x: -35.379406, y: 922.8983, z: -1427.2377}
+  - Name: Rowland
+    Diameter: 166.12
+    Longitude: -162.48
+    Latitude: 56.98
+    Position: {x: -883.4108, y: 1425.4167, z: -278.87747}
+  - Name: Rozhdestvenskiy
+    Diameter: 181.15
+    Longitude: -157.89
+    Latitude: 84.99
+    Position: {x: -137.54308, y: 1693.5051, z: -55.87842}
+  - Name: Rumford T
+    Diameter: 111.67
+    Longitude: -172.15
+    Latitude: -28.54
+    Position: {x: -1479.4275, y: -812.2127, z: -203.97215}
+  - Name: Russell
+    Diameter: 103.37
+    Longitude: -75.55
+    Latitude: 26.51
+    Position: {x: 379.60666, y: 758.8018, z: -1473.1322}
+  - Name: Sacrobosco
+    Diameter: 97.67
+    Longitude: 16.64
+    Latitude: -23.75
+    Position: {x: 1490.8674, y: -684.6694, z: 445.5804}
+  - Name: Saha
+    Diameter: 103.34
+    Longitude: 103.04
+    Latitude: -1.69
+    Position: {x: -383.4063, y: -50.13604, z: 1655.4413}
+  - Name: Scheiner
+    Diameter: 110.07
+    Longitude: -27.81
+    Latitude: -60.35
+    Position: {x: 743.8559, y: -1477.4081, z: -392.35666}
+  - Name: Schickard
+    Diameter: 212.18
+    Longitude: -55.11
+    Latitude: -44.38
+    Position: {x: 694.99396, y: -1189.0037, z: -996.62115}
+  - Name: Schickard P
+    Diameter: 94.39
+    Longitude: -48.5
+    Latitude: -42.91
+    Position: {x: 825.0421, y: -1157.4429, z: -932.54047}
+  - Name: Schiller
+    Diameter: 179.36
+    Longitude: -39.78
+    Latitude: -51.72
+    Position: {x: 809.3597, y: -1334.4875, z: -673.8545}
+  - Name: Schiller-Zucchius
+    Diameter: 335
+    Longitude: -45
+    Latitude: -56
+    Position: {x: 672.19543, y: -1409.3638, z: -672.19543}
+  - Name: Schlesinger
+    Diameter: 97.28
+    Longitude: -138.98
+    Latitude: 47.12
+    Position: {x: -872.7759, y: 1245.7268, z: -759.2278}
+  - Name: Schrodinger
+    Diameter: 316.39
+    Longitude: 132.93
+    Latitude: -74.73
+    Position: {x: -304.94772, y: -1639.9823, z: 327.81857}
+  - Name: Schuster
+    Diameter: 100.08
+    Longitude: 146.42
+    Latitude: 4.44
+    Position: {x: -1412.044, y: 131.60564, z: 937.4496}
+  - Name: Schwarzschild
+    Diameter: 211.42
+    Longitude: 121.57
+    Latitude: 70.08
+    Position: {x: -303.236, y: 1598.2877, z: 493.48172}
+  - Name: Scott
+    Diameter: 107.82
+    Longitude: 48.52
+    Latitude: -82.35
+    Position: {x: 149.89592, y: -1684.8696, z: 169.54575}
+  - Name: Seares
+    Diameter: 99.5
+    Longitude: 147.23
+    Latitude: 73.74
+    Position: {x: -400.23975, y: 1632.0017, z: 257.6404}
+  - Name: Serenitatis
+    Diameter: 920
+    Longitude: 18
+    Latitude: 26
+    Position: {x: 1453.1667, y: 745.23096, z: 472.1625}
+  - Name: Seyfert
+    Diameter: 102.63
+    Longitude: 114.34
+    Latitude: 29.26
+    Position: {x: -611.25964, y: 830.915, z: 1351.2742}
+  - Name: Sikorsky
+    Diameter: 97.67
+    Longitude: 103.65
+    Latitude: -65.89
+    Position: {x: -163.87927, y: -1551.6969, z: 674.8186}
+  - Name: Sikorsky-Rittenhouse
+    Diameter: 310
+    Longitude: 111
+    Latitude: -68
+    Position: {x: -228.21992, y: -1576.2125, z: 594.53326}
+  - Name: Sklodowska
+    Diameter: 125.55
+    Longitude: 96.15
+    Latitude: -18.04
+    Position: {x: -173.17088, y: -526.4575, z: 1607.1261}
+  - Name: Smythii
+    Diameter: 740
+    Longitude: 87
+    Latitude: -2
+    Position: {x: 88.91696, y: -59.329144, z: 1696.6361}
+  - Name: Sommerfeld
+    Diameter: 150.89
+    Longitude: -161.54
+    Latitude: 64.83
+    Position: {x: -685.81616, y: 1538.5848, z: -228.93863}
+  - Name: South
+    Diameter: 119.04
+    Longitude: -50.94
+    Latitude: 57.58
+    Position: {x: 574.30804, y: 1435.0396, z: -707.6948}
+  - Name: South Pole-Aitken
+    Diameter: 2500
+    Longitude: 180
+    Latitude: -56
+    Position: {x: -950.6279, y: -1409.3638, z: -0.00008310653}
+  - Name: Stebbins
+    Diameter: 129.74
+    Longitude: -142.64
+    Latitude: 64.36
+    Position: {x: -584.69586, y: 1532.602, z: -446.3872}
+  - Name: Stefan
+    Diameter: 112.18
+    Longitude: -108.77
+    Latitude: 46.33
+    Position: {x: -377.7117, y: 1229.659, z: -1111.4281}
+  - Name: Sternfeld
+    Diameter: 109.8
+    Longitude: -142.27
+    Latitude: -19.75
+    Position: {x: -1265.4445, y: -574.4584, z: -979.1055}
+  - Name: Stofler
+    Diameter: 129.87
+    Longitude: 5.93
+    Latitude: -41.24
+    Position: {x: 1271.4828, y: -1120.6648, z: 132.06784}
+  - Name: Struve
+    Diameter: 164.34
+    Longitude: -76.65
+    Latitude: 23.41
+    Position: {x: 360.21725, y: 675.42377, z: -1517.9084}
+  - Name: Szilard
+    Diameter: 127.22
+    Longitude: 105.78
+    Latitude: 33.71
+    Position: {x: -384.57208, y: 943.48236, z: 1360.8619}
+  - Name: Theophilus
+    Diameter: 98.59
+    Longitude: 26.28
+    Latitude: -11.45
+    Position: {x: 1493.9537, y: -337.4716, z: 737.7092}
+  - Name: Thomson
+    Diameter: 117.25
+    Longitude: 166.04
+    Latitude: -32.32
+    Position: {x: -1394.1962, y: -908.9006, z: 346.57883}
+  - Name: Thomson M
+    Diameter: 113.83
+    Longitude: 166.44
+    Latitude: -35.98
+    Position: {x: -1337.3306, y: -998.7547, z: 322.54614}
+  - Name: Tranquillitatis
+    Diameter: 700
+    Longitude: 30
+    Latitude: 7
+    Position: {x: 1461.2693, y: 207.17789, z: 843.66425}
+  - Name: Tsander
+    Diameter: 159.95
+    Longitude: -149.69
+    Latitude: 5.39
+    Position: {x: -1461.1333, y: 159.68874, z: -854.1594}
+  - Name: Tsiolkovskiy
+    Diameter: 184.39
+    Longitude: 128.97
+    Latitude: -20.38
+    Position: {x: -1002.2276, y: -592.01624, z: 1238.9741}
+  - Name: Tsiolkovskiy-Stark
+    Diameter: 700
+    Longitude: 128
+    Latitude: -15
+    Position: {x: -1010.96155, y: -439.99237, z: 1293.9719}
+  - Name: W. Bond
+    Diameter: 170.53
+    Longitude: 3.52
+    Latitude: 65.41
+    Position: {x: 706.07294, y: 1545.825, z: 43.43266}
+  - Name: Walther
+    Diameter: 134.23
+    Longitude: 0.62
+    Latitude: -33.25
+    Position: {x: 1421.6033, y: -932.0985, z: 15.383828}
+  - Name: Van de Graaff
+    Diameter: 240.47
+    Longitude: 172.01
+    Latitude: -27.04
+    Position: {x: -1499.4728, y: -772.8411, z: 210.47043}
+  - Name: Van der Waals
+    Diameter: 113.37
+    Longitude: 119.98
+    Latitude: -43.56
+    Position: {x: -615.58276, y: -1171.4935, z: 1067.0804}
+  - Name: van't Hoff
+    Diameter: 107.3
+    Longitude: -132.68
+    Latitude: 61.75
+    Position: {x: -545.47015, y: 1497.5143, z: -591.5347}
+  - Name: Vasco da Gama P
+    Diameter: 102.54
+    Longitude: -80.34
+    Latitude: 12
+    Position: {x: 279.02844, y: 353.4499, z: -1639.2731}
+  - Name: Vavilov
+    Diameter: 98.22
+    Longitude: -138.77
+    Latitude: -0.87
+    Position: {x: -1278.3716, y: -25.812428, z: -1120.3124}
+  - Name: Vavilov D
+    Diameter: 96.2
+    Longitude: -137.48
+    Latitude: 0.03
+    Position: {x: -1252.9703, y: 0.8901179, z: -1148.9407}
+  - Name: Wegener
+    Diameter: 95.78
+    Longitude: -113.81
+    Latitude: 45.21
+    Position: {x: -483.5043, y: 1206.4792, z: -1095.7334}
+  - Name: Vendelinus
+    Diameter: 141.21
+    Longitude: 61.55
+    Latitude: -16.46
+    Position: {x: 776.67584, y: -481.688, z: 1433.4406}
+  - Name: Ventris
+    Diameter: 100.74
+    Longitude: 157.97
+    Latitude: -4.77
+    Position: {x: -1570.4209, y: -141.36533, z: 635.44806}
+  - Name: Werner-Airy
+    Diameter: 500
+    Longitude: 12
+    Latitude: -24
+    Position: {x: 1519.0898, y: -691.4523, z: 322.89252}
+  - Name: Vertregt
+    Diameter: 172.76
+    Longitude: 171.12
+    Latitude: -19.3
+    Position: {x: -1585.2302, y: -561.87445, z: 247.6737}
+  - Name: Vestine
+    Diameter: 97.81
+    Longitude: 93.68
+    Latitude: 33.87
+    Position: {x: -90.59674, y: 947.4278, z: 1408.6067}
+  - Name: Vetchinkin
+    Diameter: 94.29
+    Longitude: 131.08
+    Latitude: 9.77
+    Position: {x: -1100.8895, y: 288.479, z: 1262.8627}
+  - Name: Weyl
+    Diameter: 122.82
+    Longitude: -120.53
+    Latitude: 15.97
+    Position: {x: -830.2528, y: 467.72778, z: -1407.8036}
+  - Name: Wiener
+    Diameter: 113.39
+    Longitude: 146.51
+    Latitude: 40.9
+    Position: {x: -1071.6259, y: 1113.0594, z: 709.0251}
+  - Name: Wiener K
+    Diameter: 94.51
+    Longitude: 147.96
+    Latitude: 39.26
+    Position: {x: -1115.7815, y: 1075.8287, z: 698.3009}
+  - Name: Wilhelm
+    Diameter: 100.83
+    Longitude: -20.94
+    Latitude: -43.21
+    Position: {x: 1157.211, y: -1163.9463, z: -442.8219}
+  - Name: Volta
+    Diameter: 117.15
+    Longitude: -84.77
+    Latitude: 53.9
+    Position: {x: 91.302986, y: 1373.5828, z: -997.46375}
+  - Name: von Bekesy
+    Diameter: 96.25
+    Longitude: 126.73
+    Latitude: 51.92
+    Position: {x: -627.0466, y: 1338.1555, z: 840.3287}
+  - Name: Von Karman
+    Diameter: 186.35
+    Longitude: 176.25
+    Latitude: -44.45
+    Position: {x: -1210.9668, y: -1190.4872, z: 79.37098}
+  - Name: Von Karman M
+    Diameter: 218.98
+    Longitude: 174.95
+    Latitude: -49.44
+    Position: {x: -1101.1239, y: -1291.5333, z: 97.30428}
+  - Name: Wyld
+    Diameter: 103.4
+    Longitude: 98.1
+    Latitude: -1.42
+    Position: {x: -239.4585, y: -42.127934, z: 1682.5233}
+  - Name: Xenophanes
+    Diameter: 117.57
+    Longitude: -82.01
+    Latitude: 57.49
+    Position: {x: 126.99892, y: 1433.6061, z: -904.79}
+  - Name: Yablochkov
+    Diameter: 101.49
+    Longitude: 127.58
+    Latitude: 60.78
+    Position: {x: -506.11737, y: 1483.6779, z: 657.68164}
+  - Name: Zeeman
+    Diameter: 186.56
+    Longitude: -135.06
+    Latitude: -75.07
+    Position: {x: -310.0269, y: -1642.6102, z: -309.3783}
+  - Name: Zwicky
+    Diameter: 126.06
+    Longitude: 167.64
+    Latitude: -16.17
+    Position: {x: -1594.9034, y: -473.43002, z: 349.4952}
+  - Name: Abel
+    Diameter: 137.35
+    Longitude: 85.78
+    Latitude: -34.63
+    Position: {x: 102.93454, y: -966.06696, z: 1395.0337}
+  - Name: Aitken
+    Diameter: 129.69
+    Longitude: 172.96
+    Latitude: -16.44
+    Position: {x: -1618.2057, y: -481.11893, z: 199.83734}
+  - Name: Albategnius
+    Diameter: 130.84
+    Longitude: 4.01
+    Latitude: -11.24
+    Position: {x: 1663.3109, y: -331.36255, z: 116.60176}
+  - Name: Alden
+    Diameter: 111.44
+    Longitude: 111.11
+    Latitude: -23.51
+    Position: {x: -561.447, y: -678.1455, z: 1454.2682}
+  - Name: Alexander
+    Diameter: 94.8
+    Longitude: 13.69
+    Latitude: 40.25
+    Position: {x: 1260.634, y: 1098.4108, z: 307.07632}
+  - Name: Al-Khwarizmi G
+    Diameter: 102.83
+    Longitude: 107.35
+    Latitude: 6.76
+    Position: {x: -503.429, y: 200.10822, z: 1611.3708}
+  - Name: Al-Khwarizmi-King
+    Diameter: 590
+    Longitude: 112
+    Latitude: 1
+    Position: {x: -636.73425, y: 29.66909, z: 1575.9725}
+  - Name: Alphonsus
+    Diameter: 110.54
+    Longitude: -2.85
+    Latitude: -13.39
+    Position: {x: 1651.7422, y: -393.6828, z: -82.22859}
+  - Name: Amici M
+    Diameter: 107.91
+    Longitude: -172.02
+    Latitude: -11.81
+    Position: {x: -1647.9006, y: -347.93375, z: -231.01053}
+  - Name: Amundsen
+    Diameter: 103.39
+    Longitude: 83.07
+    Latitude: -84.44
+    Position: {x: 19.87332, y: -1692.002, z: 163.50632}
+  - Name: Amundsen-Ganswindt
+    Diameter: 335
+    Longitude: 120
+    Latitude: -81
+    Position: {x: -132.96933, y: -1679.0702, z: 230.3096}
+  - Name: Anaximander D
+    Diameter: 96.63
+    Longitude: -50.68
+    Latitude: 65.78
+    Position: {x: 441.91473, y: 1550.3608, z: -539.5299}
+  - Name: Anderson
+    Diameter: 105.33
+    Longitude: 170.79
+    Latitude: 15.5
+    Position: {x: -1617.053, y: 454.30524, z: 262.19547}
+  - Name: Antoniadi
+    Diameter: 137.92
+    Longitude: -173.06
+    Latitude: -69.3
+    Position: {x: -596.5045, y: -1590.2549, z: -72.60755}
+  - Name: Apollo
+    Diameter: 524.23
+    Longitude: -151.48
+    Latitude: -35.69
+    Position: {x: -1213.1659, y: -991.7791, z: -659.244}
+  - Name: Arzachel
+    Diameter: 96.99
+    Longitude: -1.93
+    Latitude: -18.26
+    Position: {x: 1613.4797, y: -532.6602, z: -54.37039}
+  - Name: Ashbrook
+    Diameter: 157.68
+    Longitude: -110.58
+    Latitude: -81.1
+    Position: {x: -92.451096, y: -1679.5317, z: -246.22311}
+  - Name: Australe
+    Diameter: 880
+    Longitude: 95
+    Latitude: -52
+    Position: {x: -91.21936, y: -1339.6182, z: 1042.6418}
+  - Name: Avogadro
+    Diameter: 129.84
+    Longitude: 165.36
+    Latitude: 63.21
+    Position: {x: -741.34985, y: 1517.5297, z: 193.65996}
+  - Name: Babbage
+    Diameter: 146.56
+    Longitude: -57.38
+    Latitude: 59.56
+    Position: {x: 464.28613, y: 1465.6724, z: -725.4261}
+  - Name: Babcock
+    Diameter: 95.28
+    Longitude: 94.14
+    Latitude: 4.13
+    Position: {x: -122.41067, y: 122.43349, z: 1691.161}
+  - Name: Bailly
+    Diameter: 300.56
+    Longitude: -68.9
+    Latitude: -66.82
+    Position: {x: 240.894, y: -1562.7637, z: -624.2913}
+  - Name: Balmer
+    Diameter: 136.3
+    Longitude: 70.22
+    Latitude: -20.27
+    Position: {x: 539.66833, y: -588.9557, z: 1500.6298}
+  - Name: Balmer-Kapteyn
+    Diameter: 500
+    Longitude: 70
+    Latitude: -15
+    Position: {x: 561.6224, y: -439.99237, z: 1543.0447}
+  - Name: Banachiewicz
+    Diameter: 99.09
+    Longitude: 80.01
+    Latitude: 5.28
+    Position: {x: 293.65823, y: 156.43912, z: 1667.1207}
+  - Name: Barnard
+    Diameter: 115.73
+    Longitude: 85.95
+    Latitude: -29.79
+    Position: {x: 104.199585, y: -844.59827, z: 1471.6644}
+  - Name: Bel'kovich
+    Diameter: 215.08
+    Longitude: 90.15
+    Latitude: 61.53
+    Position: {x: -2.1215913, y: 1494.4136, z: 810.3848}
+  - Name: Birkhoff
+    Diameter: 329.81
+    Longitude: -145.65
+    Latitude: 58.45
+    Position: {x: -734.38654, y: 1448.7126, z: -501.90448}
+  - Name: Blackett
+    Diameter: 145.31
+    Longitude: -115.84
+    Latitude: -37.55
+    Position: {x: -587.4501, y: -1036.0709, z: -1213.0374}
+  - Name: Blancanus
+    Diameter: 105.82
+    Longitude: -21.63
+    Latitude: -63.77
+    Position: {x: 698.45056, y: -1524.946, z: -276.95926}
+  - Name: Boguslawsky
+    Diameter: 94.59
+    Longitude: 43.26
+    Latitude: -72.9
+    Position: {x: 364.02994, y: -1624.8481, z: 342.5649}
+  - Name: Bolyai
+    Diameter: 102.22
+    Longitude: 126.12
+    Latitude: -33.85
+    Position: {x: -832.25385, y: -946.93494, z: 1140.4683}
+  - Name: Boussingault
+    Diameter: 127.61
+    Longitude: 53.73
+    Latitude: -70.21
+    Position: {x: 340.50522, y: -1599.5978, z: 464.05075}
+  - Name: Boussingault E
+    Diameter: 104.09
+    Longitude: 46.64
+    Latitude: -67.08
+    Position: {x: 454.55542, y: -1565.7842, z: 481.35153}
+  - Name: Brianchon
+    Diameter: 137.26
+    Longitude: -88.36
+    Latitude: 74.75
+    Position: {x: 12.797301, y: 1640.1384, z: -446.9699}
+  - Name: Brouwer
+    Diameter: 119.6
+    Longitude: -124.75
+    Latitude: -35.82
+    Position: {x: -785.71857, y: -994.90924, z: -1132.6085}
+  - Name: Buffon
+    Diameter: 105.76
+    Longitude: -133.53
+    Latitude: -40.64
+    Position: {x: -888.4593, y: -1107.217, z: -935.2597}
+  - Name: Buisson Z
+    Diameter: 115.35
+    Longitude: 113.29
+    Latitude: 0.13
+    Position: {x: -672.1531, y: 3.8571742, z: 1561.4722}
+  - Name: Byrd
+    Diameter: 97.49
+    Longitude: 10.07
+    Latitude: 85.43
+    Position: {x: 133.36432, y: 1694.5952, z: 23.683764}
+  - Name: Cabeus
+    Diameter: 100.58
+    Longitude: -42.13
+    Latitude: -85.33
+    Position: {x: 102.646935, y: -1694.3562, z: -92.8463}
+  - Name: Campbell
+    Diameter: 222.48
+    Longitude: 152.91
+    Latitude: 45.57
+    Position: {x: -1059.5043, y: 1213.9806, z: 541.9424}
+  - Name: Carnot
+    Diameter: 126.06
+    Longitude: -144.2
+    Latitude: 52.09
+    Position: {x: -847.17145, y: 1341.2606, z: -610.99945}
+  - Name: Casatus
+    Diameter: 102.85
+    Longitude: -30.75
+    Latitude: -72.7
+    Position: {x: 434.46213, y: -1623.0934, z: -258.4778}
+  - Name: Catharina
+    Diameter: 98.77
+    Longitude: 23.55
+    Latitude: -17.98
+    Position: {x: 1482.304, y: -524.7645, z: 646.0628}
+  - Name: Chaplygin
+    Diameter: 123.39
+    Longitude: 150.24
+    Latitude: -5.76
+    Position: {x: -1468.3396, y: -170.61493, z: 839.56494}
+  - Name: Charlier
+    Diameter: 109.88
+    Longitude: -131.69
+    Latitude: 36.22
+    Position: {x: -912.1726, y: 1004.5084, z: -1024.1602}
+  - Name: Chebyshev
+    Diameter: 179.05
+    Longitude: -132.88
+    Latitude: -34.01
+    Position: {x: -958.91016, y: -950.87384, z: -1032.6327}
+  - Name: Chretien
+    Diameter: 98.63
+    Longitude: 162.99
+    Latitude: -46.11
+    Position: {x: -1127.0114, y: -1225.1426, z: 344.7769}
+  - Name: Clavius
+    Diameter: 230.77
+    Longitude: -14.73
+    Latitude: -58.62
+    Position: {x: 856.11725, y: -1451.3453, z: -225.07733}
+  - Name: Cleomedes
+    Diameter: 130.77
+    Longitude: 55.5
+    Latitude: 27.6
+    Position: {x: 853.31714, y: 787.6033, z: 1241.5841}
+  - Name: Compton
+    Diameter: 164.63
+    Longitude: 104.05
+    Latitude: 55.86
+    Position: {x: -231.61794, y: 1407.0369, z: 925.5271}
+  - Name: Copernicus
+    Diameter: 96.07
+    Longitude: -20.08
+    Latitude: 9.62
+    Position: {x: 1574.2114, y: 284.09192, z: -575.4566}
+  - Name: Coulomb-Sarton
+    Diameter: 440
+    Longitude: -123
+    Latitude: 52
+    Position: {x: -570.0326, y: 1339.6182, z: -877.77313}
+  - Name: Crisium
+    Diameter: 740
+    Longitude: 59
+    Latitude: 18
+    Position: {x: 832.71155, y: 525.3289, z: 1385.8647}
+  - Name: Curie
+    Diameter: 138.87
+    Longitude: 92.28
+    Latitude: -23.05
+    Position: {x: -62.231537, y: -665.6083, z: 1563.0396}
+  - Name: Curtius
+    Diameter: 99.29
+    Longitude: 4.4
+    Latitude: -67.08
+    Position: {x: 660.10614, y: -1565.7842, z: 50.7924}
+  - Name: Cyrillus
+    Diameter: 98.09
+    Longitude: 24.07
+    Latitude: -13.29
+    Position: {x: 1510.6124, y: -390.7958, z: 674.78064}
+  - Name: d'Alembert
+    Diameter: 233.55
+    Longitude: 164.89
+    Latitude: 51.07
+    Position: {x: -1031.298, y: 1322.4542, z: 278.45865}
+  - Name: Darwin
+    Diameter: 122.18
+    Longitude: -69.21
+    Latitude: -19.93
+    Position: {x: 567.2665, y: -579.4821, z: -1494.125}
+  - Name: De La Rue
+    Diameter: 135.22
+    Longitude: 52.84
+    Latitude: 59.02
+    Position: {x: 528.57135, y: 1457.4899, z: 697.3775}
+  - Name: Debye
+    Diameter: 127.03
+    Longitude: -176.03
+    Latitude: 49.43
+    Position: {x: -1102.987, y: 1291.3403, z: -76.54808}
+  - Name: Demonax
+    Diameter: 121.93
+    Longitude: 59.36
+    Latitude: -78.09
+    Position: {x: 178.80162, y: -1663.404, z: 301.85583}
+  - Name: Deslandres
+    Diameter: 227.02
+    Longitude: -5.57
+    Latitude: -32.55
+    Position: {x: 1426.2019, y: -914.6601, z: -139.08643}
+  - Name: Doppler
+    Diameter: 101.79
+    Longitude: -159.84
+    Latitude: -12.58
+    Position: {x: -1557.5358, y: -370.26434, z: -571.8276}
+  - Name: Drygalski
+    Diameter: 162.49
+    Longitude: -87.18
+    Latitude: -79.57
+    Position: {x: 15.141201, y: -1671.9106, z: -307.3854}
+  - Name: Eddington
+    Diameter: 120.13
+    Longitude: -72.02
+    Latitude: 21.5
+    Position: {x: 488.25027, y: 623.05206, z: -1504.4661}
+  - Name: Einstein
+    Diameter: 181.47
+    Longitude: -88.65
+    Latitude: 16.6
+    Position: {x: 38.382298, y: 485.67023, z: -1628.6962}
+  - Name: Emden
+    Diameter: 114.64
+    Longitude: -176.51
+    Latitude: 62.76
+    Position: {x: -776.67883, y: 1511.465, z: -47.36769}
+  - Name: Encke T
+    Diameter: 94.68
+    Longitude: -37.88
+    Latitude: 3.23
+    Position: {x: 1339.6759, y: 95.78528, z: -1042.1583}
+  - Name: Endymion
+    Diameter: 122.1
+    Longitude: 56.48
+    Latitude: 53.61
+    Position: {x: 556.96246, y: 1368.4956, z: 840.8406}
+  - Name: Engel'gardt B
+    Diameter: 121.21
+    Longitude: -158.18
+    Latitude: 7.8
+    Position: {x: -1563.6036, y: 230.71648, z: -626.03015}
+  - Name: Eotvos
+    Diameter: 101.8
+    Longitude: 134.43
+    Latitude: -35.61
+    Position: {x: -967.52045, y: -989.85034, z: 986.9653}
+  - Name: Evans Q
+    Diameter: 138.41
+    Longitude: -136.3
+    Latitude: -11.21
+    Position: {x: -1205.5957, y: -330.48944, z: -1152.092}
+  - Name: Fabry
+    Diameter: 179.44
+    Longitude: 100.68
+    Latitude: 43.07
+    Position: {x: -230.1504, y: 1160.9153, z: 1220.3715}
+  - Name: Fecunditatis
+    Diameter: 690
+    Longitude: 52
+    Latitude: -4
+    Position: {x: 1044.0751, y: -118.586, z: 1336.355}
+  - Name: Fermi
+    Diameter: 241.41
+    Longitude: 123.24
+    Latitude: -19.61
+    Position: {x: -877.80194, y: -570.5472, z: 1339.3802}
+  - Name: Fersman
+    Diameter: 148.14
+    Longitude: -126.06
+    Latitude: 17.9
+    Position: {x: -952.2362, y: 522.5063, z: -1307.7589}
+  - Name: Firsov S
+    Diameter: 104.17
+    Longitude: 110.27
+    Latitude: 3.34
+    Position: {x: -587.95514, y: 99.04367, z: 1592.011}
+  - Name: Fitzgerald
+    Diameter: 104.21
+    Longitude: -172.14
+    Latitude: 26.67
+    Position: {x: -1504.8591, y: 763.047, z: -207.74573}
+  - Name: Fizeau
+    Diameter: 107.08
+    Longitude: -134.11
+    Latitude: -58.19
+    Position: {x: -623.70374, y: -1444.6613, z: -643.3876}
+  - Name: Flamsteed P
+    Diameter: 112.24
+    Longitude: -44.25
+    Latitude: -3.25
+    Position: {x: 1215.7549, y: -96.37774, z: -1184.3359}
+  - Name: Flamsteed-Billy
+    Diameter: 570
+    Longitude: -45
+    Latitude: -7
+    Position: {x: 1193.1213, y: -207.17789, z: -1193.1213}
+  - Name: Fleming
+    Diameter: 126.37
+    Longitude: 109.28
+    Latitude: 14.91
+    Position: {x: -542.4156, y: 437.41248, z: 1550.6307}
+  - Name: Fowler
+    Diameter: 139.52
+    Longitude: -145.27
+    Latitude: 42.59
+    Position: {x: -1028.5944, y: 1150.4707, z: -713.02936}
+  - Name: Fra Mauro
+    Diameter: 96.76
+    Longitude: -16.97
+    Latitude: -6.06
+    Position: {x: 1616.8921, y: -179.46878, z: -493.40787}
+  - Name: Fracastorius
+    Diameter: 120.58
+    Longitude: 33.07
+    Latitude: -21.36
+    Position: {x: 1326.7518, y: -619.18536, z: 863.90906}
+  - Name: Freundlich-Sharonov
+    Diameter: 600
+    Longitude: 175
+    Latitude: 18.5
+    Position: {x: -1606.0155, y: 539.4179, z: 140.50838}
+  - Name: Fridman
+    Diameter: 101.45
+    Longitude: -126.88
+    Latitude: -12.48
+    Position: {x: -996.13306, y: -367.36795, z: -1327.6897}
+  - Name: Furnerius
+    Diameter: 135.03
+    Longitude: 60.54
+    Latitude: -36
+    Position: {x: 676.40845, y: -999.2349, z: 1197.4978}
+  - Name: Gagarin
+    Diameter: 261.83
+    Longitude: 149.35
+    Latitude: -19.66
+    Position: {x: -1377.25, y: -571.94446, z: 816.1261}
+  - Name: Galois
+    Diameter: 231.97
+    Longitude: -152.99
+    Latitude: -13.94
+    Position: {x: -1469.97, y: -409.5396, z: -749.31006}
+  - Name: Galois Q
+    Diameter: 133.6
+    Longitude: -154.46
+    Latitude: -14.85
+    Position: {x: -1482.6521, y: -435.69196, z: -708.4597}
+  - Name: Gamow
+    Diameter: 113.92
+    Longitude: 144.65
+    Latitude: 65.29
+    Position: {x: -579.62427, y: 1544.34, z: 411.1568}
+  - Name: Gartner
+    Diameter: 101.79
+    Longitude: 34.76
+    Latitude: 59.24
+    Position: {x: 714.2971, y: 1460.8392, z: 495.71017}
+  - Name: Gassendi
+    Diameter: 111.39
+    Longitude: -39.96
+    Latitude: -17.55
+    Position: {x: 1242.3872, y: -512.6145, z: -1041.0094}
+  - Name: Gauss
+    Diameter: 170.72
+    Longitude: 79.08
+    Latitude: 36.01
+    Position: {x: 260.50684, y: 999.47485, z: 1350.2542}
+  - Name: Gerard
+    Diameter: 98.78
+    Longitude: -80.51
+    Latitude: 44.54
+    Position: {x: 199.77852, y: 1192.392, z: -1195.1108}
+  - Name: Gerard Q Outer
+    Diameter: 192.48
+    Longitude: -84.55
+    Latitude: 46.51
+    Position: {x: 111.121925, y: 1233.3407, z: -1164.6986}
+  - Name: Gilbert
+    Diameter: 100.25
+    Longitude: 76.16
+    Latitude: -3.2
+    Position: {x: 406.02515, y: -94.89656, z: 1648.071}
+  - Name: Goldschmidt
+    Diameter: 115.26
+    Longitude: -3.37
+    Latitude: 73.04
+    Position: {x: 495.03925, y: 1626.0647, z: -29.15064}
+  - Name: Grimaldi
+    Diameter: 173.49
+    Longitude: -68.36
+    Latitude: -5.38
+    Position: {x: 624.15326, y: -159.39334, z: -1573.2217}
+  - Name: Grissom-White
+    Diameter: 600
+    Longitude: -161
+    Latitude: -44
+    Position: {x: -1156.2537, y: -1180.9193, z: -398.12997}
+  - Name: Guyot
+    Diameter: 98.28
+    Longitude: 117.12
+    Latitude: 11.63
+    Position: {x: -759.0446, y: 342.70438, z: 1482.0273}
+  - Name: H. G. Wells
+    Diameter: 108.9
+    Longitude: 122.63
+    Latitude: 40.84
+    Position: {x: -693.4887, y: 1111.7131, z: 1083.1284}
+  - Name: Harkhebi
+    Diameter: 337.14
+    Longitude: 98.74
+    Latitude: 40.87
+    Position: {x: -195.33784, y: 1112.3864, z: 1270.6061}
+  - Name: Hausen
+    Diameter: 163.24
+    Longitude: -88.49
+    Latitude: -65.11
+    Position: {x: 18.85425, y: -1542.0997, z: -715.2432}
+  - Name: Heaviside
+    Diameter: 164.46
+    Longitude: 166.77
+    Latitude: -10.44
+    Position: {x: -1627.4845, y: -308.0498, z: 382.62228}
+  - Name: Heaviside K
+    Diameter: 124.9
+    Longitude: 168.5
+    Latitude: -12.91
+    Position: {x: -1623.7625, y: -379.81442, z: 330.35812}
+  - Name: Hecataeus
+    Diameter: 133.67
+    Longitude: 79.68
+    Latitude: -22.06
+    Position: {x: 282.25208, y: -638.48145, z: 1550.0565}
+  - Name: Hecataeus K
+    Diameter: 94.14
+    Longitude: 79.69
+    Latitude: -19.6
+    Position: {x: 286.62625, y: -570.2677, z: 1575.6396}
+  - Name: Hedin
+    Diameter: 157.38
+    Longitude: -76.57
+    Latitude: 2.87
+    Position: {x: 394.34204, y: 85.119, z: -1651.4386}
+  - Name: Helmholtz
+    Diameter: 110.16
+    Longitude: 65.34
+    Latitude: -68.64
+    Position: {x: 258.34445, y: -1583.2275, z: 562.71545}
+  - Name: Hermite
+    Diameter: 108.64
+    Longitude: -93.32
+    Latitude: 86.17
+    Position: {x: -6.5761943, y: 1696.2032, z: -113.36336}
+  - Name: Hertzsprung
+    Diameter: 536.37
+    Longitude: -128.66
+    Latitude: 1.37
+    Position: {x: -1061.6825, y: 40.644844, z: -1327.094}
+  - Name: Hevelius
+    Diameter: 113.87
+    Longitude: -67.46
+    Latitude: 2.2
+    Position: {x: 651.178, y: 65.25928, z: -1568.9833}
+  - Name: Hilbert
+    Diameter: 173.24
+    Longitude: 108.32
+    Latitude: -17.87
+    Position: {x: -508.57086, y: -521.65924, z: 1535.9778}
+  - Name: Hipparchus
+    Diameter: 143.95
+    Longitude: 4.91
+    Latitude: -5.36
+    Position: {x: 1686.3555, y: -158.80254, z: 144.86813}
+  - Name: Hirayama
+    Diameter: 145.21
+    Longitude: 93.63
+    Latitude: -6.01
+    Position: {x: -107.0405, y: -177.99347, z: 1687.2642}
+  - Name: Hommel
+    Diameter: 113.6
+    Longitude: 32.93
+    Latitude: -54.74
+    Position: {x: 823.7145, y: -1388.1194, z: 533.4968}
+  - Name: Humboldt
+    Diameter: 199.46
+    Longitude: 80.96
+    Latitude: -27.02
+    Position: {x: 237.95502, y: -772.3125, z: 1495.6305}
+  - Name: Humboldtianum
+    Diameter: 650
+    Longitude: 82
+    Latitude: 59
+    Position: {x: 121.85506, y: 1457.1844, z: 867.04376}
+  - Name: Humorum
+    Diameter: 425
+    Longitude: -39
+    Latitude: -24
+    Position: {x: 1206.9288, y: -691.4523, z: -977.3517}
+  - Name: Imbrium
+    Diameter: 1160
+    Longitude: -17
+    Latitude: 35
+    Position: {x: 1331.7103, y: 975.07996, z: -407.14468}
+  - Name: Ingenii
+    Diameter: 560
+    Longitude: 165
+    Latitude: -43
+    Position: {x: -1200.9368, y: -1159.3972, z: 321.79016}
+  - Name: Inghirami
+    Diameter: 94.6
+    Longitude: -68.95
+    Latitude: -47.49
+    Position: {x: 412.60095, y: -1253.171, z: -1072.0647}
+  - Name: Insularum
+    Diameter: 600
+    Longitude: -18
+    Latitude: 9
+    Position: {x: 1596.8906, y: 265.9386, z: -518.86127}
+  - Name: Isaev
+    Diameter: 94.1
+    Longitude: 147.49
+    Latitude: -17.57
+    Position: {x: -1366.7267, y: -513.18024, z: 871.0363}
+  - Name: J. Herschel
+    Diameter: 154.44
+    Longitude: -41.86
+    Latitude: 62.31
+    Position: {x: 588.3511, y: 1505.307, z: -527.15625}
+  - Name: Janssen
+    Diameter: 200.65
+    Longitude: 40.82
+    Latitude: -44.96
+    Position: {x: 910.3304, y: -1201.2421, z: 786.3308}
+  - Name: Joliot
+    Diameter: 172.79
+    Longitude: 93.39
+    Latitude: 25.79
+    Position: {x: -90.511765, y: 739.62573, z: 1527.9927}
+  - Name: Joule
+    Diameter: 97.52
+    Longitude: -144.14
+    Latitude: 27.15
+    Position: {x: -1225.957, y: 775.7467, z: -886.1413}
+  - Name: Jules Verne
+    Diameter: 145.54
+    Longitude: 147.28
+    Latitude: -34.85
+    Position: {x: -1173.7339, y: -971.43085, z: 754.1026}
+  - Name: Kastner
+    Diameter: 116.07
+    Longitude: 78.94
+    Latitude: -6.9
+    Position: {x: 323.76065, y: -204.23264, z: 1656.3418}
+  - Name: Kastner G
+    Diameter: 95.66
+    Longitude: 79.35
+    Latitude: -3.68
+    Position: {x: 313.5277, y: -109.11274, z: 1667.2717}
+  - Name: Keeler
+    Diameter: 158.07
+    Longitude: 161.78
+    Latitude: -9.78
+    Position: {x: -1591.3, y: -288.77136, z: 523.8085}
+  - Name: Keeler-Heaviside
+    Diameter: 500
+    Longitude: 162
+    Latitude: -10
+    Position: {x: -1592.2332, y: -295.2019, z: 517.348}
+  - Name: Kekule
+    Diameter: 94.22
+    Longitude: -138.47
+    Latitude: 16.31
+    Position: {x: -1221.4192, y: 477.41818, z: -1081.7611}
+  - Name: Klaproth
+    Diameter: 121.37
+    Longitude: -26.26
+    Latitude: -69.85
+    Position: {x: 525.1766, y: -1595.9497, z: -259.1024}
+  - Name: Koch
+    Diameter: 94.7
+    Longitude: 150.33
+    Latitude: -42.13
+    Position: {x: -1095.4646, y: -1140.3856, z: 624.08185}
+  - Name: Kondratyuk
+    Diameter: 97.97
+    Longitude: 115.8
+    Latitude: -15.33
+    Position: {x: -713.5668, y: -449.44266, z: 1476.084}
+  - Name: Korolev
+    Diameter: 423.41
+    Longitude: -157.41
+    Latitude: -4.19
+    Position: {x: -1565.3762, y: -124.20903, z: -651.2827}
+  - Name: Kovalevskaya
+    Diameter: 113.71
+    Longitude: -129.44
+    Latitude: 30.86
+    Position: {x: -927.06177, y: 872.0015, z: -1127.0181}
+  - Name: Kovalevskaya Q
+    Diameter: 100.63
+    Longitude: -131.44
+    Latitude: 29.18
+    Position: {x: -982.3337, y: 828.8433, z: -1112.6721}
+  - Name: Krasovskiy T
+    Diameter: 96.46
+    Longitude: -177.09
+    Latitude: 3.64
+    Position: {x: -1694.3827, y: 107.92833, z: -86.13053}
+  - Name: Kurchatov
+    Diameter: 110.96
+    Longitude: 141.74
+    Latitude: 38.3
+    Position: {x: -1047.5627, y: 1053.6243, z: 826.1283}
+  - Name: Lagrange
+    Diameter: 162.21
+    Longitude: -71.45
+    Latitude: -32.6
+    Position: {x: 455.61908, y: -915.9103, z: -1357.7627}
+  - Name: Lagrange R
+    Diameter: 126.59
+    Longitude: -76.67
+    Latitude: -31.33
+    Position: {x: 334.79913, y: -883.94293, z: -1412.9949}
+  - Name: Lamarck
+    Diameter: 114.65
+    Longitude: -70.06
+    Latitude: -23.12
+    Position: {x: 533.1973, y: -667.5189, z: -1469.7344}
+  - Name: Lamarck D
+    Diameter: 131.28
+    Longitude: -74.35
+    Latitude: -24.9
+    Position: {x: 415.96353, y: -715.76086, z: -1484.8099}
+  - Name: Lamb
+    Diameter: 103.55
+    Longitude: 100.94
+    Latitude: -42.67
+    Position: {x: -237.21823, y: -1152.217, z: 1227.2422}
+  - Name: Landau
+    Diameter: 218.15
+    Longitude: -119.34
+    Latitude: 42.16
+    Position: {x: -617.46967, y: 1141.0454, z: -1098.5201}
+  - Name: Langemak
+    Diameter: 104.76
+    Longitude: 119.45
+    Latitude: -9.93
+    Position: {x: -823.307, y: -293.1563, z: 1458.1581}
+  - Name: Langemak N
+    Diameter: 137.93
+    Longitude: 119.12
+    Latitude: -13.19
+    Position: {x: -805.46375, y: -387.9076, z: 1445.9446}
+  - Name: Langrenus
+    Diameter: 131.98
+    Longitude: 61.04
+    Latitude: -8.86
+    Position: {x: 813.31616, y: -261.83502, z: 1469.68}
+  - Name: Larmor
+    Diameter: 99.49
+    Longitude: -179.67
+    Latitude: 31.85
+    Position: {x: -1444.0114, y: 897.0853, z: -8.317061}
+  - Name: Le Gentil
+    Diameter: 125.38
+    Longitude: -76.02
+    Latitude: -74.27
+    Position: {x: 111.34032, y: -1636.3348, z: -447.22656}
+  - Name: Lebedev
+    Diameter: 121.8
+    Longitude: 107.89
+    Latitude: -46.8
+    Position: {x: -357.4868, y: -1239.2467, z: 1107.4615}
+  - Name: Leeuwenhoek
+    Diameter: 125
+    Longitude: -178.87
+    Latitude: -29.28
+    Position: {x: -1482.5197, y: -831.4326, z: -29.242601}
+  - Name: Leeuwenhoek E
+    Diameter: 102.11
+    Longitude: -176.27
+    Latitude: -28.51
+    Position: {x: -1490.6831, y: -811.43066, z: -97.18202}
+  - Name: Leibnitz
+    Diameter: 236.67
+    Longitude: 179.35
+    Latitude: -38.24
+    Position: {x: -1335.1365, y: -1052.2268, z: 15.147218}
+  - Name: Letronne
+    Diameter: 117.59
+    Longitude: -42.49
+    Latitude: -10.5
+    Position: {x: 1232.5807, y: -309.80038, z: -1129.0565}
+  - Name: Levi-Civita
+    Diameter: 108.23
+    Longitude: 143.14
+    Latitude: -23.34
+    Position: {x: -1248.873, y: -673.5172, z: 936.3177}
+  - Name: Lippmann
+    Diameter: 160.07
+    Longitude: -114.32
+    Latitude: -55.43
+    Position: {x: -397.2542, y: -1399.837, z: -879.00244}
+  - Name: Lomonosov-Fleming
+    Diameter: 620
+    Longitude: 105
+    Latitude: 19
+    Position: {x: -416.02097, y: 553.4658, z: 1552.6113}
+  - Name: Longomontanus
+    Diameter: 145.5
+    Longitude: -21.88
+    Latitude: -49.55
+    Position: {x: 1023.485, y: -1293.6532, z: -411.02335}
+  - Name: Longomontanus Z
+    Diameter: 96.13
+    Longitude: -18
+    Latitude: -49.91
+    Position: {x: 1041.2008, y: -1300.5574, z: -338.30667}
+  - Name: Lorentz
+    Diameter: 378.42
+    Longitude: -97.19
+    Latitude: 34.59
+    Position: {x: -175.16154, y: 965.09015, z: -1388.4954}
+  - Name: Lundmark
+    Diameter: 103.44
+    Longitude: 152.56
+    Latitude: -38.87
+    Position: {x: -1174.6621, y: -1066.8444, z: 609.928}
+  - Name: Lyot
+    Diameter: 150.6
+    Longitude: 84.8
+    Latitude: -50.47
+    Position: {x: 98.0662, y: -1311.1954, z: 1077.5665}
+  - Name: Mach
+    Diameter: 174.97
+    Longitude: -149.24
+    Latitude: 18.13
+    Position: {x: -1388.3129, y: 528.9959, z: -826.28735}
+  - Name: Maginus
+    Diameter: 155.58
+    Longitude: -5.98
+    Latitude: -50.03
+    Position: {x: 1086.1143, y: -1302.8475, z: -113.77191}
+  - Name: Mandel'shtam
+    Diameter: 181.89
+    Longitude: 162.39
+    Latitude: 5.7
+    Position: {x: -1612.3228, y: 168.84357, z: 511.7686}
+  - Name: Manzinus
+    Diameter: 95.97
+    Longitude: 26.37
+    Latitude: -67.51
+    Position: {x: 582.62164, y: -1570.7087, z: 288.8358}
+  - Name: Marginis
+    Diameter: 580
+    Longitude: 84
+    Latitude: 20
+    Position: {x: 166.9818, y: 581.4342, z: 1588.7263}
+  - Name: Maurolycus
+    Diameter: 115.35
+    Longitude: 13.92
+    Latitude: -41.77
+    Position: {x: 1230.6672, y: -1132.4415, z: 305.0153}
+  - Name: Maxwell
+    Diameter: 109.24
+    Longitude: 98.53
+    Latitude: 29.9
+    Position: {x: -218.59349, y: 847.42914, z: 1457.4226}
+  - Name: Mee
+    Diameter: 134.11
+    Longitude: -35.19
+    Latitude: -43.63
+    Position: {x: 1005.6027, y: -1172.9977, z: -709.1118}
+  - Name: Mendel
+    Diameter: 139.65
+    Longitude: -109.86
+    Latitude: -48.83
+    Position: {x: -380.18478, y: -1279.6915, z: -1052.5442}
+  - Name: Mendeleev
+    Diameter: 325.13
+    Longitude: 141.17
+    Latitude: 5.38
+    Position: {x: -1318.4827, y: 159.39334, z: 1061.2245}
+  - Name: Mendel-Rydberg
+    Diameter: 630
+    Longitude: -94
+    Latitude: -50
+    Position: {x: -76.225624, y: -1302.2755, z: -1090.0771}
+  - Name: Messala
+    Diameter: 122.4
+    Longitude: 60.06
+    Latitude: 39.31
+    Position: {x: 656.477, y: 1076.977, z: 1139.8064}
+  - Name: Meton
+    Diameter: 124.7
+    Longitude: 19.63
+    Latitude: 73.57
+    Position: {x: 452.8891, y: 1630.5822, z: 161.53381}
+  - Name: Michelson
+    Diameter: 123.14
+    Longitude: -121.55
+    Latitude: 6.72
+    Position: {x: -883.40125, y: 198.9296, z: -1438.7596}
+  - Name: Milankovic
+    Diameter: 94.21
+    Longitude: 171.35
+    Latitude: 76.53
+    Position: {x: -391.48746, y: 1653.2363, z: 59.556362}
+  - Name: Milne
+    Diameter: 259.97
+    Longitude: 112.78
+    Latitude: -31
+    Position: {x: -564.2126, y: -875.5647, z: 1343.5217}
+  - Name: Milne P
+    Diameter: 97.13
+    Longitude: 108.08
+    Latitude: -37.47
+    Position: {x: -418.73004, y: -1034.1882, z: 1282.6223}
+  - Name: Minkowski
+    Diameter: 107.51
+    Longitude: -145.8
+    Latitude: -56.13
+    Position: {x: -783.5992, y: -1411.5171, z: -532.5333}
+  - Name: Minnaert
+    Diameter: 137.31
+    Longitude: 178.57
+    Latitude: -67.54
+    Position: {x: -649.263, y: -1571.049, z: 16.2077}
+  - Name: Mitra
+    Diameter: 97.1
+    Longitude: -154.65
+    Latitude: 17.76
+    Position: {x: -1463.0892, y: 518.5519, z: -693.1622}
+  - Name: Moretus
+    Diameter: 114.45
+    Longitude: -5.95
+    Latitude: -70.63
+    Position: {x: 560.7968, y: -1603.7739, z: -58.447372}
+  - Name: Moscoviense
+    Diameter: 445
+    Longitude: 148
+    Latitude: 26
+    Position: {x: -1295.7749, y: 745.23096, z: 809.6902}
+  - Name: Mutus-Vlacq
+    Diameter: 700
+    Longitude: 21
+    Latitude: -52
+    Position: {x: 977.10815, y: -1339.6182, z: 375.0767}
+  - Name: Nansen
+    Diameter: 116.9
+    Longitude: 95.38
+    Latitude: 81.17
+    Position: {x: -24.467403, y: 1679.8518, z: 259.8061}
+  - Name: Nassau F
+    Diameter: 115.37
+    Longitude: -179.09
+    Latitude: -25.33
+    Position: {x: -1536.3658, y: -727.313, z: -24.403605}
+  - Name: Nectaris
+    Diameter: 860
+    Longitude: 34
+    Latitude: -16
+    Position: {x: 1354.7676, y: -468.5835, z: 913.80225}
+  - Name: Neper
+    Diameter: 144.32
+    Longitude: 84.58
+    Latitude: 8.76
+    Position: {x: 158.70175, y: 258.903, z: 1672.6575}
+  - Name: Nernst
+    Diameter: 121.52
+    Longitude: -94.64
+    Latitude: 35.57
+    Position: {x: -111.86035, y: 988.8852, z: -1378.2574}
+  - Name: Neujmin
+    Diameter: 97.03
+    Longitude: 125.17
+    Latitude: -26.68
+    Position: {x: -874.9493, y: -763.31213, z: 1241.6998}
+  - Name: Nubium
+    Diameter: 690
+    Longitude: -15
+    Latitude: -21
+    Position: {x: 1533.0079, y: -609.2255, z: -410.76825}
+  - Name: Numerov
+    Diameter: 105.39
+    Longitude: -162.2
+    Latitude: -70.52
+    Position: {x: -539.7739, y: -1602.6885, z: -173.30246}
+  - Name: Olbers D
+    Diameter: 100.03
+    Longitude: -78.03
+    Latitude: 10.23
+    Position: {x: 346.9741, y: 301.92004, z: -1636.598}
+  - Name: Oppenheimer
+    Diameter: 201.16
+    Longitude: -166.03
+    Latitude: -35.32
+    Position: {x: -1346.0638, y: -982.84216, z: -334.86285}
+  - Name: Orientale
+    Diameter: 930
+    Longitude: -95
+    Latitude: -19
+    Position: {x: -140.09258, y: -553.4658, z: -1601.265}
+  - Name: Orlov Y
+    Diameter: 120.01
+    Longitude: -175.37
+    Latitude: -22.84
+    Position: {x: -1561.5946, y: -659.8705, z: -126.465965}
+  - Name: Orontius
+    Diameter: 121.02
+    Longitude: -3.96
+    Latitude: -40.37
+    Position: {x: 1292.0997, y: -1101.1257, z: -89.44598}
+  - Name: Ostwald
+    Diameter: 108.13
+    Longitude: 121.95
+    Latitude: 10.24
+    Position: {x: -885.275, y: 302.21204, z: 1419.4915}
+  - Name: Paraskevopoulos
+    Diameter: 98.87
+    Longitude: -150.34
+    Latitude: 50.09
+    Position: {x: -947.78644, y: 1303.9905, z: -539.73145}
+  - Name: Parenago
+    Diameter: 94.57
+    Longitude: -108.91
+    Latitude: 25.88
+    Position: {x: -495.68674, y: 742.0292, z: -1446.958}
+  - Name: Pascal
+    Diameter: 108.2
+    Longitude: -70.63
+    Latitude: 74.36
+    Position: {x: 152.0053, y: 1637.0569, z: -432.3648}
+  - Name: Paschen
+    Diameter: 127.36
+    Longitude: -140.53
+    Latitude: -14.06
+    Position: {x: -1273.0128, y: -412.99435, z: -1048.272}
+  - Name: Pasteur
+    Diameter: 232.77
+    Longitude: 104.91
+    Latitude: -11.58
+    Position: {x: -428.50925, y: -341.25116, z: 1609.3252}
+  - Name: Pauli
+    Diameter: 95.28
+    Longitude: 137.35
+    Latitude: -44.76
+    Position: {x: -887.83417, y: -1197.0356, z: 817.8361}
+  - Name: Pavlov
+    Diameter: 143.05
+    Longitude: 142.4
+    Latitude: -28.28
+    Position: {x: -1186.1309, y: -805.4274, z: 913.44403}
+  - Name: Petavius
+    Diameter: 184.06
+    Longitude: 60.78
+    Latitude: -25.39
+    Position: {x: 749.72156, y: -728.9217, z: 1340.3696}
+  - Name: Petermann R
+    Diameter: 118.38
+    Longitude: 55.61
+    Latitude: 74.78
+    Position: {x: 252.07724, y: 1640.3724, z: 368.2874}
+  - Name: Phillips
+    Diameter: 104.21
+    Longitude: 75.67
+    Latitude: -26.57
+    Position: {x: 376.32367, y: -760.3944, z: 1473.1533}
+  - Name: Philolaus C
+    Diameter: 98.14
+    Longitude: -32.82
+    Latitude: 71.23
+    Position: {x: 459.694, y: 1609.5903, z: -296.4797}
+  - Name: Philolaus G
+    Diameter: 102.68
+    Longitude: -23.82
+    Latitude: 69.18
+    Position: {x: 552.7669, y: 1588.9928, z: -244.02977}
+  - Name: Phocylides
+    Diameter: 115.18
+    Longitude: -57.31
+    Latitude: -52.79
+    Position: {x: 555.24567, y: -1353.9215, z: -865.2161}
+  - Name: Piazzi
+    Diameter: 102.57
+    Longitude: -68.01
+    Latitude: -36.16
+    Position: {x: 513.93774, y: -1003.0716, z: -1272.6804}
+  - Name: Pingre-Hausen
+    Diameter: 300
+    Longitude: -82
+    Latitude: -56
+    Position: {x: 132.30183, y: -1409.3638, z: -941.37646}
+  - Name: Pitatus
+    Diameter: 100.63
+    Longitude: -13.53
+    Latitude: -29.88
+    Position: {x: 1433.1125, y: -846.9146, z: -344.8536}
+  - Name: Planck
+    Diameter: 319.46
+    Longitude: 135.34
+    Latitude: -57.27
+    Position: {x: -653.78784, y: -1430.0872, z: 646.07434}
+  - Name: Plaskett
+    Diameter: 114.34
+    Longitude: 176.71
+    Latitude: 81.63
+    Position: {x: -247.05283, y: 1681.8927, z: 14.201662}
+  - Name: Plato
+    Diameter: 100.68
+    Longitude: -9.38
+    Latitude: 51.62
+    Position: {x: 1041.3734, y: 1332.6473, z: -172.02481}
+  - Name: Poczobutt
+    Diameter: 212.36
+    Longitude: -99.23
+    Latitude: 57.27
+    Position: {x: -147.43115, y: 1430.0872, z: -907.25665}
+  - Name: Poincare
+    Diameter: 345.99
+    Longitude: 163.99
+    Latitude: -56.86
+    Position: {x: -893.3205, y: -1423.4734, z: 256.32425}
+  - Name: Posidonius
+    Diameter: 95.06
+    Longitude: 29.99
+    Latitude: 31.88
+    Position: {x: 1250.2902, y: 897.8414, z: 721.5644}
+  - Name: Poynting
+    Diameter: 127.55
+    Longitude: -133.38
+    Latitude: 17.5
+    Position: {x: -1113.5767, y: 511.19983, z: -1178.398}
+  - Name: Ptolemaeus
+    Diameter: 153.67
+    Longitude: -1.84
+    Latitude: -9.16
+    Position: {x: 1677.4557, y: -270.6264, z: -53.888435}
+  - Name: Purbach
+    Diameter: 114.97
+    Longitude: -2.03
+    Latitude: -25.51
+    Position: {x: 1533.3043, y: -732.13666, z: -54.347992}
+  - Name: Pythagoras
+    Diameter: 144.55
+    Longitude: -62.98
+    Latitude: 63.68
+    Position: {x: 342.43112, y: 1523.7639, z: -671.4793}
+  - Name: Rayleigh
+    Diameter: 113.77
+    Longitude: 89.45
+    Latitude: 29.12
+    Position: {x: 14.256086, y: 827.2886, z: 1485.0555}
+  - Name: Regiomontanus
+    Diameter: 126.64
+    Longitude: -1.09
+    Latitude: -28.28
+    Position: {x: 1496.8218, y: -805.4274, z: -28.479107}
+  - Name: Repsold
+    Diameter: 108.65
+    Longitude: -78.41
+    Latitude: 51.31
+    Position: {x: 213.49992, y: 1326.9171, z: -1041.0133}
+  - Name: Repsold C
+    Diameter: 135.09
+    Longitude: -73.78
+    Latitude: 48.73
+    Position: {x: 313.21814, y: 1277.7362, z: -1076.7007}
+  - Name: Riccioli
+    Diameter: 155.66
+    Longitude: -74.42
+    Latitude: -2.9
+    Position: {x: 456.0074, y: -86.008, z: -1635.4387}
+  - Name: Richardson
+    Diameter: 162.56
+    Longitude: 99.89
+    Latitude: 30.93
+    Position: {x: -250.46541, y: 873.7838, z: 1436.5824}
+  - Name: Riemann
+    Diameter: 117.85
+    Longitude: 87.18
+    Latitude: 39.38
+    Position: {x: 64.647835, y: 1078.5833, z: 1312.4323}
+  - Name: Rocca W
+    Diameter: 104.65
+    Longitude: -66.52
+    Latitude: -10.26
+    Position: {x: 666.49854, y: -302.796, z: -1534.3059}
+  - Name: Roche
+    Diameter: 152.67
+    Longitude: 136.54
+    Latitude: -42.37
+    Position: {x: -911.65466, y: -1145.6566, z: 863.9195}
+  - Name: Rontgen
+    Diameter: 128.42
+    Longitude: -91.42
+    Latitude: 32.88
+    Position: {x: -35.379406, y: 922.8983, z: -1427.2377}
+  - Name: Rowland
+    Diameter: 166.12
+    Longitude: -162.48
+    Latitude: 56.98
+    Position: {x: -883.4108, y: 1425.4167, z: -278.87747}
+  - Name: Rozhdestvenskiy
+    Diameter: 181.15
+    Longitude: -157.89
+    Latitude: 84.99
+    Position: {x: -137.54308, y: 1693.5051, z: -55.87842}
+  - Name: Rumford T
+    Diameter: 111.67
+    Longitude: -172.15
+    Latitude: -28.54
+    Position: {x: -1479.4275, y: -812.2127, z: -203.97215}
+  - Name: Russell
+    Diameter: 103.37
+    Longitude: -75.55
+    Latitude: 26.51
+    Position: {x: 379.60666, y: 758.8018, z: -1473.1322}
+  - Name: Sacrobosco
+    Diameter: 97.67
+    Longitude: 16.64
+    Latitude: -23.75
+    Position: {x: 1490.8674, y: -684.6694, z: 445.5804}
+  - Name: Saha
+    Diameter: 103.34
+    Longitude: 103.04
+    Latitude: -1.69
+    Position: {x: -383.4063, y: -50.13604, z: 1655.4413}
+  - Name: Scheiner
+    Diameter: 110.07
+    Longitude: -27.81
+    Latitude: -60.35
+    Position: {x: 743.8559, y: -1477.4081, z: -392.35666}
+  - Name: Schickard
+    Diameter: 212.18
+    Longitude: -55.11
+    Latitude: -44.38
+    Position: {x: 694.99396, y: -1189.0037, z: -996.62115}
+  - Name: Schickard P
+    Diameter: 94.39
+    Longitude: -48.5
+    Latitude: -42.91
+    Position: {x: 825.0421, y: -1157.4429, z: -932.54047}
+  - Name: Schiller
+    Diameter: 179.36
+    Longitude: -39.78
+    Latitude: -51.72
+    Position: {x: 809.3597, y: -1334.4875, z: -673.8545}
+  - Name: Schiller-Zucchius
+    Diameter: 335
+    Longitude: -45
+    Latitude: -56
+    Position: {x: 672.19543, y: -1409.3638, z: -672.19543}
+  - Name: Schlesinger
+    Diameter: 97.28
+    Longitude: -138.98
+    Latitude: 47.12
+    Position: {x: -872.7759, y: 1245.7268, z: -759.2278}
+  - Name: Schrodinger
+    Diameter: 316.39
+    Longitude: 132.93
+    Latitude: -74.73
+    Position: {x: -304.94772, y: -1639.9823, z: 327.81857}
+  - Name: Schuster
+    Diameter: 100.08
+    Longitude: 146.42
+    Latitude: 4.44
+    Position: {x: -1412.044, y: 131.60564, z: 937.4496}
+  - Name: Schwarzschild
+    Diameter: 211.42
+    Longitude: 121.57
+    Latitude: 70.08
+    Position: {x: -303.236, y: 1598.2877, z: 493.48172}
+  - Name: Scott
+    Diameter: 107.82
+    Longitude: 48.52
+    Latitude: -82.35
+    Position: {x: 149.89592, y: -1684.8696, z: 169.54575}
+  - Name: Seares
+    Diameter: 99.5
+    Longitude: 147.23
+    Latitude: 73.74
+    Position: {x: -400.23975, y: 1632.0017, z: 257.6404}
+  - Name: Serenitatis
+    Diameter: 920
+    Longitude: 18
+    Latitude: 26
+    Position: {x: 1453.1667, y: 745.23096, z: 472.1625}
+  - Name: Seyfert
+    Diameter: 102.63
+    Longitude: 114.34
+    Latitude: 29.26
+    Position: {x: -611.25964, y: 830.915, z: 1351.2742}
+  - Name: Sikorsky
+    Diameter: 97.67
+    Longitude: 103.65
+    Latitude: -65.89
+    Position: {x: -163.87927, y: -1551.6969, z: 674.8186}
+  - Name: Sikorsky-Rittenhouse
+    Diameter: 310
+    Longitude: 111
+    Latitude: -68
+    Position: {x: -228.21992, y: -1576.2125, z: 594.53326}
+  - Name: Sklodowska
+    Diameter: 125.55
+    Longitude: 96.15
+    Latitude: -18.04
+    Position: {x: -173.17088, y: -526.4575, z: 1607.1261}
+  - Name: Smythii
+    Diameter: 740
+    Longitude: 87
+    Latitude: -2
+    Position: {x: 88.91696, y: -59.329144, z: 1696.6361}
+  - Name: Sommerfeld
+    Diameter: 150.89
+    Longitude: -161.54
+    Latitude: 64.83
+    Position: {x: -685.81616, y: 1538.5848, z: -228.93863}
+  - Name: South
+    Diameter: 119.04
+    Longitude: -50.94
+    Latitude: 57.58
+    Position: {x: 574.30804, y: 1435.0396, z: -707.6948}
+  - Name: South Pole-Aitken
+    Diameter: 2500
+    Longitude: 180
+    Latitude: -56
+    Position: {x: -950.6279, y: -1409.3638, z: -0.00008310653}
+  - Name: Stebbins
+    Diameter: 129.74
+    Longitude: -142.64
+    Latitude: 64.36
+    Position: {x: -584.69586, y: 1532.602, z: -446.3872}
+  - Name: Stefan
+    Diameter: 112.18
+    Longitude: -108.77
+    Latitude: 46.33
+    Position: {x: -377.7117, y: 1229.659, z: -1111.4281}
+  - Name: Sternfeld
+    Diameter: 109.8
+    Longitude: -142.27
+    Latitude: -19.75
+    Position: {x: -1265.4445, y: -574.4584, z: -979.1055}
+  - Name: Stofler
+    Diameter: 129.87
+    Longitude: 5.93
+    Latitude: -41.24
+    Position: {x: 1271.4828, y: -1120.6648, z: 132.06784}
+  - Name: Struve
+    Diameter: 164.34
+    Longitude: -76.65
+    Latitude: 23.41
+    Position: {x: 360.21725, y: 675.42377, z: -1517.9084}
+  - Name: Szilard
+    Diameter: 127.22
+    Longitude: 105.78
+    Latitude: 33.71
+    Position: {x: -384.57208, y: 943.48236, z: 1360.8619}
+  - Name: Theophilus
+    Diameter: 98.59
+    Longitude: 26.28
+    Latitude: -11.45
+    Position: {x: 1493.9537, y: -337.4716, z: 737.7092}
+  - Name: Thomson
+    Diameter: 117.25
+    Longitude: 166.04
+    Latitude: -32.32
+    Position: {x: -1394.1962, y: -908.9006, z: 346.57883}
+  - Name: Thomson M
+    Diameter: 113.83
+    Longitude: 166.44
+    Latitude: -35.98
+    Position: {x: -1337.3306, y: -998.7547, z: 322.54614}
+  - Name: Tranquillitatis
+    Diameter: 700
+    Longitude: 30
+    Latitude: 7
+    Position: {x: 1461.2693, y: 207.17789, z: 843.66425}
+  - Name: Tsander
+    Diameter: 159.95
+    Longitude: -149.69
+    Latitude: 5.39
+    Position: {x: -1461.1333, y: 159.68874, z: -854.1594}
+  - Name: Tsiolkovskiy
+    Diameter: 184.39
+    Longitude: 128.97
+    Latitude: -20.38
+    Position: {x: -1002.2276, y: -592.01624, z: 1238.9741}
+  - Name: Tsiolkovskiy-Stark
+    Diameter: 700
+    Longitude: 128
+    Latitude: -15
+    Position: {x: -1010.96155, y: -439.99237, z: 1293.9719}
+  - Name: W. Bond
+    Diameter: 170.53
+    Longitude: 3.52
+    Latitude: 65.41
+    Position: {x: 706.07294, y: 1545.825, z: 43.43266}
+  - Name: Walther
+    Diameter: 134.23
+    Longitude: 0.62
+    Latitude: -33.25
+    Position: {x: 1421.6033, y: -932.0985, z: 15.383828}
+  - Name: Van de Graaff
+    Diameter: 240.47
+    Longitude: 172.01
+    Latitude: -27.04
+    Position: {x: -1499.4728, y: -772.8411, z: 210.47043}
+  - Name: Van der Waals
+    Diameter: 113.37
+    Longitude: 119.98
+    Latitude: -43.56
+    Position: {x: -615.58276, y: -1171.4935, z: 1067.0804}
+  - Name: van't Hoff
+    Diameter: 107.3
+    Longitude: -132.68
+    Latitude: 61.75
+    Position: {x: -545.47015, y: 1497.5143, z: -591.5347}
+  - Name: Vasco da Gama P
+    Diameter: 102.54
+    Longitude: -80.34
+    Latitude: 12
+    Position: {x: 279.02844, y: 353.4499, z: -1639.2731}
+  - Name: Vavilov
+    Diameter: 98.22
+    Longitude: -138.77
+    Latitude: -0.87
+    Position: {x: -1278.3716, y: -25.812428, z: -1120.3124}
+  - Name: Vavilov D
+    Diameter: 96.2
+    Longitude: -137.48
+    Latitude: 0.03
+    Position: {x: -1252.9703, y: 0.8901179, z: -1148.9407}
+  - Name: Wegener
+    Diameter: 95.78
+    Longitude: -113.81
+    Latitude: 45.21
+    Position: {x: -483.5043, y: 1206.4792, z: -1095.7334}
+  - Name: Vendelinus
+    Diameter: 141.21
+    Longitude: 61.55
+    Latitude: -16.46
+    Position: {x: 776.67584, y: -481.688, z: 1433.4406}
+  - Name: Ventris
+    Diameter: 100.74
+    Longitude: 157.97
+    Latitude: -4.77
+    Position: {x: -1570.4209, y: -141.36533, z: 635.44806}
+  - Name: Werner-Airy
+    Diameter: 500
+    Longitude: 12
+    Latitude: -24
+    Position: {x: 1519.0898, y: -691.4523, z: 322.89252}
+  - Name: Vertregt
+    Diameter: 172.76
+    Longitude: 171.12
+    Latitude: -19.3
+    Position: {x: -1585.2302, y: -561.87445, z: 247.6737}
+  - Name: Vestine
+    Diameter: 97.81
+    Longitude: 93.68
+    Latitude: 33.87
+    Position: {x: -90.59674, y: 947.4278, z: 1408.6067}
+  - Name: Vetchinkin
+    Diameter: 94.29
+    Longitude: 131.08
+    Latitude: 9.77
+    Position: {x: -1100.8895, y: 288.479, z: 1262.8627}
+  - Name: Weyl
+    Diameter: 122.82
+    Longitude: -120.53
+    Latitude: 15.97
+    Position: {x: -830.2528, y: 467.72778, z: -1407.8036}
+  - Name: Wiener
+    Diameter: 113.39
+    Longitude: 146.51
+    Latitude: 40.9
+    Position: {x: -1071.6259, y: 1113.0594, z: 709.0251}
+  - Name: Wiener K
+    Diameter: 94.51
+    Longitude: 147.96
+    Latitude: 39.26
+    Position: {x: -1115.7815, y: 1075.8287, z: 698.3009}
+  - Name: Wilhelm
+    Diameter: 100.83
+    Longitude: -20.94
+    Latitude: -43.21
+    Position: {x: 1157.211, y: -1163.9463, z: -442.8219}
+  - Name: Volta
+    Diameter: 117.15
+    Longitude: -84.77
+    Latitude: 53.9
+    Position: {x: 91.302986, y: 1373.5828, z: -997.46375}
+  - Name: von Bekesy
+    Diameter: 96.25
+    Longitude: 126.73
+    Latitude: 51.92
+    Position: {x: -627.0466, y: 1338.1555, z: 840.3287}
+  - Name: Von Karman
+    Diameter: 186.35
+    Longitude: 176.25
+    Latitude: -44.45
+    Position: {x: -1210.9668, y: -1190.4872, z: 79.37098}
+  - Name: Von Karman M
+    Diameter: 218.98
+    Longitude: 174.95
+    Latitude: -49.44
+    Position: {x: -1101.1239, y: -1291.5333, z: 97.30428}
+  - Name: Wyld
+    Diameter: 103.4
+    Longitude: 98.1
+    Latitude: -1.42
+    Position: {x: -239.4585, y: -42.127934, z: 1682.5233}
+  - Name: Xenophanes
+    Diameter: 117.57
+    Longitude: -82.01
+    Latitude: 57.49
+    Position: {x: 126.99892, y: 1433.6061, z: -904.79}
+  - Name: Yablochkov
+    Diameter: 101.49
+    Longitude: 127.58
+    Latitude: 60.78
+    Position: {x: -506.11737, y: 1483.6779, z: 657.68164}
+  - Name: Zeeman
+    Diameter: 186.56
+    Longitude: -135.06
+    Latitude: -75.07
+    Position: {x: -310.0269, y: -1642.6102, z: -309.3783}
+  - Name: Zwicky
+    Diameter: 126.06
+    Longitude: 167.64
+    Latitude: -16.17
+    Position: {x: -1594.9034, y: -473.43002, z: 349.4952}
+  selection: 114
+  LimitCratersByDiameter: 1
+  DiameterThreshold: 94
+  LimitCratersByCoordinates: 0
+--- !u!4 &236247360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236247358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &236247361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236247358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b0720e9d079144aebf2a81967b19656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alpha: 0.666
+  BoxTexture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+  cam: {fileID: 745669903}
+  CraterReader: {fileID: 236247359}
+  Reverse: 0
+  Scanline: 0
+  ScanlineSpeed: 0.71
+  CullWithPlane: 1
+  ScanlineMethod: 0
+  FontSize: 20
+  DetailColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!1 &501330321
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501330323}
+  - component: {fileID: 501330322}
+  m_Layer: 0
+  m_Name: StaticLightingSky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &501330322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501330321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441482e8936e35048a1dffac814e3ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Profile: {fileID: 0}
+  m_StaticLightingSkyUniqueID: 0
+--- !u!4 &501330323
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501330321}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &745669901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 745669904}
+  - component: {fileID: 745669903}
+  - component: {fileID: 745669902}
+  - component: {fileID: 745669905}
+  - component: {fileID: 745669906}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &745669902
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745669901}
+  m_Enabled: 1
+--- !u!20 &745669903
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745669901}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.1
+  far clip plane: 10000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &745669904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745669901}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4000}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 984663949}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &745669905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745669901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c1ce4fb46143f46bc5cb5224c934f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 7
+  m_ObsoleteRenderingPath: 0
+  m_ObsoleteFrameSettings:
+    overrides: 0
+    enableShadow: 0
+    enableContactShadows: 0
+    enableShadowMask: 0
+    enableSSR: 0
+    enableSSAO: 0
+    enableSubsurfaceScattering: 0
+    enableTransmission: 0
+    enableAtmosphericScattering: 0
+    enableVolumetrics: 0
+    enableReprojectionForVolumetrics: 0
+    enableLightLayers: 0
+    enableExposureControl: 1
+    diffuseGlobalDimmer: 0
+    specularGlobalDimmer: 0
+    shaderLitMode: 0
+    enableDepthPrepassWithDeferredRendering: 0
+    enableTransparentPrepass: 0
+    enableMotionVectors: 0
+    enableObjectMotionVectors: 0
+    enableDecals: 0
+    enableRoughRefraction: 0
+    enableTransparentPostpass: 0
+    enableDistortion: 0
+    enablePostprocess: 0
+    enableOpaqueObjects: 0
+    enableTransparentObjects: 0
+    enableRealtimePlanarReflection: 0
+    enableMSAA: 0
+    enableAsyncCompute: 0
+    runLightListAsync: 0
+    runSSRAsync: 0
+    runSSAOAsync: 0
+    runContactShadowsAsync: 0
+    runVolumeVoxelizationAsync: 0
+    lightLoopSettings:
+      overrides: 0
+      enableDeferredTileAndCluster: 0
+      enableComputeLightEvaluation: 0
+      enableComputeLightVariants: 0
+      enableComputeMaterialVariants: 0
+      enableFptlForForwardOpaque: 0
+      enableBigTilePrepass: 0
+      isFptlEnabled: 0
+  clearColorMode: 1
+  backgroundColorHDR: {r: 0, g: 0, b: 0, a: 1}
+  clearDepth: 1
+  volumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  volumeAnchorOverride: {fileID: 0}
+  antialiasing: 0
+  SMAAQuality: 2
+  dithering: 0
+  stopNaNs: 0
+  taaSharpenStrength: 0.6
+  physicalParameters:
+    m_Iso: 200
+    m_ShutterSpeed: 0.005
+    m_Aperture: 16
+    m_BladeCount: 5
+    m_Curvature: {x: 2, y: 11}
+    m_BarrelClipping: 0.25
+    m_Anamorphism: 0
+  flipYMode: 0
+  xrRendering: 1
+  fullscreenPassthrough: 0
+  allowDynamicResolution: 0
+  customRenderingSettings: 0
+  invertFaceCulling: 0
+  probeLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  hasPersistentHistory: 0
+  m_RenderingPathCustomFrameSettings:
+    bitDatas:
+      data1: 70300024700749
+      data2: 4539628425463136256
+    lodBias: 1
+    lodBiasMode: 0
+    lodBiasQualityLevel: 0
+    maximumLODLevel: 0
+    maximumLODLevelMode: 0
+    maximumLODLevelQualityLevel: 0
+    materialQuality: 0
+  renderingPathCustomFrameSettingsOverrideMask:
+    mask:
+      data1: 0
+      data2: 0
+  defaultFrameSettings: 0
+--- !u!114 &745669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745669901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a9e6fbdd7579174a9d8639b338d94bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  columns: 8
+  rows: 4
+  LineWidth: 0.001
+  DotScale: 0.001
+  IntersectionSize: 4
+--- !u!1 &821015303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 821015305}
+  - component: {fileID: 821015304}
+  - component: {fileID: 821015306}
+  m_Layer: 0
+  m_Name: Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &821015304
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821015303}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 5ba85a0a437ef004abf220be47694f71, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 0
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -4264060672876531730, guid: 5ba85a0a437ef004abf220be47694f71, type: 2}
+    value: {fileID: 821015306}
+  - key: {fileID: -5175077086967840226, guid: 5ba85a0a437ef004abf220be47694f71, type: 2}
+    value: {fileID: 1252916120}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &821015305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821015303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -535.7736, y: 38.469666, z: 461.50665}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &821015306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821015303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf95b8a8c3fe224da0c73587c4f28c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CraterUI: {fileID: 236247361}
+  Multiplier: 0.05
+  _globeMat: {fileID: 2100000, guid: 607c884bbc85c384193445a440e493c9, type: 2}
+  Reverse: 1
+  DetailColor: {r: 0, g: 0, b: 0, a: 1}
+  BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  GridColor: {r: 0, g: 0, b: 0, a: 1}
+  Camera: {fileID: 745669903}
+--- !u!1 &984663947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984663949}
+  - component: {fileID: 984663948}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &984663948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984663947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 837f4feba77300942887fd0bc0f727dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClockWise: 0
+  Speed: 10
+  Axis: 1
+--- !u!4 &984663949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984663947}
+  m_LocalRotation: {x: -0.11215311, y: 0.80869234, z: 0.16379544, w: 0.55372334}
+  m_LocalPosition: {x: 2.2216797, y: -0.7977295, z: 2.416748}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 745669904}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -22.9, y: 111.2, z: 0}
+--- !u!1 &1139874126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139874128}
+  - component: {fileID: 1139874127}
+  - component: {fileID: 1139874129}
+  - component: {fileID: 1139874130}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1139874127
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139874126}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.043
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 2
+  m_AreaSize: {x: 0.5, y: 0.5}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 7500
+  m_UseColorTemperature: 1
+  m_BoundingSphereOverride: {x: 0, y: 7e-45, z: 1.686e-42, w: 1.05e-43}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1139874128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139874126}
+  m_LocalRotation: {x: 0, y: -0.26202065, z: 0, w: 0.96506226}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -30.38, z: 0}
+--- !u!114 &1139874129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139874126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
+  m_Intensity: 5
+  m_EnableSpotReflector: 0
+  m_LuxAtDistance: 1
+  m_InnerSpotPercent: 0
+  m_LightDimmer: 1
+  m_VolumetricDimmer: 1
+  m_LightUnit: 2
+  m_FadeDistance: 10000
+  m_AffectDiffuse: 1
+  m_AffectSpecular: 1
+  m_NonLightmappedOnly: 0
+  m_ShapeWidth: 0.5
+  m_ShapeHeight: 0.5
+  m_AspectRatio: 1
+  m_ShapeRadius: 0.025
+  m_SoftnessScale: 1
+  m_UseCustomSpotLightShadowCone: 0
+  m_CustomSpotLightShadowCone: 30
+  m_MaxSmoothness: 0.99
+  m_ApplyRangeAttenuation: 1
+  m_DisplayAreaLightEmissiveMesh: 0
+  m_AreaLightCookie: {fileID: 0}
+  m_AreaLightShadowCone: 120
+  m_UseScreenSpaceShadows: 0
+  m_InteractsWithSky: 1
+  m_AngularDiameter: 0.5
+  m_FlareSize: 2
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
+  m_FlareFalloff: 4
+  m_SurfaceTexture: {fileID: 0}
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
+  m_Distance: 1.5e+11
+  m_UseRayTracedShadows: 0
+  m_NumRayTracingSamples: 4
+  m_FilterTracedShadow: 1
+  m_FilterSizeTraced: 16
+  m_SunLightConeAngle: 0.5
+  m_LightShadowRadius: 0.5
+  m_SemiTransparentShadow: 0
+  m_ColorShadow: 1
+  m_EvsmExponent: 15
+  m_EvsmLightLeakBias: 0
+  m_EvsmVarianceBias: 0.00001
+  m_EvsmBlurPasses: 0
+  m_LightlayersMask: 1
+  m_LinkShadowLayers: 1
+  m_ShadowNearPlane: 0.1
+  m_BlockerSampleCount: 24
+  m_FilterSampleCount: 16
+  m_MinFilterSize: 0.1
+  m_KernelSize: 5
+  m_LightAngle: 1
+  m_MaxDepthBias: 0.001
+  m_ShadowResolution:
+    m_Override: 1024
+    m_UseOverride: 1
+    m_Level: 0
+  m_ShadowDimmer: 1
+  m_VolumetricShadowDimmer: 1
+  m_ShadowFadeDistance: 10000
+  m_UseContactShadow:
+    m_Override: 0
+    m_UseOverride: 1
+    m_Level: 0
+  m_RayTracedContactShadow: 0
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
+  m_PenumbraTint: 0
+  m_NormalBias: 0.75
+  m_SlopeBias: 0.5
+  m_ShadowUpdateMode: 0
+  m_BarnDoorAngle: 90
+  m_BarnDoorLength: 0.05
+  m_ShadowCascadeRatios:
+  - 0.05
+  - 0.2
+  - 0.3
+  m_ShadowCascadeBorders:
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  m_ShadowAlgorithm: 0
+  m_ShadowVariant: 0
+  m_ShadowPrecision: 0
+  useOldInspector: 0
+  useVolumetric: 1
+  featuresFoldout: 1
+  showAdditionalSettings: 0
+  m_AreaLightEmissiveMeshShadowCastingMode: 0
+  m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
+  m_AreaLightEmissiveMeshLayer: -1
+--- !u!114 &1139874130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139874126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 837f4feba77300942887fd0bc0f727dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClockWise: 1
+  Speed: 9
+  Axis: 1
+--- !u!1 &1252916119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1252916121}
+  - component: {fileID: 1252916120}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1252916120
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252916119}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ec2bc095db9f54f42bf24806997479f3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1252916121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252916119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -535.7736, y: 38.469666, z: 461.50665}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &647848653159165653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2166282882720155107}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.9172678, y: -0.07954121, z: 5.81527}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2166282882720155107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 647848653159165653}
+  - component: {fileID: 4557657344563116879}
+  m_Layer: 0
+  m_Name: Sky and Fog Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &4557657344563116879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2166282882720155107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 4d385ab8e5d474144a1db9dbaf302e02, type: 2}
