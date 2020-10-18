@@ -6,7 +6,7 @@ using UnityEngine;
 public class CamGrid : MonoBehaviour
 {
   public GameObject prefab;
-
+  public readonly Color GridColor = Color.white;
   public int columns, rows;
 
   private Vector3[,] grid;
@@ -33,15 +33,9 @@ public class CamGrid : MonoBehaviour
   public int IntersectionSize = 8;
 
   // Use this for initialization
-  private void Start()
-  {
-    Configure();
-  }
+  private void Start() => Configure();
 
-  private void OnValidate()
-  {
-    Configure();
-  }
+  private void OnValidate() => Configure();
 
   private Texture2D MakeTex(int width, int height, Color col)
   {
@@ -57,11 +51,15 @@ public class CamGrid : MonoBehaviour
     return result;
   }
 
+  public void UpdateGridColor(Color gridColor)
+  {
+    _boxStyle.normal.background = MakeTex(1, 1, gridColor);
+  }
+
   private void Configure()
   {
     _boxStyle = new GUIStyle();
-    _tex = MakeTex(1, 1, Color.white);
-    _boxStyle.normal.background = _tex;
+    _boxStyle.normal.background = MakeTex(1, 1, GridColor);
     _cam = GetComponent<Camera>();
     GenerateGrid(_cam);
   }
@@ -243,6 +241,6 @@ public class CamGrid : MonoBehaviour
 
     GizmoGridBounds(grid);
     GizmoLines(grid);
-    GizmoIntersections(grid);
+    //GizmoIntersections(grid);
   }
 }

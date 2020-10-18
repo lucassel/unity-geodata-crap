@@ -2,7 +2,8 @@
     "name": "Lucy.Geodata.Editor",
     "references": [
         "GUID:527e273b913ff4a09919c23aaecd2473",
-        "GUID:e2699e74b07e7e34eb1f095ecd892d08"
+        "GUID:e2699e74b07e7e34eb1f095ecd892d08",
+        "GUID:bd55371a0a6137744bebb212dc6756ae"
     ],
     "includePlatforms": [
         "Editor"

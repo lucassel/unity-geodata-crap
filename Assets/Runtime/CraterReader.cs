@@ -2,12 +2,6 @@
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-public enum PlaneOrientation
-{
-  XY,
-  XZ
-}
-
 [ExecuteInEditMode]
 public class CraterReader : MonoBehaviour
 {
@@ -19,14 +13,12 @@ public class CraterReader : MonoBehaviour
 
   [Range(0, 1000)] public int selection;
 
-  public Vector3 Offset = new Vector3(3600f / 2f, 0f, 1800f / 2f);
-
   public bool LimitCratersByDiameter = true;
 
   [Range(10f, 500f)]
   public float DiameterThreshold = 50f;
 
-  public bool LimitCratersByCoordinates;
+  public bool LimitCratersByCoordinates = false;
 
   private void OnEnable() => Settings.OnGlobeSettingsUpdate += UpdateCraters;
 
@@ -39,27 +31,27 @@ public class CraterReader : MonoBehaviour
     for (var i = 0; i < input.Count; i++)
     {
       Crater c = input[i];
-      if (c.Diameter < DiameterThreshold)
+      if (LimitCratersByDiameter && c.Diameter < DiameterThreshold)
       { continue; }
 
-      if (c.Longitude < settings.LongitudeLow * 10f)
+      if (LimitCratersByCoordinates && c.Longitude < Mathf.FloorToInt(settings.LongitudeLow) * 10f)
       {
         continue;
       }
 
-      if (c.Longitude > settings.LongitudeHigh * 10f)
+      if (LimitCratersByCoordinates && c.Longitude > Mathf.FloorToInt(settings.LongitudeHigh) * 10f)
       {
         continue;
       }
 
-      if (c.Latitude < settings.LatitudeLow * 10f)
+      if (LimitCratersByCoordinates && c.Latitude < Mathf.FloorToInt(settings.LatitudeLow) * 10f)
       {
         continue;
       }
 
-      if (c.Latitude > settings.LatitudeHigh * 10f)
+      if (LimitCratersByCoordinates && c.Latitude > Mathf.FloorToInt(settings.LatitudeHigh) * 10f)
       { continue; }
-      Debug.Log($"crater {c.Name} is valid");
+      //Debug.Log($"crater {c.Name} is valid");
       result.Add(c);
     }
     return result;

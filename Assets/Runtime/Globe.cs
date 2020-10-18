@@ -57,7 +57,7 @@ public class Globe : MonoBehaviour
     {
       for (var y = 0; y < newCoords.GetLength(1); y++)
       {
-        newCoords[x, y] = new GeoCoord(new Vector2(Settings.LowLongitude + x * multi, Settings.LowLatitude + y * multi), orientation, radius);
+        newCoords[x, y] = new GeoCoord(new Vector2(Settings.LowLongitude + x * multi, Settings.LowLatitude + y * multi), orientation, radius, 0f);
       }
     }
     return newCoords;
@@ -70,7 +70,7 @@ public class Globe : MonoBehaviour
     {
       for (var y = 0; y < coords.GetLength(1); y++)
       {
-        coords[x, y].UpdateCoordinate(orientation, radius);
+        coords[x, y].UpdateCoordinate(orientation, radius, 0f);
         pts[x, y] = Vector3.Lerp(coords[x, y].worldPosition, coords[x, y].spherePosition, lerp);
       }
     }
@@ -105,7 +105,7 @@ public class Globe : MonoBehaviour
       {
         if (DrawGrids)
         {
-          Gizmos.DrawWireSphere(pointsReal[i, j], 1f);
+          //Gizmos.DrawWireSphere(pointsReal[i, j], 1f);
           if (i > 0)
           {
             Gizmos.DrawLine(pointsReal[i, j], pointsReal[i - 1, j]);

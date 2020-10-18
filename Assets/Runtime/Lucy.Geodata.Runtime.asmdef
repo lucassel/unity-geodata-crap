@@ -2,7 +2,9 @@
     "name": "Lucy.Geodata.Runtime",
     "references": [
         "GUID:5fd5d0dfa7c9cdc498c963c8d2ff60e6",
-        "GUID:9a73168161c74194a877181a9b86bb38"
+        "GUID:bd55371a0a6137744bebb212dc6756ae",
+        "GUID:f06555f75b070af458a003d92f9efb00",
+        "GUID:457756d89b35d2941b3e7b37b4ece6f1"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

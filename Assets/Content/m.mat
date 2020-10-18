@@ -32,7 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_5DEFC560:
-        m_Texture: {fileID: 2800000, guid: 6f1a4cdb2702545d697c7e4abbfd3cb2, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -164,9 +164,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Opacity: 0.49521363
-    - Vector1_9F0149D5: 0.8
-    - Vector1_E9464592: 1
+    - Opacity: 0.7399516
+    - Vector1_9F0149D5: 0.51
+    - Vector1_E9464592: 0
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1

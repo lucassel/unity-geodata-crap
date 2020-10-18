@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class GlobeSettings : ScriptableObject
 {
-  [Range(1f, 2000f)]
+  [Range(1f, 1737.4f)]
   public float Radius;
 
   [Range(0f, 1f)]

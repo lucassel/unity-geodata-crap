@@ -4,7 +4,6 @@ using System.Linq;
 
 using UnityEngine;
 using UnityEngine.Assertions;
-
 using Random = UnityEngine.Random;
 
 public enum MoonType { texture, mesh, quads }
@@ -14,24 +13,22 @@ public enum MoonType { texture, mesh, quads }
 /// </summary>
 public class PDSReader : MonoBehaviour
 {
-  public MoonType SpawnType;
-  public PlaneOrientation Orientation;
-  public PDSData Data;
   public TextAsset LabelFile;
 
-  public float Radius = 90f;
+  public GlobeSettings Settings;
+  public MoonType SpawnType;
+
+  public LDEMData Data;
+
   public bool DrawQuads;
-  public bool DrawTexture;
-  public bool DrawMesh;
+
   public bool DrawChunk;
 
-  public int Width;
-  public int Height;
   public Material MoonMaterial;
-
+  public GeoCoord[,] geoCoords;
   private byte[] _imgData;
   private string _path;
-  private Texture2D _texture;
+  public Texture2D _texture;
   private GUIStyle _style;
 
   private void OnValidate() => Configure();
@@ -51,33 +48,13 @@ public class PDSReader : MonoBehaviour
 
   public void Read()
   {
-    Data = new PDSData(LabelFile);
-    Width = Data.ColumnCount;
-    Height = Data.RowCount;
+    Data = new LDEMData(LabelFile);
   }
 
   public void Build()
   {
     if (Data == null) Read();
     ReadBinaryFile(LabelFile.name, Data);
-  }
-
-  private static float[] GetHeights(string filename, PDSData data)
-  {
-    var img = File.ReadAllBytes(Path.Combine(Application.streamingAssetsPath, $"{filename}.IMG"));
-    var floatData = new float[img.Length / 4];
-    var floatDataDimensional = new float[data.ColumnCount, data.RowCount];
-
-    for (var y = 0; y < data.RowCount; y++)
-    {
-      for (var x = 0; x < data.ColumnCount; x++)
-      {
-        var i = x + data.ColumnCount * y;
-        floatData[i] = BitConverter.ToSingle(img, i * 4);
-        floatDataDimensional[x, y] = floatData[i];
-      }
-    }
-    return floatData;
   }
 
   private void DrawTex(float[,] floatDataDimensional, float minimum, float maximum)
@@ -87,7 +64,7 @@ public class PDSReader : MonoBehaviour
     MeshRenderer mr = plane.GetComponent<MeshRenderer>();
     mr.sharedMaterial = MoonMaterial;
     MeshFilter mf = plane.GetComponent<MeshFilter>();
-    mf.sharedMesh = PlaneMeshGenerator.CreatePlaneMesh(new Vector2(Width * -0.5f, Height * -0.5f), new Vector2(Width * .5f, Height * .5f), Orientation);
+    mf.sharedMesh = PlaneMeshGenerator.CreatePlaneMesh(new Vector2(Settings.Radius * -2f, -Settings.Radius), new Vector2(Settings.Radius * 2f, Settings.Radius), Settings.Orientation);
 
     var width = floatDataDimensional.GetLength(0);
     var height = floatDataDimensional.GetLength(1);
@@ -105,23 +82,27 @@ public class PDSReader : MonoBehaviour
     }
 
     _texture.Apply();
-    mr.sharedMaterial.mainTexture = _texture;
+    mr.sharedMaterial.SetTexture("_BaseColorMap", _texture);
   }
 
-  private void ReadBinaryFile(string fileName, PDSData data)
+  private void ReadBinaryFile(string fileName, LDEMData data)
   {
     _imgData = File.ReadAllBytes(Path.Combine(Application.streamingAssetsPath, $"{fileName}.IMG"));
 
     var floatData = new float[_imgData.Length / 4];
     var floatDataDimensional = new float[data.ColumnCount, data.RowCount];
-
+    geoCoords = new GeoCoord[data.ColumnCount, data.RowCount];
     for (var y = 0; y < data.RowCount; y++)
     {
       for (var x = 0; x < data.ColumnCount; x++)
       {
-        var i = x + Width * y;
+        var i = x + data.ColumnCount * y;
         floatData[i] = BitConverter.ToSingle(_imgData, i * 4);
         floatDataDimensional[x, y] = floatData[i];
+        var lon = RemapValue(x, 0, data.ColumnCount, -180f, 180f);
+        var lat = RemapValue(y, 0, data.RowCount, -90f, 90f);
+        var elevation = floatData[i];
+        geoCoords[x, y] = new GeoCoord(new Vector2(lon, lat), Settings.Orientation, Settings.Radius, elevation);
       }
     }
 
@@ -133,71 +114,52 @@ public class PDSReader : MonoBehaviour
     switch (SpawnType)
     {
       case MoonType.texture:
-        DrawTex(floatDataDimensional, 0f, 1f);
+        DrawTex(floatDataDimensional, min, max);
         break;
 
       case MoonType.mesh:
-        var verts = new Vector3[data.ColumnCount, data.RowCount];
-        print($"width: {verts.GetLength(0)}");
-        print($"height: {verts.GetLength(1)}");
-        Assert.AreEqual(verts.GetLength(0), Width);
-        Assert.AreEqual(verts.GetLength(1), Height);
-        for (var y = 0; y < data.RowCount; y++)
-        {
-          for (var x = 0; x < data.ColumnCount; x++)
-          {
-            var z = RemapValue(floatDataDimensional[x, data.RowCount - 1 - y], min, max,
-              MoonConstants.LowestPointOnTheMoon,
-              MoonConstants.HighestPointOnTheMoon);
-            verts[x, y] = (new Vector3(x, z, -y) + new Vector3(-data.ColumnCount / 2f, 0, data.RowCount / 2f)) *
-                          (Radius * 2f / data.RowCount);
-          }
-        }
-
-        MeshFilter mf = GetComponent<MeshFilter>();
-        MeshRenderer mr = GetComponent<MeshRenderer>();
-
-        MeshData d = SphereMeshGenerator.GenerateTerrainMesh(verts);
-        Mesh singleMesh = d.CreateMesh32Bit();
-        singleMesh = FlipMesh(singleMesh);
-        mf.sharedMesh = singleMesh;
+        DrawMesh(data, floatDataDimensional, min, max);
         break;
 
       case MoonType.quads:
-        var vertices = new Vector3[Height, Height];
-
-        for (var i = 0; i < 2; i++)
-        {
-          for (var y = 0; y < data.RowCount; y++)
-          {
-            for (var x = 0; x < data.ColumnCount / 2; x++)
-            {
-              var offset = i * Height;
-              var z = RemapValue(floatDataDimensional[x + offset, data.RowCount - 1 - y], min, max,
-                MoonConstants.LowestPointOnTheMoon,
-                MoonConstants.HighestPointOnTheMoon);
-              vertices[x, y] = (new Vector3(x + offset, z, -y) + new Vector3(-data.ColumnCount / 2f, 0, data.RowCount / 2f)) *
-                            (Radius * 2f / data.RowCount);
-            }
-          }
-
-          if (i == 0)
-          {
-            MeshData a = SphereMeshGenerator.GenerateTerrainMesh(vertices);
-            Mesh tempMesh = a.CreateMesh32Bit();
-            tempMesh = FlipMesh(tempMesh);
-            //meshA.sharedMesh = tempMesh;
-          }
-          else
-          {
-            MeshData b = SphereMeshGenerator.GenerateTerrainMesh(vertices);
-            Mesh mesh = b.CreateMesh32Bit();
-            mesh = FlipMesh(mesh);
-            //meshB.sharedMesh = mesh;
-          }
-        }
+        var vertices = new Vector3[1, 1];
         break;
     }
+  }
+
+  private void DrawMesh(LDEMData data, float[,] floatDataDimensional, float minimum, float maximum)
+  {
+    var verts = new Vector3[data.ColumnCount, data.RowCount];
+
+    print($"width: {verts.GetLength(0)}");
+    print($"height: {verts.GetLength(1)}");
+
+    Assert.AreEqual(verts.GetLength(0), data.ColumnCount);
+    Assert.AreEqual(verts.GetLength(1), data.RowCount);
+
+    for (var y = 0; y < data.RowCount; y++)
+    {
+      for (var x = 0; x < data.ColumnCount; x++)
+      {
+        var z = RemapValue(floatDataDimensional[x, data.RowCount - 1 - y], minimum, maximum,
+          MoonConstants.LowestPointOnTheMoon,
+          MoonConstants.HighestPointOnTheMoon);
+        GeoCoord geo = geoCoords[x, y];
+        geo.UpdateCoordinate(Settings.Orientation, Settings.Radius, z);
+        verts[x, y] = Vector3.Lerp(geo.worldPosition, geo.spherePosition, Settings.Lerp);
+      }
+    }
+
+    var go = new GameObject("mesh", typeof(MeshFilter), typeof(MeshRenderer));
+    go.transform.parent = transform;
+    MeshFilter mf = go.GetComponent<MeshFilter>();
+    MeshRenderer mr = go.GetComponent<MeshRenderer>();
+
+    mr.sharedMaterial = MoonMaterial;
+
+    MeshData d = SphereMeshGenerator.GenerateTerrainMesh(verts);
+    Mesh singleMesh = d.CreateMesh32Bit();
+    mf.sharedMesh = singleMesh;
   }
 
   private static Mesh FlipMesh(Mesh mesh)
@@ -223,11 +185,11 @@ public class PDSReader : MonoBehaviour
   {
     if (DrawQuads)
     {
-      DivideQuad(Radius * 2, new Vector3(0, 0f, -Radius));
-      DivideQuad(Radius * 2, new Vector3(-Radius * 2, 0f, -Radius));
+      DivideQuad(Settings.Radius * 2, new Vector3(0, 0f, -Settings.Radius));
+      DivideQuad(Settings.Radius * 2, new Vector3(-Settings.Radius * 2, 0f, -Settings.Radius));
 
-      DrawQuadrant(Radius * 2, new Vector3(0, 0f, -Radius), Color.red);
-      DrawQuadrant(Radius * 2, new Vector3(-Radius * 2, 0f, -Radius), Color.green);
+      DrawQuadrant(Settings.Radius * 2, new Vector3(0, 0f, -Settings.Radius), Color.red);
+      DrawQuadrant(Settings.Radius * 2, new Vector3(-Settings.Radius * 2, 0f, -Settings.Radius), Color.green);
     }
   }
 
@@ -281,7 +243,7 @@ public class PDSReader : MonoBehaviour
   {
     if (Data != null)
     {
-      GUI.Label(new Rect(20, 40, 100, 20), $"File: {Data.DatasetID}", _style);
+      GUI.Label(new Rect(20, 40, 100, 20), $"File: {Data.ProductID}", _style);
       GUI.Label(new Rect(20, 70, 100, 20), $"Resolution: {Data.MapResolution} pixels/degree", _style);
       GUI.Label(new Rect(20, 100, 100, 20), $"Sample bits: {Data.SampleBits} bit depth", _style);
       GUI.Label(new Rect(20, 130, 100, 20), $"Sample type: {Data.SampleType}", _style);

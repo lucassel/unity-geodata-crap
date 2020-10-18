@@ -4,15 +4,12 @@ using UnityEngine;
 
 public enum ScanlineMethod { TopDown, LeftRight, UV }
 
-[ExecuteInEditMode]
 public class CraterUI : MonoBehaviour
 {
   private GUIStyle _style;
   private GUIStyle _boxStyle;
-  private Texture2D _tex;
   private int BoxSize = 10;
   public float alpha = .666f;
-  public Material UIMaterial;
   private List<Crater> scannedCraters = new List<Crater>();
   private Plane _plane;
   private Vector3 _cameraPosition;
@@ -20,6 +17,7 @@ public class CraterUI : MonoBehaviour
   private Vector3 _moonPosition;
   private Crater _currentCrater;
   public Texture BoxTexture;
+  private Texture2D _tex;
   public Camera cam;
   public CraterReader CraterReader;
   public bool Reverse;
@@ -51,6 +49,15 @@ public class CraterUI : MonoBehaviour
     _boxStyle.normal.background = _tex;
   }
 
+  public void UpdateColor(Color detailColor)
+  {
+    DetailColor = detailColor;
+    _style.normal.textColor = detailColor;
+    _tex = MakeTex(1, 1, DetailColor);
+
+    _boxStyle.normal.background = _tex;
+  }
+
   private Texture2D MakeTex(int width, int height, Color col)
   {
     var pix = new Color[width * height];
@@ -74,34 +81,8 @@ public class CraterUI : MonoBehaviour
     _plane = new Plane(_cameraNormal, _moonPosition);
   }
 
-  private void OnDrawGizmosSelected()
-  {
-    Gizmos.color = Color.magenta;
-    Gizmos.DrawLine(CraterReader.transform.position, CraterReader.transform.position + _plane.normal * 100f);
-
-    Gizmos.color = Color.red;
-    foreach (Crater c in scannedCraters)
-    {
-      //Gizmos.DrawWireSphere(c.Position, 1f);
-    }
-
-    if (_currentCrater != null)
-    {
-      Gizmos.DrawLine(_cameraPosition, _currentCrater.Position);
-    }
-  }
-
   private void OnGUI()
   {
-    if (scannedCraters.Count > 0)
-    {
-      var rnd = Random.Range(0, scannedCraters.Count);
-      _currentCrater = scannedCraters[rnd];
-      CraterReader.selection = rnd;
-    }
-
-    scannedCraters.Clear();
-
     switch (ScanlineMethod)
     {
       case ScanlineMethod.TopDown:
