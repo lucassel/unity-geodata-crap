@@ -1,6 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
+
 [CustomEditor(typeof(CraterReader))]
 public class CraterEditor : Editor
 {

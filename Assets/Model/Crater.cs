@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEngine;
-
+namespace Lucy.Geodata.Model { 
 [Serializable]
 public class Crater
 {
@@ -34,4 +34,5 @@ public class Crater
     }
     Coordinate.UpdateCoordinate(orientation, radius, 0f);
   }
+}
 }

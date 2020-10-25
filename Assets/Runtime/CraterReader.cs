@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Lucy.Geodata.Model;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 

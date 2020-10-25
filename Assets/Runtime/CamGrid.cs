@@ -21,7 +21,6 @@ public class CamGrid : MonoBehaviour
 
   private Texture2D _tex;
 
-  private Vector3[] vertices;
   private Vector3[] bounds;
   private List<GameObject> dots = new List<GameObject>();
   private List<LineRenderer> horizontal = new List<LineRenderer>();
@@ -64,18 +63,7 @@ public class CamGrid : MonoBehaviour
     GenerateGrid(_cam);
   }
 
-  private void SpawnDots()
-  {
-    foreach (Vector3 item in vertices)
-    {
-      GameObject go = Instantiate(prefab);
-      go.transform.parent = transform;
-      Vector3 p = _cam.ViewportToWorldPoint(new Vector3(0, 0, _cam.nearClipPlane));
-      go.transform.position = item - transform.position + p;
-      go.transform.parent = transform;
-      dots.Add(go);
-    }
-  }
+  
 
   private void OnGUI()
   {
@@ -147,14 +135,6 @@ public class CamGrid : MonoBehaviour
     }
   }
 
-  public void Place()
-  {
-    for (var i = 0; i < dots.Count; i++)
-    {
-      dots[i].transform.position = vertices[i] + _cam.ViewportToWorldPoint(new Vector3(0, 0, _cam.nearClipPlane));
-      dots[i].transform.localScale = Vector3.one * DotScale;
-    }
-  }
 
   public void SpawnLines()
   {
