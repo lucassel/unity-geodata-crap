@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Position on geoid surface.
+/// </summary>
 public class GeoCoord
 {
+  /// <summary>
+  /// 
+  /// </summary>
   public Vector2 polarCoordinate { get; private set; }
   public Vector2 worldCoordinate { get; private set; }
   public Vector3 worldPosition { get; private set; }

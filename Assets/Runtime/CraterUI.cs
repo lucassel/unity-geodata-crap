@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-
+using Lucy.Geodata.Model;
 using UnityEngine;
 
 public enum ScanlineMethod { TopDown, LeftRight, UV }

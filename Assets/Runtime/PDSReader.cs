@@ -9,10 +9,13 @@ using Random = UnityEngine.Random;
 public enum MoonType { texture, mesh, quads }
 
 /// <summary>
-/// Reads PDS data from disk, constructs mesh.
+/// Reads PDS data from disk and constructs assets (meshes, textures).
 /// </summary>
 public class PDSReader : MonoBehaviour
 {
+  /// <summary>
+  /// 
+  /// </summary>
   public TextAsset LabelFile;
 
   public GlobeSettings Settings;
@@ -46,11 +49,17 @@ public class PDSReader : MonoBehaviour
     _style.normal.textColor = new Color(1f, 0f, 0f, 1f);
   }
 
+  /// <summary>
+  /// Reads configuration data from label file.
+  /// </summary>
   public void Read()
   {
     Data = new LDEMData(LabelFile);
   }
 
+  /// <summary>
+  /// Load bytes into memory, construct asset, save to disk.
+  /// </summary>
   public void Build()
   {
     if (Data == null) Read();
@@ -85,6 +94,11 @@ public class PDSReader : MonoBehaviour
     mr.sharedMaterial.SetTexture("_BaseColorMap", _texture);
   }
 
+  /// <summary>
+  /// Reads bytes from binary file
+  /// </summary>
+  /// <param name="fileName"></param>
+  /// <param name="data"></param>
   private void ReadBinaryFile(string fileName, LDEMData data)
   {
     _imgData = File.ReadAllBytes(Path.Combine(Application.streamingAssetsPath, $"{fileName}.IMG"));
@@ -127,6 +141,13 @@ public class PDSReader : MonoBehaviour
     }
   }
 
+  /// <summary>
+  /// Creates a mesh for a specific strip of byte data from PDS  file.
+  /// </summary>
+  /// <param name="data"></param>
+  /// <param name="floatDataDimensional"></param>
+  /// <param name="minimum"></param>
+  /// <param name="maximum"></param>
   private void DrawMesh(LDEMData data, float[,] floatDataDimensional, float minimum, float maximum)
   {
     var verts = new Vector3[data.ColumnCount, data.RowCount];
@@ -162,6 +183,12 @@ public class PDSReader : MonoBehaviour
     mf.sharedMesh = singleMesh;
   }
 
+
+  /// <summary>
+  /// Flips a mesh.
+  /// </summary>
+  /// <param name="mesh"></param>
+  /// <returns></returns>
   private static Mesh FlipMesh(Mesh mesh)
   {
     Vector3[] normals = mesh.normals;
@@ -193,7 +220,7 @@ public class PDSReader : MonoBehaviour
     }
   }
 
-  private void DrawQuadrant(float size, Vector3 offset, UnityEngine.Color color)
+  private void DrawQuadrant(float size, Vector3 offset, Color color)
   {
     Gizmos.color = color;
     Gizmos.DrawLine(offset, offset + new Vector3(0, 0, size));
@@ -239,6 +266,9 @@ public class PDSReader : MonoBehaviour
     }
   }
 
+  /// <summary>
+  /// Draw OnGUI information about currently loaded LDEM file.
+  /// </summary>
   private void OnGUI()
   {
     if (Data != null)
