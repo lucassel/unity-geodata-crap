@@ -14,7 +14,6 @@ public enum MoonType { texture, mesh, quads }
 public class PDSReader : MonoBehaviour
 {
   /// <summary>
-  /// 
   /// </summary>
   public TextAsset LabelFile;
 
@@ -97,8 +96,8 @@ public class PDSReader : MonoBehaviour
   /// <summary>
   /// Reads bytes from binary file
   /// </summary>
-  /// <param name="fileName"></param>
-  /// <param name="data"></param>
+  /// <param name="fileName"> </param>
+  /// <param name="data"> </param>
   private void ReadBinaryFile(string fileName, LDEMData data)
   {
     _imgData = File.ReadAllBytes(Path.Combine(Application.streamingAssetsPath, $"{fileName}.IMG"));
@@ -142,12 +141,12 @@ public class PDSReader : MonoBehaviour
   }
 
   /// <summary>
-  /// Creates a mesh for a specific strip of byte data from PDS  file.
+  /// Creates a mesh for a specific strip of byte data from PDS file.
   /// </summary>
-  /// <param name="data"></param>
-  /// <param name="floatDataDimensional"></param>
-  /// <param name="minimum"></param>
-  /// <param name="maximum"></param>
+  /// <param name="data"> </param>
+  /// <param name="floatDataDimensional"> </param>
+  /// <param name="minimum"> </param>
+  /// <param name="maximum"> </param>
   private void DrawMesh(LDEMData data, float[,] floatDataDimensional, float minimum, float maximum)
   {
     var verts = new Vector3[data.ColumnCount, data.RowCount];
@@ -171,7 +170,10 @@ public class PDSReader : MonoBehaviour
       }
     }
 
-    var go = new GameObject("mesh", typeof(MeshFilter), typeof(MeshRenderer));
+    var go = new GameObject("mesh", typeof(MeshFilter), typeof(MeshRenderer))
+    {
+      hideFlags = HideFlags.DontSave
+    };
     go.transform.parent = transform;
     MeshFilter mf = go.GetComponent<MeshFilter>();
     MeshRenderer mr = go.GetComponent<MeshRenderer>();
@@ -183,12 +185,11 @@ public class PDSReader : MonoBehaviour
     mf.sharedMesh = singleMesh;
   }
 
-
   /// <summary>
   /// Flips a mesh.
   /// </summary>
-  /// <param name="mesh"></param>
-  /// <returns></returns>
+  /// <param name="mesh"> </param>
+  /// <returns> </returns>
   private static Mesh FlipMesh(Mesh mesh)
   {
     Vector3[] normals = mesh.normals;

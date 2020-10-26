@@ -20,7 +20,7 @@ public class Globe : MonoBehaviour
   public bool DrawGrids;
 
   public bool UpdateMesh;
-
+  public bool ShowDivisions;
   private MeshFilter mf;
 
   private void OnEnable()
@@ -103,18 +103,42 @@ public class Globe : MonoBehaviour
     {
       for (var j = 0; j < pointsReal.GetLength(1); j++)
       {
+        Vector3 p = pointsReal[i, j];
         if (DrawGrids)
         {
           //Gizmos.DrawWireSphere(pointsReal[i, j], 1f);
           if (i > 0)
           {
-            Gizmos.DrawLine(pointsReal[i, j], pointsReal[i - 1, j]);
+            Gizmos.DrawLine(p, pointsReal[i - 1, j]);
           }
 
           if (j > 0)
           {
-            Gizmos.DrawLine(pointsReal[i, j], pointsReal[i, j - 1]);
+            Gizmos.DrawLine(p, pointsReal[i, j - 1]);
           }
+        }
+
+        if (ShowDivisions)
+        {
+          var x = Mathf.Abs(p.x);
+          var y = Mathf.Abs(p.y);
+          var z = Mathf.Abs(p.z);
+          if (x > y)
+          {
+            if (x > z)
+              Gizmos.color = Color.red;
+            else
+              Gizmos.color = Color.cyan;
+          }
+          else
+          {
+            if (y > z)
+              Gizmos.color = Color.green;
+            else
+              Gizmos.color = Color.blue;
+          }
+
+          Gizmos.DrawWireSphere(p, .01f * Settings.Radius);
         }
       }
     }
@@ -128,6 +152,7 @@ public class Globe : MonoBehaviour
       Gizmos.DrawLine(new Vector3(-Settings.Radius * 2f, Settings.Radius, 0), new Vector3(-Settings.Radius * 2f, -Settings.Radius, 0));
       Gizmos.DrawLine(new Vector3(Settings.Radius * 2f, Settings.Radius, 0), new Vector3(Settings.Radius * 2f, -Settings.Radius, 0));
     }
+
     Gizmos.matrix = Matrix4x4.identity;
   }
 }
